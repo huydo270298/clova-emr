@@ -1,0 +1,363 @@
+<div class="popup_wrap show dimmed">
+  <div class="popup" id="panel_add_family">
+    <div class="popup_innerwrap">
+      <div class="popup_head">
+        <strong class="tit">환자 정보 검색</strong>
+        <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+      </div>
+      <div class="popup_cont">
+        <div class="popup_inner" data-simplebar>
+          <div class="data_filter">
+            <h2 class="title" weight="bold" size="16">검색 범주 선택 </h2>
+            <div class="chkbox_area">
+              <span class="chkbox">
+                <input type="checkbox" checked="" id="name">
+                <label for="name">이름</label>
+              </span>
+              <span class="chkbox">
+                <input type="checkbox" checked="" id="chartNumber">
+                <label for="chartNumber">차트번호</label>
+              </span>
+              <span class="chkbox">
+                <input type="checkbox" checked="" id="whoIntroducedYou">
+                <label for="whoIntroducedYou">소개하신 분</label>
+              </span>
+              <span class="chkbox">
+                <input type="checkbox" checked="" id="phoneNumber">
+                <label for="phoneNumber">전화번호</label>
+              </span>
+              <span class="chkbox">
+                <input type="checkbox" checked="" id="dateOfBirth">
+                <label for="dateOfBirth">생년월일</label>
+              </span>
+            </div>
+            <span class="input ">
+              <input class="inp_search" type="text" value="김덴트">
+              <button type="button" class="btn_search"><span class="blind">검색</span></button>
+            </span>
+          </div>
+          <div class="data_filter">
+            <strong class="label">필터 구분</strong>
+            <div class="form_group">
+              <div class="form_title">
+                <span class="form_txt">나이</span>
+              </div>
+              <div class="form_cont">
+                <span class="input size_xsm">
+                  <input type="text" placeholder="0">
+                </span>
+                <span>~</span>
+                <span class="input size_xsm">
+                  <input type="text"  placeholder="120">
+                </span>
+                <span>세 미만</span>
+              </div>
+            </div>
+            <div class="form_group">
+              <div class="form_title">
+                <span class="form_txt">성별</span>
+              </div>
+              <div class="form_cont">
+                <div class="select">
+                  <button type="button" class="select_btn size_sm">=선택=</button>
+                  <div class="select_opt">
+                    <ul data-simplebar>
+                      <li><button type="button" class="option" value="남">남</button></li>
+                      <li><button type="button" class="option" value="여">여</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form_group">
+              <div class="form_title">
+                <span class="form_txt">보험구분</span>
+              </div>
+              <div class="form_cont">
+                <div class="select">
+                  <button type="button" class="select_btn">=선택=</button>
+                  <div class="select_opt">
+                    <ul data-simplebar>
+                      <li><button type="button" class="option" value="건강보험">건강보험</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="form_group">
+              <div class="form_title">
+                <span class="form_txt">담당의사</span>
+              </div>
+              <div class="form_cont">
+                <div class="select">
+                  <button type="button" class="select_btn">=선택=</button>
+                  <div class="select_opt">
+                    <ul data-simplebar>
+                      <li><button type="button" class="option" value="이닥터">이닥터</button></li>
+                      <li><button type="button" class="option" value="김닥터">김닥터</button></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="table">
+            <div class="tit_group">
+              <strong class="title" size="16" weight="bold">환자 검색 결과 [123<span>개</span>]</strong>
+              <div class="form_group">
+                <div class="form_title">
+                  <span class="form_txt">결과 내 재검색</span>
+                </div>
+                <div class="form_cont">
+                  <span class="input size_md">
+                    <input class="inp_search" type="text" placeholder="이름/차트번호로 검색">
+                    <button type="button" class="btn_search"><span class="blind">검색</span></button>
+                  </span>
+                </div>
+              </div>
+            </div>
+            <div class="table_area js_context">
+              <table data-simplebar>
+                <colgroup>
+                  <col style="width: 70px;">
+                  <col style="min-width: 57px;">
+                  <col style="min-width: 95px;">
+                  <col style="min-width: 39px;">
+                  <col style="min-width: 69px;">
+                  <col style="min-width: 62px;">
+                  <col style="min-width: 103px;">
+                  <col style="min-width: 112px;">
+                  <col style="min-width: 89px;">
+                  <col style="min-width: 128px;">
+                  <col style="width: auto">
+                  <col style="min-width: 103px;">
+                </colgroup>
+                <thead>
+                  <th align="center">차트번호</th>
+                  <th>이름</th>
+                  <th>생년월일</th>
+                  <th>성별</th>
+                  <th>보험구분</th>
+                  <th>담당의사</th>
+                  <th>전화번호</th>
+                  <th>휴대전화</th>
+                  <th>고객성향</th>
+                  <th>고객구분</th>
+                  <th>고객구분(2)</th>
+                  <th>최종내원일</th>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>2</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td class="customer_orientation">
+                      <span class="chip" style="background: #FAACAC"></span>
+                      <span>겁이많음</span>
+                    </td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>5</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td class="customer_orientation">
+                      <span class="chip" style="background: #83CE77"></span>
+                      <span>겁이많음</span>
+                    </td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>8</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>17</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>19</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>22</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>23</td>
+                    <td>김덴트</td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>34</td>
+                    <td>김덴트 </td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>35</td>
+                    <td>김덴트 </td>
+                    <td>2021-11-15</td>
+                    <td>여</td>
+                    <td>건강보험</td>
+                    <td>이닥터</td>
+                    <td>02-000-0000</td>
+                    <td>010-000-0000</td>
+                    <td>-</td>
+                    <td>상담만 원함</td>
+                    <td>-</td>
+                    <td>2021-11-08</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="table_bottom">
+            <div class="table">
+              <div class="tit_group">
+                <strong class="title" size="16" weight="bold">예약내역</strong>
+              </div>
+              <div class="table_area js_context">
+                <table data-simplebar>
+                  <colgroup>
+                    <col style="min-width: 111px;">
+                    <col style="min-width: 338px;">
+                  </colgroup>
+                  <thead>
+                    <th align="center">예약일</th>
+                    <th  align="center">예약 내용</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td align="left">2019-12-09</td>
+                      <td>근관확대</td>
+                    </tr>
+                    <tr>
+                      <td>2019-12-09</td>
+                      <td>근관확대</td>
+                    </tr>
+                    <tr>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+            <div class="table size_sm">
+              <div class="tit_group">
+                <strong class="title" size="16" weight="bold">진료 내역</strong>
+              </div>
+              <div class="table_area js_context">
+                <table data-simplebar>
+                  <colgroup>
+                    <col style="min-width: 111px;">
+                    <col style="min-width: 78px;">
+                    <col style="min-width: 343px;">
+                  </colgroup>
+                  <thead>
+                    <th align="center">날짜</th>
+                    <th  align="center">치아번호</th>
+                    <th  align="center">진료 내역</th>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <td>2021-11-09</td>
+                      <td>#75</td>
+                      <td>GI 충전 1면</td>
+                    </tr>
+                    <tr>
+                      <td>2019-12-06</td>
+                      <td>#75</td>
+                      <td>당일 발수 근충</td>
+                    </tr>
+                    <tr>
+                      <td>2019-07-19</td>
+                      <td>#71</td>
+                      <td>치근단</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="popup_bottom">
+        <button class="btn">취소</button>
+        <button class="btn primary">환자 선택</button>
+      </div>
+    </div>
+  </div>
+</div>

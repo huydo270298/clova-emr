@@ -1,0 +1,65 @@
+.title[weight="bold"] {
+    font-weight: bold !important;
+}
+
+.title[weight="800"] {
+    font-weight: 800 !important;
+}
+
+.title[size="32"] {
+    font-weight: normal;
+    font-size: 32px;
+    line-height: 48px;
+}
+
+.title[size="28"] {
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 42px;
+}
+
+.title[size="24"] {
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 36px;
+}
+
+.title[size="20"] {
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 30px;
+}
+
+.title[size="18"] {
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 27px;
+}
+
+.title[size="16"] {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.title[size="14"] {
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 21px;
+}
+
+.title[size="13"] {
+    font-weight: normal;
+    font-size: 13px;
+    line-height: 18px;
+}
+
+.title[size="12"] {
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+[theme] .primary_txt {
+  color: var(--p500);
+}

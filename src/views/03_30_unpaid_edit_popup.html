@@ -1,0 +1,401 @@
+@@include('./include/head.html',{"title": "비급여 수가 조회변경 : NAVER CLOVA EMR", "list_title": "[팝업] 비급여 수가 조회변경 : Common"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] LAYER -->
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup" id="unpaid_edit_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">비급여 수가 조회 / 변경</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont" data-simplebar>
+            <div class="flexbox">
+              <div class="flex_item_group" position="left">
+                <div class="search_field">
+                  <label>수가명 / 코드 검색</label>
+                  <span class="input search_input">
+                    <input type="text" value="임플">
+                  </span>
+                </div>
+                <div class="flexbox" v-align="center">
+                  <div class="flex_item_group" position="left">
+                    <strong class="title" size="16" weight="bold">비급여 수가 조회 [10개]</strong>
+                  </div>
+                  <div class="flex_item_group" position="right">
+                    <div class="select category_select">
+                      <button type="button" class="select_btn">비급여 수가 카테고리 선택</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="전체">전체</button></li>
+                          <li><button type="button" class="option" value="임플란트">임플란트</button></li>
+                          <li><button type="button" class="option" value="보철">보철</button></li>
+                          <li><button type="button" class="option" value="틀니">틀니</button></li>
+                          <li><button type="button" class="option" value="보존">보존</button></li>
+                          <li><button type="button" class="option" value="소아, 예방">소아, 예방</button></li>
+                          <li><button type="button" class="option" value="교정">교정</button></li>
+                          <li><button type="button" class="option" value="기타">기타</button></li>
+                          <li><button type="button" class="option" value="미용목적 진료">미용목적 진료</button></li>
+                          <li><button type="button" class="option" value="심평원 등재 비급여">심평원 등재 비급여</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="unpaid_number_search">
+                  <div class="table" data-row-select>
+                    <table data-simplebar>
+                      <colgroup>
+                        <col style="width: 93px;">
+                        <col>
+                        <col style="width: 69px;">
+                        <col style="width: 118px;">
+                        <col style="width: 80px;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>코드</th>
+                          <th>수가명</th>
+                          <th>상세구분</th>
+                          <th>적용단위</th>
+                          <th align="right">금액</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>BL8001YH</td>
+                          <td>짐머 TSV 치과임플란트 고정체 (RRRRRRRR)</td>
+                          <td>기타</td>
+                          <td>치아당</td>
+                          <td align="right">45,001</td>
+                        </tr>
+                        <tr>
+                          <td>BL8001YH</td>
+                          <td>짐머 TSV 치과임플란트 고정체 (RRRRRRRR)</td>
+                          <td>기타</td>
+                          <td>치아당</td>
+                          <td align="right">45,001</td>
+                        </tr>
+                        <tr>
+                          <td>BL8001YH</td>
+                          <td>짐머 TSV 치과임플란트 고정체 (RRRRRRRR)</td>
+                          <td>기타</td>
+                          <td>치아당</td>
+                          <td align="right">100,000</td>
+                        </tr>
+                        <tr>
+                          <td>BL8001YH</td>
+                          <td>짐머 AV CEMENTED 치과임플란치과임플란</td>
+                          <td>기타</td>
+                          <td>치아당</td>
+                          <td align="right">45,001</td>
+                        </tr>
+                        <tr>
+                          <td>BL8001YH</td>
+                          <td>짐머 TSV 치과임플란트 고정체 (RRRRRRRR)</td>
+                          <td>기타</td>
+                          <td>치아당</td>
+                          <td align="right">100,000</td>
+                        </tr>
+                        <tr>
+                          <td>BL8001YH</td>
+                          <td>짐머 TSV SV CEMENTED 치과임치과임치과임</td>
+                          <td>기타</td>
+                          <td>치아당</td>
+                          <td align="right">45,001</td>
+                        </tr>
+                        <tr>
+                          <td>N1A010</td>
+                          <td>임플란트 상담</td>
+                          <td>임플란트</td>
+                          <td>1구강당(1일1회)</td>
+                          <td align="right">100,000</td>
+                        </tr>
+                        <tr>
+                          <td>N1A020</td>
+                          <td>임플란트 진단 및 치료계획</td>
+                          <td>임플란트</td>
+                          <td>1구강당(1일1회)</td>
+                          <td align="right">0</td>
+                        </tr>
+                        <tr>
+                          <td>N1A050</td>
+                          <td>임플란트 1차 수술(str)</td>
+                          <td>임플란트</td>
+                          <td>치아당</td>
+                          <td align="right">0</td>
+                        </tr>
+                        <tr>
+                          <td>N1A052</td>
+                          <td>임플란트 1차 수술(str)</td>
+                          <td>임플란트</td>
+                          <td>치아당</td>
+                          <td align="right">0</td>
+                        </tr>
+                        <tr class="fill">
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                          <td></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <div class="flex_item_group" position="right">
+                <strong class="title" size="16" weight="bold">비급여 수가 정보 추가 및 수정</strong>
+                <div class="content_box">
+                  <div class="info_input_field">
+                    <label>수가 코드</label>
+                    <div class="input">
+                      <input type="text" value="N1A010" placeholder="입력">
+                    </div>
+                  </div>
+                  <ul class="description_lst">
+                    <li>수가코드는 알파벳과 숫자만 가능하며 5~9자 길이로 입력합니다.</li>
+                    <li>INLAY,RESIN으로 시작하는 코드의 경우 충전면 입력이 가능합니다.</li>
+                    <li>IMPLOP로 시자가는 코드의 경우 임플란트 수술기록창이 나타납니다.</li>
+                    <li>CBCT로 시작하는 코드의 경우 CT 판독문 입력창이 나타납니다. </li>
+                    <li>CROWN으로 시작하는 코드는 치식창에 Cr/Br로 표시됩니다. </li>
+                    <li>EXTRACT로 시작하는 코드는 발치(비급여 발치로)로 인식됩니다.</li>
+                    <li>DOCUFEE 또는 NOTXFEE로 시작하는 코드는 세액공제 제외수가로 인식됩니다.</li>
+                  </ul>
+                  <div class="info_input_field">
+                    <label>수가 이름</label>
+                    <div class="input">
+                      <input type="text" value="임플란트 상담" placeholder="입력">
+                    </div>
+                  </div>
+                  <div class="info_input_field">
+                    <label>상세 구분</label>
+                    <div class="select">
+                      <button type="button" class="select_btn" value="임플란트">임플란트</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="임플란트">임플란트</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info_input_field">
+                    <label>적용 단위</label>
+                    <div class="select">
+                      <button type="button" class="select_btn" value="1구강당(1일1회)">1구강당(1일1회)</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="전체">전체</button></li>
+                          <li><button type="button" class="option" value="1구강당(1일1회)">1구강당(1일1회)</button></li>
+                          <li><button type="button" class="option" value="근관당">근관당</button></li>
+                          <li><button type="button" class="option" value="1/3악당">1/3악당</button></li>
+                          <li><button type="button" class="option" value="악당(상,하악)">악당(상,하악)</button></li>
+                          <li><button type="button" class="option" value="치아당">치아당</button></li>
+                          <li><button type="button" class="option" value="표준촬영(14매)">표준촬영(14매)</button></li>
+                          <li><button type="button" class="option" value="교익촬영">교익촬영</button></li>
+                          <li><button type="button" class="option" value="1/2악당">1/2악당</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="info_input_field">
+                    <label>금액</label>
+                    <div class="input">
+                      <input type="text" value="100,000" placeholder="입력">
+                    </div>
+                  </div>
+                  <div class="flexbox" v-align="center" align="right">
+                    <button class="btn"><i class="icon_add"></i>수가 추가</button>
+                    <button class="btn">수가 수정</button>
+                    <button class="btn">수가 삭제</button>
+                  </div>
+                </div>
+                <p class="note_txt">Dv2웹에 기본으로 입력되어 있는 비급여 수가는 변경하지 마시기 바랍니다.<br>비급여 수가가 필요하면 내용 입력 후 “+수가추가" 버튼을 눌러 목록을 추가하세요.</p>
+              </div>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">엑셀저장</button>
+            <button class="btn">닫기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="fix_price_confirm" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">수정 확인</strong>
+            <p>코드 [N1020]인 비급여수가를 아래와 같이 변경합니다.</p>
+            <ul class="additional_info_lst">
+              <li>금액 : 0 → 1,200 으로 변경</li>
+            </ul>
+            <p>수정을 진행하시겠습니까?</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">예(Y)</button>
+            <button class="btn primary">아니오(N)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="number_confirm" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">수가명 확인</strong>
+            <p>동일한 수가명으로 등록된 경우, 보험 산정기준, 판단, 치식창 표시 등에서 오류가 발생할 수 있습니다.</p>
+            <p>그래도 현재 수가명으로 저장하시겠습니까?</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">예(Y)</button>
+            <button class="btn primary">아니오(N)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="input_error" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold"><span class="icon_error"></span>입력 오류</strong>
+            <p>같은 코드의 수가가 이미 존재합니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="check_complete_alert" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">완료</strong>
+            <p>$수가코드$[$수가이름$]을(를) 추가 하였습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="delete_confirm" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">수가 삭제 확인</strong>
+            <p>코드 [$수가코드$/$수가이름$]을 삭제하시겠습니까?</p>
+            <p>삭제한 데이터는 복구 할 수 없습니다.<br>삭제를 진행하시겠습니까?</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">예(Y)</button>
+            <button class="btn primary">아니오(N)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="delete_complete" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">완료</strong>
+            <p>코드 [$수가코드$] 가 삭제되었습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="delete_fail" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold"><span class="icon_error"></span>오류</strong>
+            <p>기본 적용 수가 항목으로 삭제 할 수 없습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="openPopup('#unpaid_edit_popup')">[팝업] 비급여 수가 조회 / 변경</a>
+    <a href="#none" onclick="openPopup('#fix_price_confirm')">[알림] 수정 확인</a>
+    <a href="#none" onclick="openPopup('#number_confirm')">[알림] 수가명 확인</a>
+    <a href="#none" onclick="openPopup('#input_error')">[알림] 입력 오류</a>
+    <a href="#none" onclick="openPopup('#check_complete_alert')">[알림] 추가 완료</a>
+    <a href="#none" onclick="openPopup('#delete_confirm')">[알림] 수가 삭제 확인</a>
+    <a href="#none" onclick="openPopup('#delete_complete')">[알림] 삭제 완료</a>
+    <a href="#none" onclick="openPopup('#delete_fail')">[알림] 삭제 불가</a>
+
+  </div>
+  <script>
+    function openPopup(id) {
+      $('.layer.show .popup')[0].dispatchEvent(new CustomEvent('popup.close'));
+      $(id)[0].dispatchEvent(new CustomEvent('popup.open'));
+    }
+  </script>
+</body>
+
+</html>

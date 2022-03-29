@@ -1,0 +1,113 @@
+@@include('./include/head.html',{"title": "임플란트 픽스처 선택 : NAVER CLOVA EMR", "list_title": "[팝업] 임플란트 픽스처 선택 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+  <div class="layer show dimmed">
+    <div class="popup_wrap">
+      <div class="popup" id="imp_fixture_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <h2 class="title" size="16" weight="bold">임플란트 픽스처 선택</h2>
+            <div class="tit_group">
+              <strong class="title">제조사 선택</strong>
+            </div>
+            <div class="form_box">
+              <div class="select">
+                <button type="button" class="select_btn">=선택=</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="제조사1">제조사1</button></li>
+                    <li><button type="button" class="option" value="제조사2">제조사2</button></li>
+                    <li><button type="button" class="option" value="제조사3">제조사3</button></li>
+                    <li><button type="button" class="option" value="제조사4">제조사4</button></li>
+                    <li><button type="button" class="option" value="제조사5">제조사5</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title">브랜드 선택</strong>
+            </div>
+            <div class="form_box">
+              <div class="select">
+                <button type="button" class="select_btn">=선택=</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="브랜드1">브랜드1</button></li>
+                    <li><button type="button" class="option" value="브랜드2">브랜드2</button></li>
+                    <li><button type="button" class="option" value="브랜드3">브랜드3</button></li>
+                    <li><button type="button" class="option" value="브랜드4">브랜드4</button></li>
+                    <li><button type="button" class="option" value="브랜드5">브랜드5</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title">Fixture</strong>
+            </div>
+            <div class="fixture_list">
+              <ul class="list" data-simplebar>
+                <li class="item">Standard,SLActive ⏀3.3 x 16</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 8</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 10</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 12</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 14</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 16</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 8</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 10</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 12</li>
+                <li class="item">Standard,SLActive ⏀4.1 x 14</li>
+              </ul>
+            </div>
+            <div class="tit_group">
+              <strong class="title">직접 입력</strong>
+            </div>
+            <div class="form_box">
+              <span class="input inp_fixture">
+                <input type="text" placeholder="입력">
+              </span>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button type="button" class="btn">취소</button>
+            <button type="button" class="btn primary">적용</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

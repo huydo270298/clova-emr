@@ -1,0 +1,944 @@
+<div id="secPatientList">
+  <div class="tit_group">
+    <h2 class="title" weight="800" size="16">접수 목록</h2>
+  </div>
+  <div class="panel_cont">
+    <div class="table">
+      <div class="data_filter">
+        <div class="calendar">
+          <span class="input calendar_input">
+            <input type="text" value="2021-09-10(금)">
+          </span>
+        </div>
+        <div class="dropdown custom_dropdown">
+          <button type="button" class="btn rounded dropdown_btn">의사선택</button>
+          <div class="dropdown_option">
+            <strong class="title" size="12" weight="bold">의사 선택</strong>
+            <ul class="checkbox_lst">
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" data-checkall="dr" checked id="checkAll">
+                  <label for="checkAll">전체선택</label>
+                </span>
+              </li>
+            </ul>
+            <hr>
+            <ul class="checkbox_lst">
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" name="dr" checked id="dr1">
+                  <label for="dr1">Dr. 신수정</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" name="dr" checked id="dr2">
+                  <label for="dr2">Dr. 허영재</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" name="dr" checked id="dr3">
+                  <label for="dr3">Dr. 김덴트</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" name="dr" checked id="dr4">
+                  <label for="dr4">Dr. 이덴트</label>
+                </span>
+              </li>
+            </ul>
+            <div class="dropdown_btn_box">
+              <button type="button" class="btn">확인</button>
+            </div>
+          </div>
+        </div>
+        <div class="dropdown custom_dropdown">
+          <button type="button" class="btn rounded dropdown_btn">표시항목</button>
+          <div class="dropdown_option">
+            <strong class="title" size="12" weight="bold">표시항목 선택</strong>
+            <ul class="checkbox_lst">
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem1">
+                  <label for="displayItem1">순번</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem2">
+                  <label for="displayItem2">접수 상태</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem3">
+                  <label for="displayItem3">차트번호</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem4">
+                  <label for="displayItem4">이름</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem5">
+                  <label for="displayItem5">연령/성별</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem6">
+                  <label for="displayItem6">고객구분</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem7">
+                  <label for="displayItem7">고객구분2</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem8">
+                  <label for="displayItem8">내원경로</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem9">
+                  <label for="displayItem9">보험구분</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem10">
+                  <label for="displayItem10">신환여부</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem11">
+                  <label for="displayItem11">접수시각</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem12">
+                  <label for="displayItem12">진료시작시각</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem13">
+                  <label for="displayItem13">진료완료시각</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem14">
+                  <label for="displayItem14">대기시간</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem15">
+                  <label for="displayItem15">예약시각</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem16">
+                  <label for="displayItem16">담당의사</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem17">
+                  <label for="displayItem17">담당직원</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" id="displayItem18">
+                  <label for="displayItem18">체어</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem19">
+                  <label for="displayItem19">전화번호</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem20">
+                  <label for="displayItem20">진료/예약내역</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem21">
+                  <label for="displayItem21">다음 예약일</label>
+                </span>
+              </li>
+              <li>
+                <span class="chkbox">
+                  <input type="checkbox" checked id="displayItem22">
+                  <label for="displayItem22">다음 리콜일</label>
+                </span>
+              </li>
+            </ul>
+            <div class="dropdown_btn_box has_shadow">
+              <button type="button" class="btn">확인</button>
+            </div>
+          </div>
+        </div>
+        <button type="button" class="btn rounded">오늘</button>
+        <span class="chkbox">
+          <input type="checkbox" checked id="receipt">
+          <label for="receipt">전체선택</label>
+        </span>
+        <span class="chkbox">
+          <input type="checkbox" checked id="ready">
+          <label for="ready">전체선택</label>
+        </span>
+        <span class="chkbox">
+          <input type="checkbox" checked id="underTreat">
+          <label for="underTreat">진료중</label>
+        </span>
+        <span class="chkbox">
+          <input type="checkbox" checked id="completeTreat">
+          <label for="completeTreat">진료완료</label>
+        </span>
+        <span class="chkbox">
+          <input type="checkbox" checked id="storage">
+          <label for="storage">수납완료</label>
+        </span>
+        <span class="chkbox">
+          <input type="checkbox" checked id="receptionNotice">
+          <label for="receptionNotice">접수알림</label>
+        </span>
+        <div class="align_right">
+          <div class="select sort_type">
+            <button type="button" value="상태정렬" class="select_btn">상태정렬</button>
+            <div class="select_opt">
+              <ul data-simplebar>
+                <li><button type="button" class="option" value="상태정렬">상태정렬</button></li>
+                <li><button type="button" class="option" value="시각정렬">시각정렬</button></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="table_area js_context">
+        <table data-simplebar>
+          <colgroup>
+            <col style="min-width: 56px;">
+            <col style="min-width: 76px;">
+            <col style="min-width: 61px;">
+            <col style="min-width: 56px;">
+            <col style="min-width: 66px;">
+            <col style="min-width: 43px;">
+            <col style="min-width: 61px;">
+            <col style="min-width: 39px;">
+            <col style="min-width: 61px;">
+            <col style="min-width: 61px;">
+            <col style="min-width: 120px;">
+            <col style="width: auto">
+            <col style="min-width: 77px;">
+            <col style="min-width: 89px;">
+          </colgroup>
+          <thead>
+            <th align="center">순번</th>
+            <th>상태</th>
+            <th align="center">차트번호</th>
+            <th>이름</th>
+            <th>연령/성별</th>
+            <th>신구</th>
+            <th align="center">접수시각</th>
+            <th align="center">대기</th>
+            <th align="center">예약시간</th>
+            <th align="center">담당의사</th>
+            <th>전화번호</th>
+            <th>진료/예약내역</th>
+            <th>다음예약</th>
+            <th>리콜</th>
+          </thead>
+          <tbody>
+            <tr data-tooltips>
+              <td align="center">1</td>
+              <td>
+                <span class="patient_stt received">접수</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [접수] - 담당의사 : 한닥터</strong>
+                  <p>접수시각 17시 09분</p>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">2</td>
+              <td>
+                <span class="patient_stt received">접수</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [접수] - 담당의사 : 한닥터</strong>
+                  <p>접수시각 17시 09분</p>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">3</td>
+              <td>
+                <span class="patient_stt ready">준비완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [준비완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>305</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">4</td>
+              <td>
+                <span class="patient_stt under_treat">진료중</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료중]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">5</td>
+              <td>
+                <span class="patient_stt under_treat">진료중</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료중]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">6</td>
+              <td>
+                <span class="patient_stt done_treat">진료완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">7</td>
+              <td>
+                <span class="patient_stt done_treat">진료완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">8</td>
+              <td>
+                <span class="patient_stt done_treat">진료완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">9</td>
+              <td>
+                <span class="patient_stt stored">수납완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [수납완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근예약]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 [미이행]: A/O, P/E</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">10</td>
+              <td>
+                <span class="patient_stt stored">수납완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [수납완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근예약]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 [미이행]: A/O, P/E</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">11</td>
+              <td>
+                <span class="patient_stt received">접수</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [접수] - 담당의사 : 한닥터</strong>
+                  <p>접수시각 17시 09분</p>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">12</td>
+              <td>
+                <span class="patient_stt received">접수</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [접수] - 담당의사 : 한닥터</strong>
+                  <p>접수시각 17시 09분</p>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">13</td>
+              <td>
+                <span class="patient_stt ready">준비완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [준비완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>305</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">14</td>
+              <td>
+                <span class="patient_stt under_treat">진료중</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료중]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">15</td>
+              <td>
+                <span class="patient_stt under_treat">진료중</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료중]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">16</td>
+              <td>
+                <span class="patient_stt done_treat">진료완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">17</td>
+              <td>
+                <span class="patient_stt done_treat">진료완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">18</td>
+              <td>
+                <span class="patient_stt done_treat">진료완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [진료완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+            <tr data-tooltips>
+              <td align="center">19</td>
+              <td>
+                <span class="patient_stt stored">수납완료</span>
+                <div class="tooltips">
+                  <strong>김원석(305)님 [수납완료]</strong>
+                  <strong>담당의사 : 한닥터 / 담당직원 : 직원2 / 체어3번</strong>
+                  <p>접수시각 17시 09분</p>
+                  <dl>
+                    <dt>[최근예약]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 [미이행]: A/O, P/E</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>[최근진료]</dt>
+                    <dd>
+                      <ul>
+                        <li>2021-10-25 : 치석제거(연1회)</li>
+                        <li>2021-10-23 : 발수, 근관확대, 단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                        <li>2021-02-23 : 치주낭 측정검사</li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </td>
+              <td>15</td>
+              <td align="center" data-contextmenu>김원석</td>
+              <td>64/남</td>
+              <td align="center">구환</td>
+              <td>14:16</td>
+              <td align="center">3분</td>
+              <td>14:00</td>
+              <td>김덴트</td>
+              <td>010-0000-0000</td>
+              <td>앞쪽 치아 시리고 아픔</td>
+              <td align="center">11월26일</td>
+              <td>치주환자</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="dropdown context_menu">
+          <div class="dropdown_option">
+            <ul>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#none">[김원석] 님 선택</a>
+                  </li>
+                  <li>
+                    <a href="#none">접수대기화면 알림 보내기</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#none">[접수]로 변경</a>
+                  </li>
+                  <li>
+                    <a href="#none">[준비완료]로 변경</a>
+                  </li>
+                  <li>
+                    <a href="#none">[진료중]로 변경</a>
+                  </li>
+                  <li>
+                    <a href="#none">[진료완료]로 변경</a>
+                  </li>
+                  <li>
+                    <a href="#none">[수납완료]로 변경</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none">접수 취소 (삭제)</a>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#none">[김원석] 님 인적사항 보기</a>
+                  </li>
+                  <li>
+                    <a href="#none">[김원석] 님 전자차트 보기</a>
+                  </li>
+                  <li>
+                    <a href="#none">[김원석] 님 사진 보기</a>
+                  </li>
+                  <li>
+                    <a href="#none">[김원석] 님 외부 X-Ray 실행</a>
+                  </li>
+                  <li>
+                    <a href="#none">[김원석] 님 예약 검색</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <a href="#none">의사필터 선택</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

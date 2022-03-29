@@ -1,0 +1,155 @@
+@@include('./include/head.html',{"title": "Layout : NAVER CLOVA EMR", "list_title": "Layout : Common"})
+
+<body data-pagestatus="update : 2022.01.18">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap">
+    <!--[D] HEADER -->
+    @@include('./include/header.html',{"type": "01"})
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    <!--[D] FOOTER -->
+    @@include('./include/footer.html',{"type": "01"})
+    <!--// [D] FOOTER -->
+  </div>
+
+  <!-- [D] LAYER -->
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup" id="select_chair">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="24" weight="bold"><span class="primary_txt">Dv2 진료실 모드</span>로 로그인하셨습니다.<br>체어를 선택해주세요.</strong>
+            <form action="">
+              <label>체어 선택</label>
+              <div class="select">
+                <button type="button" value="예전실" class="select_btn">예전실</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="예진실">예진실</button></li>
+                    <li><button type="button" class="option" value="1번체어">1번체어</button></li>
+                    <li><button type="button" class="option" value="2번체어">2번체어</button></li>
+                    <li><button type="button" class="option" value="3번체어">3번체어</button></li>
+                    <li><button type="button" class="option" value="4번체어">4번체어</button></li>
+                  </ul>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">로그인 화면 이동</button>
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="caseLoginToggle()">로그인/로그아웃 토글</a>
+    <a href="#none" onclick="caseNoPatient()">[환자 아이콘] 선택된 환자 없음</a>
+    <a href="#none" onclick="caseBabyPatient()">[환자 아이콘] 만 19세 미만</a>
+    <a href="#none" onclick="caseMalePatient()">[환자 아이콘] 만 19세~64세 미만 (남)</a>
+    <a href="#none" onclick="caseFemalePatient()">[환자 아이콘] 만 19세~64세 미만 (여)</a>
+    <a href="#none" onclick="caseOldMalePatient()">[환자 아이콘] 만 64세 이상 (남)</a>
+    <a href="#none" onclick="caseOldFemalePatient()">[환자 아이콘] 만 64세 이상 (여)</a>
+    <a href="#none" onclick="caseClinicMode()">진료실 모드 진입 - 개인정보 마스킹</a>
+    <a href="#none" onclick="showPopup2()">진료실 모드 - 체어 선택</a>
+  </div>
+  <script>
+    function caseLoginToggle() {
+      $('.header_utility .menu_box').toggle();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(0).show();
+      $('.title_box').find('.header_title').eq(0).show();
+      $('.title_box').find('.header_title').eq(1).hide();
+    }
+    function caseNoPatient() {
+      $('.header_utility .menu_box').show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(0).show();
+      $('.title_box').find('.header_title').eq(0).show();
+      $('.title_box').find('.header_title').eq(1).hide();
+    }
+    function caseBabyPatient() {
+      $('.header_utility .menu_box').show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(1).show();
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+    }
+    function caseMalePatient() {
+      $('.header_utility .menu_box').show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(2).show();
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+    }
+    function caseFemalePatient() {
+      $('.header_utility .menu_box').show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(3).show();
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+    }
+    function caseOldMalePatient() {
+      $('.header_utility .menu_box').show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(4).show();
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+    }
+    function caseOldFemalePatient() {
+      $('.header_utility .menu_box').show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(5).show();
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+    }
+    function caseClinicMode() {
+      $('.menu_lst >li:nth-child(1)').toggle();
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+      $('.title_box').find('.header_title').eq(1).find('li').eq(1).toggle();
+      $('.title_box').find('.header_title').eq(1).find('li').eq(2).toggle();
+
+    }
+
+    function showPopup2() {
+      $('.layer, #select_chair').toggle();
+    }
+  </script>
+</body>
+
+</html>

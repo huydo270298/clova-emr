@@ -1,0 +1,230 @@
+@@include('./include/head.html',{"title": "행위 추가정보 입력 : NAVER CLOVA EMR", "list_title": "[팝업] 행위 추가정보 입력 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      <div class="layer show dimmed">
+
+        <div class="popup_wrap">
+          <div class="popup" id="add_act_popup" style="display: block;">
+            <div class="popup_innerwrap">
+              <div class="popup_head">
+                <strong class="tit">행위 추가정보 입력</strong>
+                <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+              </div>
+              <div class="popup_cont">
+                <div class="popup_inner" data-simplebar>
+                  <div class="tit_group">
+                    <strong class="title" size="16" weight="bold">발치술-완전매복치 시 시행한 항목에 체크하세요.</strong>
+                  </div>
+                  <!-- 행위추가 정보 설정에서 옵션#1 까지 지정된 행위인 경우 -->
+                  <div class="box_act">
+                    <div class="column">
+                      <div class="content">
+                        <div class="content_inner" data-simplebar>
+                          <ul class="list">
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="toothDivision">
+                                <label for="toothDivision">치아분할</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="boneDeletion">
+                                <label for="boneDeletion">골삭제</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="blade15">
+                                <label for="blade15">#15 Blade</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="blade12">
+                                <label for="blade12">#12 Blade</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="gauzebite">
+                                <label for="gauzebite">Gauze Bite</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="suture">
+                                <label for="suture">Suture</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form_group">
+                        <div class="form_title">
+                          <span class="form_txt">직접 입력</span>
+                        </div>
+                        <div class="form_cont">
+                          <span class="input">
+                            <input type="text">
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- 행위추가 정보 설정에서 옵션#2 까지 지정된 행위인 경우 -->
+                  <div class="box_act" style="display: none;">
+                    <div class="column">
+                      <div class="content">
+                        <div class="content_inner" data-simplebar>
+                          <ul class="list">
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="occlusal">
+                                <label for="occlusal">교합면</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="distalFace">
+                                <label for="distalFace">원심면</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="worryFace">
+                                <label for="worryFace">근심면e</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="buccal">
+                                <label for="buccal">협면</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="snowSurface">
+                                <label for="snowSurface">설면</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form_group">
+                        <div class="form_title">
+                          <span class="form_txt">직접 입력</span>
+                        </div>
+                        <div class="form_cont">
+                          <span class="input">
+                            <input type="text">
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="column">
+                      <div class="content">
+                        <div class="content_inner" data-simplebar>
+                          <ul class="list">
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="singleBond">
+                                <label for="singleBond">Single bond</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="gaenialFloA2">
+                                <label for="gaenialFloA2">G-aenial Flo A2</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="gaenialFloA3">
+                                <label for="gaenialFloA3">G-aenial Flo A3</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="z350a2">
+                                <label for="z350a2">Z350 A2</label>
+                              </span>
+                            </li>
+                            <li class="item">
+                              <span class="chkbox">
+                                <input type="checkbox" id="z350a3">
+                                <label for="z350a3">Z350 A3</label>
+                              </span>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="form_group">
+                        <div class="form_title">
+                          <span class="form_txt">직접 입력</span>
+                        </div>
+                        <div class="form_cont">
+                          <span class="input">
+                            <input type="text">
+                          </span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup_bottom">
+                <button class="btn btn_add">행위 추가정보 설정</button>
+                <button class="btn">취소</button>
+                <button class="btn primary">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+      <a href="#none" onclick="$('.box_act').eq(0).show().siblings('.box_act').hide()">[화면] 옵션1 선택일 경우</a>
+      <a href="#none" onclick="$('.box_act').eq(1).show().siblings('.box_act').hide()">[화면] 옵션2 선택일 경우</a>
+    </div>
+  </div>
+</body>
+
+</html>

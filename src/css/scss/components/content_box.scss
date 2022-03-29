@@ -1,0 +1,15 @@
+.content_box {
+  margin-top: 8px;
+  border: 1px solid;
+  border-color: var(--g300);
+  border-radius: 6px;
+  box-sizing: border-box;
+
+  [theme="dark"] & {
+    border-color: var(--g600);
+  }
+
+  &[data-simplebar] {
+    max-height: 136px;
+  }
+}

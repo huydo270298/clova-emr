@@ -1,0 +1,39 @@
+$icons : "desk",
+"e_chart",
+"bill",
+"capture",
+"consultation",
+"customer_manage",
+"digit_sign",
+"oral_exam",
+"photos",
+"reservation",
+"stats",
+"xray";
+
+.nav_icon {
+    display: block;
+    height: 32px;
+    width: 32px;
+    background-repeat: no-repeat;
+    background-size: auto;
+    background-position: center;
+
+    @each $icon in $icons {
+        &[data-icon="#{$icon}"] {
+            background-image: url('../img/components/nav/icon_#{$icon}.svg');
+
+            .is_active & {
+                background-image: url('../img/components/nav/icon_#{$icon}_active.svg');
+            }
+
+            [theme="dark"] & {
+                background-image: url('../img/components/nav/icon_#{$icon}_dark.svg');
+            }
+
+            [theme="dark"] .is_active & {
+                background-image: url('../img/components/nav/icon_#{$icon}_dark_active.svg');
+            }
+        }
+    }
+}

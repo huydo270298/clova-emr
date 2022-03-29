@@ -1,0 +1,397 @@
+<div id="secPatient">
+  <div class="top_panel">
+    <h2 class="panel_title title" size="16" weight="800">환자 정보</h2>
+    <div class="rating_area">
+      <span class="rating_icon">VVIP</span>
+      <span class="rating_txt">김한국 님은 <span>VVIP</span> 회원 입니다.</span>
+    </div>
+    <div class="patient_btn">
+      <button type="button" class="btn rounded"><i class="icon icon_print"></i>문서출력</button>
+      <button type="button" class="btn rounded"><i class="icon icon_consent"></i>문진표동의서</button>
+      <button type="button" class="btn rounded"><i class="icon icon_delete"></i>삭제</button>
+    </div>
+  </div>
+  <div class="panel_cont">
+    <div class="column_left">
+      <div class="patient_profile">
+        <div class="avatar">
+          <!-- <img src="../img/desk_patient/avatar_400x400.png" alt=""> -->
+          <!--[D] 이미지 태그 삭제 시 기본 이미지 노출-->
+        </div>
+        <ul class="control_avatar">
+          <li><button type="button" class="btn">촬영</button></li>
+          <li><button type="button" class="btn">열기</button></li>
+          <li><button type="button" class="btn">삭제</button></li>
+        </ul>
+      </div>
+      <div class="patient_insurance">
+        <h3 class="panel_title title" size="14" weight="700">보험 정보</h3>
+        <ul class="form_wrap">
+          <li class="form_group">
+            <div class="form_title">
+              <span class="form_txt">구분</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" value="건강보험">
+              </span>
+            </div>
+          </li>
+          <li class="form_group">
+            <div class="form_title">
+              <span class="form_txt">가입자</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" value="송지현">
+              </span>
+            </div>
+          </li>
+          <li class="form_group">
+            <div class="form_title">
+              <span class="form_txt">증번호</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" value="80681151664">
+              </span>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="column_right">
+      <ul class="patient_info">
+        <li>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">이름</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" value="김한국">
+              </span>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">요미가나</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" placeholder="요미가나 이름 입력">
+                </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">차트번호</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" value="305">
+                  </span>
+                </li>
+                <li class="form_item item_btn">
+                  <button type="button" class="btn">변경</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">생년월일</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" value="1956-03-03">
+                  </span>
+                </li>
+                <li class="form_item item_btn">
+                  <span class="input read_only">
+                    <input disabled type="text" value="37/남" placeholder="나이/성별">
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">연락처1</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" value="02-0000-0000">
+              </span>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">연락처2</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" value="010-0000-0000">
+                  </span>
+                </li>
+                <li class="form_item item_btn">
+                  <button type="button" class="btn">SMS+</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group full_width">
+            <div class="form_title">
+              <span class="form_txt">주민번호</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" value="12345-12345">
+                  </span>
+                </li>
+                <li class="form_item item_btn">
+                  <button type="button" class="btn">공단조회</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group full_width more_line">
+            <div class="form_title">
+              <span class="form_txt">주소</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item item_search">
+                  <span class="input">
+                    <input class="search" type="text" placeholder="우편번호 검색">
+                  </span>
+                </li>
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" value="서울특별시">
+                  </span>
+                </li>
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" placeholder="상세 주소">
+                  </span>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group" data-column="1">
+            <div class="form_title">
+              <span class="form_txt">리콜구분</span>
+            </div>
+            <div class="form_cont">
+              <div class="select">
+                <button type="button" class="select_btn">=자동리콜 안함=</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="리콜 구분값 A">리콜 구분값 A</button></li>
+                    <li><button type="button" class="option" value="리콜 구분값 B">리콜 구분값 B</button></li>
+                    <li><button type="button" class="option" value="리콜 구분값 C">리콜 구분값 C</button></li>
+                    <li><button type="button" class="option" value="리콜 구분값 D">리콜 구분값 D</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">최종내원</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text" value="2021-06-30">
+              </span>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group" data-column="1">
+            <div class="form_title">
+              <span class="form_txt">내원경로</span>
+            </div>
+            <div class="form_cont">
+              <div class="select">
+                <button type="button" class="select_btn">=선택=</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="=선택=">=선택=</button></li>
+                    <li><button type="button" class="option" value="근처">근처</button></li>
+                    <li><button type="button" class="option" value="집 근처">집 근처</button></li>
+                    <li><button type="button" class="option" value="입지_직장근처">입지_직장근처</button></li>
+                    <li><button type="button" class="option" value="소개_구환소개">소개_구환소개</button></li>
+                    <li><button type="button" class="option" value="소개_원장님소개">소개_원장님소개</button></li>
+                    <li><button type="button" class="option" value="소개_직원소개">소개_직원소개</button></li>
+                    <li><button type="button" class="option" value="광고_인터넷">광고_인터넷</button></li>
+                    <li><button type="button" class="option" value="광고_옥외게시판">광고_옥외게시판</button></li>
+                    <li><button type="button" class="option" value="SM_카페">SM_카페</button></li>
+                    <li><button type="button" class="option" value="SM_인스타">SM_인스타</button></li>
+                    <li><button type="button" class="option" value="SM_블로그">SM_블로그</button></li>
+                    <li><button type="button" class="option" value="홍보_소문">홍보_소문</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="form_group">
+            <div class="form_title">
+              <span class="form_txt">소개자</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <span class="input">
+                    <input type="text" placeholder="입력">
+                  </span>
+                </li>
+                <li class="form_item item_btn">
+                  <button type="button" class="btn">검색</button>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="form_group full_width" data-column="3">
+            <div class="form_title">
+              <span class="form_txt">고객성향</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <div class="select">
+                    <button type="button" class="select_btn">=선택=</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="=선택=">=선택=</button></li>
+                        <li><button type="button" class="option" value="겁이많음"><span class="chip" style="background: #F4B09C"></span>겁이많음</button></li>
+                        <li><button type="button" class="option" value="좋은분"><span class="chip" style="background: #75C6FA"></span>좋은분</button></li>
+                        <li><button type="button" class="option" value="JS"><span class="chip" style="background: #C2C2C2"></span>JS</button></li>
+                        <li><button type="button" class="option" value="노쇼"><span class="chip" style="background: #B068A7"></span>노쇼</button></li>
+                        <li><button type="button" class="option" value="비용민감"><span class="chip" style="background: #6AC89F"></span>비용민감</button></li>
+                        <li><button type="button" class="option" value="예민"><span class="chip" style="background: #EE6950"></span>예민</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="form_item">
+                  <div class="select">
+                    <button type="button" class="select_btn">=선택=</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="=선택=">=선택=</button></li>
+                        <li><button type="button" class="option" value="상담만 원함"><span class="chip" style="background: #69DFFB"></span>상담만 원함</button></li>
+                        <li><button type="button" class="option" value="전체 치료 원함"><span class="chip" style="background: #3C95E2"></span>전체 치료 원함</button></li>
+                        <li><button type="button" class="option" value="CC 치료만 원함"><span class="chip" style="background: #4BA456"></span>CC 치료만 원함</button></li>
+                        <li><button type="button" class="option" value="보험진료만 원함"><span class="chip" style="background: #F19DC0"></span>보험진료만 원함</button></li>
+                        <li><button type="button" class="option" value="임플란트"><span class="chip" style="background: #F9D348"></span>임플란트</button></li>
+                        <li><button type="button" class="option" value="틀니치료"><span class="chip" style="background: #C2C2C2"></span>틀니치료</button></li>
+                        <li><button type="button" class="option" value="턱관절치료"><span class="chip" style="background: #C2C2C2"></span>턱관절치료</button></li>
+                        <li><button type="button" class="option" value="교정치료"><span class="chip" style="background: #C2C2C2"></span>교정치료</button></li>
+                        <li><button type="button" class="option" value="보존치료"><span class="chip" style="background: #C2C2C2"></span>보존치료</button></li>
+                        <li><button type="button" class="option" value="보철치료"><span class="chip" style="background: #C2C2C2"></span>보철치료</button></li>
+                        <li><button type="button" class="option" value="정기검진"><span class="chip" style="background: #C2C2C2"></span>정기검진</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="form_item">
+                  <div class="select">
+                    <button type="button" class="select_btn">=선택=</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="=선택=">=선택=</button></li>
+                        <li><button type="button" class="option" value="부분 동의">부분 동의</button></li>
+                        <li><button type="button" class="option" value="미동의">미동의</button></li>
+                        <li><button type="button" class="option" value="전체 동의">전체 동의</button></li>
+                        <li><button type="button" class="option" value="리콜중">리콜중</button></li>
+                        <li><button type="button" class="option" value="리콜 종료">리콜 종료</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="setting_width">
+          <div class="form_group full_width">
+            <div class="form_title">
+              <span class="form_txt">담당의사</span>
+            </div>
+            <div class="form_cont">
+              <ul class="form_list">
+                <li class="form_item">
+                  <div class="select">
+                    <button type="button" class="select_btn">=의사선택=</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="Option A">의사A</button></li>
+                        <li><button type="button" class="option" value="Option B">의사B</button></li>
+                        <li><button type="button" class="option" value="Option C">의사C</button></li>
+                        <li><button type="button" class="option" value="Option D">의사D</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+                <li class="form_item">
+                  <div class="select">
+                    <button type="button" class="select_btn">=직원선택=</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="Option A">직원A</button></li>
+                        <li><button type="button" class="option" value="Option B">직원B</button></li>
+                        <li><button type="button" class="option" value="Option C">직원C</button></li>
+                        <li><button type="button" class="option" value="Option D">직원D</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="setting_width">
+          <div class="form_group full_width">
+            <div class="form_title">
+              <span class="form_txt">환자메모</span>
+            </div>
+            <div class="form_cont">
+              <span class="input">
+                <input type="text">
+              </span>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="form_btn">
+        <div class="btn_left">
+          <button type="button" class="btn">신환등록</button>
+          <button type="button" class="btn">환자저장</button>
+        </div>
+        <button type="button" class="btn primary btn_right">접수</button>
+      </div>
+    </div>
+  </div>
+</div>

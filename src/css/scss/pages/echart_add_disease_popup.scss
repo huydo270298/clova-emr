@@ -1,0 +1,214 @@
+#echart_add_disease_popup {
+  width: 1104px;
+  max-height: 948px;
+  margin: 90px 0;
+
+  .popup_cont {
+    padding: 0;
+    height: calc(100% - 122px);
+  }
+
+  .popup_inner {
+    height: 100%;
+  }
+
+  .popup_inner {
+    &>div.simplebar-wrapper>div.simplebar-mask>div>div>div {
+      padding: 24px 32px 24px !important;
+      display: flex;
+      flex-wrap: wrap;
+      column-gap: 32px;
+      row-gap: 24px;
+
+      &::before,
+      &::after {
+        display: none;
+      }
+
+      &>div {
+        width: 504px;
+      }
+    }
+  }
+
+  .table {
+    border: 1px solid var(--g300);
+    border-radius: 6px;
+    overflow: hidden;
+    margin-top: 12px;
+    box-sizing: border-box;
+
+    [theme="dark"] & {
+      border-color: var(--g600);
+    }
+
+    thead {
+      th {
+        padding: 8px 15px;
+      }
+    }
+
+    td {
+      padding: 12px 15px;
+    }
+
+    .tooth_map {
+      &::after {
+        height: 100%;
+      }
+
+      &::after,
+      &::before {
+        background: var(--g400);
+        opacity: 1;
+
+        [theme="dark"] & {
+          background: var(--g400);
+        }
+      }
+    }
+
+    .selected {
+      .tooth_map {
+
+        &::after,
+        &::before {
+          background: var(--g500);
+          opacity: 1;
+
+          [theme="dark"] & {
+            background: var(--g300);
+          }
+        }
+      }
+    }
+  }
+
+  .medical_record,
+  .corporal_related {
+    .table {
+      table {
+        height: 328px;
+      }
+    }
+  }
+
+  .search_corporal {
+    .flexbox {
+      .flex_item_group[position="left"] {
+        align-items: center;
+
+        .btn {
+          height: 28px;
+          padding: 6px 9px;
+          font-size: 12px;
+          line-height: 14px;
+          margin-left: 16px;
+          font-weight: normal;
+        }
+      }
+
+      .search_input {
+        input {
+          padding-right: 30px;
+        }
+
+        &::after {
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          width: 16px;
+          height: 16px;
+          background: url('../img/medical_enter/icon_search.svg') no-repeat;
+          content: '';
+
+          [theme="dark"] & {
+            background: url('../img/medical_enter/icon_search_dark.svg') no-repeat;
+          }
+        }
+      }
+    }
+
+    .filter_option {
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+
+      ul {
+        padding: 11px 15px;
+        width: 100%;
+        display: flex;
+        cursor: grab;
+        overflow: hidden;
+        box-sizing: border-box;
+        gap: 8px;
+
+        &:after {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          width: 28px;
+          height: 28px;
+          background: linear-gradient(90deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);
+          content: '';
+          transform: translateY(-50%);
+          transition: all 0.1s;
+
+          [theme="dark"] & {
+            background: linear-gradient(90deg, rgba(36, 37, 38, 0) 0%, #242526 100%);
+          }
+        }
+
+        &.scrollEnd {
+          &::after {
+            display: none;
+          }
+        }
+      }
+
+      .btn {
+        height: 28px;
+        line-height: 14px;
+        min-width: 48px;
+        font-weight: normal;
+      }
+
+      &.grabbing {
+        cursor: grabbing;
+
+        .btn {
+          pointer-events: none;
+        }
+      }
+    }
+
+    .table {
+      table {
+        height: 278px;
+      }
+    }
+  }
+
+  .associated_corporal {
+    .title {
+      line-height: 32px;
+
+    }
+
+    .table {
+      table {
+        height: 342px;
+      }
+    }
+  }
+
+  .popup_bottom {
+    .btn {
+      height: 32px;
+      padding: 0;
+    }
+  }
+}
+
+#tooth_selection_reminder {}

@@ -1,0 +1,162 @@
+@@include('./include/head.html',{"title": "전자차트 : NAVER CLOVA EMR", "list_title": "메인 : 전자차트"})
+
+<body data-pagestatus="new : 2022.02.11">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap" data-simplebar>
+    <!--[D] HEADER -->
+    @@include('./include/header.html',{"type": "01", "tab": "02"})
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main class="echart_layout" data-simplebar>
+      <div class="col">
+        <div class="panel" style="height: 100%;">
+          @@include('./include/echart_history.html')
+        </div>
+      </div>
+      <div class="col">
+        <div class="panel" style="height: 100%;">
+          <div id="echartMedicalEnter">
+            <div class="tab_group">
+              <div class="tab_lst_box">
+                <ul class="tab_lst">
+                  <li class="tab_item is_active">
+                    <a href="#piEnter" class="tab_btn">PI 입력</a>
+                  </li>
+                  <li class="tab_item">
+                    <a href="#treatmentPlanEnter" class="tab_btn">치료계획 입력</a>
+                  </li>
+                  <li class="tab_item">
+                    <a href="#medicalEnter" class="tab_btn">진료 입력</a>
+                  </li>
+                  <li class="tab_item">
+                    <a href="#none" class="tab_btn">문서 발급</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs" data-simplebar>
+                @@include('./include/pi.html',{"active":"true"})
+                @@include('./include/treatment_plan.html')
+                @@include('./include/medical_enter.html')
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="folding_btn" data-position="right" data-function="reduce"><span class="tooltips" data-ex-content="진료 입력 영역 확장" data-reduce-content="진료 입력 영역 축소"></span></button>
+      </div>
+      <div class="col">
+        <div class="row">
+          <div class="panel" style="height: 690px;">@@include('./include/panel_basic.html')</div>
+        </div>
+        <div class="row">
+          <div class="panel" style="height: 479px;">@@include('./include/panel_etc.html')</div>
+        </div>
+        <button class="folding_btn" data-position="right" data-function="reduce"><span class="tooltips" data-ex-content="환자 정보 및 접수 패널 영역 확장" data-reduce-content="환자 정보 및 접수 패널 영역 축소"></span></button>
+      </div>
+      @@include('./include/layout_edit_control.html',{"type":"02"})
+    </main>
+    <!-- // [D] CONTENTS -->
+    <!--[D] FOOTER -->
+    @@include('./include/footer.html',{"type": "01"})
+    <!--// [D] FOOTER -->
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="inputSuggest()">[환자검색] 리스트 열기/닫기</a>
+    <a href="#none" onclick="suggestSelect()">[환자검색] 환자 선택됨</a>
+    <a href="#none" onclick="toggleNavMode()">[메뉴] 일반/진료실 토글</a>
+    <a href="#none" onclick="toggleMegadrop()">[기존기록-첨부파일] 영역 토글</a>
+    <a href="#none" onclick="toggleNoAttachment()">[기존기록-첨부파일] 없음</a>
+    <a href="#none" onclick="medicalHistory(0)">[기존기록-전신병력] 특이사항 없음</a>
+    <a href="#none" onclick="medicalHistory(1)">[기존기록-전신병력] 특이사항 있음</a>
+    <a href="#none" onclick="medicalHistory(2)">[기존기록-전신병력] 특이사항 2줄이상</a>
+    <a href="#none" onclick="toggleSeachBox()">[기존기록] 검색필드 열기</a>
+    <a href="#none" onclick="toggleEditMode()">[레이아웃] 편집모드 토글</a>
+  </div>
+  <script>
+    function toggleMegadrop() {
+      $('.record_display_control').toggleClass('megadrop')
+    }
+    function medicalHistory(n) {
+      $('.medical_alert_box .select_item').hide().eq(n).show();
+      if (n === 0) {
+        $('.medical_alert_box').addClass('ns').removeClass('notice')
+      } else {
+        $('.medical_alert_box').addClass('notice').removeClass('ns')
+      }
+    }
+    function toggleNoAttachment() {
+      $('.attachment_box .files_list,.attachment_box .preview_files_list,.attachment_stt .stt_txt').toggle();
+    }
+    function toggleSeachBox() {
+      $('.float_search_box').toggle();
+    }
+    function inputSuggest() {
+      $('.patient_search').toggleClass('has_suggest');
+      $('.title_box').find('.header_title').eq(1).hide();
+      $('.title_box').find('.header_title').eq(0).show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(0).show();
+    }
+    function suggestSelect() {
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(2).show();
+      $('.patient_search').removeClass('has_suggest');
+      $('.patient_search .input_search').addClass('txt_sensitive').val('김한국 (305)');
+    }
+    function toggleNavMode() {
+      $('.nav > ul > li').eq(7).toggle();
+      $('.nav > ul > li').eq(9).toggle();
+      $('.nav > ul > li').eq(10).toggle();
+      $('.nav > ul > li').eq(11).toggle();
+    }
+    function toggleEditMode() {
+      var panels = document.querySelectorAll('.panel'),
+        mainLayout = document.querySelector('.echart_layout');
+      mainLayout.classList.toggle('edit_mode');
+      panels.forEach(function (el) {
+        if (mainLayout.classList.contains('edit_mode')) {
+          var editWrap = document.createElement('div');
+          editWrap.classList.add('panel_edit');
+          el.append(editWrap);
+        } else {
+          var editWrap = el.querySelector('.panel_edit');
+          editWrap.remove();
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

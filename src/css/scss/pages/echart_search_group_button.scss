@@ -1,0 +1,60 @@
+#bundle_button_search {
+  width: 504px;
+  height: 100%;
+  max-height: 637px;
+  margin: 90px 0;
+
+  .popup_cont {
+    padding: 0;
+    height: calc(100% - 41px);
+
+    &>.simplebar-wrapper {
+      height: 100%;
+    }
+
+    &>div.simplebar-wrapper>div.simplebar-mask>div>div>div.simplebar-content {
+      padding: 24px 32px !important;
+    }
+
+    .input {
+      width: 338px;
+    }
+
+    .btn {
+      height: 32px;
+      width: 96px;
+      padding: 0;
+    }
+
+    .table {
+      border: 1px solid var(--g300);
+      box-sizing: border-box;
+      border-radius: 6px;
+      overflow: hidden;
+      margin-top: 16px;
+
+      [theme="dark"] & {
+        border-color: var(--g600);
+      }
+
+      table {
+        height: 498px;
+      }
+
+      th {
+        padding: 8px 15px;
+      }
+
+      td {
+        padding: 12px 16px;
+        line-height: 16px;
+      }
+
+      tbody {
+        tr {
+          height: 40px;
+        }
+      }
+    }
+  }
+}

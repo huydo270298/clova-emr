@@ -1,0 +1,104 @@
+.edit_mode_control {
+    display: none;
+    justify-content: space-between;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+    min-height: 112px;
+    padding: 23px 24px 24px;
+    background: var(--g0);
+    box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.05);
+    align-items: center;
+    box-sizing: border-box;
+
+    [theme="dark"] & {
+        background: var(--g700);
+        box-shadow: 0px -5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    .content_select {
+        font-size: 0;
+
+        strong {
+            display: block;
+            font-weight: bold;
+            font-size: 16px;
+            line-height: 20px;
+            min-height: 18px;
+            color: var(--g800);
+            margin-bottom: 15px;
+
+            [theme="dark"] & {
+                color: var(--g0);
+            }
+        }
+
+        .label {
+            display: inline-block;
+            font-size: 14px;
+            height: 16px;
+            line-height: 16px;
+            vertical-align: middle;
+            color: var(--g800);
+
+            [theme="dark"] & {
+                color: var(--g100);
+            }
+        }
+
+        .select {
+            vertical-align: middle;
+            margin-left: 16px;
+        }
+    }
+
+    .draggable_component {
+        margin-left: 56px;
+        margin-right: auto;
+    }
+
+    .edit_mode_buttons {
+        margin-right: 0;
+        display: flex;
+        align-items: center;
+
+        .exit_btn {
+            display: block;
+            margin-right: 24px;
+            font-size: 14px;
+            line-height: 16px;
+            height: 16px;
+            color: var(--g800);
+            white-space: nowrap;
+
+            [theme="dark"] & {
+                color: var(--g100);
+            }
+
+            .icon_exit {
+                display: inline-block;
+                margin-left: 4px;
+                height: 16px;
+                width: 16px;
+                background: url('../img/svg/icon_exit.svg') no-repeat center/auto;
+                vertical-align: top;
+
+                [theme="dark"] & {
+                    background: url('../img/svg/icon_exit_dark.svg') no-repeat center/auto;
+                }
+            }
+        }
+
+        .btn {
+            width: 96px;
+            height: 32px;
+            padding: 0;
+
+            &~.btn {
+                margin-left: 8px;
+            }
+        }
+    }
+}

@@ -1,0 +1,283 @@
+#next_frequently_popup {
+  width: 750px;
+  max-height: 516px;
+  height: 100%;
+
+  .popup_cont {
+    flex-grow: 1;
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 32px;
+      box-sizing: border-box;
+
+      .simplebar-content {
+        padding-top: 23px !important;
+        padding-bottom: 23px !important;
+      }
+
+      .content {
+
+        .simplebar-content {
+          padding-top: 9px !important;
+          padding-bottom: 9px !important;
+        }
+
+        [theme="dark"] & {
+          border-color: var(--g600);
+        }
+      }
+
+      .select {
+        .simplebar-content {
+          padding-top: 5px !important;
+          padding-bottom: 5px !important;
+        }
+      }
+
+      .note {
+        margin-top: 8px;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--g700);
+
+        [theme="dark"] & {
+          color: var(--g200);
+        }
+      }
+
+      .treatments_cont  {
+
+        .simplebar-content {
+          padding-top: 0 !important;
+          padding-bottom: 0 !important;
+        }
+      }
+
+    }
+  }
+
+  .popup_bottom {
+
+    .btn {
+      padding: 7px 21px;
+      line-height: 16px;
+    }
+  }
+
+  .tit_group {
+    margin: 24px 0 12px;
+  }
+
+  .data_filter {
+    padding: 0;
+
+    .select {
+      margin-left: 20px;
+    }
+
+    .title {
+      font-size: 14px;
+    }
+
+    .btn {
+      padding: 7px 21px;
+      line-height: 16px;
+      vertical-align: middle;
+    }
+
+    & + .data_filter {
+      flex-wrap: wrap;
+      padding: 11px 15px;
+      font-size: 0;
+      border: 1px solid;
+      border-color: var(--g300);
+      border-radius: 6px;
+      box-sizing: border-box;
+
+      [theme="dark"] & {
+        border-color: var(--g600);
+      }
+
+      &:before {
+        content: none;
+      }
+
+      .select {
+        margin: 0;
+      }
+    }
+  }
+
+  .form_group {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+
+    .form_title {
+      margin-right: 12px;
+      min-width: 46px;
+    }
+    .form_txt {
+      font-size: 12px;
+      color: var(--g800);
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+
+    .input {
+      width: 596px;
+    }
+
+    & + .form_group {
+      margin-top: 8px;
+    }
+  }
+
+  .custom_color {
+    margin-top: 8px;
+    margin-left: auto;
+
+    .item {
+      display: inline-block;
+
+      .txt_item {
+        vertical-align: middle;
+        margin-left: 8px;
+        font-size: 12px;
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+
+      & + .item {
+        margin-left: 16px;
+      }
+    }
+
+    .btn_item {
+      position: relative;
+      vertical-align: middle;
+      width: 32px;
+      height: 24px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      &:before {
+        content: '';
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background: url(../img/next_popup/icon_edit.svg) no-repeat center/auto;
+      }
+
+      &.is_custom {
+
+        &:before {
+          background: url(../img/next_popup/icon_edit_dark.svg) no-repeat center/auto;
+        }
+      }
+    }
+  }
+
+  .btn_right_group {
+    margin-left: auto;
+    font-size: 0;
+
+
+    .btn {
+      min-width: 48px;
+      padding: 6px 9px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: normal;
+
+      &:disabled {
+        color: var(--g500);
+
+        [theme="dark"] & {
+          color: var(--g400);
+        }
+      }
+
+      &.btn_add {
+        position: relative;
+        padding-left: 27px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 9px;
+          width: 12px;
+          height: 12px;
+          transform: translateY(-50%);
+          background: url(../img/next_popup/icon_add.svg) no-repeat center/auto;
+
+          [theme="dark"] & {
+            background: url(../img/next_popup/icon_add_dark.svg) no-repeat center/auto;
+          }
+        }
+      }
+
+      &.btn_save {
+        display: none;
+      }
+    }
+  }
+
+  .content {
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .note {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--g700);
+  }
+
+  .treatments_lst {
+
+    .list {
+      position: relative;
+
+
+      &.has_drag {
+        .item {
+          cursor: grabbing;
+          user-select: none;
+        }
+      }
+    }
+
+    .item {
+      cursor: grab;
+
+      &.cloned {
+        position: fixed;
+        z-index: 2;
+        pointer-events: none;
+      }
+
+      // &.is_ondrag {
+      //   color: var(--g500);
+      //   background: var(--g400);
+
+      //   [theme="dark"] & {
+      //     color: var(--g300);
+      //     border-color: var(--g400);
+      //   }
+      // }
+    }
+
+  }
+}

@@ -1,0 +1,48 @@
+@@include('./include/head.html',{"title": "기존기록 표시부 Viewer : NAVER CLOVA EMR", "list_title": "[팝업] 기존기록 표시부 Viewer : 전자차트"})
+
+<body data-pagestatus="new : 2022.02.09">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      @@include('./include/viewer_popup.html')
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    </div>
+  </div>
+</body>
+
+</html>

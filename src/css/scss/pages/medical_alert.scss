@@ -1,0 +1,226 @@
+#medical_alert_popup {
+  width: 778px;
+
+  .popup_cont {
+    padding: 24px 32px;
+  }
+
+  .icon_check {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background: url('../img/medical_alert/icon_check.svg') no-repeat;
+    margin-right: 6px;
+    margin-top: -1px;
+    vertical-align: middle;
+
+    [theme="dark"] & {
+      background: url('../img/medical_alert/icon_check_dark.svg') no-repeat;
+    }
+  }
+
+  .tit_group {
+    .btn_right_grp {
+      .btn {
+        width: 170px;
+        height: 28px;
+        padding: 0;
+        font-size: 12px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .content {
+    max-height: 224px;
+    padding: 0;
+
+    &+.tit_group {
+      margin-top: 24px;
+    }
+  }
+
+  .check_box_wrap {
+    padding: 16px 24px;
+    box-sizing: border-box;
+
+    ul {
+      display: flex;
+      width: 100%;
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+
+      li {
+        display: flex;
+        align-items: center;
+        width: 205px;
+        height: 22px;
+
+        &~li {
+          margin-left: 24px;
+
+          &:nth-child(3) {
+            &~li {
+              margin-top: 6px;
+            }
+          }
+
+          &:nth-child(3n+1) {
+            margin-left: 0;
+          }
+        }
+      }
+    }
+
+    .chkbox {
+      white-space: nowrap;
+      padding-right: 0;
+      margin-bottom: 0;
+      flex-basis: 0;
+
+      input:checked + label {
+        color: var(--p600);
+        font-weight: bold;
+
+        [theme="dark"] & {
+          color: var(--p400);
+        }
+      }
+    }
+
+    .input {
+      width: auto;
+      margin-left: 8px;
+      flex-grow: 1;
+
+      input {
+        height: 22px;
+        font-size: 11px;
+        padding: 5px;
+      }
+    }
+  }
+
+  .change_log_list {
+    height: 168px;
+
+    li {
+      display: flex;
+      padding: 12px 12px 12px 16px;
+      background: var(--p100);
+      font-size: 14px;
+      line-height: 16px;
+
+      [theme="dark"] & {
+        background: rgba(#637EDD, .15);
+      }
+
+      span {
+        color: var(--g900);
+
+        [theme="dark"] & {
+          color: var(--g0);
+        }
+      }
+
+      .delete_btn {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      .icon_delete {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('../img/medical_alert/icon_delete.svg') no-repeat;
+
+        [theme="dark"] & {
+          background: url('../img/medical_alert/icon_delete_dark.svg') no-repeat;
+        }
+      }
+    }
+  }
+
+  .popup_bottom {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      padding: 0;
+      height: 32px;
+    }
+
+    .setting_btn {
+      width: 146px;
+      margin-right: auto;
+      margin-left: 0;
+    }
+  }
+}
+
+#pregnancy_options {
+  width: 462px;
+
+  .popup_cont {
+    padding: 24px 32px;
+  }
+
+  .content {
+    padding: 16px 23px;
+  }
+
+  .check_box_wrap {
+    .chkbox {
+      white-space: nowrap;
+      padding-right: 0;
+      margin-bottom: 0;
+      flex-basis: 0;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: row;
+      gap: 16px;
+      justify-content: flex-start;
+      font-size: 0;
+    }
+  }
+
+  .content {
+    &+.tit_group {
+      margin-top: 24px;
+    }
+  }
+
+  textarea.content {
+    display: block;
+    height: 75px;
+    padding: 6px 10px;
+    resize: none;
+    width: 100%;
+    background: var(--g0);
+
+    [theme="dark"] & {
+      background: var(--g700);
+    }
+
+    &::placeholder {
+      color: var(--g600);
+
+      [theme="dark"] & {
+        color: var(--g300);
+      }
+    }
+  }
+
+  .popup_bottom {
+    display: flex;
+    justify-content: flex-end;
+
+    .btn {
+      padding: 0;
+      height: 32px;
+    }
+  }
+}

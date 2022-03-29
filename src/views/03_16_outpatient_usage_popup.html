@@ -1,0 +1,98 @@
+@@include('./include/head.html',{"title": "패널 : NAVER CLOVA EMR", "list_title": "[팝업] 외래 사용 팝업 : 전자차트"})
+
+<body data-pagestatus="new : 2022.02.17">
+  @@include('./include/skipnavigation.html')
+  <div class="layer show dimmed">
+    <div class="popup_wrap">
+      <div class="popup" id="outpatient_usage_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <h2 class="title" size="16" weight="bold">종근당아목시실린캡슐500밀리그램<span>의 용법 입력</span></h2>
+            <div class="tit_group">
+              <strong class="title">내복약</strong>
+            </div>
+            <div class="content">
+              <button class="btn rounded is_active">식후 30분에 복용</button>
+              <button class="btn rounded">식사 중 복용</button>
+              <button class="btn rounded">식전 30분에 복용</button>
+            </div>
+            <div class="tit_group">
+              <strong class="title">연고 형태의 외용약</strong>
+            </div>
+            <div class="content">
+              <button class="btn rounded">1일 2회 환부에 도포</button>
+              <button class="btn rounded">1일 3회 환부에 도포</button>
+              <button class="btn rounded">수시로 환부에 도포</button>
+            </div>
+            <div class="tit_group">
+              <strong class="title">가글(Ex:헥사메딘) 형태의 외용약인 경우</strong>
+            </div>
+            <div class="content">
+              <button class="btn rounded">1일 2회 구강 소독</button>
+              <button class="btn rounded">1일 3회 구강 소독</button>
+              <button class="btn rounded">수시로 구강 소독</button>
+            </div>
+            <div class="tit_group">
+              <strong class="title">자주쓰는 용법</strong>
+              <button class="btn">편집</button>
+            </div>
+            <div class="instruction_list">
+              <ul class="list" data-simplebar>
+                <li class="item">식후 바로 복용</li>
+                <li class="item">통증이 있을 경우만 도포</li>
+                <li class="item">식후 바로 복용</li>
+                <li class="item">통증이 있을 경우만 도포</li>
+                <li class="item">식후 바로 복용</li>
+                <li class="item">통증이 있을 경우만 도포</li>
+              </ul>
+            </div>
+            <div class="tit_group">
+              <strong class="title">직접 입력</strong>
+            </div>
+            <div class="form">
+              <span class="input">
+                <input type="text" placeholder="입력">
+              </span>
+              <button class="btn btn_add">적용</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

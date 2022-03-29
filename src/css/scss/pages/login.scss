@@ -1,0 +1,266 @@
+#login {
+  min-height: 100vh;
+
+  .layout {
+    align-content: stretch;
+  }
+
+  .login_banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--p100);
+  }
+
+  .login_section {
+    background: var(--g0);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    [theme="dark"] & {
+      background: var(--g700);
+    }
+  }
+
+  .login_wrap {
+    max-width: 480px;
+    width: 100%;
+    padding: 50px 0;
+
+    .title[size="32"] {
+      text-align: center;
+      color: var(--g900);
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+    }
+  }
+
+  .tab_group {
+    margin-top: 64px;
+
+    .tab_lst {
+      border-bottom: 1px solid var(--g300);
+
+      li {
+        flex-grow: 1;
+
+        a {
+          padding-bottom: 16px;
+          font-size: 20px;
+          line-height: 30px;
+        }
+
+        &.is_active {
+          font-weight: bold;
+          box-shadow: 0px -3px 0px 0px var(--p500) inset;
+
+          a {
+            color: var(--p500);
+          }
+        }
+      }
+    }
+
+    .tab {
+      form {
+        margin-top: 47px;
+
+        &>label {
+          display: block;
+          font-weight: bold;
+          font-size: 18px;
+          line-height: 18px;
+          color: var(--g800);
+
+          [theme="dark"] & {
+            color: var(--g100);
+          }
+        }
+
+        .input {
+          display: block;
+          width: 100%;
+          margin-top: 6px;
+
+          &+label {
+            margin-top: 39px;
+          }
+
+          &.error {
+            &:after {
+              position: absolute;
+              left: 0;
+              top: 100%;
+              margin-top: 8px;
+            }
+          }
+        }
+
+        .optional {
+          display: flex;
+          margin-top: 40px;
+          font-size: 0;
+          align-items: baseline;
+
+          .switch {
+            flex-grow: 1;
+            text-align: right;
+          }
+        }
+
+        .chkbox {
+          label {
+            font-size: 14px;
+            line-height: 16px;
+            height: 16px;
+          }
+
+          &~.chkbox {
+            margin-left: 16px;
+          }
+        }
+
+        .switch {
+          font-size: 14px;
+          line-height: 16px;
+          color: var(--g800);
+
+          .switch_btn {
+            margin-left: 8px;
+          }
+        }
+
+        .submit_btn {
+          display: block;
+          width: 100%;
+          height: 60px;
+          margin-top: 40px;
+          padding: 21px;
+          text-align: center;
+          font-weight: bold;
+          font-size: 18px;
+        }
+
+        .extra_link {
+          margin-top: 24px;
+          text-align: center;
+          font-size: 0;
+
+          li {
+            display: inline-block;
+            font-size: 0;
+
+            a {
+              display: inline-block;
+              height: 14px;
+              font-size: 14px;
+              line-height: 14px;
+              color: var(--g700);
+              vertical-align: top;
+
+              [theme="dark"] & {
+                color: var(--g200);
+              }
+            }
+
+            &~li {
+              margin-left: 12px;
+
+              &:before {
+                display: inline-block;
+                width: 1px;
+                height: 14px;
+                margin-right: 12px;
+                background: var(--g600);
+                vertical-align: middle;
+                content: '';
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+#popup1,
+#select_chair {
+
+  .title[size="24"] {
+    display: block;
+    color: var(--g900);
+    text-align: center;
+
+    [theme="dark"] & {
+      color: var(--g0);
+    }
+  }
+
+  form {
+    margin-top: 32px;
+
+    label {
+      display: block;
+      font-weight: bold;
+      font-size: 18px;
+      line-height: 18px;
+      color: var(--g800);
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+
+    .select {
+      margin-top: 8px;
+      width: 100%;
+
+      .select_btn {
+        width: 100%;
+        height: 52px;
+        font-size: 16px;
+        padding: 14px 38px 14px 16px;
+
+        &::after {
+          width: 12px;
+          height: 8px;
+          right: 16px;
+          background-size: cover;
+        }
+      }
+    }
+
+    .input {
+      width: 100%;
+      margin-top: 8px;
+
+      &~label {
+        margin-top: 40px;
+      }
+    }
+
+  }
+
+  .btn {
+    font-size: 13px;
+    line-height: 13px;
+    padding: 9px 19px;
+
+    &.primary {
+      padding: 9px 22px;
+    }
+  }
+}
+
+#select_chair {
+  overflow: unset;
+
+  .popup_bottom {
+    .btn.primary {
+      min-width: 96px;
+    }
+  }
+}

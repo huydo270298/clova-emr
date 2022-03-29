@@ -1,0 +1,271 @@
+#unpaid_edit_popup {
+  width: 1197px;
+  height: 100%;
+  max-height: 762px;
+  margin: 90px 0;
+
+  .popup_cont {
+    padding: 0;
+
+    &>div.simplebar-wrapper>div.simplebar-mask>div>div>div.simplebar-content {
+      padding: 24px 32px !important;
+
+      &>.flexbox {
+        &>.flex_item_group {
+          flex-direction: column;
+
+          &[position="left"] {
+            width: 624px;
+          }
+
+          &[position="right"] {
+            width: 469px;
+
+            .title {
+              line-height: 32px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .search_field {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+
+    label {
+      font-size: 12px;
+      line-height: 12px;
+    }
+
+    .input {
+      width: 518px;
+
+      input {
+        padding-right: 30px;
+      }
+
+      &::after {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        background: url('../img/unpaid_edit_popup/icon_search.svg') no-repeat;
+        transform: translateY(-50%);
+        content: '';
+
+        [theme="dark"] & {
+          background: url('../img/unpaid_edit_popup/icon_search_dark.svg') no-repeat;
+        }
+      }
+    }
+  }
+
+  .category_select {
+    .select_btn {
+      width: 240px;
+    }
+  }
+
+  .unpaid_number_search {
+    margin-top: 12px;
+    border: 1px solid var(--g300);
+    box-sizing: border-box;
+    border-radius: 6px;
+    overflow: hidden;
+
+    [theme="dark"] & {
+      border-color: var(--g600);
+    }
+
+    .simplebar-content {
+      height: 100%;
+    }
+
+    table {
+      height: 518px;
+    }
+
+    thead {
+      tr {
+        height: 32px;
+      }
+    }
+
+    tr {
+      height: 40px;
+
+      &.fill {
+        td {
+          height: 100% !important;
+        }
+      }
+
+      td {
+        height: 40px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        max-width: 0;
+      }
+    }
+
+    th,
+    td {
+
+      &:first-child {
+        padding: 0 0 0 15px;
+      }
+
+      &:last-child {
+        padding: 0 15px 0 0;
+      }
+    }
+  }
+
+  .content_box {
+    padding: 15px 23px 39px;
+  }
+
+  .info_input_field {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    label {
+      font-size: 12px;
+      line-height: 12px;
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+
+    .input,
+    .select_btn {
+      width: 360px;
+    }
+
+    &+.info_input_field {
+      margin-top: 12px;
+    }
+
+    &+.flexbox {
+      gap: 8px;
+      margin-top: 16px;
+
+      .btn {
+        height: 28px;
+        padding: 6px 9px;
+        font-size: 12px;
+        line-height: 12px;
+        font-weight: normal;
+      }
+    }
+  }
+
+  .icon_add {
+    display: inline-block;
+    vertical-align: top;
+    margin-top: 1px;
+    margin-right: 6px;
+    width: 12px;
+    height: 12px;
+    background: url('../img/unpaid_edit_popup/icon_add.svg') no-repeat;
+
+    [theme="dark"] & {
+      background: url('../img/unpaid_edit_popup/icon_add_dark.svg') no-repeat;
+    }
+  }
+
+  .description_lst {
+    margin-top: 12px;
+
+    li {
+      position: relative;
+      display: block;
+      font-size: 13px;
+      line-height: 20px;
+      padding-left: 8px;
+      color: var(--g800);
+      height: auto;
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+
+      &:before {
+        position: absolute;
+        top: 8px;
+        left: 0;
+        height: 4px;
+        width: 4px;
+        border-radius: 50%;
+        background: var(--g800);
+        content: '';
+
+        [theme="dark"] & {
+          background: var(--g100);
+        }
+      }
+
+      &~li {
+        margin-top: 6px;
+      }
+    }
+
+    &+.info_input_field {
+      margin-top: 16px;
+    }
+  }
+
+  .note_txt {
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 18px;
+    color: var(--g700);
+
+    [theme="dark"] & {
+      color: var(--g200);
+    }
+  }
+
+  .popup_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .btn {
+      padding: 0;
+      height: 32px;
+
+      &:first-child {
+        height: 28px;
+        padding: 6px 9px;
+        font-size: 12px;
+        font-weight: normal;
+        line-height: 14px;
+        min-width: auto;
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+#fix_price_confirm {
+  .additional_info_lst {
+    margin: 8px 0;
+  }
+}
+
+#number_confirm,
+#delete_confirm {
+  p~p {
+    margin-top: 8px;
+  }
+}

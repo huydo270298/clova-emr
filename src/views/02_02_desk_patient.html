@@ -1,0 +1,60 @@
+@@include('./include/head.html',{"title": "환자 인적 표시/등록/수정 : NAVER CLOVA EMR", "list_title": "[모듈] 환자 인적 표시/등록/수정 : Desk"})
+
+<body data-pagestatus="new : 2022.01.10">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+      <div class="panel">
+        @@include('./include/desk_patient.html',{"type": "01"})
+      </div>
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        top: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+      <a href="#none" class="btn_case1">[사진] 기본</a>
+      <a href="#none" class="btn_case2">[사진] 등록완료</a>
+    </div>
+    <script>
+      $('.btn_case1').click(function () {
+        $('.avatar img').remove();
+      });
+      $('.btn_case2').click(function () {
+        var img = '<img src="../img/desk_patient/avatar_400x400.png" alt="">'
+        $('.avatar').append(img);
+      });
+    </script>
+  </div>
+</body>
+
+</html>

@@ -1,0 +1,144 @@
+.header_utility {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  width: 100%;
+  min-height: 40px;
+  padding: 0 16px;
+  background: var(--p500);
+  justify-content: space-between;
+  box-sizing: border-box;
+
+  @media (max-width: 768px) {
+    min-height: 48px;
+    padding-right: 8px;
+  }
+
+  .title_box {
+    display: flex;
+    align-items: center;
+
+    .header_title {
+      margin-left: 10px;
+      font-size: 0;
+
+      li {
+        display: inline-block;
+        font-size: 12px;
+        line-height: 18px;
+        color: var(--g0);
+        vertical-align: top;
+
+        &~li {
+          margin-left: 8px;
+
+          &:before {
+            display: inline-block;
+            width: 1px;
+            height: 12px;
+            margin-right: 8px;
+            vertical-align: top;
+            margin-top: 3px;
+            background: var(--g0);
+            opacity: .5;
+            content: '';
+          }
+        }
+      }
+    }
+  }
+
+  .menu_box {
+    display: flex;
+    align-items: center;
+
+    .menu_lst {
+      display: flex;
+      align-items: center;
+      font-size: 0;
+
+      &>li {
+        display: inline-block;
+
+        &~li {
+          margin-left: 8px;
+
+          @media (max-width: 768px) {
+            margin-left: 0;
+          }
+        }
+
+        &:last-child {
+          .dropdown {
+            .dropdown_option {
+              margin-right: 0;
+            }
+          }
+        }
+
+        &:nth-last-child(1),
+        &:nth-last-child(2) {
+          display: none;
+
+          @media (max-width: 768px) {
+            display: block;
+          }
+        }
+      }
+
+      .settings {
+        .dropdown_option {
+          &>ul>li:last-child {
+            @media (max-width:1440px) {
+              display: none;
+            }
+          }
+        }
+      }
+
+      button[button-type="icon"] {
+        height: 32px;
+        width: 32px;
+        border-radius: 50%;
+        background: none;
+
+        &:hover {
+          background: rgba(255, 255, 255, .2);
+        }
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        &.search_btn,
+        &.menu_btn {
+          width: 48px;
+          height: 48px;
+
+          @media (max-width: 768px) {
+            display: block;
+          }
+        }
+      }
+
+      button[button-type="text"] {
+        height: 32px;
+        color: var(--g0);
+
+        @media (max-width: 768px) {
+          display: none;
+        }
+
+        &:hover:after {
+          position: absolute;
+          left: 0;
+          bottom: 6px;
+          height: 1px;
+          width: 100%;
+          background: var(--g0);
+          content: '';
+        }
+      }
+    }
+  }
+}

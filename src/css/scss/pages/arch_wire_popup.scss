@@ -1,0 +1,146 @@
+#arch_wire_popup {
+  width: 680px;
+  max-height: 698px;
+  height: 100%;
+
+  .popup_cont {
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .title {
+      line-height: 18px;
+    }
+
+    &>div>div>div>div>div > .simplebar-content {
+        padding-top: 23px !important;
+        padding-bottom: 23px !important;
+    }
+  }
+
+  .popup_bottom {
+    .btn {
+      padding: 7px 21px;
+      line-height: 16px;
+    }
+  }
+
+  .simplebar-vertical {
+    z-index: 3;
+  }
+
+  .tit_group {
+    margin-top: 20px;
+
+    .title {
+      font-size: 13px;
+      line-height: 15px;
+    }
+  }
+
+  .archwire_area {
+    overflow: hidden;
+    border: 1px solid var(--g300);
+    border-radius: 6px;
+
+    [theme="dark"] & {
+      border-color: var(--g600);
+    }
+  }
+
+  .box_act {
+    display: flex;
+    gap: 16px;
+    margin-top: 8px;
+
+    .column {
+      flex: 1;
+    }
+
+    .title {
+      position: sticky;
+      display: inline-block;
+      top: 0;
+      width: 100%;
+      padding: 9px 8px;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--g800);
+      box-sizing: border-box;
+      background: var(--g50);
+
+      [theme="dark"] & {
+        color: var(--g100);
+        background: var(--g800);
+      }
+    }
+
+    .item {
+      padding: 12px 8px;
+      font-size: 14px;
+      line-height: 16px;
+      color: var(--g900);
+      cursor: pointer;
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+
+      &:nth-child(even) {
+        background: var(--g50);
+
+        [theme="dark"] & {
+          background: var(--g800);
+        }
+      }
+    }
+  }
+
+  .arch_wire_name {
+    display: inline-block;
+    width: 100%;
+    padding: 11px;
+    font-size: 14px;
+    line-height: 16px;
+    background: var(--g50);
+    text-align: center;
+    border: 1px solid var(--g300);
+    border-radius: 6px;
+    box-sizing: border-box;
+
+    [theme="dark"] & {
+      background: var(--g800);
+      border-color: var(--g600);
+    }
+  }
+
+  .archwire_lst {
+    height: 304px;
+
+    .list {
+      height: 100% ;
+    }
+  }
+
+  .chkbox_group {
+    margin-top: 19px;
+    font-size: 0;
+
+    & + .chkbox_group {
+      margin-top: 12px;
+    }
+
+    .chkbox {
+      min-width: 136px;
+
+      & + .chkbox {
+        margin-left: 24px;
+      }
+    }
+  }
+}

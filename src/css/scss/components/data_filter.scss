@@ -1,0 +1,143 @@
+.data_filter {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0 16px;
+  margin-bottom: 12px;
+
+  .align_right {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto !important;
+    margin-right: 8px;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    .custom_dropdown {
+      &:last-child {
+        margin-left: 8px;
+      }
+    }
+  }
+
+  .calendar {
+    margin-right: 20px;
+
+    &_input {
+      width: 122px;
+
+      input {
+        padding: 0 20px 0 0;
+        height: 28px;
+        border: 0;
+        background: none;
+        font-size: 14px;
+        line-height: 14px;
+        color: var(--g800);
+
+        &:hover {
+          background: none !important;
+        }
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+
+      &:after {
+        right: 0;
+      }
+    }
+  }
+
+  .custom_dropdown {
+
+    &~.custom_dropdown,
+    &~.btn {
+      margin-left: 8px;
+    }
+  }
+
+  .btn {
+    height: 28px;
+    font-weight: normal;
+    padding-bottom: 0;
+    padding-top: 0;
+    white-space: nowrap;
+
+    [theme="light"] & {
+      color: var(--g800);
+    }
+
+    &+.chkbox,
+    &+.radio {
+      margin-left: 20px;
+    }
+
+    &~.custom_dropdown,
+    &~.btn {
+      margin-left: 8px;
+    }
+  }
+
+  .chkbox~.chkbox,
+  .radio~.radio {
+    margin-left: 16px;
+  }
+
+  .label {
+    display: block;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 12px;
+    color: var(--g900);
+    margin-left: 12px;
+
+    [theme="dark"] & {
+      color: var(--g0);
+    }
+
+    &:first-child {
+      margin-left: 0;
+    }
+
+    &+.btn {
+      margin-left: 20px;
+    }
+
+    &+.chkbox,
+    &+.radio {
+      margin-left: 12px;
+    }
+  }
+
+  .sort_type {
+
+    .select_btn {
+      width: 102px;
+    }
+  }
+
+  &~& {
+    position: relative;
+    padding-top: 13px;
+
+    &:before {
+      position: absolute;
+      top: 0;
+      left: 16px;
+      right: 16px;
+      display: block;
+      height: 1px;
+      background: var(--g300);
+      content: '';
+
+      [theme="dark"] & {
+        background: var(--g600);
+      }
+    }
+  }
+}

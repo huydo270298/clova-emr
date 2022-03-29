@@ -1,0 +1,141 @@
+@@include('./include/head.html',{"title": "데스크 : NAVER CLOVA EMR", "list_title": "메인 : 데스크"})
+
+<body data-pagestatus="new : 2022.01.11">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap" data-simplebar>
+    <!--[D] HEADER -->
+    @@include('./include/header.html',{"type": "01", "tab": "01"})
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main class="main_layout" data-simplebar>
+      <div class="row">
+        <div class="col" view="pc" style="width: 798px; height: 512px;">
+          <div class="panel" data-simplebar data-size="L">@@include('./include/desk_patient.html',{"type": "01"})</div>
+          <span class="resize_indicator"></span>
+        </div>
+        <div class="col" style="width: 1074px; height: 512px;">
+          <div class="panel" data-simplebar data-size="L">@@include('./include/desk_patient_list.html')</div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" view="pc" style="width: 798px;">
+          <div class="row">
+            <div class="col" view="pc" style="width: 100%; height: 169px;">
+              <div class="panel" data-simplebar data-size="S">@@include('./include/desk_medical_expenses.html')</div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" view="pc" style="width: 100%; height: 447px;">
+              <div class="panel" data-simplebar data-size="S">@@include('./include/desk_history.html')</div>
+            </div>
+          </div><span class="resize_indicator"></span>
+        </div>
+        <div class="col" view="pc" style="width: 1074px;">
+          <div class="panel" data-simplebar data-component="patientManage" data-size="L">
+            @@include('./include/desk_patient_manage.html')
+          </div>
+        </div>
+      </div>
+      @@include('./include/layout_edit_control.html',{"type":"01"})
+    </main>
+    <!-- // [D] CONTENTS -->
+    <!--[D] FOOTER -->
+    @@include('./include/footer.html',{"type": "01"})
+    <!--// [D] FOOTER -->
+  </div>
+
+  <!-- [D] LAYER -->
+  <div class="layer">
+
+    @@include('./include/desk_cc_popup.html')
+  </div>
+
+  <div class="layer">
+
+    @@include('./include/desk_cc_setting.html')
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="inputSuggest()">[환자검색] 리스트 열기/닫기</a>
+    <a href="#none" onclick="suggestSelect()">[환자검색] 환자 선택됨</a>
+    <a href="#none" onclick="toggleNavMode()">[메뉴] 일반/진료실 토글</a>
+    <a href="#none" onclick="toggleEditMode()">[레이아웃] 편집모드 토글</a>
+  </div>
+  <script>
+    function inputSuggest() {
+      $('.patient_search').toggleClass('has_suggest');
+      $('.title_box').find('.header_title').eq(1).hide();
+      $('.title_box').find('.header_title').eq(0).show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(0).show();
+    }
+    function suggestSelect() {
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show();
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(2).show();
+      $('.patient_search').removeClass('has_suggest');
+      $('.patient_search .input_search').addClass('txt_sensitive').val('김한국 (305)');
+    }
+    function toggleNavMode() {
+      $('.nav > ul > li').eq(7).toggle();
+      $('.nav > ul > li').eq(9).toggle();
+      $('.nav > ul > li').eq(10).toggle();
+      $('.nav > ul > li').eq(11).toggle();
+    }
+    function toggleEditMode() {
+      var panels = document.querySelectorAll('.panel'),
+        mainLayout = document.querySelector('.main_layout'),
+        initWidth = [798, 1074];
+      mainLayout.classList.toggle('edit_mode');
+      document.querySelectorAll('.main_layout > .row').forEach(function (el) {
+        var col = el.querySelectorAll(':scope > .col');
+        col[0].style.width = initWidth[0] + 'px';
+        col[1].style.width = initWidth[1] + 'px';
+      })
+      panels.forEach(function (el) {
+        if (mainLayout.classList.contains('edit_mode')) {
+          var editWrap = document.createElement('div');
+          editWrap.classList.add('panel_edit');
+          el.append(editWrap);
+        } else {
+          var editWrap = el.querySelector('.panel_edit');
+          editWrap.remove();
+        }
+      });
+    }
+  </script>
+</body>
+
+</html>

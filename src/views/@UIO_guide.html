@@ -1,0 +1,348 @@
+@@include('./include/head.html',{"title": "UIO Guide : NAVER CLOVA EMR", "list_title": "UIO Guide : Common", "uio":"true"})
+
+<body data-pagestatus="new : 2021.12.21">
+  <div class="wrap" id="uio">
+    <h1 class="title" size="32">CLOVA EMR UIO <button class="btn" id="themeToggle">Dark/Light Theme</button></h1>
+    <div class="panel" id="secButton">
+      <div class="top_panel">
+        <h2 class="panel_title title" size="16">BUTTON</h2>
+      </div>
+      <div class="panel_cont">
+        <dl>
+          <div>
+            <dt class="title" size="14">Button default</dt>
+            <dd>
+              <button type="button" class="btn">Button</button>
+              <button type="button" disabled class="btn">Button</button>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Button primary</dt>
+            <dd>
+              <button type="button" class="btn primary">Button Primary</button>
+              <button type="button" disabled class="btn primary">Button Primary</button>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Button rounded</dt>
+            <dd>
+              <button type="button" class="btn rounded">Button Rounded</button>
+              <button type="button" disabled class="btn rounded">Button Rounded</button>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <div class="panel" id="secForm">
+      <div class="top_panel">
+        <h2 class="panel_title title" size="16">FORM</h2>
+      </div>
+      <div class="panel_cont">
+        <h3 class="title" size="16">Input</h3>
+        <dl>
+          <div>
+            <dt class="title" size="14">Default</dt>
+            <dd>
+              <span class="input">
+                <input type="text" placeholder="text">
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Entered</dt>
+            <dd>
+              <span class="input">
+                <input type="text" placeholder="text" value="text">
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Disabled</dt>
+            <dd>
+              <span class="input">
+                <input disabled type="text" placeholder="text">
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Error</dt>
+            <dd>
+              <span class="input error" data-error="Error message Error message Error message">
+                <input type="text" placeholder="text" value="text">
+              </span>
+            </dd>
+          </div>
+        </dl>
+        <h3 class="title" size="16">Select</h3>
+        <dl>
+          <div>
+            <dt class="title" size="14">Default</dt>
+            <dd>
+              <div class="select">
+                <button type="button" class="select_btn">Option</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="Option A">Option A</button></li>
+                    <li><button type="button" class="option" value="Option B">Option B</button></li>
+                    <li><button type="button" class="option" value="Option C">Option C</button></li>
+                    <li><button type="button" class="option" value="Option D">Option D</button></li>
+                  </ul>
+                </div>
+              </div>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Selected</dt>
+            <dd>
+              <div class="select">
+                <button type="button" value="Option A" class="select_btn">Option A</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="Option A">Option A</button></li>
+                    <li><button type="button" class="option" value="Option B">Option B</button></li>
+                    <li><button type="button" class="option" value="Option C">Option C</button></li>
+                    <li><button type="button" class="option" value="Option D">Option D</button></li>
+                    <li><button type="button" class="option" value="Option E">Option E</button></li>
+                    <li><button type="button" class="option" value="Option F">Option F</button></li>
+                  </ul>
+                </div>
+              </div>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Disabled</dt>
+            <dd>
+              <div class="select">
+                <button type="button" disabled class="select_btn">Option</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="Option A">Option A</button></li>
+                    <li><button type="button" class="option" value="Option B">Option B</button></li>
+                    <li><button type="button" class="option" value="Option C">Option C</button></li>
+                    <li><button type="button" class="option" value="Option D">Option D</button></li>
+                    <li><button type="button" class="option" value="Option E">Option E</button></li>
+                    <li><button type="button" class="option" value="Option F">Option F</button></li>
+                  </ul>
+                </div>
+              </div>
+            </dd>
+          </div>
+        </dl>
+        <h3 class="title" size="16">On/Off</h3>
+        <dl>
+          <div>
+            <dt class="title" size="14">Default</dt>
+            <dd>
+              <span class="switch">
+                <input type="checkbox" id="switch1">
+                <label for="switch1"><span class="switch_btn"></span></label>
+              </span>
+              <span class="switch">
+                <input type="checkbox" id="switch2" checked>
+                <label for="switch2"><span class="switch_btn"></span></label>
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Disabled</dt>
+            <dd>
+              <span class="switch">
+                <input type="checkbox" disabled id="switch3">
+                <label for="switch3"><span class="switch_btn"></span></label>
+              </span>
+              <span class="switch">
+                <input type="checkbox" disabled id="switch4" checked>
+                <label for="switch4"><span class="switch_btn"></span></label>
+              </span>
+            </dd>
+          </div>
+        </dl>
+        <h3 class="title" size="16">Checkbox</h3>
+        <dl>
+          <div>
+            <dt class="title" size="14">Default</dt>
+            <dd>
+              <span class="chkbox">
+                <input type="checkbox" id="chkbox1">
+                <label for="chkbox1">Checkbox 1</label>
+              </span>
+              <span class="chkbox">
+                <input type="checkbox" checked id="chkbox2">
+                <label for="chkbox2">Checkbox 2</label>
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Disabled</dt>
+            <dd>
+              <span class="chkbox">
+                <input type="checkbox" disabled id="chkbox3">
+                <label for="chkbox3">Checkbox 3</label>
+              </span>
+              <span class="chkbox">
+                <input type="checkbox" disabled checked id="chkbox4">
+                <label for="chkbox4">Checkbox 4</label>
+              </span>
+            </dd>
+          </div>
+        </dl>
+        <h3 class="title" size="16">Radio</h3>
+        <dl>
+          <div>
+            <dt class="title" size="14">Default</dt>
+            <dd>
+              <span class="radio">
+                <input type="radio" id="radio1">
+                <label for="radio1">Radio 1</label>
+              </span>
+              <span class="radio">
+                <input type="radio" checked id="radio2">
+                <label for="radio2">Radio 1</label>
+              </span>
+            </dd>
+          </div>
+          <div>
+            <dt class="title" size="14">Disabled</dt>
+            <dd>
+              <span class="radio">
+                <input type="radio" disabled id="radio3">
+                <label for="radio3">Radio 3</label>
+              </span>
+              <span class="radio">
+                <input type="radio" disabled checked id="radio4">
+                <label for="radio4">Radio 3</label>
+              </span>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+    <div class="panel" id="secColor">
+      <div class="top_panel">
+        <h2 class="panel_title title" size="16">COLOR</h2>
+      </div>
+      <div class="panel_cont">
+        <h3 class="title" size="16">Primary Color</h3>
+        <ul class="color_lst">
+          <li class="p500">
+            <strong>P500</strong>
+          </li>
+        </ul>
+        <h3 class="title" size="16">Background Color</h3>
+        <ul class="color_lst">
+          <li class="bgc">
+            <strong>BG</strong>
+          </li>
+        </ul>
+        <h3 class="title" size="16">Color Palette</h3>
+        <ul class="color_lst">
+          <li class="p700">
+            <strong>P700</strong>
+          </li>
+          <li class="p600">
+            <strong>P600</strong>
+          </li>
+          <li class="p500">
+            <strong>P500</strong>
+          </li>
+          <li class="p400">
+            <strong>P400</strong>
+          </li>
+          <li class="p300">
+            <strong>P300</strong>
+          </li>
+          <li class="p200">
+            <strong>P200</strong>
+          </li>
+          <li class="p100">
+            <strong>P100</strong>
+          </li>
+        </ul>
+        <ul class="color_lst">
+          <li class="g900">
+            <strong>g900</strong>
+          </li>
+          <li class="g800">
+            <strong>g800</strong>
+          </li>
+          <li class="g700">
+            <strong>g700</strong>
+          </li>
+          <li class="g600">
+            <strong>g600</strong>
+          </li>
+          <li class="g500">
+            <strong>g500</strong>
+          </li>
+          <li class="g400">
+            <strong>g400</strong>
+          </li>
+          <li class="g300">
+            <strong>g300</strong>
+          </li>
+          <li class="g200">
+            <strong>g200</strong>
+          </li>
+          <li class="g100">
+            <strong>g100</strong>
+          </li>
+          <li class="g50">
+            <strong>g50</strong>
+          </li>
+          <li class="g0">
+            <strong>g0</strong>
+          </li>
+        </ul>
+        <h3 class="title" size="16">Table</h3>
+        <ul class="color_lst">
+          <li class="t-green">
+            <strong>t-green</strong>
+          </li>
+          <li class="t-mint">
+            <strong>t-mint</strong>
+          </li>
+          <li class="t-light-blue">
+            <strong>t-light-blue</strong>
+          </li>
+          <li class="t-blue">
+            <strong>t-blue</strong>
+          </li>
+          <li class="t-gray">
+            <strong>t-gray</strong>
+          </li>
+          <li class="t-red">
+            <strong>t-red</strong>
+          </li>
+          <li class="t-orange">
+            <strong>t-orange</strong>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="panel" id="secTypo">
+      <div class="top_panel">
+        <h2 class="panel_title title" size="16">TYPOGRAPHY</h2>
+      </div>
+      <div class="panel_cont">
+        <p class="title" size="32">Title 32Pt <code>class .title, attribute size="32"</code></p>
+        <p class="title" size="28">Title 28Pt <code>class .title, attribute size="28"</code></p>
+        <p class="title" size="24">Title 24Pt <code>class .title, attribute size="24"</code></p>
+        <p class="title" size="20">Title 20Pt <code>class .title, attribute size="20"</code></p>
+        <p class="title" size="18">Title 18Pt <code>class .title, attribute size="18"</code></p>
+        <p class="title" size="16">Title 16Pt <code>class .title, attribute size="16"</code></p>
+        <p class="title" size="14">Title 14Pt <code>class .title, attribute size="14"</code></p>
+        <p class="title" size="13">Title 13Pt <code>class .title, attribute size="13"</code></p>
+        <p class="title" size="12">Title 12Pt <code>class .title, attribute size="12"</code></p>
+      </div>
+    </div>
+  </div>
+  @@include('./include/script.html')
+  <script src="../js/libs/vendor.min.js"></script>
+  <script>
+    $('#themeToggle').on('click', function () {
+      $('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')
+    })
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,3145 @@
+@@include('./include/head.html',{"title": "구강검사 결과 입력 : NAVER CLOVA EMR", "list_title": "[팝업] 구강검사 결과 입력 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      <div class="layer show dimmed">
+
+        <div class="popup_wrap">
+          <div class="popup" id="oral_result_popup" style="display: block;">
+            <div class="popup_innerwrap">
+              <div class="popup_head">
+                <strong class="tit">구강검사 결과 입력</strong>
+                <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+              </div>
+              <div class="popup_cont">
+                <div class="popup_inner" data-simplebar>
+                  <div class="tit_group">
+                    <strong class="title" size="16" weight="bold">구강검사 결과 입력</strong>
+                    <div class="form_group_right">
+                      <div class="select">
+                        <button type="button" class="select_btn" value="이닥터">이닥터</button>
+                        <div class="select_opt">
+                          <ul data-simplebar>
+                            <li><button type="button" class="option" value="의사A">의사A</button></li>
+                            <li><button type="button" class="option" value="의사B">의사B</button></li>
+                            <li><button type="button" class="option" value="의사C">의사C</button></li>
+                            <li><button type="button" class="option" value="의사D">의사D</button></li>
+                            <li><button type="button" class="option" value="의사E">의사E</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="select">
+                        <button type="button" class="select_btn">이전 기록 선택</button>
+                        <div class="select_opt">
+                          <ul data-simplebar>
+                            <li><button type="button" class="option" value="2020-09-10">2021-09-10</button></li>
+                            <li><button type="button" class="option" value="2020-09-10">2020-09-10</button></li>
+                            <li><button type="button" class="option" value="2019-09-10">2019-09-10</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="content js_forminput">
+                    <div class="classify_area">
+                      <span class="radio">
+                        <input type="radio" id="caries" name="classificationOfDentalConditions" data-classification="caries" data-color="#EE6950" checked>
+                        <label for="caries">우식(L)</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="charge" name="classificationOfDentalConditions" data-classification="charge" data-color="#3C95E2" >
+                        <label for="charge">충전(R)</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="inlay" name="classificationOfDentalConditions" data-classification="inlay" data-color="#F9D348" >
+                        <label for="inlay">인레이(M)</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="crown" name="classificationOfDentalConditions" data-classification="crown" data-color="#52B57C" >
+                        <label for="crown">크라운</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="pontic" name="classificationOfDentalConditions" data-classification="pontic" data-color="#B068A7" >
+                        <label for="pontic">폰틱</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="implant" name="classificationOfDentalConditions" data-classification="implant" data-color="#F19737" >
+                        <label for="implant">임플란트</label>
+                      </span>
+                      <span class="radio">
+                        <input type="radio" id="loss" name="classificationOfDentalConditions" data-classification="loss" data-color="#777" >
+                        <label for="loss">상실/결손</label>
+                      </span>
+                    </div>
+                    <div class="measured_area">
+                      <div class="table">
+                        <table>
+                          <colgroup>
+                            <col style="min-width: 120px;">
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                            <col>
+                          </colgroup>
+                          <tbody>
+                            <tr data-dentalcondition="oralState">
+                              <th align="center">Decay Filling Missing</th>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap" alt="">
+                                    <map name="workmap">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap2" alt="">
+                                    <map name="workmap2">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap3" alt="">
+                                    <map name="workmap3">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap4" alt="">
+                                    <map name="workmap4">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap5" alt="">
+                                    <map name="workmap5">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#workmap6" alt="">
+                                    <map name="workmap6">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#workmap7" alt="">
+                                    <map name="workmap7">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#workmap8" alt="">
+                                    <map name="workmap8">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#workmap9" alt="">
+                                    <map name="workmap9">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#workmap10" alt="">
+                                    <map name="workmap10">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#workmap11" alt="">
+                                    <map name="workmap11">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap12" alt="">
+                                    <map name="workmap12">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap13" alt="">
+                                    <map name="workmap13">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap14" alt="">
+                                    <map name="workmap14">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap15" alt="">
+                                    <map name="workmap15">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#workmap16" alt="">
+                                    <map name="workmap16">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="mobility">
+                              <th align="center">Mobility</th>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="periodontal">
+                              <th align="center" rowspan="2">Pocket Depth <span>B</span><span>P</span></th>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="periodontal">
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="attachment">
+                              <th align="center" rowspan="2">Attach Loss<span>B</span><span>P</span></th>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="attachment">
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="tooth_number">
+                              <th align="center">치아번호</th>
+                              <td colspan="3" align="center">8</td>
+                              <td colspan="3" align="center">7</td>
+                              <td colspan="3" align="center">6</td>
+                              <td colspan="3" align="center">5</td>
+                              <td colspan="3" align="center">4</td>
+                              <td colspan="3" align="center">3</td>
+                              <td colspan="3" align="center">2</td>
+                              <td colspan="3" align="center">1</td>
+                              <td colspan="3" align="center">1</td>
+                              <td colspan="3" align="center">2</td>
+                              <td colspan="3" align="center">3</td>
+                              <td colspan="3" align="center">4</td>
+                              <td colspan="3" align="center">5</td>
+                              <td colspan="3" align="center">6</td>
+                              <td colspan="3" align="center">7</td>
+                              <td colspan="3" align="center">8</td>
+                            </tr>
+                            <tr data-dentalcondition="attachment">
+                              <th align="center" rowspan="2">Attach Loss<span>L</span><span>B</span></th>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="attachment">
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="periodontal">
+                              <th align="center" rowspan="2">Pocket Depth<span>L</span><span>B</span></th>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="periodontal">
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                              <td data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="2" value="">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="mobility">
+                              <th align="center">Mobility</th>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                              <td colspan="3" align="center" data-forminput>
+                                <div class="input">
+                                  <input type="text" maxlength="1" value="-">
+                                </div>
+                              </td>
+                            </tr>
+                            <tr data-dentalcondition="oralState">
+                              <th align="center">Decay Filling Missing</th>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap" alt="">
+                                    <map name="bot_workmap">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap2" alt="">
+                                    <map name="bot_workmap2">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap3" alt="">
+                                    <map name="bot_workmap3">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap4" alt="">
+                                    <map name="bot_workmap4">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap5" alt="">
+                                    <map name="bot_workmap5">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#bot_workmap6" alt="">
+                                    <map name="bot_workmap6">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#bot_workmap7" alt="">
+                                    <map name="bot_workmap7">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#bot_workmap8" alt="">
+                                    <map name="bot_workmap8">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#bot_workmap9" alt="">
+                                    <map name="bot_workmap9">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#bot_workmap10" alt="">
+                                    <map name="bot_workmap10">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_incisor">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_incisor.png" usemap="#bot_workmap11" alt="">
+                                    <map name="bot_workmap11">
+                                      <area shape="poly" coords="0,0,72,0,48,36,24,36" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,48,36" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,72,72,48,36,24,36" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,24,36" href="#none" alt="left_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap12" alt="">
+                                    <map name="bot_workmap12">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap13" alt="">
+                                    <map name="bot_workmap13">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap14" alt="">
+                                    <map name="bot_workmap14">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap15" alt="">
+                                    <map name="bot_workmap15">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                              <td colspan="3" class="tooth_molar">
+                                <div class="box">
+                                  <div class="image_area">
+                                    <img src="../img/components/measured/oral_state_molar.png" usemap="#bot_workmap16" alt="">
+                                    <map name="bot_workmap16">
+                                      <area shape="poly" coords="0,0,72,0,52,20,20,20" href="#none" alt="top_area">
+                                      <area shape="poly" coords="72,0,72,72,52,52,52,20" href="#none" alt="right_area">
+                                      <area shape="poly" coords="0,72,20,52,52,52,72,72" href="#none" alt="bottom_area">
+                                      <area shape="poly" coords="0,0,0,72,20,52,20,20" href="#none" alt="left_area">
+                                      <area shape="poly" coords="20,20,52,20,52,52,20,52" href="#none" alt="center_area">
+                                    </map>
+                                  </div>
+                                  <div class="click_area">
+                                    <span class="btn_click top_area" data-classification></span>
+                                    <span class="btn_click right_area" data-classification></span>
+                                    <span class="btn_click bottom_area" data-classification></span>
+                                    <span class="btn_click left_area" data-classification></span>
+                                    <span class="btn_click center_area" data-classification></span>
+                                  </div>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="summary_area">
+                      <ul class="sumary_list">
+                        <li class="sumary_item">
+                          <strong class="title">구강 상태</strong>
+                          <div class="table">
+                            <table data-simplebar>
+                              <colgroup>
+                                <col style="width: 80px;">
+                                <col style="width: 124px;">
+                                <col style="width: 80px;">
+                                <col style="width: 124px;">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th align="center">우식</th>
+                                  <td align="center">0 / 0</td>
+                                  <th align="center">폰틱</th>
+                                  <td align="center">0 / 0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">충전</th>
+                                  <td align="center">0 / 0</td>
+                                  <th align="center">임플란트</th>
+                                  <td align="center">0 / 0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">크라운</th>
+                                  <td align="center">0</td>
+                                  <th align="center">상실, 결손</th>
+                                  <td align="center">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="sumary_item">
+                          <strong class="title">동요도</strong>
+                          <div class="table">
+                            <table data-simplebar>
+                              <colgroup>
+                                <col style="width: 80px;">
+                                <col style="width: auto;">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th align="center">1도</th>
+                                  <td align="center">0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">2도</th>
+                                  <td align="center">0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">3도</th>
+                                  <td align="center">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="sumary_item">
+                          <strong class="title">치주낭</strong>
+                          <div class="table">
+                            <table data-simplebar>
+                              <colgroup>
+                                <col style="width: 80px;">
+                                <col style="width: auto;">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th align="center">4~6mm</th>
+                                  <td align="center">0 / 0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">7~9mm</th>
+                                  <td align="center">0 / 0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">10mm</th>
+                                  <td align="center">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="sumary_item">
+                          <strong class="title">부착소실</strong>
+                          <div class="table">
+                            <table data-simplebar>
+                              <colgroup>
+                                <col style="width: 80px;">
+                                <col style="width: auto;">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th align="center">4~6mm</th>
+                                  <td align="center">0 / 0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">7~9mm</th>
+                                  <td align="center">0 / 0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">10mm</th>
+                                  <td align="center">0</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                        <li class="sumary_item">
+                          <strong class="title">탐침 시 출혈</strong>
+                          <div class="table">
+                            <table data-simplebar>
+                              <colgroup>
+                                <col style="width: 80px;">
+                                <col style="width: 120px;">
+                              </colgroup>
+                              <tbody>
+                                <tr>
+                                  <th align="center">치아수</th>
+                                  <td align="center">0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">부위수</th>
+                                  <td align="center">0</td>
+                                </tr>
+                                <tr>
+                                  <th align="center">비율</th>
+                                  <td align="center">0%</td>
+                                </tr>
+                              </tbody>
+                            </table>
+                          </div>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="keyboard form_input">
+                      <div class="key_area" data-keyboard="mobility">
+                        <ul class="key_list">
+                          <li><button type="button" class="btn" value="1">1</button></li>
+                          <li><button type="button" class="btn" value="2">2</button></li>
+                          <li><button type="button" class="btn" value="3">3</button></li>
+                          <li class="no_agitation"><button type="button" class="btn" value="-">동요도 없음 (-)</button></li>
+                        </ul>
+                      </div>
+                      <div class="key_area" data-keyboard="periodontal" style="display: none;">
+                        <p class="note">좌클릭 : 일반 입력 <br>우클릭 : Bleeding 입력</p>
+                        <ul class="key_list">
+                          <li><button type="button" class="btn" value="1">1</button></li>
+                          <li><button type="button" class="btn" value="2">2</button></li>
+                          <li><button type="button" class="btn" value="3">3</button></li>
+                          <li><button type="button" class="btn" value="4">4</button></li>
+                          <li><button type="button" class="btn" value="5">5</button></li>
+                          <li><button type="button" class="btn" value="6">6</button></li>
+                          <li><button type="button" class="btn" value="7">7</button></li>
+                          <li><button type="button" class="btn" value="8">8</button></li>
+                          <li><button type="button" class="btn" value="9">9</button></li>
+                          <li><button type="button" class="btn" value="10">10</button></li>
+                          <li><button type="button" class="btn" value="11">11</button></li>
+                          <li><button type="button" class="btn" value="12">12</button></li>
+                        </ul>
+                      </div>
+                      <div class="key_area" data-keyboard="attachment" style="display: none;">
+                        <ul class="key_list">
+                          <li><button type="button" class="btn" value="1">1</button></li>
+                          <li><button type="button" class="btn" value="2">2</button></li>
+                          <li><button type="button" class="btn" value="3">3</button></li>
+                          <li><button type="button" class="btn" value="4">4</button></li>
+                          <li><button type="button" class="btn" value="5">5</button></li>
+                          <li><button type="button" class="btn" value="6">6</button></li>
+                          <li><button type="button" class="btn" value="7">7</button></li>
+                          <li><button type="button" class="btn" value="8">8</button></li>
+                          <li><button type="button" class="btn" value="9">9</button></li>
+                          <li><button type="button" class="btn" value="10">10</button></li>
+                          <li><button type="button" class="btn" value="11">11</button></li>
+                          <li><button type="button" class="btn" value="12">12</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup_bottom">
+                <button class="btn">취소</button>
+                <button class="btn primary">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    </div>
+  </div>
+</body>
+
+</html>

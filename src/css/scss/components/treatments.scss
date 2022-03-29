@@ -1,0 +1,111 @@
+.treatments_lst {
+  height: 136px;
+  padding: 0 15px;
+
+  .list {
+    display: flex;
+    height: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 8px;
+  }
+
+  .item {
+    display: block;
+    position: relative;
+    width: auto;
+    height: auto;
+    border: 0;
+    border-radius: 100px;
+
+    .btn {
+      padding: 4px 9px;
+      font-weight: normal;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+
+      [theme="dark"] & {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .btn_delete_area {
+      position: absolute;
+      top: 50%;
+      right: 6px;
+      width: 16px;
+      height: 16px;
+      transform: translateY(-50%);
+      font-size: 0;
+    }
+
+    .btn_delete {
+      position: relative;
+      width: 100%;
+      height: 100%;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 8px;
+        height: 8px;
+        transform: translate(-50%, -50%);
+        background: url(../img/next_popup/icon_delete.svg) no-repeat center/auto;
+
+        [theme="dark"] & {
+          background: url(../img/next_popup/icon_delete_dark.svg) no-repeat center/auto;
+        }
+      }
+
+      &.white {
+        &:after {
+          background: url(../img/next_popup/icon_delete_active2.svg) no-repeat center/auto;
+        }
+      }
+    }
+
+    &.is_active {
+
+      .btn {
+        color: var(--p600);
+        border-color: var(--p500);
+
+        [theme="dark"] & {
+          color: var(--p400);
+        }
+      }
+
+      .btn_delete {
+
+        &:after {
+          background: url(../img/next_popup/icon_delete_active.svg) no-repeat center/auto;
+
+          [theme="dark"] & {
+            &:after {
+              background: url(../img/next_popup/icon_delete_active_dark.svg) no-repeat center/auto;
+            }
+          }
+        }
+      }
+    }
+
+    &.is_edit {
+
+      .btn {
+        padding-right: 22px;
+      }
+    }
+
+    &.is_custom {
+
+      &.is_active {
+
+        .btn {
+          border-color: rgba(0, 0, 0, 0.1);
+        }
+      }
+    }
+  }
+}

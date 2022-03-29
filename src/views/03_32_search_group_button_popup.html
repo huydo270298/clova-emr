@@ -1,0 +1,169 @@
+@@include('./include/head.html',{"title": "묶음 버튼 검색 : NAVER CLOVA EMR", "list_title": "[팝업] 묶음 버튼 검색 : Common"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] LAYER -->
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup" id="bundle_button_search" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">묶음 버튼 검색</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont" data-simplebar>
+            <div class="flexbox" v-align="center" align="between">
+              <div class="input">
+                <input type="text" placeholder="버튼이름으로 검색">
+              </div>
+              <button class="btn">검색</button>
+            </div>
+            <div class="table">
+              <table data-simplebar>
+                <colgroup>
+                  <col style="width:138px">
+                  <col style="width:138px">
+                  <col>
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>상위그룹</th>
+                    <th>중그룹</th>
+                    <th>버튼 이름</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>기본진료</td>
+                    <td>구강검진</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>기본진료</td>
+                    <td>구내염처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>기본진료</td>
+                    <td>구내염처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>X-ray</td>
+                    <td>치근단</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>X-ray</td>
+                    <td>동시2매</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>X-ray</td>
+                    <td>파노라마</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>X-ray</td>
+                    <td>교익촬영</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>X-ray</td>
+                    <td>CT촬영</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>마취</td>
+                    <td>침윤마취</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>마취</td>
+                    <td>침윤마취</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>보존</td>
+                    <td>진정처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>보존</td>
+                    <td>진정처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>보존</td>
+                    <td>진정처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>보존</td>
+                    <td>진정처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>보존</td>
+                    <td>진정처치</td>
+                  </tr>
+                  <tr>
+                    <td>자주하는 진료</td>
+                    <td>보존</td>
+                    <td>진정처치</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+
+  </div>
+  <script>
+    function openPopup(id) {
+      $('.layer.show .popup')[0].dispatchEvent(new CustomEvent('popup.close'));
+      $(id)[0].dispatchEvent(new CustomEvent('popup.open'));
+    }
+  </script>
+</body>
+
+</html>

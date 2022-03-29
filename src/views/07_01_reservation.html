@@ -1,0 +1,826 @@
+@@include('./include/head.html',{"title": "예약 : NAVER CLOVA EMR", "list_title": "메인 : 예약"})
+
+<body data-pagestatus="new : 2022.03.16">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap">
+    <!--[D] HEADER -->
+    @@include('./include/header.html',{"type": "01","tab":"3"})
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main class="reservation_layout" data-simplebar>
+      <div class="col">
+        <div class="row">
+          <div class="panel">
+            <div id="reservationDrSelect">
+              <strong class="title" size="14" weight="bold">의사 선택</strong>
+              <div class="content_box" data-simplebar>
+                <ul class="select_list">
+                  <li>
+                    <span class="chkbox" style="--custom-cb-color:#6AC89F;">
+                      <input type="checkbox" id="redr1">
+                      <label for="redr1">Dr. 이닥터</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="chkbox" style="--custom-cb-color:#EE6950
+                    ;">
+                      <input type="checkbox" id="redr2">
+                      <label for="redr2">Dr. 한닥터</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="chkbox">
+                      <input type="checkbox" id="redr3">
+                      <label for="redr3">Dr. 박닥터</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="chkbox">
+                      <input type="checkbox" id="redr4">
+                      <label for="redr4">Dr. 장닥터</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="chkbox">
+                      <input type="checkbox" id="redr5">
+                      <label for="redr5">Dr. 장닥터</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="chkbox">
+                      <input type="checkbox" id="redr6">
+                      <label for="redr6">Dr. 장닥터</label>
+                    </span>
+                  </li>
+                  <li>
+                    <span class="chkbox">
+                      <input type="checkbox" id="redr7">
+                      <label for="redr7">Dr. 장닥터</label>
+                    </span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="panel">
+            <div id="reservationDatepicker">
+              <img src="../img/reservation/@tmp_datepicker.png" alt="">
+              <img src="../img/reservation/@tmp_datepicker_dark.png" style="display: none;" alt="">
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="panel">
+            <div class="tab_group">
+              <div class="tab_lst_box">
+                <ul class="tab_lst">
+                  <li class="tab_item is_active">
+                    <a href="#reservationMemo" class="tab_btn">메모</a>
+                  </li>
+                  <li class="tab_item">
+                    <a href="#reservationStats" class="tab_btn">통계</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="tabs">
+                <div class="tab is_active" id="reservationMemo">
+                  <div class="content_box" data-simplebar>
+                    <ul class="memo_registered_list">
+                      <li>
+                        <span class="date">2021-11-06</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p><span class="label" style="background: #6AC89F;">이</span>진료실 3명</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2021-11-07</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p><span class="label" style="background: #EE6950;">한</span>오후 5시부터 배선 점검으로 15분</p>
+                              <p>분 정도 1번부터 3번 진료실까지 이용</p>
+                            </li>
+                            <li>
+                              <p><span class="label" style="background: #6AC89F;">이</span>오후 3시부터 외래 진료 시작</p>
+                            </li>
+                            <li>
+                              <p><span class="label" style="background: var(--g500);">직원1</span>오후 5시부터 배선 점검으로 15</p>
+                              <p>분 정도 1번부터 3번 진료실까지 이용 불가</p>
+                            </li>
+                            <li>
+                              <p><span class="label" style="background: var(--g500);">직원2</span>오후 3시부터 외래 진료 시작</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2021-11-08</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p class="nodata_txt">등록된 메모가 없습니다.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2021-11-09</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p class="nodata_txt">등록된 메모가 없습니다.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2021-11-10</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p class="nodata_txt">등록된 메모가 없습니다.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2021-11-11</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p class="nodata_txt">등록된 메모가 없습니다.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                      <li>
+                        <span class="date">2021-11-12</span>
+                        <div class="content_box">
+                          <ul class="note_list">
+                            <li>
+                              <p class="nodata_txt">등록된 메모가 없습니다.</p>
+                            </li>
+                          </ul>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="tab" id="reservationStats">
+                  <strong class="title" size="14" weight="bold">총 예약 14건 중</strong>
+                  <dl class="stats_list">
+                    <div class="content_box">
+                      <dt>일반예약</dt>
+                      <dd>14</dd>
+                    </div>
+                    <div class="content_box">
+                      <dt>정기검진</dt>
+                      <dd>0</dd>
+                    </div>
+                    <div class="content_box">
+                      <dt>치석제거</dt>
+                      <dd>0</dd>
+                    </div>
+                    <div class="content_box">
+                      <dt>간단예약</dt>
+                      <dd>0</dd>
+                    </div>
+                  </dl>
+                  <div class="content_box">
+                    <dl class="detail_stats_list">
+                      <div>
+                        <dt>신환 예약</dt>
+                        <dd>1</dd>
+                      </div>
+                      <div>
+                        <dt>근관 치료</dt>
+                        <dd>3</dd>
+                      </div>
+                      <div>
+                        <dt>충치 치료</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>스켈링</dt>
+                        <dd>1</dd>
+                      </div>
+                      <div>
+                        <dt>잇몸 치료</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>발치</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>임플 1차 수술</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>Prep</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>셋팅</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>틀니</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>교정</dt>
+                        <dd>1</dd>
+                      </div>
+                      <div>
+                        <dt>검진</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>근관치료</dt>
+                        <dd>0</dd>
+                      </div>
+                      <div>
+                        <dt>RP</dt>
+                        <dd>0</dd>
+                      </div>
+                    </dl>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col">
+        <div class="panel">
+          <div id="reservationTimetable">
+            <div class="flexbox" align="center" v-align="center">
+              <div class="flex_item_group" position="left">
+                <button class="btn"><i class="icon_settings"></i></button>
+                <button class="btn inc_font_btn" data-max-size="20" data-fs-target="#reservationTimetable .timetable .events li"><i class="icon_plus"></i></button>
+                <button class="btn dec_font_btn" data-min-size="12" data-fs-target="#reservationTimetable .timetable .events li"><i class="icon_minus"></i></button>
+              </div>
+              <div class="flex_item_group" position="right">
+                <button class="btn">개인별 휴무일</button>
+                <button class="btn">예약표 출력</button>
+              </div>
+            </div>
+            <div class="timetable">
+              <div class="data_filter">
+                <div class="flexbox" align="center" v-align="center">
+                  <div class="flex_item_group" position="left">
+                    <button class="btn"><i class="icon_prev"></i></button>
+                    <button class="btn"><i class="icon_next"></i></button>
+                    <p>2021-11-06 ~ 2021-11-12</p>
+                  </div>
+                  <div class="flex_item_group" position="right">
+                    <p>총 예약 <em>47</em>건</p>
+                    <button class="btn"><i class="icon_search"></i></button>
+                  </div>
+                </div>
+              </div>
+              <div class="timetable_header">
+                <ul class="col_lst">
+                  <li>
+                    <span>6일</span>
+                    <small>(월)</small>
+                  </li>
+                  <li>
+                    <span>7일</span>
+                    <small>(화)</small>
+                  </li>
+                  <li>
+                    <span>8일</span>
+                    <small>(수)</small>
+                  </li>
+                  <li class="today">
+                    <span>9일</span>
+                    <small>(목)</small>
+                  </li>
+                  <li>
+                    <span>10일</span>
+                    <small>(금)</small>
+                  </li>
+                  <li>
+                    <span>11일</span>
+                    <small>(토)</small>
+                  </li>
+                  <li class="holiday">
+                    <span>12일</span>
+                    <small>(일)</small>
+                  </li>
+                </ul>
+              </div>
+              <div class="timetable_cont" data-simplebar>
+                <ul class="timeline">
+                  <li data-time="8.5">
+                    <div class="time">08:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="9">
+                    <div class="time">09:00</div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="green">
+                          <span class="patient">김한국 (신환예약) 010-0000-0000</span>
+                          <span class="detail">(30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                        <li data-duration="0.5" data-color="orange">
+                          <span class="patient">김나래 (91) 010-0000-0000</span>
+                          <span class="detail">(30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="1.5" data-color="gray" style="height: 149px;">
+                          <span class="patient">이미정 (118) 010-0000-0000</span>
+                          <span class="detail">(1시간)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="green">
+                          <span class="patient">미숙 (신환예약) 010-0000-0000</span>
+                          <span class="detail">구강검진 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                        <li data-duration="0.5" data-color="blue">
+                          <span class="patient">김나나 (366) 010-0000-0000</span>
+                          <span class="detail">#17~14, 44~47cu (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday">
+                      <span class="holiday_txt">
+                        정기<br>휴무일
+                      </span>
+                    </div>
+                  </li>
+                  <li data-time="9.5">
+                    <div class="time">09:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="orange">
+                          <span class="patient">곽두팔 (99) 010-0000-0000</span>
+                          <span class="detail">상담 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="10">
+                    <div class="time">10:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="green">
+                          <span class="patient">토토로 (신환예약) 010-0000-0000</span>
+                          <span class="detail">#17~14, 44~47cu (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="darkgray" data-tooltips>
+                          <span class="patient">김예지 (10104) 010-0000-0000</span>
+                          <span class="detail">[도착] #64 크라운셋팅 (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                          <div class="tooltips">
+                            <strong>11월 09일 10시 김예지(10104)님</strong>
+                            <strong>[여 33Y 0M / 최종내원 : 2021-09-01] 예약정보</strong>
+                            <p>Alert : 리도케인 알러지</p>
+                            <dl>
+                              <dt>[예약정보]</dt>
+                              <dd>
+                                <ul>
+                                  <li>휴대전화 : 010-0000-0000</li>
+                                  <li>예약내용 : #64 크라운셋팅</li>
+                                  <li>담당의사 : 한닥터</li>
+                                  <li>소요시간 : 30분</li>
+                                  <li>입력시각 : 2021-09-01 17:32:32</li>
+                                </ul>
+                              </dd>
+                            </dl>
+                            <dl>
+                              <dt>[예약 변경 내역]</dt>
+                              <dd>
+                                <ul>
+                                  <li>2021-09-01 17:32:32 예약 최초 입력 @한닥터</li>
+                                </ul>
+                              </dd>
+                            </dl>
+                          </div>
+                        </li>
+                        <li data-duration="0.5" data-color="blue">
+                          <span class="patient">이야옹 (10541) 010-0000-0000</span>
+                          <span class="detail">보철상담 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                        <li data-duration="0.5" data-color="blue">
+                          <span class="patient">이사과 (10471) 010-0000-0000</span>
+                          <span class="detail">#17,45 Scaling (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="purple">
+                          <span class="patient">박기조 (10493) 010-0000-0000</span>
+                          <span class="detail">#33 근관확대 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="10.5">
+                    <div class="time">10:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="darkgray">
+                          <span class="patient">강나나 (10467) 010-0000-0000</span>
+                          <span class="detail">[도착] 구강 검진 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="1.5" data-color="yellow" style="height: 150px;">
+                          <span class="patient">강나나 (10467) 010-0000-0000</span>
+                          <span class="detail">op (1시간 30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="11">
+                    <div class="time">11:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="orange">
+                          <span class="patient">염연진 (706) 010-0000-0000</span>
+                          <span class="detail">[치석제거] 충전 or 발수(30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="11.5">
+                    <div class="time">11:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="12">
+                    <div class="time">12:00</div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="gray">
+                          <span class="patient">안다미 (10584) 010-0000-0000</span>
+                          <span class="detail">#33 충전 or 발수 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="yellow">
+                          <span class="patient">강나나 (10467) 010-0000-0000</span>
+                          <span class="detail">구강 검진 (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="purple">
+                          <span class="patient">박기조 (10493) 010-0000-0000</span>
+                          <span class="detail">#33 근관확대 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="12.5">
+                    <div class="time">12:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="13">
+                    <div class="time">13:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="13.5">
+                    <div class="time">13:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="14">
+                    <div class="time">14:00</div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="darkorange">
+                          <span class="patient">안포도 (10473) 010-0000-0000</span>
+                          <span class="detail">#33 근관확대 (30분)<br>&lt;9/14까지 연락 없으면 전화하기&gt;</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="purple">
+                          <span class="patient">김선표C (10423) 010-0000-0000</span>
+                          <span class="detail">#11 근관확대/근관성형 (30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="yellow">
+                          <span class="patient">강나나 (10467) 010-0000-0000</span>
+                          <span class="detail">구강 검진 (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="14.5">
+                    <div class="time">14:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="15">
+                    <div class="time">15:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="orange">
+                          <span class="patient">염연진 (706) 010-0000-0000</span>
+                          <span class="detail">[치석제거] 충전 or 발수(30분)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="green">
+                          <span class="patient">토토로 (신환예약) 010-0000-0000</span>
+                          <span class="detail">#17~14, 44~47cu (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="15.5">
+                    <div class="time">15:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="16">
+                    <div class="time">16:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="16.5">
+                    <div class="time">16:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="17">
+                    <div class="time">17:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="yellow">
+                          <span class="patient">강나나 (10467) 010-0000-0000</span>
+                          <span class="detail">구강 검진 (30분)</span>
+                          <span class="label" style="background:#EE6950">한</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="17.5">
+                    <div class="time">17:30</div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="1" data-color="yellow" style="height: 111px;">
+                          <span class="patient">강나나 (10467) 010-0000-0000</span>
+                          <span class="detail">op (1시간)</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events">
+                      <ul>
+                        <li data-duration="0.5" data-color="darkorange">
+                          <span class="patient">안포도 (10473) 010-0000-0000</span>
+                          <span class="detail">#33 근관확대 (30분)<br>&lt;9/14까지 연락 없으면 전화하기&gt;</span>
+                          <span class="label" style="background:#6AC89F">이</span>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="18">
+                    <div class="time">18:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="18.5">
+                    <div class="time">18:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="19">
+                    <div class="time">19:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="19.5">
+                    <div class="time">19:30</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                  <li data-time="20">
+                    <div class="time">20:00</div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events"></div>
+                    <div class="events holiday"></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- // [D] CONTENTS -->
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light');$('#reservationDatepicker img').toggle()">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

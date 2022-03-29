@@ -1,0 +1,74 @@
+<div id="secMedicalExpenses">
+  <div class="tit_group">
+    <h2 class="title" weight="bold" size="16">당일 수납 정보</h2>
+    <div class="btn_right_group">
+      <div class="select">
+        <button type="button" class="select_btn">=선택=</button>
+        <div class="select_opt">
+          <ul data-simplebar>
+            <li><button type="button" class="option" value="Option A">진료비 구분 1</button></li>
+            <li><button type="button" class="option" value="Option B">진료비 구분 2</button></li>
+            <li><button type="button" class="option" value="Option C">진료비 구분 3</button></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="panel_cont">
+    <table class="storage_info">
+      <caption><span class="blind">당일 수납 정보</span></caption>
+      <colgroup>
+        <col style="width: 9.4%">
+        <col style="width: 15.6%">
+        <col style="width: 9.5%">
+        <col style="width: 15.4%">
+        <col style="width: 12.4%">
+        <col style="width: 12.7%">
+        <col style="width: 11%">
+        <col>
+      </colgroup>
+      <tbody>
+        <tr>
+          <th scope="row">총진료비</th>
+          <td>497,810</td>
+          <th scope="row">본인부담</th>
+          <td>29,300</td>
+          <th scope="row">
+            <span class="chkbox">
+              <input type="checkbox" checked id="total_rec">
+              <label for="total_rec">총미수금</label>
+            </span>
+          </th>
+          <td class="text_red">-31,700</td>
+          <th scope="row" rowspan="2">환자부담금</th>
+          <td rowspan="2">429,300</td>
+        </tr>
+        <tr>
+          <th>비급여</th>
+          <td>400,000</td>
+          <th colspan="2">
+            <span class="chkbox">
+              <input type="checkbox" id="deduction">
+              <label for="deduction">비급여에서 본인분담금 차감</label>
+            </span>
+          </th>
+          <th scope="row">부가가치세</th>
+          <td>0</td>
+        </tr>
+      </tbody>
+    </table>
+    <ul class="note">
+      <li>세액공제 제외액 : 0원</li>
+      <li>치료비용계획 수납에 포함</li>
+    </ul>
+  </div>
+</div>
+<script>
+  var totalRecCB = document.getElementById('total_rec'),
+    total = document.querySelector('.storage_info tr:first-child td:last-child');
+  totalRecCB.addEventListener('change', function () {
+    var totalAmount = parseInt(total.innerText.replace(',', ''));
+    var amount = Math.abs(parseInt(this.closest('th').nextElementSibling.innerText.replace(',', '')));
+    total.innerText = Intl.NumberFormat("en-US").format(!this.checked ? totalAmount - amount : totalAmount + amount)
+  });
+</script>

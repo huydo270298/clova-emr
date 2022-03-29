@@ -1,0 +1,201 @@
+@@include('./include/head.html',{"title": "알림 팝업 : NAVER CLOVA EMR", "list_title": "알림 팝업 : Common"})
+
+<body data-pagestatus="new : 2022.01.18">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] LAYER -->
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="search_error">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold"><span class="icon_error"></span>검색 오류</strong>
+            <p>검색된 환자가 없습니다.<br>환자이름 혹은 차트번호를 다시 확인해주세요.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="new_reg">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <p>신환 정보 입력 후 “환자 저장" 버튼을 눌러<br>저장하세요.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="save_patient">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">저장 완료</strong>
+            <p>환자 정보가 저장 되었습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="save_patient2">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">저장 완료 - 동명이인 접미사 B추가</strong>
+            <p>환자 정보가 저장 되었습니다.<br>동명이인인 기존 환자가 존재하여, 접미사 “B”<br>자동 추가 하였습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="input_error">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold"><span class="icon_error"></span>입력 오류</strong>
+            <p>환자분 성함을 입력하세요.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="input_error2">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold"><span class="icon_error"></span>입력 오류</strong>
+            <p>생년월일을 입력하세요.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="service_prepare">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <p>서비스 준비중입니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="del_confirm">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">삭제 확인</strong>
+            <p>김덴트C님을 현재 가족 목록에서 제거 하시겠습니까?<br>삭제한 자료는 복구할 수 없습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">예(Y)</button>
+            <button class="btn primary">아니요(N)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="invalid_daterange" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <p>미래의 일자는 선택 할 수 없습니다.<br>다시 확인해주세요.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="openPopup('#search_error')">[알림] 검색 오류</a>
+    <a href="#none" onclick="openPopup('#new_reg')">[알림] 신환 정보 입력 요청</a>
+    <a href="#none" onclick="openPopup('#save_patient')">[알림] 환자 정보 저장 완료</a>
+    <a href="#none" onclick="openPopup('#save_patient2')">[알림] 환자 정보 저장 완료 (동명이인 접미사 추가)</a>
+    <a href="#none" onclick="openPopup('#input_error')">[알림] 입력 오류 - 성함 입력</a>
+    <a href="#none" onclick="openPopup('#input_error2')">[알림] 입력 오류 - 생년월일</a>
+    <a href="#none" onclick="openPopup('#service_prepare')">[알림] 서비스 준비중</a>
+    <a href="#none" onclick="openPopup('#del_confirm')">[알림] 삭제 확인</a>
+    <a href="#none" onclick="openPopup('#invalid_daterange')">[알림] 일자 선택 오류</a>
+
+  </div>
+  <script>
+    function openPopup(id) {
+      $('.layer.show .popup')[0].dispatchEvent(new CustomEvent('popup.close'));
+      $(id)[0].dispatchEvent(new CustomEvent('popup.open'));
+    }
+  </script>
+</body>
+
+</html>

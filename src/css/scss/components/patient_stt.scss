@@ -1,0 +1,88 @@
+.patient_stt {
+  display: inline-block;
+  font-weight: bold;
+  margin-right: 4px;
+
+  &::before {
+    display: inline-block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    margin-right: 4px;
+    margin-top: -2px;
+    content: '';
+    vertical-align: middle;
+  }
+}
+
+.no_response {
+  color: var(--t-red) !important;
+
+  &::before {
+    background: var(--t-red) !important;
+  }
+}
+
+.no_compliance {
+  color: var(--g900) !important;
+
+  &::before {
+    background: var(--g900) !important;
+  }
+
+  [theme="dark"] & {
+    color: var(--g0) !important;
+
+    &::before {
+      background: var(--g0) !important;
+    }
+  }
+}
+
+.received {
+  color: var(--t-green) !important;
+
+  &::before {
+    background: var(--t-green) !important;
+  }
+}
+
+.ready {
+  color: var(--t-mint) !important;
+
+  &::before {
+    background: var(--t-mint) !important;
+  }
+}
+
+.under_treat {
+  color: var(--t-light-blue) !important;
+
+  &::before {
+    background: var(--t-light-blue) !important;
+  }
+}
+
+.done_treat {
+  color: var(--t-blue) !important;
+
+  &::before {
+    background: var(--t-blue) !important;
+  }
+}
+
+.stored {
+  color: var(--t-gray) !important;
+
+  &::before {
+    background: var(--t-gray) !important;
+  }
+}
+
+.need_confirm {
+  color: var(--t-orange) !important;
+
+  &::before {
+    background: var(--t-orange) !important;
+  }
+}

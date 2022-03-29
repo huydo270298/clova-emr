@@ -1,0 +1,190 @@
+body,
+input,
+select,
+textarea,
+button {
+  font-family: 'Nanum Gothic', '나눔고딕', sans-serif;
+}
+
+.blind,
+caption span,
+legend {
+  overflow: hidden;
+  position: absolute;
+  clip: rect(0 0 0 0);
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  text-indent: -9999px;
+}
+
+.skip {
+  height: 0
+}
+
+.skip a {
+  display: block;
+  position: absolute;
+  left: 0;
+  top: -100px;
+  width: 100%;
+  height: 25px;
+  text-align: center
+}
+
+.skip a:focus,
+#skip a:active {
+  position: absolute;
+  top: 0;
+  z-index: 100;
+  padding: 10px 0;
+  background: #000;
+  font-weight: bold;
+  color: #fff;
+  font-size: 20px;
+  text-decoration: none
+}
+
+* {
+  transition-property: border-color, background-color, color;
+  transition-duration: 0s;
+}
+
+body {
+  background: var(--bg);
+}
+
+p,
+span,
+dt,
+dd,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+label {
+  color: var(--g800);
+
+  [theme="dark"] & {
+    color: var(--g0);
+  }
+
+}
+
+.simplebar-track {
+  z-index: 2;
+
+  .simplebar-scrollbar::before {
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    bottom: 0 !important;
+    background: var(--g500);
+
+    [theme="dark"] & {
+      background: var(--g400);
+    }
+  }
+
+  .simplebar-scrollbar.simplebar-visible::before {
+    opacity: 1;
+  }
+
+  &.simplebar-horizontal {
+    height: 12px;
+    margin: 0 6px;
+
+    .simplebar-scrollbar {
+      top: 0;
+      height: 6px;
+    }
+  }
+
+  &.simplebar-vertical {
+    width: 12px;
+    margin: 6px 0;
+
+    .simplebar-scrollbar {
+      left: 0;
+      width: 6px;
+    }
+  }
+}
+
+.simplebar-wrapper {
+  position: relative;
+  z-index: 2;
+
+  &:focus-within {
+    z-index: 3;
+  }
+}
+
+::-webkit-scrollbar {
+  width: 18px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--g500);
+  border-radius: 100px;
+  border: 6px solid transparent;
+  width: 3px;
+  background-clip: padding-box;
+
+}
+
+[theme="dark"] *::-webkit-scrollbar-thumb {
+  background: var(--g400);
+  border-radius: 100px;
+  border: 6px solid transparent;
+  width: 3px;
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  position: absolute;
+  background: none;
+  border-radius: 0px;
+  margin-right: 5px;
+}
+
+.wrap {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+
+  &>.simplebar-wrapper {
+    width: 100%;
+  }
+
+  &>.simplebar-track {
+    z-index: 99;
+  }
+
+  &>div.simplebar-wrapper>div.simplebar-mask>div>div>div {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+  }
+}
+
+[view="pc"] {
+  @media (max-width: 1440px) {
+    display: none !important;
+  }
+}
+
+main {
+  overflow: auto;
+  flex-grow: 1;
+  height: 100%;
+  padding: 0;
+
+  &>div.simplebar-wrapper>div.simplebar-mask>div>div>div {
+    padding: 16px !important;
+  }
+}

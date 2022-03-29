@@ -1,0 +1,678 @@
+@@include('./include/head.html',{"title": "단축키 설정 : NAVER CLOVA EMR", "list_title": "[팝업] 단축키 설정 : Common"})
+
+<body data-pagestatus="new : 2021.12.30">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] Popup - 단축키 설정 -->
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup" id="shortcutPopup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">단축키 설정</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont">
+            <div class="tit_group">
+              <strong class="title" size="16">단축키 설정</strong>
+              <div class="btn_right_grp">
+                <label>작성자</label>
+                <span class="select user_select">
+                  <button type="button" value="김덴트" class="select_btn">김덴트</button>
+                  <div class="select_opt">
+                    <ul data-simplebar>
+                      <li><button type="button" class="option" value="김덴트">김덴트</button></li>
+                      <li><button type="button" class="option" value="김덴트1">김덴트1</button></li>
+                      <li><button type="button" class="option" value="김덴트2">김덴트2</button></li>
+                    </ul>
+                  </div>
+                </span>
+              </div>
+            </div>
+            <span class="virtual_shadow"></span>
+            <div class="shortcut_scroll" data-simplebar>
+              <div class="shortcut_lst_wrap">
+                <ul class="shortcut_lst">
+                  <li>
+                    <span class="key modifier_key">ESC</span>
+                    <div class="txt_shortcut">
+                      <span>상단 환자검색에 포커스</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F1</span>
+                    <div class="select">
+                      <button type="button" value="도움말/설명서" class="select_btn">도움말/설명서</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F2</span>
+                    <div class="select">
+                      <button type="button" value="스캔이미지 보기" class="select_btn">스캔이미지 보기</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F3</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F4</span>
+                    <div class="select">
+                      <button type="button" value="스캔이미지 보기" class="select_btn">스캔이미지 보기</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F5</span>
+                    <div class="select">
+                      <button type="button" value="사진 보기" class="select_btn">사진 보기</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F6</span>
+                    <div class="select">
+                      <button type="button" value="외부 X-ray" class="select_btn">외부 X-ray</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F7</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F8</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F9</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F10</span>
+                    <div class="select">
+                      <button type="button" value="상세 수납 화면" class="select_btn">상세 수납 화면</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F11</span>
+                    <div class="select">
+                      <button type="button" value="새 처치 추가 선택" class="select_btn">새 처치 추가 선택</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F12</span>
+                    <div class="select">
+                      <button type="button" value="예약 화면" class="select_btn">예약 화면</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">F12</span>
+                    <div class="select">
+                      <button type="button" value="예약 화면" class="select_btn">예약 화면</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="사용안함">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="shortcut_lst">
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">T</span>
+                    <div class="txt_shortcut">
+                      <span>현재 시간 자동 입력</span>
+                      <span class="txt_time">YYYY-MM-DD hh:mm:ss</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">D</span>
+                    <div class="txt_shortcut">
+                      <span>오늘 일자 자동 입력</span>
+                      <span class="txt_time">YYYY-MM-DD hh:mm:ss</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">S</span>
+                    <div class="txt_shortcut">
+                      <span>저장</span>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">Q</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">W</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">E</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">R</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">W</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="사용안함">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">E</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="사용안함">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                  <li>
+                    <span class="key modifier_key">Ctrl</span>
+                    <span class="icon_plus"><span class="blind">+</span></span>
+                    <span class="key">R</span>
+                    <div class="select">
+                      <button type="button" class="select_btn">사용안함</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="사용안함">사용안함</button></li>
+                          <li><button type="button" class="option" value="도움말/설명서">도움말/설명서</button></li>
+                          <li><button type="button" class="option" value="데스크">데스크</button></li>
+                          <li><button type="button" class="option" value="전자차트 화면">전자차트 화면</button></li>
+                          <li><button type="button" class="option" value="PI 입력 화면">PI 입력 화면</button></li>
+                          <li><button type="button" class="option" value="치료계획 입력 화면">치료계획 입력 화면</button></li>
+                          <li><button type="button" class="option" value="사진보기">사진보기</button></li>
+                          <li><button type="button" class="option" value="X-ray">X-ray</button></li>
+                          <li><button type="button" class="option" value="상담 화면">상담 화면</button></li>
+                          <li><button type="button" class="option" value="예약 화면">예약 화면</button></li>
+                          <li><button type="button" class="option" value="촬영">촬영</button></li>
+                          <li><button type="button" class="option" value="스캔이미지 보기">스캔이미지 보기</button></li>
+                          <li><button type="button" class="option" value="새 처치 추가 선택">새 처치 추가 선택</button></li>
+                          <li><button type="button" class="option" value="동의서/문진표 발급">동의서/문진표 발급</button></li>
+                          <li><button type="button" class="option" value="이전 차트번호 열기">이전 차트번호 열기</button></li>
+                          <li><button type="button" class="option" value="다음 차트번호 열기">다음 차트번호 열기</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">취소</button>
+            <button class="btn primary">저장</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // [D] Popup - 단축키 설정 -->
+  <!-- [D] Popup - 중복 선택 -->
+  <div class="layer">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="duplicate_selection">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">중복 선택</strong>
+            <p>단축키는 설정이 중복되었습니다.<br> 다시 설정해 주세요.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // [D] Popup - 중복 선택 -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="duplicatedAlert();">[팝업] 중복 선택</a>
+  </div>
+  <script>
+    function duplicatedAlert() {
+      $('.layer').eq(1).toggle();
+      $('#duplicate_selection').toggle();
+    }
+  </script>
+</body>
+
+</html>

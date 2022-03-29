@@ -1,0 +1,72 @@
+@@include('./include/head.html',{"title": "전자차트 : NAVER CLOVA EMR", "list_title": "[모듈] 기존기록 표시부 : 전자차트"})
+
+<body data-pagestatus="new : 2022.02.09">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap">
+
+    <div class="panel">
+      @@include('./include/echart_history.html',{"type": "01"})
+    </div>
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="toggleMegadrop()">[기존기록-첨부파일] 영역 토글</a>
+    <a href="#none" onclick="toggleNoAttachment()">[기존기록-첨부파일] 없음</a>
+    <a href="#none" onclick="medicalHistory(0)">[기존기록-전신병력] 특이사항 없음</a>
+    <a href="#none" onclick="medicalHistory(1)">[기존기록-전신병력] 특이사항 있음</a>
+    <a href="#none" onclick="medicalHistory(2)">[기존기록-전신병력] 특이사항 2줄이상</a>
+    <a href="#none" onclick="toggleSeachBox()">[기존기록] 검색필드 열기</a>
+  </div>
+  <script>
+    function toggleMegadrop() {
+      $('.record_display_control').toggleClass('megadrop')
+    }
+    function medicalHistory(n) {
+      $('.medical_alert_box .select_item').hide().eq(n).show();
+      if (n === 0) {
+        $('.medical_alert_box').addClass('ns').removeClass('notice')
+      } else {
+        $('.medical_alert_box').addClass('notice').removeClass('ns')
+      }
+    }
+    function toggleNoAttachment() {
+      $('.attachment_box .files_list,.attachment_box .preview_files_list,.attachment_stt .stt_txt').toggle();
+    }
+    function toggleSeachBox() {
+      $('.float_search_box').toggle();
+    }
+  </script>
+</body>
+
+</html>

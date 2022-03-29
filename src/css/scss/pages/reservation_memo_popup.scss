@@ -1,0 +1,138 @@
+#reservation_memo_popup {
+  width: 680px;
+  height: 100%;
+  max-height: 535px;
+  margin: 90px 0;
+
+  .title {
+    display: block;
+    line-height: 18px;
+  }
+
+  .popup_cont {
+    padding: 0;
+
+    &>div>div>div>div>div>.simplebar-content {
+      padding: 24px 32px !important;
+    }
+  }
+
+  .memo_list_box {
+    height: 304px;
+
+    .content_box {
+      max-height: unset;
+      height: 100%;
+    }
+
+    &+.title {
+      margin-top: 24px;
+    }
+
+    .memo_list {
+      .label {
+        display: inline-block;
+        min-width: 16px;
+        height: 16px;
+        vertical-align: top;
+        border-radius: 2px;
+        line-height: 16px;
+        padding: 0 2px;
+        font-size: 11px;
+        font-weight: 700;
+        color: var(--g0);
+        box-sizing: border-box;
+        flex-shrink: 0;
+      }
+
+      li {
+        display: flex;
+        padding: 11px 16px;
+        gap: 8px;
+        font-size: 14px;
+        line-height: 18px;
+        justify-content: flex-start;
+        align-items: center;
+
+        span:nth-child(2) {
+          color: var(--g900);
+
+          [theme="dark"] & {
+            color: var(--g0);
+          }
+        }
+
+        &.line_through {
+          span:nth-child(2) {
+            text-decoration: line-through;
+          }
+        }
+
+        &:nth-child(even) {
+          background: var(--g50);
+
+          [theme="dark"] & {
+            background: var(--g800);
+          }
+        }
+      }
+
+      .delete_btn {
+        margin-right: 0;
+        margin-left: auto;
+      }
+
+      .icon_delete {
+        display: block;
+        width: 16px;
+        height: 16px;
+        background: url('../img/reservation_memo_popup/icon_delete.svg') no-repeat;
+
+        [theme="dark"] & {
+          background: url('../img/reservation_memo_popup/icon_delete_dark.svg') no-repeat;
+        }
+      }
+    }
+  }
+
+  .memo_enter {
+    margin-top: 12px;
+
+    .flexbox {
+      gap: 8px;
+    }
+
+    .flex_item_group {
+      &[position="left"] {
+        flex-grow: 1;
+      }
+
+      &[position="right"] {
+        .btn {
+          height: 58px;
+          width: 68px;
+          padding: 10px 21px;
+          white-space: nowrap;
+        }
+      }
+    }
+
+    .content_box {
+      height: 58px;
+      margin-top: 0;
+      flex-grow: 1;
+      overflow: hidden;
+
+      textarea {
+        height: 100%;
+        width: 100%;
+        padding: 7px 9px;
+        border: none;
+        outline: none;
+        box-sizing: border-box;
+        resize: none;
+        background: none;
+      }
+    }
+  }
+}

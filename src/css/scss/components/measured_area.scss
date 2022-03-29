@@ -1,0 +1,290 @@
+.measured_area {
+  margin-top: 10px;
+
+  .table {
+
+    table {
+      height: auto;
+    }
+
+    tr {
+      height: 24px;
+    }
+
+    th,
+    td {
+      font-size: 12px;
+      line-height: 14px;
+      border: 1px solid var(--g400);
+
+      [theme="dark"] & {
+        border-color: var(--g400);
+      }
+    }
+
+    th {
+      position: relative;
+      padding: 8px 30px;
+      font-weight: normal;
+      line-height: 18px;
+
+      span {
+        position: absolute;
+        right: 4px;
+        width: 16px;
+        font-weight: bold;
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+
+        &:first-child {
+          top: 5px;
+        }
+
+        &:last-child {
+          bottom: 5px;
+        }
+      }
+    }
+
+    tr {
+      &:nth-child(even) {
+        background: transparent;
+      }
+
+      &[data-dentalcondition] {
+
+        .input {
+
+          width: 100%;
+
+          input {
+            position: relative;
+            font-size: 12px;
+            border: 0;
+            background: transparent;
+            outline: none;
+            text-align: center;
+            border-radius: 0;
+
+            &:focus {
+              color: var(--p500);
+              outline: 1px solid var(--p500);
+            }
+          }
+
+          &:hover {
+            outline: 1px solid var(--g600);
+            background: var(--g100);
+          }
+        }
+      }
+
+      &[data-dentalCondition="mobility"] {
+
+        .input {
+          height: 31px;
+
+          input:not([value="-"]) {
+            [theme="dark"] & {
+              color: var(--g100);
+            }
+          }
+        }
+      }
+
+      &[data-dentalcondition="periodontal"],
+      &[data-dentalcondition="attachment"] {
+
+        .input {
+
+          input {
+            height: 23px;
+            padding: 3px;
+          }
+        }
+      }
+
+      &[data-dentalcondition="tooth_number"] {
+        height: 32px;
+        background: var(--g50);
+
+        [theme="dark"] & {
+          background: var(--g800);
+        }
+
+        td {
+          color: var(--g800);
+
+          [theme="dark"] & {
+            color: var(--g100);
+          }
+        }
+      }
+    }
+
+    td {
+      padding: 0;
+    }
+  }
+
+  .box {
+    position: relative;
+    width: 71px;
+    height: 71px;
+    line-height: 71px;
+    text-align: center;
+    font-size: 14px;
+    color: #fff;
+    font-weight: bold;
+
+    .image_area {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 10;
+
+      img {
+        width: 71px;
+        height: 71px;
+      }
+    }
+
+    .click_area {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 1;
+    }
+
+    .btn_click {
+      position: absolute;
+      width: 71px;
+      height: 20px;
+
+      &.top_area {
+        top: 0;
+        left: 0;
+        transform: rotate(180deg);
+      }
+
+      &.left_area {
+        top: 26px;
+        left: -26px;
+        transform: rotate(90deg);
+      }
+
+      &.right_area {
+        top: 26px;
+        right: -26px;
+        transform: rotate(-90deg);
+      }
+
+      &.bottom_area {
+        bottom: 0;
+        left: 0;
+      }
+
+      &.center_area {
+        top: 50%;
+        left: 50%;
+        width: 32px;
+        height: 32px;
+        transform: translate(-50%, -50%);
+      }
+
+      &.all_area {
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+      }
+
+      &[data-classification="caries"] {
+        background: url(../img/components/measured/tooth_caries_selected.png) no-repeat center/auto;
+
+        &.center_area {
+          background: #EE6950;
+        }
+      }
+
+      &[data-classification="charge"] {
+        background: url(../img/components/measured/tooth_charge_selected.png) no-repeat center/auto;
+
+        &.center_area {
+          background: #3C95E2;
+        }
+      }
+
+      &[data-classification="inlay"] {
+        background: url(../img/components/measured/tooth_inlay_selected.png) no-repeat center/auto;
+
+        [theme="dark"] & {
+          background: url(../img/components/measured/tooth_inlay_selected_dark.png) no-repeat center/auto;
+        }
+
+        &.center_area {
+          background: #AA9A31;
+
+          [theme="dark"] & {
+            background: #F9D348;
+          }
+        }
+      }
+    }
+  }
+
+  .tooth_incisor {
+    .click_area {
+
+      .top_area,
+      .bottom_area {
+        height: 35px;
+
+        &[data-classification="caries"] {
+          background: url(../img/components/measured/tooth_caries_ver_selected.png) no-repeat center/100%;
+        }
+
+        &[data-classification="charge"] {
+          background: url(../img/components/measured/tooth_charge_ver_selected.png) no-repeat center/100%;
+        }
+
+        &[data-classification="inlay"] {
+          background: url(../img/components/measured/tooth_inlay_ver_selected.png) no-repeat center/100%;
+        }
+      }
+
+      .left_area,
+      .right_area {
+        top: 0;
+        width: 24px;
+        height: 71px;
+
+        &[data-classification="caries"] {
+          background: url(../img/components/measured/tooth_caries_hor_selected.png) no-repeat center/100%;
+        }
+
+        &[data-classification="charge"] {
+          background: url(../img/components/measured/tooth_charge_hor_selected.png) no-repeat center/100%;
+        }
+
+        &[data-classification="inlay"] {
+          background: url(../img/components/measured/tooth_inlay_hor_selected.png) no-repeat center/100%;
+        }
+      }
+
+      .right_area {
+        right: 0;
+        transform: rotate(180deg);
+      }
+
+      .left_area {
+        left: 0;
+        transform: none;
+      }
+    }
+  }
+}

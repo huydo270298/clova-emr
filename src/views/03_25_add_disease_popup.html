@@ -1,0 +1,76 @@
+@@include('./include/head.html',{"title": "상병명 선택 : NAVER CLOVA EMR", "list_title": "[팝업] 상병명 선택 : Common"})
+
+<body data-pagestatus="new : 2022.03.02">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      <div class="layer" >
+
+        @@include('./include/echart_add_disease_popup.html')
+      </div>
+      <div class="layer show dimmed">
+
+        <div class="popup_wrap">
+          <div class="popup alert_popup" id="tooth_selection_reminder" style="display: block;">
+            <div class="popup_innerwrap">
+              <div class="popup_cont">
+                <strong class="title" size="18" weight="bold">치아선택 알림</strong>
+                <p>선택된 치아가 없습니다.<br>치아 선택을 하지 않고 입력 하시겠습니까?</p>
+              </div>
+              <div class="popup_bottom">
+                <button class="btn">예(Y)</button>
+                <button class="btn primary">아니오(N)</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+  </div>
+  <!-- // [D] CONTENTS -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="openPopup('#echart_add_disease_popup')">[팝업] 상병명 선택</a>
+    <a href="#none" onclick="openPopup('#tooth_selection_reminder')">[알림] 선택 치아 없음</a>
+  </div>
+  <script>
+    function openPopup(id) {
+      $('.layer.show .popup')[0].dispatchEvent(new CustomEvent('popup.close'));
+      $(id)[0].dispatchEvent(new CustomEvent('popup.open'));
+    }
+  </script>
+</body>
+
+</html>

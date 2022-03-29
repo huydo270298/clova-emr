@@ -1,0 +1,167 @@
+#libraryPopup {
+  width: 900px;
+  height: 100%;
+  max-height: 900px;
+  margin: 90px 0;
+
+  .tit_group {
+    .title {
+      line-height: 18px;
+    }
+  }
+
+  .popup_cont {
+    padding: 0;
+    height: calc(100% - 106px);
+
+    &>.simplebar-wrapper {
+      height: 100%;
+    }
+
+    &>div.simplebar-wrapper>div.simplebar-mask>div>div>div.simplebar-content {
+      padding: 32px 32px 24px !important;
+
+      &>.flexbox~.flexbox {
+        margin-top: 12px;
+        gap: 40px;
+      }
+    }
+  }
+
+  .content_box {
+    overflow: hidden;
+
+    +.content_box {
+      margin-top: 25px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  .filter_wrap {
+    padding: 0 23px;
+
+    .flexbox {
+      padding: 16px 0;
+      row-gap: 12px;
+      flex-wrap: wrap;
+
+      +.flexbox {
+        border-top: 1px solid var(--g300);
+
+        [theme="dark"] & {
+          border-top: 1px solid var(--g600);
+        }
+      }
+    }
+
+    .input {
+      width: 220px;
+    }
+
+    .flex_item_group {
+      column-gap: 12px;
+      align-items: center;
+
+      label {
+        display: block;
+        font-size: 12px;
+      }
+    }
+
+    .radio_wrap {
+      .flex_item_group {
+        column-gap: 16px;
+      }
+    }
+
+    .symptom_range {
+      justify-content: flex-start;
+      column-gap: 24px;
+
+      .flex_item_group {
+        column-gap: 16px;
+      }
+    }
+  }
+
+  .dropdown.context_menu {
+    position: absolute;
+  }
+
+  table {
+    height: 351px;
+
+    tr {
+      line-height: 21px;
+
+      &.selected {
+        box-shadow: none;
+
+        [theme="dark"] & {
+          background: rgba(99, 126, 221, 0.3) !important;
+        }
+
+        td {
+          font-weight: normal;
+        }
+      }
+
+      &:hover {
+        background: var(--p200);
+
+        [theme="dark"] & {
+          background: rgba(99, 126, 221, 0.3) !important;
+        }
+      }
+    }
+
+    td {
+      padding: 10px 16px;
+
+      strong {
+        color: var(--t-red);
+      }
+
+      span {
+        display: inline;
+        padding: 2px 1px 2px 3px;
+        background-color: #FACAD6;
+      }
+    }
+  }
+
+  .simplebar-track {
+    margin-top: 6px;
+    z-index: 10;
+  }
+
+  .popup_bottom {
+    .flex_item_group {
+      align-items: center;
+    }
+
+    .note_txt {
+      margin-right: 16px;
+      color: var(--g700);
+      font-size: 12px;
+      line-height: 18px;
+
+      [theme="dark"] & {
+        color: var(--g200);
+      }
+    }
+
+    .btn {
+      height: 32px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+
+    label {
+      font-size: 14px;
+    }
+  }
+}

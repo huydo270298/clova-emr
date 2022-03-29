@@ -1,0 +1,474 @@
+@@include('./include/head.html',{"title": "새 수가 추가 : NAVER CLOVA EMR", "list_title": "[팝업] 새 수가 추가 : Common"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] LAYER -->
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup" id="new_price_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">새 수가 추가</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont" data-simplebar>
+            <div class="flexbox" v-align="stretch">
+              <div class="injury_code_info">
+                <div class="flexbox" v-align="center" align="between">
+                  <div class="flex_item_group" position="left">
+                    <strong class="title" size="16">추가할 수가 항목 선택</strong>
+                  </div>
+                  <div class="flex_item_group" position="right">
+                    <div class="input_field">
+                      <label>수가명 / 코드 검색</label>
+                      <div class="input search_input">
+                        <input type="text" placeholder="검색">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox" v-align="stretch" align="left">
+              <div class="separate_selection">
+                <div class="content_box">
+                  <dl>
+                    <div>
+                      <dt>보험수가</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" checked name="distinct" id="distinct1">
+                              <label for="distinct1">기본 진료료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct2">
+                              <label for="distinct2">행위료 - 검사료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct3">
+                              <label for="distinct3">행위료 - 영상 진단료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct4">
+                              <label for="distinct4">행위료 - 투약료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct5">
+                              <label for="distinct5">행위료 - 주사, 마취료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct6">
+                              <label for="distinct6">행위료 - 이학요법료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct7">
+                              <label for="distinct7">행위료 - 처치 및 수술</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct8">
+                              <label for="distinct8">행위료 - 급여틀니/임플란트</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct9">
+                              <label for="distinct9">행위료 - 100분의 100본인부담</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct10">
+                              <label for="distinct10">행위료 - 선별 급여</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>비급여 수가</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct11">
+                              <label for="distinct11">임플란트</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct12">
+                              <label for="distinct12">보철</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct13">
+                              <label for="distinct13">보존</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct14">
+                              <label for="distinct14">소아/예방</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct15">
+                              <label for="distinct15">교정</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct16">
+                              <label for="distinct16">기타</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct17">
+                              <label for="distinct17">미용(과세)</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </dl>
+                  <dl>
+                    <div>
+                      <dt>치료 재료</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct18">
+                              <label for="distinct18">치료재료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct19">
+                              <label for="distinct19">방사선 재료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct20">
+                              <label for="distinct20">보험임플란트 고정체</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct21">
+                              <label for="distinct21">보험임플란트 지대주</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct22">
+                              <label for="distinct22">조직유도재생재료</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct23">
+                              <label for="distinct23">봉합사</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct24">
+                              <label for="distinct24">인체조직 / 기타</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct25">
+                              <label for="distinct25">100분의 100 본인부담</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct26">
+                              <label for="distinct26">선별급여</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </dd>
+                    </div>
+                    <div>
+                      <dt>자보/산재 수가</dt>
+                      <dd>
+                        <ul>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct27">
+                              <label for="distinct27">임플란트</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct28">
+                              <label for="distinct28">보철</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct29">
+                              <label for="distinct29">보존</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct30">
+                              <label for="distinct30">소아/예방</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct31">
+                              <label for="distinct31">교정</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct32">
+                              <label for="distinct32">기타</label>
+                            </span>
+                          </li>
+                          <li>
+                            <span class="radio">
+                              <input type="radio" name="distinct" id="distinct33">
+                              <label for="distinct33">미용(과세)</label>
+                            </span>
+                          </li>
+                        </ul>
+                      </dd>
+                    </div>
+                  </dl>
+                </div>
+              </div>
+              <div class="list_code_table">
+                <div class="table" data-row-select>
+                  <table data-simplebar>
+                    <colgroup>
+                      <col style="width: 77px;">
+                      <col>
+                      <col style="width: 100px;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>Code</th>
+                        <th>수가명</th>
+                        <th align="right">금액/상한가</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>A0000</td>
+                        <td>기본진료</td>
+                        <td align="right">81,830</td>
+                      </tr>
+                      <tr>
+                        <td>AA100</td>
+                        <td>초진진찰료-치과의원,보건의료원 내 치과</td>
+                        <td align="right">45,510</td>
+                      </tr>
+                      <tr>
+                        <td>AA109</td>
+                        <td>초진진찰료-치과병원, 병원•요양병원•한방병원 내 치과</td>
+                        <td align="right">5,820</td>
+                      </tr>
+                      <tr>
+                        <td>AA200</td>
+                        <td>재진진찰료-치과의원, 보건의료원 내 치과</td>
+                        <td align="right">36,600</td>
+                      </tr>
+                      <tr>
+                        <td>AA209</td>
+                        <td>재진진찰료-치과의원, 병원•요양병원•한방병원 내 치과</td>
+                        <td align="right">48,070</td>
+                      </tr>
+                      <tr>
+                        <td>AA222</td>
+                        <td>재진-물리치료,주사등을 시술받은 경우</td>
+                        <td align="right">208,800</td>
+                      </tr>
+                      <tr>
+                        <td>AH115</td>
+                        <td>전화상담 관리료(초진)-치과의원, 보건의료원 내 치과</td>
+                        <td align="right">92,080</td>
+                      </tr>
+                      <tr>
+                        <td>AL300</td>
+                        <td>외래환자 의약품관리료[방문당]-병원, 치과병원,요양병원- 한방병원 내 의•치과</td>
+                        <td align="right">381,930</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">616,180</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">922,990</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">1,420,380</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">1,220,630</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">1,374,640</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">1,760,310</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">447,100</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">534,070</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">763,880</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                      <tr>
+                        <td>AL400</td>
+                        <td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+                        <td align="right">981,360</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <div class="flexbox" v-align="center">
+              <div class="flex_item_group" position="right">
+                <button class="btn">취소</button>
+                <button class="btn primary">수가 추가</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

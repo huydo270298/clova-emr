@@ -1,0 +1,337 @@
+#outpatient_popup {
+  width: 976px;
+  max-height: 900px;
+  height: 100%;
+
+  .popup_cont {
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 31px;
+      box-sizing: border-box;
+
+    }
+
+    .simplebar-content {
+      padding-top: 23px !important;
+      padding-bottom: 23px !important;
+    }
+
+    .select {
+
+      .simplebar-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+    .data_filter {
+      display: flex;
+      justify-content: space-between;
+      padding: 15px 23px;
+      margin: 8px 0 0;
+      border: 1px solid;
+      border-color: var(--g300);
+      border-radius: 6px;
+      font-size: 0;
+
+      [theme="dark"] & {
+        border-color: var(--g600);
+      }
+
+      .radio {
+
+        &~.radio {
+          margin-left: 0;
+        }
+
+        &+.input {
+          width: 197px;
+          margin-left: 8px;
+
+          input {
+            height: 22px;
+            font-size: 11px;
+            line-height: 11px;
+            padding: 5px;
+
+            &::placeholder {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      &~.data_filter {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap: 0;
+
+        &:before {
+          content: none;
+        }
+      }
+    }
+  }
+
+  .popup_bottom {
+    display: flex;
+    justify-content: space-between;
+
+    .btn {
+      padding: 7px 21px;
+      line-height: 16px;
+    }
+
+    span {
+      font-size: 12px;
+    }
+
+    .select {
+      margin-left: 12px;
+
+      .select_btn {
+        width: 304px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+
+  .form_group {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .form_title {
+      margin-right: 12px;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--g800);
+    }
+
+    .form_cont {
+
+      .select_btn,
+      .input {
+        width: 152px;
+      }
+
+      .size_md {
+        width: 62px;
+
+        input {
+          text-align: right;
+        }
+      }
+
+      .size_sm {
+        width: 56px;
+
+        input {
+          height: 28px;
+          text-align: right;
+        }
+      }
+
+      .size_lg {
+        width: 296px;
+      }
+
+      .calendar {
+        width: 152px;
+        margin: 0;
+        background: var(--g300);
+        box-sizing: border-box;
+        border-radius: 4px;
+
+        .calendar_input {
+          width: auto;
+        }
+
+        .input {
+          &:after {
+            background: url(../img/outpatient_popup/icon_calendar.svg) no-repeat center/auto;
+
+            [theme="dark"] & {
+              background: url(../img/outpatient_popup/icon_calendar_dark.svg) no-repeat center/auto;
+            }
+          }
+        }
+
+        input {
+          height: auto;
+
+
+        }
+      }
+    }
+  }
+
+  .tit_group {
+
+    &~.tit_group {
+      margin-top: 20px;
+    }
+
+  }
+
+  .content {
+    padding: 15px 23px;
+
+    .btn {
+      padding: 4px 9px;
+      font-weight: normal;
+    }
+
+    &~.content {
+      display: flex;
+      padding: 15px 23px;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+      font-size: 0;
+      gap: 8px;
+    }
+
+    .line {
+      display: flex;
+      justify-content: space-between;
+
+      &+.line {
+        margin-top: 12px;
+
+        .form_group:first-child {
+          .form_title {
+            margin-right: 15px;
+          }
+        }
+      }
+
+      .chkbox_group {
+        display: flex;
+        margin-left: 24px;
+        margin-right: auto;
+        gap: 16px;
+        align-items: center;
+      }
+    }
+
+  }
+
+  .title_left_group {
+    display: flex;
+    align-items: center;
+
+    .title~* {
+      margin-left: 20px;
+    }
+  }
+
+  .btn_right_group {
+    font-size: 0;
+
+    .btn {
+      height: 28px;
+      padding: 6px 9px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: normal;
+
+      &+.btn {
+        margin-left: 8px;
+      }
+
+      &.btn_add {
+        position: relative;
+        padding-left: 27px;
+
+        &:before {
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          width: 12px;
+          height: 12px;
+          transform: translateY(-50%);
+          background: url(../img/panel/icon_add.svg);
+          content: '';
+        }
+      }
+    }
+  }
+
+  .table {
+    margin-top: 12px;
+    border: 1px solid;
+    border-color: var(--g300);
+    border-radius: 6px;
+    overflow: hidden;
+
+    [theme="dark"] & {
+      border-color: var(--g600);
+    }
+
+    table {
+      height: 205px;
+
+      td {
+        font-size: 14px;
+      }
+
+      th,
+      td {
+        &:first-child {
+          padding-left: 16px;
+        }
+
+        &:last-child {
+          padding-right: 16px;
+        }
+      }
+    }
+
+    .btn_area {
+      position: relative;
+    }
+
+    .btn_delete {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      -webkit-transform: translate(-50%, -50%);
+      transform: translate(-50%, -50%);
+      background: url(../img/outpatient_usage_detail_popup/icon_delete.svg) no-repeat center/auto;
+
+      [theme="dark"] & {
+        background: url(../img/outpatient_usage_detail_popup/icon_delete_dark.svg) no-repeat center/auto;
+      }
+    }
+  }
+
+  .text_area {
+    margin-top: 12px;
+    font-size: 0;
+
+    .note {
+      width: 100%;
+      padding: 6px 9px;
+      font-size: 14px;
+      line-height: 21px;
+      background: transparent;
+      border-radius: 4px;
+      border: 1px solid;
+      border-color: var(--g400);
+      -webkit-box-sizing: border-box;
+      box-sizing: border-box;
+      resize: none;
+      outline: none;
+
+      [theme="dark"] & {
+        border-color: var(--g600);
+      }
+    }
+  }
+}

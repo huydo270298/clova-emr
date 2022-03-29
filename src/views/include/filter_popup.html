@@ -1,0 +1,809 @@
+<div class="layer show dimmed">
+  <div class="popup_wrap">
+    <div class="popup" id="filter_popup">
+      <div class="popup_innerwrap">
+        <div class="popup_head">
+          <strong class="tit">전자차트에 표시할 항목 선택</strong>
+          <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+        </div>
+        <div class="popup_cont">
+          <div class="popup_inner" data-simplebar>
+            <div class="tit_group">
+              <strong class="title" size="16" weight="bold">항목 선택</strong>
+              <div class="txt_right">표시 항목 선택은 현재 컴퓨터, 현재 환자에만 적용됩니다. 환자가 변경되면 전체 표시로 변경됩니다.</div>
+            </div>
+            <div class="content">
+              <div class="check_box_wrap">
+                <span class="chkbox">
+                  <input type="checkbox" data-checkall="filterItem" id="chkbox_all" checked>
+                  <label for="chkbox_all">전체선택</label>
+                </span>
+                <hr>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox1" checked>
+                  <label for="chkbox1">CC (Chief Complaint)</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox2" checked>
+                  <label for="chkbox2">치료 계획</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox3" checked>
+                  <label for="chkbox3">PI (Presen Illness)</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox4" checked>
+                  <label for="chkbox4">진료 기록</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox5" checked>
+                  <label for="chkbox5">치료비용 계획</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox6" checked>
+                  <label for="chkbox6">문진표 / 커스텀 차트</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox7" checked>
+                  <label for="chkbox7">진료 메모</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox8" checked>
+                  <label for="chkbox8">Medical Alert</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox9" checked>
+                  <label for="chkbox9">기공의뢰서</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox10" checked>
+                  <label for="chkbox10">진료 메모 태블릿</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox11" checked>
+                  <label for="chkbox11">Pass through</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox12" checked>
+                  <label for="chkbox12">방사선 판독문</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox13" checked>
+                  <label for="chkbox13">원외 처방 내역</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox14" checked>
+                  <label for="chkbox14">환자 사진</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox15" checked>
+                  <label for="chkbox15">다음치료(Next)</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="filterItem" id="chkbox16" checked>
+                  <label for="chkbox16">해피콜</label>
+                </span>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title" size="16" weight="bold">표시할 진료과 선택</strong>
+            </div>
+            <div class="content">
+              <div class="rdo_wrap">
+                <span class="radio">
+                  <input type="radio" name="department" id="radio1" checked>
+                  <label for="radio1">전체진료과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio2">
+                  <label for="radio2">외과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio3">
+                  <label for="radio3">보철과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio4">
+                  <label for="radio4">교정과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio5">
+                  <label for="radio5">소아치과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio6">
+                  <label for="radio6">치주과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio7">
+                  <label for="radio7">보존과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio8">
+                  <label for="radio8">구강내과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio9">
+                  <label for="radio9">의료급여</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio10">
+                  <label for="radio10">교정과</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio11">
+                  <label for="radio11">의료급여</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="department" id="radio12">
+                  <label for="radio12">통치</label>
+                </span>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title" size="16" weight="bold">진료기록 작성자 선택</strong>
+            </div>
+            <div class="content">
+              <div class="check_box_wrap">
+                <span class="chkbox">
+                  <input type="checkbox" data-checkall="medicalWritter" id="chkbox_all_wirrter" checked>
+                  <label for="chkbox_all_wirrter">전체선택</label>
+                </span>
+                <hr>
+                <span class="chkbox">
+                  <input type="checkbox" name="medicalWritter" id="writter1" checked>
+                  <label for="writter1">Dr. 이닥터</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="medicalWritter" id="writter2" checked>
+                  <label for="writter2">Dr. 한닥터</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="medicalWritter" id="writter3" checked>
+                  <label for="writter3">직원1</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="medicalWritter" id="writter4" checked>
+                  <label for="writter4">직원2</label>
+                </span>
+                <span class="chkbox">
+                  <input type="checkbox" name="medicalWritter" id="writter5" checked>
+                  <label for="writter5">직원3</label>
+                </span>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title" size="16" weight="bold">표시할 치아 선택</strong>
+              <div class="rdo_right_group">
+                <span class="radio">
+                  <input type="radio" name="viewTooth" id="view_tooth1">
+                  <label for="view_tooth1">선택된 치아 기록만 보기</label>
+                </span>
+                <span class="radio">
+                  <input type="radio" name="viewTooth" checked id="view_tooth2">
+                  <label for="view_tooth2">선택된 치아를 포함한 모든 기록 보기</label>
+                </span>
+              </div>
+            </div>
+            <div class="content tooth_filter_content">
+              <div class="tooth_select" id="toothFilter">
+                <div class="tooth_select_main">
+                  <div class="tooth_content" data-toothselect>
+                    <ul class="tooth_list" data-toothall>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth18">
+                          <label for="tooth18">
+                            <span class="tooth_num">18</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums18">
+                          <!--elastic, screw, loop 클래스 추가 시 활성화 됨-->
+                          <label for="gums18"><span class="blind">gums 18</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth17">
+                          <label for="tooth17">
+                            <span class="tooth_num">17</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums17">
+                          <label for="gums17"><span class="blind">gums 17</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth type_implant tooth_expression">
+                          <input type="checkbox" id="tooth16">
+                          <label for="tooth16">
+                            <span class="tooth_state">Ext.</span>
+                            <span class="tooth_num">16</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums16">
+                          <label for="gums16"><span class="blind">gums 16</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth15">
+                          <label for="tooth15">
+                            <span class="tooth_num">15</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums15">
+                          <label for="gums15"><span class="blind">gums 15</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth14">
+                          <label for="tooth14">
+                            <span class="tooth_num">14</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums14">
+                          <label for="gums14"><span class="blind">gums 14</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth13">
+                          <label for="tooth13">
+                            <span class="tooth_num">13</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums13">
+                          <label for="gums13"><span class="blind">gums 13</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth12">
+                          <label for="tooth12">
+                            <span class="tooth_num">12</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums12">
+                          <label for="gums12"><span class="blind">gums 12</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth11">
+                          <label for="tooth11">
+                            <span class="tooth_num">11</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_top">
+                          <input type="checkbox" id="gums11">
+                          <label for="gums11"><span class="blind">gums 11</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth21">
+                          <label for="tooth21">
+                            <span class="tooth_num">21</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums21">
+                          <label for="gums21"><span class="blind">gums 21</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth22">
+                          <label for="tooth22">
+                            <span class="tooth_num">22</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums22">
+                          <label for="gums22"><span class="blind">gums 22</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth23">
+                          <label for="tooth23">
+                            <span class="tooth_num">23</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums23">
+                          <label for="gums23"><span class="blind">gums 23</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth24">
+                          <label for="tooth24">
+                            <span class="tooth_num">24</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums24">
+                          <label for="gums24"><span class="blind">gums 24</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth25">
+                          <label for="tooth25">
+                            <span class="tooth_num">25</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums25">
+                          <label for="gums25"><span class="blind">gums 25</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth" data-tooltips>
+                          <input type="checkbox" id="tooth26">
+                          <label for="tooth26">
+                            <span class="tooth_num">26</span>
+                          </label>
+                          <span class="tooltips">
+                            <span>#26 과거 진료 내역</span>
+                            <ul>
+                              <li>[2021-09-05] 즉일충전처치</li>
+                              <li>[2021-08-27] 파노라마</li>
+                            </ul>
+                          </span>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums26">
+                          <label for="gums26"><span class="blind">gums 26</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth27">
+                          <label for="tooth27">
+                            <span class="tooth_num">27</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums27">
+                          <label for="gums27"><span class="blind">gums 27</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth28">
+                          <label for="tooth28">
+                            <span class="tooth_num">28</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_top">
+                          <input type="checkbox" id="gums28">
+                          <label for="gums28"><span class="blind">gums 28</span></label>
+                        </span>
+                      </li>
+                    </ul>
+                    <ul class="tooth_list" data-toothchild>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth55">
+                          <label for="tooth55">
+                            <span class="tooth_num">55</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth54">
+                          <label for="tooth54">
+                            <span class="tooth_num">54</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth53">
+                          <label for="tooth53">
+                            <span class="tooth_num">53</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth52">
+                          <label for="tooth52">
+                            <span class="tooth_num">52</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth51">
+                          <label for="tooth51">
+                            <span class="tooth_num">51</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth61">
+                          <label for="tooth61">
+                            <span class="tooth_num">61</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth62">
+                          <label for="tooth62">
+                            <span class="tooth_num">62</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth63">
+                          <label for="tooth63">
+                            <span class="tooth_num">63</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth64">
+                          <label for="tooth64">
+                            <span class="tooth_num">64</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth65">
+                          <label for="tooth65">
+                            <span class="tooth_num">65</span>
+                          </label>
+                        </span>
+                      </li>
+                    </ul>
+                    <ul class="tooth_list tooth_list_bottom" data-toothchild>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth85">
+                          <label for="tooth85">
+                            <span class="tooth_num">85</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth84">
+                          <label for="tooth84">
+                            <span class="tooth_num">84</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth83">
+                          <label for="tooth83">
+                            <span class="tooth_num">83</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth82">
+                          <label for="tooth82">
+                            <span class="tooth_num">82</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth81">
+                          <label for="tooth81">
+                            <span class="tooth_num">81</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth71">
+                          <label for="tooth71">
+                            <span class="tooth_num">71</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth72">
+                          <label for="tooth72">
+                            <span class="tooth_num">72</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth73">
+                          <label for="tooth73">
+                            <span class="tooth_num">73</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth74">
+                          <label for="tooth74">
+                            <span class="tooth_num">74</span>
+                          </label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth75">
+                          <label for="tooth75">
+                            <span class="tooth_num">75</span>
+                          </label>
+                        </span>
+                      </li>
+                    </ul>
+                    <ul class="tooth_list tooth_list_bottom" data-toothall>
+                      <li>
+                        <span class="tooth type_implant tooth_expression">
+                          <input type="checkbox" id="tooth48">
+                          <label for="tooth48">
+                            <span class="tooth_state">Ext.</span>
+                            <span class="tooth_num">48</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums48">
+                          <label for="gums48"><span class="blind">gums 48</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth type_pontic tooth_expression">
+                          <input type="checkbox" id="tooth47">
+                          <label for="tooth47">
+                            <span class="tooth_state">Endo</span>
+                            <span class="tooth_num">47</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums47">
+                          <label for="gums47"><span class="blind">gums 47</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_expression">
+                          <input type="checkbox" id="tooth46">
+                          <label for="tooth46">
+                            <span class="tooth_state">Fill</span>
+                            <span class="tooth_num">46</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums46">
+                          <label for="gums46"><span class="blind">gums 46</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth45">
+                          <label for="tooth45">
+                            <span class="tooth_num">45</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums45">
+                          <label for="gums45"><span class="blind">gums 45</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth44">
+                          <label for="tooth44">
+                            <span class="tooth_num">44</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums44">
+                          <label for="gums44"><span class="blind">gums 44</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth43">
+                          <label for="tooth43">
+                            <span class="tooth_num">43</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums43">
+                          <label for="gums43"><span class="blind">gums 43</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth42">
+                          <label for="tooth42">
+                            <span class="tooth_num">42</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums42">
+                          <label for="gums42"><span class="blind">gums 42</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth41">
+                          <label for="tooth41">
+                            <span class="tooth_num">41</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_left_bottom">
+                          <input type="checkbox" id="gums41">
+                          <label for="gums41"><span class="blind">gums 41</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth31">
+                          <label for="tooth31">
+                            <span class="tooth_num">31</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums31">
+                          <label for="gums31"><span class="blind">gums 31</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth32">
+                          <label for="tooth32">
+                            <span class="tooth_num">32</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums32">
+                          <label for="gums32"><span class="blind">gums 32</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_front">
+                          <input type="checkbox" id="tooth33">
+                          <label for="tooth33">
+                            <span class="tooth_num">33</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums33">
+                          <label for="gums33"><span class="blind">gums 33</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth34">
+                          <label for="tooth34">
+                            <span class="tooth_num">34</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums34">
+                          <label for="gums34"><span class="blind">gums 34</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth tooth_fang">
+                          <input type="checkbox" id="tooth35">
+                          <label for="tooth35">
+                            <span class="tooth_num">35</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums35">
+                          <label for="gums35"><span class="blind">gums 35</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth36">
+                          <label for="tooth36">
+                            <span class="tooth_num">36</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums36">
+                          <label for="gums36"><span class="blind">gums 36</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth37">
+                          <label for="tooth37">
+                            <span class="tooth_num">37</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums37">
+                          <label for="gums37"><span class="blind">gums 37</span></label>
+                        </span>
+                      </li>
+                      <li>
+                        <span class="tooth">
+                          <input type="checkbox" id="tooth38">
+                          <label for="tooth38">
+                            <span class="tooth_num">38</span>
+                          </label>
+                        </span>
+                        <span class="gums gums_right_bottom">
+                          <input type="checkbox" id="gums38">
+                          <label for="gums38"><span class="blind">gums 38</span></label>
+                        </span>
+                      </li>
+                    </ul>
+                    <ul class="btn_list">
+                      <li>
+                        <button type="button" class="btn_item" data-selecttop>상악</button>
+                      </li>
+                      <li>
+                        <button type="button" class="btn_item" data-selectall>전체선택</button>
+                      </li>
+                      <li>
+                        <button type="button" class="btn_item" data-selectbottom>하악</button>
+                      </li>
+                    </ul>
+                    <ul class="btn_list btn_list_right">
+                      <li>
+                        <button type="button" class="btn_item" data-selecttop-child>유치상악</button>
+                      </li>
+                      <li>
+                        <button type="button" class="btn_item" data-selectall-child>전체선택</button>
+                      </li>
+                      <li>
+                        <button type="button" class="btn_item" data-selectbottom-child>유치하악</button>
+                      </li>
+                    </ul>
+                    <div class="btn_sub_interdental">
+                      <div class="btn_wrap">
+                        <button type="button" class="btn_new"><span class="blind">New</span></button>
+                        <button type="button" class="btn_clear"><span class="blind">Clear</span></button>
+                        <button type="button" class="btn_back"><span class="blind">Back</span></button>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="tooth_button">
+                    <div class="btn_wrap" data-expression>
+                      <button type="button" class="btn_implant">IMPL</button>
+                      <button type="button" class="btn_pontic">P</button>
+                    </div>
+                    <button type="button" class="btn_setting" data-popup="cc_setting"><span class="blind">환경</span></button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="popup_bottom">
+          <span class="chkbox">
+            <input type="checkbox" id="keepData">
+            <label for="keepData">이 컴퓨터에서는 선택된 환자가 변경 되어도 설정된 필터상태값을 유지 합니다.<br>(진료과, 작성자, 치식 필터는 초기화 됩니다.)</label>
+          </span>
+          <button class="btn">취소</button>
+          <button class="btn primary">필터 적용</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

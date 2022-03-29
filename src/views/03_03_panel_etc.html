@@ -1,0 +1,50 @@
+@@include('./include/head.html',{"title": "패널 : NAVER CLOVA EMR", "list_title": "[모듈] 접수/예약/가족/소개자 : Panel"})
+
+<body data-pagestatus="new : 2022.02.11">
+	<div class="wrap">
+		<!-- [D] CONTENTS -->
+		<main id="content">
+
+      <div class="panel no_scroll">
+        @@include('./include/panel_etc.html')
+      </div>
+
+		</main>
+		<!-- // [D] CONTENTS -->
+
+		@@include('./include/script.html')
+
+		<!-- Caseview  -->
+		<script src="../js/libs/vendor.min.js"></script>
+		<style>
+			.case_review {
+				position: fixed;
+				bottom: 20px;
+				right: 20px;
+				width: auto;
+				padding: 8px;
+				z-index: 600;
+				background: #000;
+				color: #fff;
+				opacity: 0.7;
+				filter: alpha(opacity=70);
+			}
+
+			.case_review a {
+				display: block;
+				padding: 4px 0;
+				font-size: 12px;
+				color: #fff;
+			}
+
+			.case_review a:hover {
+				color: #fff4a6;
+			}
+		</style>
+		<div class="case_review">
+			<a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+		</div>
+	</div>
+</body>
+
+</html>

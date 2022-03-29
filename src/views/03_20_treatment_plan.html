@@ -1,0 +1,71 @@
+@@include('./include/head.html',{"title": "치료계획 입력 : NAVER CLOVA EMR", "list_title": "[모듈] 치료계획 입력 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap">
+
+    <div class="panel">
+      <div id="echartMedicalEnter">
+        <div class="tab_group">
+          <div class="tab_lst_box">
+            <ul class="tab_lst">
+              <li class="tab_item">
+                <a href="#piEnter" class="tab_btn">PI 입력</a>
+              </li>
+              <li class="tab_item is_active">
+                <a href="#treatmentPlanEnter" class="tab_btn">치료계획 입력</a>
+              </li>
+              <li class="tab_item">
+                <a href="#none" class="tab_btn">진료 입력</a>
+              </li>
+              <li class="tab_item">
+                <a href="#none" class="tab_btn">문서 발급</a>
+              </li>
+            </ul>
+          </div>
+          <div class="tabs" data-simplebar>
+            @@include('./include/treatment_plan.html',{"active":"true"})
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+  <script>
+  </script>
+</body>
+
+</html>

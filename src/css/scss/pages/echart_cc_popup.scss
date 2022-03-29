@@ -1,0 +1,26 @@
+#echart_cc_popup {
+  width: 852px;
+  height: auto;
+  max-height: 390px;
+  margin: 90px 0;
+
+  .popup_cont {
+    padding: 24px 32px;
+  }
+
+  .content {
+    margin-top: 0;
+  }
+
+  .tooth_select {
+    width: 666px;
+    margin: 0 auto;
+  }
+
+  .popup_bottom {
+    .btn {
+      height: 32px;
+      padding: 0;
+    }
+  }
+}

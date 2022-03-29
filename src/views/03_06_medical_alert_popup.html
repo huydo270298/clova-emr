@@ -1,0 +1,58 @@
+@@include('./include/head.html',{"title": "전신병력 : NAVER CLOVA EMR", "list_title": "[팝업] Medical Alert(전신병력), 부가정보선택 : 전자차트"})
+
+<body data-pagestatus="new : 2022.02.09">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      @@include('./include/medical_alert_popup.html')
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+      <a href="#none" onclick="openPopup('#medical_alert_popup')">Medical Alert 팝업</a>
+      <a href="#none" onclick="openPopup('#pregnancy_options')">ㄴ부가 정보 선택 팝업</a>
+      <a href="#none" onclick="openPopup('#ns_processing')">[알림] N.S 처리 확인</a>
+      <a href="#none" onclick="openPopup('#delete_medical')">[알림] 히스토리 삭제 확인</a>
+      <script>
+        function openPopup(id) {
+          $('.layer.show .popup')[0].dispatchEvent(new CustomEvent('popup.close'));
+          $(id)[0].dispatchEvent(new CustomEvent('popup.open'));
+        }
+      </script>
+    </div>
+  </div>
+</body>
+
+</html>

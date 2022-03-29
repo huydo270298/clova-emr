@@ -1,0 +1,95 @@
+@@include('./include/head.html',{"title": "레이아웃 편집 : NAVER CLOVA EMR", "list_title": "레이아웃 편집 : 데스크"})
+
+<body data-pagestatus="new : 2022.01.11">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap">
+    <!--[D] HEADER -->
+    @@include('./include/header.html',{"type": "01"})
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main class="main_layout edit_mode" data-simplebar>
+      <div class="row">
+        <div class="col" style="width: 798px; height: 472px;">
+          <div class="panel" data-size="L">
+            <div class="panel_edit">
+            </div>
+          </div>
+        </div>
+        <div class="col" style="width: 1074px; height: 472px;">
+          <div class="panel" data-size="L">
+            <div class="panel_edit">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col" style="width: 798px;">
+          <div class="row">
+            <div class="col" style="width: 100%; height: 173px;">
+              <div class="panel" data-size="S">
+                <div class="panel_edit">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col" style="width: 100%; height: 443px;">
+              <div class="panel" data-size="S">
+                <div class="panel_edit">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col" style="width: 1074px;">
+          <div class="panel" data-size="L">
+            <div class="panel_edit">
+            </div>
+          </div>
+        </div>
+      </div>
+      @@include('./include/layout_edit_control.html',{"type":"01"})
+    </main>
+    <!-- // [D] CONTENTS -->
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      top: 150px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+  <script>
+
+  </script>
+</body>
+
+</html>

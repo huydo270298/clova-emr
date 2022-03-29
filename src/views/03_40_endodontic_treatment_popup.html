@@ -1,0 +1,515 @@
+@@include('./include/head.html',{"title": "근관치료 정보 입력 : NAVER CLOVA EMR", "list_title": "[팝업] 근관치료 정보 입력 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      <div class="layer show dimmed">
+
+        <div class="popup_wrap">
+          <div class="popup" id="endodontic_treatment_popup" style="display: block;">
+            <div class="popup_innerwrap">
+              <div class="popup_head">
+                <strong class="tit">근관치료 정보 입력</strong>
+                <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+              </div>
+              <div class="popup_cont">
+                <div class="popup_inner" data-simplebar>
+                  <div class="tit_group">
+                    <strong class="title" size="16" weight="bold">근관치료를 실시한 치아의 정보를 입력하세요</strong>
+                  </div>
+                  <div class="content">
+                    <div class="line">
+                      <strong class="title">#36번 치아</strong>
+                      <button type="button" class="btn">치아번호 변경</button>
+                      <div class="form_group">
+                        <div class="form_title">
+                          <span class="form_txt">근관타입</span>
+                        </div>
+                        <div class="form_cont">
+                          <div class="select">
+                            <button type="button" class="select_btn" value="미지정">미지정</button>
+                            <div class="select_opt">
+                              <ul data-simplebar>
+                                <li><button type="button" class="option" value="미지정">미지정</button></li>
+                                <li><button type="button" class="option" value="Type I 근관">Type I 근관</button></li>
+                                <li><button type="button" class="option" value="Type II 근관">Type II 근관</button></li>
+                                <li><button type="button" class="option" value="Type III 근관">Type III 근관</button></li>
+                                <li><button type="button" class="option" value="Type IV 근관">Type IV 근관</button></li>
+                                <li><button type="button" class="option" value="C형 근관">C형 근관</button></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="root_canal_list">
+                        <li><button type="button" class="btn rounded">1근관</button></li>
+                        <li><button type="button" class="btn rounded">2근관</button></li>
+                        <li><button type="button" class="btn rounded is_active">3근관</button></li>
+                        <li><button type="button" class="btn rounded">4근관</button></li>
+                        <li><button type="button" class="btn rounded">5근관</button></li>
+                        <li><button type="button" class="btn rounded">6근관</button></li>
+                      </ul>
+                    </div>
+                    <div class="line">
+                      <div class="table">
+                        <table data-simplebar>
+                          <colgroup>
+                            <col style="width: 47px">
+                            <col style="width: auto">
+                            <col style="width: 50px">
+                            <col style="width: 86px">
+                            <col style="width: 78px">
+                            <col style="width: 86px">
+                            <col style="width: 72px">
+                            <col style="width: 70px;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th>근관</th>
+                              <th>확대 파일</th>
+                              <th>근관장</th>
+                              <th>수산화칼슘<i class="arrow"></i></th>
+                              <th>Pantency<i class="arrow"></i></th>
+                              <th>치근단청소<i class="arrow"></i></th>
+                              <th>Ledge/Zip</th>
+                              <th>File Sep.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>MB</td>
+                              <td>Protaper Next X2</td>
+                              <td>18</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxideRow" checked>
+                                  <label for="calciumHydroxideRow"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaningRow" checked>
+                                  <label for="apicalCleaningRow"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZipRow">
+                                  <label for="ledgeZipRow"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSepRow">
+                                  <label for="fileSepRow"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>ML</td>
+                              <td>Protaper Next X2</td>
+                              <td>17.5</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxideRow2" checked>
+                                  <label for="calciumHydroxideRow2"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaningRow2" checked>
+                                  <label for="apicalCleaningRow2"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZipRow2">
+                                  <label for="ledgeZipRow2"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSepRow2">
+                                  <label for="fileSepRow2"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>D</td>
+                              <td>Protaper Next X3</td>
+                              <td>18</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxideRow3" checked>
+                                  <label for="calciumHydroxideRow3"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaningRow3" checked>
+                                  <label for="apicalCleaningRow3"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZipRow3">
+                                  <label for="ledgeZipRow3"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSepRow3">
+                                  <label for="fileSepRow3"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <span class="chkbox">
+                        <input type="checkbox" id="painless">
+                        <label for="painless">안아팠어요.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="aBitPainful" checked>
+                        <label for="aBitPainful">조금 아팠어요.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="hurtALot">
+                        <label for="hurtALot">많이 아팠어요.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="veryPainful">
+                        <label for="veryPainful">계속 많이 아팠어요.</label>
+                      </span>
+                    </div>
+                    <div class="line">
+                      <span class="chkbox">
+                        <input type="checkbox" id="rcPrep">
+                        <label for="rcPrep">RC Prep.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="naOCIIrr">
+                        <label for="naOCIIrr">NaOCI irr.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="paperPoint">
+                        <label for="paperPoint">Paper Point</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="cavitonSealing">
+                        <label for="cavitonSealing">Caviton Sealing</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="irmSealing" checked>
+                        <label for="irmSealing">IRM Sealing</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="content">
+                    <div class="line">
+                      <strong class="title">#26번 치아</strong>
+                      <button type="button" class="btn">치아번호 변경</button>
+                      <div class="form_group">
+                        <div class="form_title">
+                          <span class="form_txt">근관타입</span>
+                        </div>
+                        <div class="form_cont">
+                          <div class="select">
+                            <button type="button" class="select_btn" value="Type II 근관">Type II 근관</button>
+                            <div class="select_opt">
+                              <ul data-simplebar>
+                                <li><button type="button" class="option" value="미지정">미지정</button></li>
+                                <li><button type="button" class="option" value="Type I 근관">Type I 근관</button></li>
+                                <li><button type="button" class="option" value="Type II 근관">Type II 근관</button></li>
+                                <li><button type="button" class="option" value="Type III 근관">Type III 근관</button></li>
+                                <li><button type="button" class="option" value="Type IV 근관">Type IV 근관</button></li>
+                                <li><button type="button" class="option" value="C형 근관">C형 근관</button></li>
+                              </ul>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <ul class="root_canal_list">
+                        <li><button type="button" class="btn rounded">1근관</button></li>
+                        <li><button type="button" class="btn rounded">2근관</button></li>
+                        <li><button type="button" class="btn rounded">3근관</button></li>
+                        <li><button type="button" class="btn rounded is_active">4근관</button></li>
+                        <li><button type="button" class="btn rounded">5근관</button></li>
+                        <li><button type="button" class="btn rounded">6근관</button></li>
+                      </ul>
+                    </div>
+                    <div class="line">
+                      <div class="table">
+                        <table data-simplebar>
+                          <colgroup>
+                            <col style="width: 47px">
+                            <col style="width: auto">
+                            <col style="width: 50px">
+                            <col style="width: 86px">
+                            <col style="width: 78px">
+                            <col style="width: 86px">
+                            <col style="width: 72px">
+                            <col style="width: 70px;">
+                          </colgroup>
+                          <thead>
+                            <tr>
+                              <th align="center">근관</th>
+                              <th>확대 파일</th>
+                              <th>근관장</th>
+                              <th>수산화칼슘<i class="arrow"></i></th>
+                              <th>Pantency<i class="arrow"></i></th>
+                              <th>치근단청소<i class="arrow"></i></th>
+                              <th>Ledge/Zip</th>
+                              <th>File Sep.</th>
+                            </tr>
+                          </thead>
+                          <tbody>
+                            <tr>
+                              <td>MB</td>
+                              <td>Protaper Next X2</td>
+                              <td>18</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxide2Row">
+                                  <label for="calciumHydroxide2Row"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaning2Row" checked>
+                                  <label for="apicalCleaning2Row"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZip2Row">
+                                  <label for="ledgeZip2Row"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSep2Row">
+                                  <label for="fileSep2Row"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>MB2</td>
+                              <td>Protaper Next X2</td>
+                              <td>17.5</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxide2Row2" checked>
+                                  <label for="calciumHydroxide2Row2"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaning2Row2" checked>
+                                  <label for="apicalCleaning2Row2"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZip2Row2">
+                                  <label for="ledgeZip2Row2"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSep2Row2">
+                                  <label for="fileSep2Row2"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>DB</td>
+                              <td>Protaper Next X3</td>
+                              <td>18</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxide2Row3" checked>
+                                  <label for="calciumHydroxide2Row3"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaning2Row3" checked>
+                                  <label for="apicalCleaning2Row3"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZip2Row3">
+                                  <label for="ledgeZip2Row3"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSep2Row3">
+                                  <label for="fileSep2Row3"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>P</td>
+                              <td>Protaper Next X2</td>
+                              <td>17.5</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="calciumHydroxide2Row4">
+                                  <label for="calciumHydroxide2Row4"><span class="blind">수산화칼슘</span></label>
+                                </span>
+                              </td>
+                              <td>O.K</td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="apicalCleaning2Row4" checked>
+                                  <label for="apicalCleaning2Row4"><span class="blind">치근단청소</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="ledgeZip2Row4">
+                                  <label for="ledgeZip2Row4"><span class="blind">Ledge/Zip</span></label>
+                                </span>
+                              </td>
+                              <td align="center">
+                                <span class="chkbox">
+                                  <input type="checkbox" id="fileSep2Row4">
+                                  <label for="fileSep2Row4"><span class="blind">File Sep.</span></label>
+                                </span>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </div>
+                    <div class="line">
+                      <span class="chkbox">
+                        <input type="checkbox" id="painless2">
+                        <label for="painless2">안아팠어요.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="aBitPainful2" checked>
+                        <label for="aBitPainful2">조금 아팠어요.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="hurtALot2">
+                        <label for="hurtALot2">많이 아팠어요.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="veryPainful2">
+                        <label for="veryPainful2">계속 많이 아팠어요.</label>
+                      </span>
+                    </div>
+                    <div class="line">
+                      <span class="chkbox">
+                        <input type="checkbox" id="rcPrep2">
+                        <label for="rcPrep2">RC Prep.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="naOCIIrr2">
+                        <label for="naOCIIrr2">NaOCI irr.</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="paperPoint2">
+                        <label for="paperPoint2">Paper Point</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="cavitonSealing2">
+                        <label for="cavitonSealing2">Caviton Sealing</label>
+                      </span>
+                      <span class="chkbox">
+                        <input type="checkbox" id="irmSealing2" checked>
+                        <label for="irmSealing2">IRM Sealing</label>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="keyboard form_input">
+                    <div class="key_area" data-keyboard="name">
+                      <ul class="key_list">
+                        <li><button type="button" class="btn">M</button></li>
+                        <li><button type="button" class="btn">D</button></li>
+                        <li><button type="button" class="btn">B</button></li>
+                        <li><button type="button" class="btn">L</button></li>
+                        <li><button type="button" class="btn">P</button></li>
+                        <li><button type="button" class="btn">MB</button></li>
+                        <li><button type="button" class="btn">MB2</button></li>
+                        <li><button type="button" class="btn">ML</button></li>
+                        <li><button type="button" class="btn">DB</button></li>
+                        <li><button type="button" class="btn">DL</button></li>
+                        <li class="input">
+                          <input type="text" placeholder="직접 입력">
+                        </li>
+                        <li><button type="button" class="btn btn_confirm">확인</button></li>
+                        <li><button type="button" class="btn btn_cancel">근관 입력안함</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="popup_bottom">
+                <span class="chkbox">
+                  <input type="checkbox" id="rootCanal" checked>
+                  <label for="rootCanal">근관세척 시에도 근관치료 정보 입력창 보이기</label>
+                </span>
+                <button class="btn">취소</button>
+                <button class="btn primary">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+      <a href="#none" onclick="$('.keyboard').toggle()">[팝업] 근관 이름 수정</a>
+    </div>
+  </div>
+</body>
+
+</html>

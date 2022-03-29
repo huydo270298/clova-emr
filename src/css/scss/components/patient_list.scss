@@ -1,0 +1,78 @@
+.patient_lst {
+  display: block;
+  position: relative;
+  min-width: 306px;
+  max-width: calc(100vw - 1538px);
+  flex-grow: 1;
+  height: 56px;
+  border-radius: 4px;
+  background: var(--g100);
+  margin-left: 16px;
+  box-sizing: border-box;
+  user-select: none;
+
+  [theme="dark"] & {
+    background: var(--g600);
+  }
+
+  @media(max-width: 1440px) {
+    min-width: 184px;
+  }
+
+  .context_menu {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+
+    .dropdown_option {
+      left: 79px;
+      right: auto;
+      margin-top: 0;
+      box-sizing: content-box;
+
+      &>ul {
+        max-height: 360px;
+        overflow: auto;
+      }
+    }
+  }
+
+  &>ul {
+    padding: 7px 4px;
+    height: 100%;
+    overflow: auto;
+    box-sizing: border-box;
+
+    li {
+      display: block;
+
+      a {
+        display: block;
+        box-sizing: border-box;
+        border-radius: 4px;
+        width: 100%;
+        padding: 3px 8px;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--g800);
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+
+        &:hover,
+        &.is_active {
+          background: var(--p200);
+          color: var(--g900);
+
+          [theme="dark"] & {
+            color: var(--g0);
+            background: var(--p500);
+          }
+        }
+      }
+    }
+  }
+
+}

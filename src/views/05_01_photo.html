@@ -1,0 +1,82 @@
+@@include('./include/head.html',{"title": "사진 : NAVER CLOVA EMR", "list_title": "메인 : 사진"})
+
+<body data-pagestatus="new : 2022.03.15">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="photo" data-simplebar>
+
+      @@include('./include/photo.html')
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+      <a href="#none" onclick="caseview()">[화면] 기본</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=1]').addClass('is_active')">[화면] 큰 화면 보기</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=2]').addClass('is_active')">[화면] 가로 1칸 x 세로 2칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=3]').addClass('is_active')">[화면] 가로 2칸 x 세로 1칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=4]').addClass('is_active');$('[data-layoutmode=4] .photo_box').children().show();">[화면] 가로 2칸 x 세로 2칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=5]').addClass('is_active')">[화면] 가로 3칸 x 세로 2칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=6]').addClass('is_active')">[화면] 가로 2칸 x 세로 3칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=7]').addClass('is_active')">[화면] 가로 3칸 x 세로 3칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=8]').addClass('is_active')">[화면] 가로 4칸 x 세로 3칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=9]').addClass('is_active')">[화면] 가로 4칸 x 세로 4칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=10]').addClass('is_active')">[화면] 가로 5칸 x 세로 4칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=11]').addClass('is_active')">[화면] 가로 5칸 x 세로 5칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=12]').addClass('is_active')">[화면] 가로 6칸 x 세로 5칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=13]').addClass('is_active')">[화면] 가로 6칸 x 세로 6칸</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=14]').addClass('is_active')">[화면] 5분할 구내사진</a>
+      <a href="#none" onclick="changMode(this);$('[data-layoutmode=15]').addClass('is_active')">[화면] 표준촬영 템플릿</a>
+    </div>
+    <script>
+      function changMode(mode) {
+        var str = $(mode).text();
+        var val = str.slice(5);
+        $('.select_btn').val(val).text(val);
+        $('.mode').each(function() {
+          $(this).removeClass('is_active');
+        })
+      }
+      function caseview() {
+        $('.mode').each(function() {
+          $(this).removeClass('is_active');
+        })
+        $('.mode[data-layoutmode=4]').addClass('is_active');
+        $('.select_btn').val('가로 2칸 x 세로 2칸').html('가로 2칸 x 세로 2칸');
+        $('.mode[data-layoutmode=4] .photo_box').children().hide();
+      }
+    </script>
+  </div>
+</body>
+
+</html>

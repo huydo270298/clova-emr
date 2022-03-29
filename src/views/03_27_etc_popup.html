@@ -1,0 +1,197 @@
+@@include('./include/head.html',{"title": "이름변경, 구치획수변경 등 : NAVER CLOVA EMR", "list_title": "[진료입력탭] 이름변경, 구치획수변경 등 : Common"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] LAYER -->
+  <div class="layer" style="display: none;">
+
+    <div class="popup_wrap">
+      <div class="popup" id="clinic_name_change" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">진료 표시이름 변경</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont">
+            <strong class="title" size="16" weight="bold">선택된 진료의 표시 이름을 변경합니다.</strong>
+            <div class="input">
+              <input type="text" value="발치">
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">취소</button>
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer" style="display: none;">
+
+    <div class="popup_wrap">
+      <div class="popup alert_popup" id="delete_tab_confirm" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <strong class="title" size="18" weight="bold">삭제 확인</strong>
+            <p>선택된 처치 [#16발치]를 삭제 하시겠습니까?</p>
+            <ul class="additional_info_lst">
+              <li>선택된 진료 기록을 삭제할 경우, 해당 진료 기록에 포함되어 있는 추가정보도 함께 삭제됩니다.</li>
+            </ul>
+            <p>삭제한 자료는 복구할 수 없습니다.</p>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">예(Y)</button>
+            <button class="btn primary">아니오(N)</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer" style="display: none;">
+
+    <div class="popup_wrap">
+      <div class="popup" id="times_change" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">발치술[1치당]-구치 횟수 변경</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont">
+            <div class="change_field">
+              <label>횟수</label>
+              <div class="input">
+                <input type="text" value="1.00">
+              </div>
+              <div class="btn_group">
+                <button class="btn"><i class="icon_minus"></i></button>
+                <button class="btn"><i class="icon_plus"></i></button>
+              </div>
+            </div>
+            <div class="change_field">
+              <label>일회량</label>
+              <div class="input">
+                <input type="text" disabled value="1.0000">
+              </div>
+              <div class="btn_group disabled">
+                <button class="btn"><i class="icon_minus"></i></button>
+                <button class="btn"><i class="icon_plus"></i></button>
+              </div>
+            </div>
+            <div class="change_field">
+              <label>총 투여일</label>
+              <div class="input">
+                <input type="text" disabled value="1.00">
+              </div>
+              <div class="btn_group disabled">
+                <button class="btn"><i class="icon_minus"></i></button>
+                <button class="btn"><i class="icon_plus"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">취소</button>
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup" id="times_change" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">타이레펜8시간이알서방정650밀리그램(아세트아미노펜)(아세트아미노펜)</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont">
+            <div class="change_field">
+              <label>횟수</label>
+              <div class="input">
+                <input type="text" value="1.00">
+              </div>
+              <div class="btn_group">
+                <button class="btn"><i class="icon_minus"></i></button>
+                <button class="btn"><i class="icon_plus"></i></button>
+              </div>
+            </div>
+            <div class="change_field">
+              <label>일회량</label>
+              <div class="input">
+                <input type="text" value="1.0000">
+              </div>
+              <div class="btn_group">
+                <button class="btn"><i class="icon_minus"></i></button>
+                <button class="btn"><i class="icon_plus"></i></button>
+              </div>
+            </div>
+            <div class="change_field">
+              <label>총 투여일</label>
+              <div class="input">
+                <input type="text" value="1.00">
+              </div>
+              <div class="btn_group">
+                <button class="btn"><i class="icon_minus"></i></button>
+                <button class="btn"><i class="icon_plus"></i></button>
+              </div>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">취소</button>
+            <button class="btn primary">확인</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    <a href="#none" onclick="openPopup('#clinic_name_change')">[팝업] 진료 표시이름 변경</a>
+    <a href="#none" onclick="openPopup('#delete_tab_confirm')">[알림] 삭제 확인</a>
+    <a href="#none" onclick="openPopup($('.layer').eq(2).find('#times_change'))">[알림] 회 변경 (행위 재료)</a>
+    <a href="#none" onclick="openPopup($('.layer').eq(3).find('#times_change'))">[알림] 회 변경 (의약품)</a>
+
+  </div>
+  <script>
+    function openPopup(id) {
+      id = typeof id === 'string' ? $(id) : id;
+      $('.layer.show .popup')[0].dispatchEvent(new CustomEvent('popup.close'));
+      $(id)[0].dispatchEvent(new CustomEvent('popup.open'));
+    }
+  </script>
+</body>
+
+</html>

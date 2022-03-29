@@ -1,0 +1,116 @@
+.radio {
+  display: inline-block;
+  position: relative;
+
+  label {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    color: var(--g800);
+
+    [theme="dark"] & {
+      color: var(--g100);
+    }
+
+    &:before {
+      display: inline-block;
+      border: 1px solid var(--g500);
+      box-sizing: border-box;
+      border-radius: 50%;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: top;
+      content: '';
+
+      [theme="dark"] & {
+        border-color: var(--g300);
+      }
+    }
+  }
+
+  input {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    height: 1px;
+    width: 1px;
+    visibility: hidden;
+
+    &:not([disabled])+label:hover:before {
+      background-color: var(--g100);
+
+      [theme="dark"] & {
+        border-color: var(--g200);
+        background-color: transparent;
+      }
+    }
+
+    &:checked {
+      &+label {
+        &::before {
+          border-color: var(--p500);
+          background-position: center;
+          background-repeat: no-repeat;
+        }
+
+        &::after {
+          position: absolute;
+          top: 4px;
+          left: 4px;
+          width: 8px;
+          height: 8px;
+          border-radius: 50%;
+          background-color: var(--p500);
+          content: '';
+        }
+      }
+
+      &:not([disabled])+label:hover::before {
+        border-color: #809CFF;
+      }
+
+      &:not([disabled])+label:hover::after {
+        background-color: #809CFF;
+      }
+    }
+
+    &[disabled] {
+      &+label {
+        color: var(--g600);
+
+        &::before {
+          background-color: var(--g300);
+          border-color: var(--g400);
+        }
+
+        [theme="dark"] & {
+          color: var(--g300);
+
+          &::before {
+            background-color: var(--g500);
+            border-color: var(--g500);
+          }
+        }
+      }
+
+      &:checked+label::before {
+        border-color: var(--g400);
+        background: transparent;
+
+        [theme="dark"] & {
+          border-color: var(--g500);
+        }
+      }
+
+      &:checked+label::after {
+        background-color: var(--g400);
+
+        [theme="dark"] & {
+          background-color: var(--g500);
+        }
+      }
+    }
+  }
+}

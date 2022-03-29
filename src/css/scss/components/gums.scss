@@ -1,0 +1,80 @@
+.gums {
+  display: none;
+  position: absolute;
+  width: 12px;
+
+  label {
+    display: block;
+    position: relative;
+    padding-bottom: 12px;
+    cursor: pointer;
+    background: url("../img/components/tooth/icon_gums.svg") no-repeat center/auto;
+    box-sizing: border-box;
+
+    [theme="dark"] & {
+      background: url("../img/components/tooth/icon_gums_dark.svg") no-repeat center/auto;
+    }
+  }
+
+  &.gums_left_top {
+    left: -9px;
+    top: -7px;
+  }
+
+  &.gums_right_top {
+    right: -9px;
+    top: -7px;
+  }
+
+  &.gums_left_bottom {
+    left: -9px;
+    bottom: -7px;
+  }
+
+  &.gums_right_bottom {
+    right: -9px;
+    bottom: -7px;
+  }
+
+  input:checked {
+    & + label {
+      &.screw {
+        background: url("../img/components/tooth/icon_screw_checked.svg") no-repeat center/auto;
+
+        [theme="dark"] & {
+          background: url("../img/components/tooth/icon_screw_checked_dark.svg") no-repeat center/auto;
+        }
+
+        &.done {
+          background: url("../img/components/tooth/icon_screw_gums.svg") no-repeat center/auto;
+          [theme="dark"] & {
+            background: url("../img/components/tooth/icon_screw_gums_dark.svg") no-repeat center/auto;
+          }
+        }
+      }
+
+      &.loop {
+        background: url("../img/components/tooth/icon_loop_checked.svg") no-repeat center/auto;
+
+        [theme="dark"] & {
+          background: url("../img/components/tooth/icon_loop_checked_dark.svg") no-repeat center/auto;
+        }
+
+        &.done {
+          background: url("../img/components/tooth/icon_loop_gums.svg") no-repeat center/auto;
+          [theme="dark"] & {
+            background: url("../img/components/tooth/icon_loop_gums_dark.svg") no-repeat center/auto;
+          }
+        }
+      }
+
+      &.elastic {
+        background: url("../img/components/tooth/icon_elastic_checked.svg") no-repeat center/auto;
+
+        [theme="dark"] & {
+          background: url("../img/components/tooth/icon_elastic_checked_dark.svg") no-repeat center/auto;
+        }
+      }
+    }
+  }
+}

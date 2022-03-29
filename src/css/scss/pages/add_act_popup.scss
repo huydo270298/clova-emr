@@ -1,0 +1,104 @@
+#add_act_popup {
+  width: 778px;
+  max-height: 418px;
+
+  .popup_cont {
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .simplebar-content {
+      padding-top: 21px !important;
+      padding-bottom: 23px !important;
+    }
+
+    .select {
+
+      .simplebar-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+    .content {
+      overflow: hidden;
+      margin-top: 9px;
+      padding: 0;
+
+      .content_inner {
+        max-height: 188px;
+      }
+
+      .list {
+        padding: 0 23px;
+      }
+
+      .simplebar-content {
+        padding-top: 15px !important;
+        padding-bottom: 15px !important;
+      }
+    }
+  }
+
+  .popup_bottom {
+
+    .btn {
+      padding: 7px 21px;
+      line-height: 16px;
+
+      &.btn_add {
+        float: left;
+        margin: 0;
+      }
+    }
+  }
+
+  .box_act {
+    display: flex;
+    gap: 16px;
+
+    .column {
+      flex: 1;
+    }
+
+    .item {
+      font-size: 0;
+
+      & + .item {
+        margin-top: 12px;
+      }
+    }
+  }
+
+  .form_group {
+    display: flex;
+    margin-top: 16px;
+    align-items: center;
+
+    .form_title {
+      margin-right: 12px;
+    }
+
+    .form_cont {
+      flex: 1;
+
+      .input {
+        width: 100%;
+      }
+    }
+
+    .form_txt {
+      font-size: 12px;
+      line-height: 14px;
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+  }
+}

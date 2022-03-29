@@ -1,0 +1,145 @@
+.table {
+
+  table {
+    width: 100%;
+    height: 420px;
+    overflow: auto;
+
+    &[data-simplebar] {
+      .simplebar-content {
+        display: table;
+        width: 100%;
+      }
+
+      .simplebar-track.simplebar-vertical {
+        margin-top: 38px;
+      }
+    }
+  }
+
+  thead {
+    background: var(--g50);
+    box-sizing: border-box;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+
+    [theme="dark"] & {
+      background: var(--g800);
+    }
+
+    th {
+      font-weight: normal;
+    }
+
+    tr {
+      height: 32px;
+      font-size: 12px;
+      line-height: 14px;
+    }
+
+    td,
+    th {
+      white-space: nowrap;
+      color: var(--g800);
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+  }
+
+  tbody {
+
+    tr {
+      position: relative;
+      height: 40px;
+      font-size: 14px;
+      line-height: 22px;
+      background: var(--g0);
+
+      [theme="dark"] & {
+        background: var(--g700);
+      }
+
+      &:nth-child(even) {
+        background: var(--g50);
+
+        /* &:not([data-contextmenu]) {
+          background: var(--g0);
+        } */
+
+        [theme="dark"] & {
+          background: var(--g800);
+        }
+      }
+    }
+  }
+
+  tr {
+    box-sizing: border-box;
+
+    &.selected {
+      box-shadow: inset 0px 0px 0px 1px var(--p500);
+      background: var(--p200) !important;
+
+      [theme="dark"] & {
+        background: rgba(99, 126, 221, 0.3) !important;
+      }
+
+      td {
+        font-weight: bold;
+
+        &~td {
+          border-color: var(--p200) !important;
+
+          [theme="dark"] & {
+            border-color: #3F4764 !important;
+          }
+        }
+      }
+    }
+
+    &.fill {
+      background: var(--g0) !important;
+
+      [theme="dark"] & {
+        background: var(--g700) !important;
+      }
+    }
+  }
+
+  td,
+  th {
+    height: 100%;
+    text-align: left;
+    padding: 8px;
+    box-sizing: border-box;
+    color: var(--g900);
+
+    [theme="dark"] & {
+      color: var(--g0);
+    }
+
+    &~td,
+    &~th {
+      border-left: 1px solid var(--g300);
+
+      [theme="dark"] & {
+        border-color: var(--g600)
+      }
+    }
+
+    &[align="center"] {
+      text-align: center;
+    }
+
+    &[align="right"] {
+      text-align: right;
+    }
+
+    .chkbox {
+      margin: 0 9px 0 9px;
+    }
+  }
+}

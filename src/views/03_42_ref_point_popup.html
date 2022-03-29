@@ -1,0 +1,136 @@
+@@include('./include/head.html',{"title": "근관장 입력 : NAVER CLOVA EMR", "list_title": "[팝업] 근관장 입력 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+  <div class="layer show dimmed">
+    <div class="popup_wrap">
+      <div class="popup" id="ref_point_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <h2 class="title" size="16" weight="bold">근관장 입력</h2>
+            <div class="tit_group">
+              <strong class="title">Reference Point</strong>
+            </div>
+            <div class="form_box">
+              <div class="select">
+                <button type="button" class="select_btn">지정 안함</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="Ref1">Ref1</button></li>
+                    <li><button type="button" class="option" value="Ref2">Ref2</button></li>
+                    <li><button type="button" class="option" value="Ref3">Ref3</button></li>
+                    <li><button type="button" class="option" value="Ref4">Ref4</button></li>
+                    <li><button type="button" class="option" value="Ref5">Ref5</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title">길이 선택</strong>
+            </div>
+            <div class="content">
+              <div class="content_inner" data-simplebar>
+                <ul class="list choose_length">
+                  <li class="item">7</li>
+                  <li class="item">7.5</li>
+                  <li class="item">8</li>
+                  <li class="item">8.5</li>
+                  <li class="item">9</li>
+                  <li class="item">9.5</li>
+                  <li class="item">10</li>
+                  <li class="item">10.5</li>
+                  <li class="item">11</li>
+                  <li class="item">11.5</li>
+                  <li class="item">12</li>
+                  <li class="item">12.5</li>
+                  <li class="item">13</li>
+                  <li class="item">13.5</li>
+                  <li class="item">14</li>
+                  <li class="item">14.5</li>
+                  <li class="item">15</li>
+                  <li class="item">15.5</li>
+                  <li class="item">16</li>
+                  <li class="item">16.5</li>
+                  <li class="item">17</li>
+                  <li class="item">17.5</li>
+                  <li class="item">18</li>
+                  <li class="item">18.5</li>
+                  <li class="item">19</li>
+                  <li class="item">19.5</li>
+                  <li class="item">20</li>
+                  <li class="item">20.5</li>
+                  <li class="item">21</li>
+                  <li class="item">21.5</li>
+                  <li class="item">22</li>
+                  <li class="item">22.5</li>
+                  <li class="item">23</li>
+                  <li class="item">23.5</li>
+                  <li class="item">24</li>
+                  <li class="item">24.5</li>
+                  <li class="item">25</li>
+                  <li class="item">25.5</li>
+                  <li class="item">26</li>
+                  <li class="item">26.5</li>
+                  <li class="item">27</li>
+                  <li class="item">27.5</li>
+                  <li class="item">28</li>
+                  <li class="item">28.5</li>
+                  <li class="item">29</li>
+                  <li class="item">29.5</li>
+                  <li class="item">30</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title">직접 입력</strong>
+            </div>
+            <div class="form_box">
+              <span class="input inp_point">
+                <input type="text" placeholder="입력">
+              </span>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button type="button" class="btn">취소</button>
+            <button type="button" class="btn primary">적용</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

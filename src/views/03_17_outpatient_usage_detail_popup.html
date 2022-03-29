@@ -1,0 +1,206 @@
+@@include('./include/head.html',{"title": "패널 : NAVER CLOVA EMR", "list_title": "[팝업] 외래 환자 사용 내역 팝업 : 전자차트"})
+
+<body data-pagestatus="new : 2022.02.17">
+  <div class="wrap">
+    <!-- [D] CONTENTS -->
+    <main id="content">
+
+      <div class="layer show dimmed">
+
+        <div class="popup_wrap">
+          <div class="popup" id="outpatient_usage_detail_popup" style="display: block;">
+            <div class="popup_innerwrap">
+              <div class="popup_head">
+                <strong class="tit">자주쓰는 용법 편집</strong>
+                <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+              </div>
+              <div class="popup_cont">
+                <div class="popup_inner" data-simplebar>
+                  <div class="tit_group">
+                    <strong class="title" size="16" weight="bold">직접 입력</strong>
+                  </div>
+                  <div class="form">
+                    <span class="input">
+                      <input type="text" placeholder="입력">
+                    </span>
+                    <button class="btn">추가</button>
+                  </div>
+                  <div class="table" data-reorder>
+                    <table data-simplebar>
+                      <colgroup>
+                        <col style="width: 55px">
+                        <col style="width: auto;">
+                        <col style="width: 48px;">
+                      </colgroup>
+                      <thead>
+                        <tr>
+                          <th>순번</th>
+                          <th>내용</th>
+                          <th>삭제</th>
+                        </tr>
+                      </thead>
+                      <tbody class="drag_drop">
+                        <tr>
+                          <td>1</td>
+                          <td>식후 바로 복용</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>2</td>
+                          <td>통증이 있을 경우만 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>3</td>
+                          <td>1일 2회 환부에 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>4</td>
+                          <td>수시로 환부에 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>5</td>
+                          <td>식후 바로 복용</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>6</td>
+                          <td>통증이 있을 경우만 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>7</td>
+                          <td>1일 2회 환부에 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>8</td>
+                          <td>1일 2회 환부에 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>9</td>
+                          <td>1일 2회 환부에 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                        <tr>
+                          <td>10</td>
+                          <td>1일 2회 환부에 도포</td>
+                          <td>
+                            <div class="btn_area">
+                              <button type="button" class="btn_delete">
+                                <span class="blind">삭제</span>
+                              </button>
+                            </div>
+                          </td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                  <p class="note">※ 드래그 앤 드랍으로 순서를 변경하세요.</p>
+                </div>
+              </div>
+              <div class="popup_bottom">
+                <button class="btn">취소</button>
+                <button class="btn primary">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </main>
+    <!-- // [D] CONTENTS -->
+
+    @@include('./include/script.html')
+
+    <!-- Caseview  -->
+    <script src="../js/libs/vendor.min.js"></script>
+    <style>
+      .case_review {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        width: auto;
+        padding: 8px;
+        z-index: 600;
+        background: #000;
+        color: #fff;
+        opacity: 0.7;
+        filter: alpha(opacity=70);
+      }
+
+      .case_review a {
+        display: block;
+        padding: 4px 0;
+        font-size: 12px;
+        color: #fff;
+      }
+
+      .case_review a:hover {
+        color: #fff4a6;
+      }
+    </style>
+    <div class="case_review">
+      <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+    </div>
+  </div>
+</body>
+
+</html>

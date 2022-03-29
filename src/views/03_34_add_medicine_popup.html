@@ -1,0 +1,497 @@
+@@include('./include/head.html',{"title": "의약품 추가 : NAVER CLOVA EMR", "list_title": "[팝업] 의약품 추가 : Common"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] LAYER -->
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup" id="add_medicine_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">의약품 추가</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont" data-simplebar>
+            <div class="content_box">
+              <div class="search_option_box">
+                <div class="flexbox" v-align="center" align="between">
+                  <div class="flex_item_group" position="left">
+                    <strong class="title" size="14">의약품 검색</strong>
+                    <span class="radio">
+                      <input type="radio" checked name="searchType" id="searchType1">
+                      <label for="searchType1">전체 의약품</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" checked name="searchType" id="searchType2">
+                      <label for="searchType2">자주쓰는 약품</label>
+                    </span>
+                  </div>
+                  <div class="flex_item_group" position="right">
+                    <div class="input_field">
+                      <label>작성자</label>
+                      <div class="select">
+                        <button type="button" class="select_btn" value="일반 약제">일반 약제</button>
+                        <div class="select_opt">
+                          <ul data-simplebar>
+                            <li><button type="button" class="option" value="일반 약제">일반 약제</button></li>
+                            <li><button type="button" class="option" value="약제 일반(성분)명">약제 일반(성분)명</button></li>
+                            <li><button type="button" class="option" value="원료약">원료약</button></li>
+                          </ul>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input_field">
+                      <label>수가명 / 코드 검색</label>
+                      <div class="input search_input">
+                        <input type="text" placeholder="의약품이름 또는 코드로 검색">
+                      </div>
+                    </div>
+                    <span class="chkbox">
+                      <input type="checkbox" id="keepResult">
+                      <label for="keepResult">분류 등 체크 변경 시 검색어 검색결과 유지</label>
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flexbox" v-align="stretch" align="left">
+              <div class="separate_selection">
+                <div class="content_box" data-simplebar>
+                  <dl>
+                    <dt>의약품 분류</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" checked name="distinct" id="medicineNumber1">
+                            <label for="medicineNumber1">전체</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber2">
+                            <label for="medicineNumber2">항생제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber3">
+                            <label for="medicineNumber3">해열, 진통, 소염제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber4">
+                            <label for="medicineNumber4">제산제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber5">
+                            <label for="medicineNumber5">스테로이드</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber6">
+                            <label for="medicineNumber6">치과 구강용 약</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber7">
+                            <label for="medicineNumber7">국소마취제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber8">
+                            <label for="medicineNumber8">최면 진정제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber9">
+                            <label for="medicineNumber9">근이완제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber10">
+                            <label for="medicineNumber10">항전간제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber11">
+                            <label for="medicineNumber11">항시스타민제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber12">
+                            <label for="medicineNumber12">소화성 궤양용제</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct" id="medicineNumber13">
+                            <label for="medicineNumber13">지혈제</label>
+                          </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>투여 경로</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" checked name="distinct2" id="routeNumber1">
+                            <label for="routeNumber1">전체</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct2" id="routeNumber2">
+                            <label for="routeNumber2">내복약</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct2" id="routeNumber3">
+                            <label for="routeNumber3">외용약</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct2" id="routeNumber4">
+                            <label for="routeNumber4">주사제</label>
+                          </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                  <dl>
+                    <dt>본인부담률 구분</dt>
+                    <dd>
+                      <ul>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" checked name="distinct3" id="myburden1">
+                            <label for="myburden1">전체</label>
+                          </span>
+                        </li>
+                        <li>
+                          <span class="radio">
+                            <input type="radio" name="distinct3" id="myburden2">
+                            <label for="myburden2">보험 본인부담율</label>
+                          </span>
+                        </li>
+                      </ul>
+                    </dd>
+                  </dl>
+                </div>
+              </div>
+              <div class="result_table">
+                <div class="table" data-row-select>
+                  <table data-simplebar>
+                    <colgroup>
+                      <col style="width: 101px;">
+                      <col>
+                      <col style="width: 77px;">
+                      <col style="width: 56px;">
+                      <col style="width: 62px;">
+                      <col style="width: 62px;">
+                      <col style="width: 119px;">
+                      <col style="width: 62px;">
+                      <col style="width: 134px;">
+                    </colgroup>
+                    <thead>
+                      <tr>
+                        <th>코드</th>
+                        <th>의약품 이름</th>
+                        <th>금액/상한가</th>
+                        <th>구분</th>
+                        <th>보험구분</th>
+                        <th>보험구분</th>
+                        <th>제조사</th>
+                        <th>퇴장방지</th>
+                        <th>구분</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>642900970</td>
+                        <td>씨라클정250밀리그램(클래리트로마이신)<br>_(0.25g/1정)</td>
+                        <td align="right">779</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>일동제약(주)</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900970</td>
+                        <td>씨라클정250밀리그램(시프로플록사신염산염)<br>_(0.291g/1정)</td>
+                        <td align="right">473</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>일동제약(주)</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>씨라클정250밀리그램(시프로플록사신염산염)<br>_(0.291g/1정)</td>
+                        <td align="right">990</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>일동제약(주)</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>메가팜시버정(팜시클로비르)_(0.25g/1정)</td>
+                        <td align="right">3,847</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                      <tr>
+                        <td>642900910</td>
+                        <td>델스트리고정_(1정)</td>
+                        <td align="right">208,800</td>
+                        <td>내복약</td>
+                        <td>급여</td>
+                        <td>급여</td>
+                        <td>(주)엘앤씨바이오</td>
+                        <td>-</td>
+                        <td>기타 항생물질제제</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button class="btn">취소</button>
+            <button class="btn primary">의약품 추가</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- [D] LAYER -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

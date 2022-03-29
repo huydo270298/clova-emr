@@ -1,0 +1,123 @@
+@@include('./include/head.html',{"title": "확대 파일 선택 : NAVER CLOVA EMR", "list_title": "[팝업] 확대 파일 선택 : 전자차트"})
+
+<body data-pagestatus="new : 2022.03.02">
+  @@include('./include/skipnavigation.html')
+  <div class="layer show dimmed">
+    <div class="popup_wrap">
+      <div class="popup" id="expand_file_popup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_cont">
+            <h2 class="title" size="16" weight="bold">확대 파일 선택</h2>
+            <div class="tit_group">
+              <strong class="title">추가 정보 입력</strong>
+            </div>
+            <div class="form_box">
+              <div class="select">
+                <button type="button" class="select_btn">선택 안함</button>
+                <div class="select_opt">
+                  <ul data-simplebar>
+                    <li><button type="button" class="option" value="정보1">정보1</button></li>
+                    <li><button type="button" class="option" value="정보2">정보2</button></li>
+                    <li><button type="button" class="option" value="정보3">정보3</button></li>
+                    <li><button type="button" class="option" value="정보4">정보4</button></li>
+                    <li><button type="button" class="option" value="정보5">정보5</button></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title">확대 파일</strong>
+            </div>
+            <div class="content">
+              <div class="content_inner" data-simplebar>
+                <ul class="list enlarged_file">
+                  <li class="item is_active">ProTaper F1</li>
+                  <li class="item">ProTaper F2</li>
+                  <li class="item">ProTaper F3</li>
+                  <li class="item">ProTaper F4</li>
+                  <li class="item">ProTaper F5</li>
+                  <li class="item">ProFile 04.02</li>
+                  <li class="item">ProFile 04.25</li>
+                  <li class="item">ProFile 04.30</li>
+                  <li class="item">ProFile 04.35</li>
+                  <li class="item">ProFile 04.40</li>
+                  <li class="item">ProFile 04.45</li>
+                  <li class="item">ProFile 04.60</li>
+                  <li class="item">ProFile 04.90</li>
+                  <li class="item">Reciproc R25</li>
+                  <li class="item">Reciproc R40</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                  <li class="item">Reciproc R50</li>
+                </ul>
+              </div>
+            </div>
+            <div class="tit_group">
+              <strong class="title">직접 입력</strong>
+            </div>
+            <div class="form_box">
+              <span class="input inp_file">
+                <input type="text" placeholder="입력">
+              </span>
+              <button type="button" class="btn">현재근관 파일 입력 안함</button>
+            </div>
+          </div>
+          <div class="popup_bottom">
+            <button type="button" class="btn">취소</button>
+            <button type="button" class="btn primary">적용</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

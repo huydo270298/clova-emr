@@ -1,0 +1,160 @@
+#shortcutPopup {
+  width: 862px;
+  height: 100%;
+  max-height: 854px;
+  margin: 90px 0;
+
+  .popup_cont {
+    position: relative;
+    padding: 0;
+    height: calc(100% - 106px);
+
+    &>.shortcut_scroll {
+
+      &>.simplebar-wrapper {
+        height: 100%;
+      }
+
+      &>div.simplebar-wrapper>div.simplebar-mask>div>div>div.simplebar-content {
+        padding: 0px 32px 24px !important;
+
+        &>.flexbox~.flexbox {
+          margin-top: 12px;
+          gap: 40px;
+        }
+      }
+    }
+  }
+
+  .tit_group {
+    padding: 23px 32px 12px;
+
+    .btn_right_grp {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+
+      label {
+        font-size: 12px;
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+    }
+  }
+
+  .virtual_shadow {
+    display: none;
+    position: absolute;
+    left: 0px;
+    right: 0;
+    top: 67px;
+    height: 10px;
+    z-index: 5;
+    box-shadow: 0px 10px 8px -8px rgba(25, 29, 43, 0.12) inset;
+
+    [theme="dark"] & {
+      box-shadow: 0px 10px 8px -8px rgba(0, 0, 0, 0.3) inset;
+    }
+
+    &.show {
+      display: block;
+    }
+  }
+
+  .shortcut_scroll {
+    height: calc(100% - 67px);
+    padding: 0 32px;
+    box-sizing: border-box;
+
+    &>.simplebar-wrapper {
+      height: 100%;
+    }
+  }
+
+  .shortcut_lst_wrap {
+    border: 1px solid;
+    border-color: var(--g300);
+    padding: 23px 24px;
+    border-radius: 8px;
+    box-sizing: border-box;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+
+    [theme="dark"] & {
+      border-color: var(--g600);
+    }
+
+    .select {
+      margin-left: 12px;
+
+      .select_btn {
+        width: 272px;
+      }
+    }
+  }
+
+  .scroll {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .shortcut_lst {
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+    }
+  }
+
+  .txt_shortcut {
+    margin-left: 12px;
+
+    span {
+      color: var(--g900);
+      font-size: 14px;
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+    }
+
+    .txt_time {
+      margin-left: 8px;
+      color: var(--g600);
+      font-size: 12px;
+
+      [theme="dark"] & {
+        color: var(--g300);
+      }
+    }
+  }
+
+  .icon_plus {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    margin: 0 4px;
+    background: url('../img/frequently_phrases/icon_plus.svg') no-repeat center/auto;
+    vertical-align: middle;
+
+    [theme="dark"] & {
+      background: url('../img/frequently_phrases/icon_plus_dark.svg') no-repeat center/auto;
+    }
+  }
+
+  .popup_bottom {
+
+    .btn {
+      height: 32px;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+}

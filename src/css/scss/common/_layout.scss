@@ -1,0 +1,109 @@
+.layout {
+  display: flex;
+
+  .column2 {
+    width: 50%;
+  }
+}
+
+main.edit_mode {
+  background: rgba(255, 255, 255, .8);
+
+  [theme="dark"] & {
+    background: rgba(#19191A, .8);
+  }
+
+  .edit_mode_control {
+    display: flex;
+  }
+
+  .panel {
+    box-shadow: none;
+
+    .panel_edit {
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      width: 100%;
+      height: 100%;
+      border: 1px dashed var(--g700);
+      background: rgba(255, 255, 255, .8);
+      border-radius: 10px;
+      box-sizing: border-box;
+      transition: all 0.1s;
+      overflow: hidden;
+
+      [theme="dark"] & {
+        background: rgba(25, 25, 26, .8);
+        border-color: var(--g200);
+      }
+
+      &:after {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        z-index: 11;
+        margin-top: 9px;
+        height: 23px;
+        font-weight: bold;
+        font-size: 20px;
+        line-height: 23px;
+        color: var(--g800);
+        transform: translateX(-50%);
+        content: 'Drag and drop here';
+        transition: all 0.1s;
+        white-space: nowrap;
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+    }
+
+    &:before {
+      position: absolute;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      top: 0;
+      left: 0;
+      z-index: 11;
+      width: 100%;
+      height: 100%;
+      padding-bottom: 20px;
+      font-weight: 800;
+      font-size: 32px;
+      line-height: 37px;
+      text-align: center;
+      content: attr(data-size);
+      color: var(--g900);
+      box-sizing: border-box;
+      transition: all 0.1s;
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+    }
+
+    &.over {
+      .panel_edit {
+        border: none;
+
+        &::before {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          background: rgba(106, 111, 129, 0.3);
+          content: '';
+        }
+      }
+
+      [theme="dark"] .panel_edit {
+        background: rgba(98, 99, 104, 0.3);
+      }
+    }
+  }
+}

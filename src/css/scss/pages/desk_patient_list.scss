@@ -1,0 +1,59 @@
+#secPatientList {
+  min-width: 1074px;
+  height: 512px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  @media(max-width: 1440px) {
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 160px);
+
+    .panel_cont {
+      flex-grow: 1;
+      max-height: calc(100% - 40px);
+    }
+
+    .table {
+      height: calc(100% - 8px);
+
+      .table_area {
+        height: calc(100% - 44px);
+      }
+
+      table {
+        max-height: calc(100vh - 252px);
+        height: auto;
+      }
+    }
+  }
+
+  .tit_group {
+    padding: 16px 16px 0;
+  }
+
+  .table {
+    margin-top: 8px;
+
+    .simplebar-track {
+      z-index: 5;
+    }
+
+    .table_area {
+
+      .tbody {
+        height: 348px;
+      }
+    }
+
+    .td {
+      white-space: nowrap;
+    }
+
+    .dropdown.context_menu {
+      .dropdown_option {
+        margin: 0;
+      }
+    }
+  }
+}

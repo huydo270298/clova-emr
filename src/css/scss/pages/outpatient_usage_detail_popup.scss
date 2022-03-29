@@ -1,0 +1,176 @@
+#outpatient_usage_detail_popup {
+  width: 680px;
+  max-height: 556px;
+  height: 100%;
+
+  .popup_cont {
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 31px;
+      box-sizing: border-box;
+    }
+
+    .simplebar-content {
+      padding-top: 19px !important;
+      padding-bottom: 23px !important;
+    }
+
+    .form {
+      display: flex;
+      margin-top: 8px;
+      gap: 6px;
+
+      .input {
+        flex: 1;
+      }
+
+      .btn {
+        min-width: 96px;
+      }
+    }
+
+    .table {
+      overflow: hidden;
+      margin-top: 16px;
+      border: 1px solid;
+      border-color: var(--g300);
+      border-radius: 6px;
+
+      [theme="dark"] & {
+        border-color: var(--g600);
+      }
+
+      table {
+        height: 304px;
+
+        tbody {
+          position: relative;
+          &.has_drag {
+            tr {
+              cursor: grabbing;
+              user-select: none;
+            }
+          }
+        }
+
+        td,th {
+          &:first-child {
+            padding-left: 16px;
+          }
+          &:last-child {
+            text-align: right;
+            padding-right: 16px;
+          }
+        }
+
+        tr {
+          width: 616px;
+          cursor: grab;
+
+
+          &.cloned {
+            position: fixed;
+            border: 1px solid;
+            border-color: var(--p500);
+            background: #EFF3FF;
+            z-index: 2;
+            box-shadow: 0px 4px 20px rgba(25, 29, 43, 0.2);
+            pointer-events: none;
+
+            [theme="dark"] & {
+                background: #2E3241;
+            }
+
+            td {
+              width: 513px;
+
+              &:first-child {
+                width: 55px;
+              }
+
+              &:last-child {
+                width: 48px;
+              }
+
+              & + td {
+                border-left: 0;
+              }
+            }
+          }
+
+          &.is_ondrag {
+
+            td {
+              color: var(--g500);
+              background: var(--g400);
+
+              [theme="dark"] & {
+                color: var(--g300);
+                border-color: var(--g400);
+              }
+            }
+
+            .btn_delete {
+              background: url(../img/outpatient_usage_detail_popup/icon_delete_over.svg) no-repeat center/auto;
+
+              [theme="dark"] & {
+                background: url(../img/outpatient_usage_detail_popup/icon_delete_over_dark.svg) no-repeat center/auto;
+              }
+            }
+          }
+
+        }
+
+        .placeholder {
+          position: absolute;
+          left: 0;
+          height: 2px;
+          width: 100%;
+          background: var(--p500);
+          transition-duration: 0s;
+        }
+      }
+
+      .btn_area {
+        position: relative;
+      }
+
+      .btn_delete {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 16px;
+        height: 16px;
+        transform: translate(-50%, -50%);
+        background: url(../img/outpatient_usage_detail_popup/icon_delete.svg) no-repeat center/auto;
+
+        [theme="dark"] & {
+          background: url(../img/outpatient_usage_detail_popup/icon_delete_dark.svg) no-repeat center/auto;
+        }
+      }
+    }
+
+    .note {
+      margin-top: 8px;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--g700);
+
+      [theme="dark"] & {
+        color: var(--g200);
+      }
+    }
+  }
+
+  .btn {
+    padding: 7px 21px;
+    line-height: 16px;
+  }
+
+  .simplebar-vertical {
+    z-index: 3;
+  }
+}

@@ -1,0 +1,1100 @@
+@@include('./include/head.html',{"title": "고객관리 : NAVER CLOVA EMR", "list_title": "메인 : 고객관리"})
+
+<body data-pagestatus="new : 2022.03.18">
+  @@include('./include/skipnavigation.html')
+
+  <div class="wrap" data-simplebar>
+    <!--[D] HEADER -->
+    @@include('./include/header.html',{"type": "01", "tab": "08"})
+    <!--//[D] HEADER -->
+
+    <!-- [D] CONTENTS -->
+    <main class="manage_customer" data-simplebar>
+      <div class="panel">
+        <div class="manage_customer_cont">
+          <div class="flexbox" v-align="center">
+            <div class="flex_item_group" position="left">
+              <strong class="title" size="18" weight="800">해피콜 / 리콜 대상자 목록</strong>
+              <button type="button" class="btn_reset"><i class="icon_reset"></i></button>
+            </div>
+            <div class="flex_item_group" position="right">
+              <div class="btn_right_group">
+                <button type="button" class="btn">엑셀저장</button>
+                <button type="button" class="btn">SMS 대량발송 주소라벨출력</button>
+                <button type="button" class="btn">새 해피콜 개별리콜 등록</button>
+              </div>
+            </div>
+          </div>
+          <div class="content_box">
+            <div class="search_option_box">
+              <div class="row">
+                <div class="flexbox" v-align="center">
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">구분</strong>
+                    <span class="chkbox">
+                      <input type="checkbox" checked id="happyCall">
+                      <label for="happyCall">해피콜</label>
+                    </span>
+                    <span class="chkbox">
+                      <input type="checkbox" checked id="individualRecall">
+                      <label for="individualRecall">개별리콜</label>
+                    </span>
+                    <span class="chkbox">
+                      <input type="checkbox" id="automaticRecall">
+                      <label for="automaticRecall">자동리콜</label>
+                    </span>
+                  </div>
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">기간</strong>
+                    <span class="radio">
+                      <input type="radio" id="today" name="period" onchange="toggleDateRange.call(this)">
+                      <label for="today">오늘</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" checked id="last1Week" name="period" onchange="toggleDateRange.call(this)">
+                      <label for="last1Week">최근 1주일</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="wholeperiod" name="period" onchange="toggleDateRange.call(this)">
+                      <label for="wholeperiod">전체기간</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="specificPeriod" data-daterange name="period" onchange="toggleDateRange.call(this)">
+                      <label for="specificPeriod">특정기간</label>
+                    </span>
+                    <div class="calendar range disabled">
+                      <span class="input">
+                        <input type="text" value="2021-09-10(목)" disabled>
+                      </span>
+                      <span>~</span>
+                      <span class="input">
+                        <input type="text" value="2021-10-10(목)" disabled>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">환자명</strong>
+                    <div class="input">
+                      <input type="text" placeholder="입력">
+                    </div>
+                    <button class="btn">검색</button>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+                <div class="flexbox" v-align="center">
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">상태</strong>
+                    <span class="radio">
+                      <input type="radio" id="fullMaterial" name="state">
+                      <label for="fullMaterial">전체 자료</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="automaticTextTransmission" name="state">
+                      <label for="automaticTextTransmission">문자자동전송</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" checked id="happyCallRecallStatus" name="state">
+                      <label for="happyCallRecallStatus">해피콜/리콜상태</label>
+                    </span>
+                    <div class="select">
+                      <button type="button" class="select_btn" value="해피콜 전">해피콜 전</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="해피콜 전">해피콜 전</button></li>
+                          <li><button type="button" class="option" value="완료 - 재통화 필요">완료 - 재통화 필요</button></li>
+                          <li><button type="button" class="option" value="완료 - 예약 잡음">완료 - 예약 잡음</button></li>
+                          <li><button type="button" class="option" value="완료 - 통증 있으심">완료 - 통증 있으심</button></li>
+                          <li><button type="button" class="option" value="완료 - 불만 있으심">완료 - 불만 있으심</button></li>
+                          <li><button type="button" class="option" value="완료 - 만족">완료 - 만족</button></li>
+                          <li><button type="button" class="option" value="전화 안 받음">전화 안 받음</button></li>
+                          <li><button type="button" class="option" value="없는 번호">없는 번호</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <div class="select">
+                      <button type="button" class="select_btn" value="리콜 전">리콜 전</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="리콜 전">리콜 전</button></li>
+                          <li><button type="button" class="option" value="재통화 필요">재통화 필요</button></li>
+                          <li><button type="button" class="option" value="전화 예약 예정">전화 예약 예정</button></li>
+                          <li><button type="button" class="option" value="불만으로 안 오심">불만으로 안 오심</button></li>
+                          <li><button type="button" class="option" value="타지역 이사">타지역 이사</button></li>
+                          <li><button type="button" class="option" value="완료">완료</button></li>
+                          <li><button type="button" class="option" value="전화 안 받음">전화 안 받음</button></li>
+                          <li><button type="button" class="option" value="없는 번호">없는 번호</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">리콜검색제외</strong>
+                    <span class="chkbox">
+                      <input type="checkbox" id="reservationAfterToday">
+                      <label for="reservationAfterToday">오늘이후 예약자</label>
+                    </span>
+                    <span class="chkbox">
+                      <input type="checkbox" id="excludingRecalls">
+                      <label for="excludingRecalls">리콜자 제외</label>
+                    </span>
+                    <span class="chkbox">
+                      <input type="checkbox" id="excludingInpatientsAfterRecall">
+                      <label for="excludingInpatientsAfterRecall">리콜후 내원환자 제외</label>
+                    </span>
+                    <span class="chkbox">
+                      <input type="checkbox" id="fromRecallDate">
+                      <label for="fromRecallDate">리콜일로부터</label>
+                    </span>
+                    <div class="select">
+                      <button type="button" class="select_btn" value="1주">1주</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="1주">1주</button></li>
+                          <li><button type="button" class="option" value="2주">2주</button></li>
+                          <li><button type="button" class="option" value="3주">3주</button></li>
+                          <li><button type="button" class="option" value="4주">4주</button></li>
+                          <li><button type="button" class="option" value="1개월">1개월</button></li>
+                          <li><button type="button" class="option" value="2개월">2개월</button></li>
+                          <li><button type="button" class="option" value="3개월">3개월</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                    <span>이상 경과하지 않은 환자 제외</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="result_table">
+            <div class="table">
+              <table data-simplebar>
+                <colgroup>
+                  <col style="width: 135px;">
+                  <col style="width: 75px;">
+                  <col style="width: 69px;">
+                  <col style="width: 145px;">
+                  <col style="width: 120px;">
+                  <col>
+                  <col style="width: 284px;">
+                  <col style="width: 284px;">
+                  <col style="width: 130px;">
+                  <col style="width: 95px;">
+                  <col style="width: 95px;">
+                  <col style="width: 103px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDate">
+                        <label for="phoneDate">전화날짜</label>
+                      </span>
+                    </th>
+                    <th>환자정보</th>
+                    <th>구분</th>
+                    <th>상태</th>
+                    <th>전화번호</th>
+                    <th>해피콜/개별리콜 내용</th>
+                    <th>개별문자</th>
+                    <th>결과메모</th>
+                    <th>리콜후 예약, 내원</th>
+                    <th>최종내원일</th>
+                    <th>다음리콜</th>
+                    <th>다음예약</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum1">
+                        <label for="phoneDateNum1">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                          </dl>
+                      </div>
+                    </td>
+                    <td>개별리콜</td>
+                    <td>전화 안받음</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[3개월] 치주상태 리콜 체크(SC 예정) 및 치아홈 메우기 후 리콜 체크 및 치아홈 메우</div>
+                    </td>
+                    <td>
+                      <div class="txt">오늘 편안한 진료 되셨나요? 저희 덴트웹 치과 의원을 방문해주셔서 감사합니다.</div>
+                    </td>
+                    <td data-tooltips>
+                      <div class="txt">발치부위 통증은 조금 있으나 약 드시면 참으실만하다고 하셨습니다. 출혈이 있으시면 바로  치과에 전화하기로 하였습니다.</div>
+                      <div class="tooltips">
+                        <p>발치부위 통증은 조금 있으나 약 드시면 참으실만하다고 하셨습니다. 출혈이 있으시면 바로  치과에 전화하기로 하였습니다.</p>
+                      </div>
+                    </td>
+                    <td>내원함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum2">
+                        <label for="phoneDateNum2">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>개별리콜</td>
+                    <td>전화 안받음</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">오늘 편안한 진료 되셨나요? 저희 덴트웹 치과 의원을 방문해주셔서 감사합니다.</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원함, 예약있음</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum3">
+                        <label for="phoneDateNum3">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>개별리콜</td>
+                    <td>리콜전</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원안함, 예약있음</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum4">
+                        <label for="phoneDateNum4">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>해피콜</td>
+                    <td>완료-통증 있으심</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원안함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum5">
+                        <label for="phoneDateNum5">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>해피콜</td>
+                    <td>완료-통증 있으심</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원안함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum6">
+                        <label for="phoneDateNum6">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>해피콜</td>
+                    <td>완료-통증 있으심</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>[6개월] 정기검진</td>
+                    <td>치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</td>
+                    <td>11월 18일 정기검진 예약하셨습니다.</td>
+                    <td>내원안함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum7">
+                        <label for="phoneDateNum7">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>해피콜</td>
+                    <td>완료-통증 있으심</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원안함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum8">
+                        <label for="phoneDateNum8">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>해피콜</td>
+                    <td>완료-통증 있으심</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원안함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="phoneDateNum9">
+                        <label for="phoneDateNum9">2021-11-08</label>
+                      </span>
+                    </td>
+                    <td align="center" data-tooltips>김덴트(5)
+                      <div class="tooltips">
+                        <dl>
+                          <dt>[환자정보]</dt>
+                          <dd>
+                            <ul>
+                            <li>김덴트님(39/남)</li>
+                            <li>담당의사 : 이닥터</li>
+                            <li>최종내원 : 2021년 10월 30일</li>
+                            </ul>
+                          </dd>
+                          </dl>
+                          <dl>
+                            <dt>[최근 진료]</dt>
+                            <dd>
+                              <ul>
+                              <li>2021-10-25 : 치석제거(연1회)</li>
+                              <li>2021-10-23 : 발수, 근관확대, 치근단, 마취, 러버댐, 치은박리소파술(간단), 구내염 처치</li>
+                              <li>2021-02-23 : 치주낭 측정검사</li>
+                              </ul>
+                            </dd>
+                            </dl>
+                      </div>
+                    </td>
+                    <td>해피콜</td>
+                    <td>완료-통증 있으심</td>
+                    <td align="center">010-0000-0000</td>
+                    <td>
+                      <div class="txt">[6개월] 정기검진</div>
+                    </td>
+                    <td>
+                      <div class="txt">치료받으신 부분은 괜찮으신가요? 벌써 6개월이 지났네요. 정기검진 받으러 와주시면</div>
+                    </td>
+                    <td>
+                      <div class="txt">11월 18일 정기검진 예약하셨습니다.</div>
+                    </td>
+                    <td>내원안함</td>
+                    <td align="center">2021-11-08</td>
+                    <td align="center">2021-11-15</td>
+                    <td align="center">2021-11-08</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="flexbox" v-align="center">
+            <div class="flex_item_group" position="left">
+              <strong class="title" size="18" weight="800">특별관리 환자 검색</strong>
+              <button type="button" class="btn_reset"><i class="icon_reset"></i></button>
+              <div class="dropdown custom_dropdown">
+                <button type="button" class="btn rounded dropdown_btn">표시항목</button>
+                <div class="dropdown_option">
+                  <strong class="title" size="12" weight="bold">표시항목 선택</strong>
+                  <ul class="checkbox_lst">
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" checked id="displayItem1">
+                        <label for="displayItem1">최종내원</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" checked id="displayItem2">
+                        <label for="displayItem2">다음예약</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" checked id="displayItem3">
+                        <label for="displayItem3">다음리콜</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" id="displayItem4">
+                        <label for="displayItem4">내원경로</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" id="displayItem5">
+                        <label for="displayItem5">고객구분</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" id="displayItem6">
+                        <label for="displayItem6">고객구분2</label>
+                      </span>
+                    </li>
+                    <li>
+                      <span class="chkbox">
+                        <input type="checkbox" id="displayItem7">
+                        <label for="displayItem7">고객성향</label>
+                      </span>
+                    </li>
+                  </ul>
+                  <div class="dropdown_btn_box">
+                    <button type="button" class="btn">확인</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="flex_item_group" position="right">
+              <div class="btn_right_group">
+                <button type="button" class="btn">엑셀저장</button>
+                <button type="button" class="btn">새 특별관리환자 등록</button>
+              </div>
+            </div>
+          </div>
+          <div class="content_box">
+            <div class="search_option_box">
+              <div class="row">
+                <div class="flexbox" v-align="center">
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">구분</strong>
+                    <div class="select">
+                      <button type="button" class="select_btn" value="전체">전체</button>
+                      <div class="select_opt">
+                        <ul data-simplebar>
+                          <li><button type="button" class="option" value="전체">전체</button></li>
+                          <li><button type="button" class="option" value="치료중단">치료중단</button></li>
+                          <li><button type="button" class="option" value="미수금">미수금</button></li>
+                          <li><button type="button" class="option" value="불만환자">불만환자</button></li>
+                          <li><button type="button" class="option" value="노쇼">노쇼</button></li>
+                          <li><button type="button" class="option" value="기타">기타</button></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">등록기간</strong>
+                    <span class="radio">
+                      <input type="radio" checked id="last1Month" name="registrationPeriod" onchange="toggleDateRange.call(this)">
+                      <label for="last1Month">최근 1개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="last3Months" name="registrationPeriod" onchange="toggleDateRange.call(this)">
+                      <label for="last3Months">최근 3개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="last6Months" name="registrationPeriod" onchange="toggleDateRange.call(this)">
+                      <label for="last6Months">최근 6개월</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="wholePeriod2" name="registrationPeriod" onchange="toggleDateRange.call(this)">
+                      <label for="wholePeriod2">전체기간</label>
+                    </span>
+                    <span class="radio">
+                      <input type="radio" id="specificPeriod2" name="registrationPeriod" data-daterange onchange="toggleDateRange.call(this)">
+                      <label for="specificPeriod2">특정기간</label>
+                    </span>
+                    <div class="calendar range disabled">
+                      <span class="input">
+                        <input type="text" value="2021-09-10(목)" disabled>
+                      </span>
+                      <span>~</span>
+                      <span class="input">
+                        <input type="text" value="2021-10-10(목)" disabled>
+                      </span>
+                    </div>
+                  </div>
+                  <div class="flex_item_group">
+                    <strong class="title" size="12" weight="bold">환자명</strong>
+                    <div class="input">
+                      <input type="text" placeholder="입력">
+                    </div>
+                    <button class="btn">검색</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="result_table">
+            <div class="table">
+              <table data-simplebar>
+                <colgroup>
+                  <col style="width: 123px;">
+                  <col style="width: 111px;">
+                  <col style="width: 192px;">
+                  <col>
+                  <col style="width: 327px;">
+                  <col style="width: 111px;">
+                  <col style="width: 111px;">
+                  <col style="width: 111px;">
+                  <col style="width: 132px;">
+                  <col style="width: 78px;">
+                  <col style="width: 85px;">
+                  <col style="width: 105px;">
+                </colgroup>
+                <thead>
+                  <tr>
+                    <th>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result1">
+                        <label for="result1">환자정보</label>
+                      </span>
+                    </th>
+                    <th>등록일</th>
+                    <th>구분</th>
+                    <th>사유</th>
+                    <th>최종메모</th>
+                    <th>최종내원</th>
+                    <th>다음리콜</th>
+                    <th>다음예약</th>
+                    <th>내원경로</th>
+                    <th>고객구분</th>
+                    <th>고객구분2</th>
+                    <th>고객성향</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td  align="center">
+                      <span class="chkbox">
+                        <input type="checkbox" id="result2">
+                        <label for="result2">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>불만환자</td>
+                    <td>불만이 많으신 환자</td>
+                    <td>아프시다고 화 많이 내심</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#FAACAC"></span>겁이많음</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result3">
+                        <label for="result3">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>치료중단, 미수금</td>
+                    <td>500만원 미수금</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result4">
+                        <label for="result4">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>노쇼</td>
+                    <td>2차 수술 노쇼하시고 연락두절</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result6">
+                        <label for="result6">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>광고_옥외게시판</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result17">
+                        <label for="result17">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>광고_옥외게시판</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#FAACAC"></span>겁이많음</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result8">
+                        <label for="result8">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#FAACAC"></span>겁이많음</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result9">
+                        <label for="result9">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr class="data_deleted">
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result10">
+                        <label for="result10">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result11">
+                        <label for="result11">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result12">
+                        <label for="result12">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result13">
+                        <label for="result13">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <span class="chkbox">
+                        <input type="checkbox" id="result14">
+                        <label for="result14">김덴트(5)</label>
+                      </span>
+                    </td>
+                    <td>2021-11-08</td>
+                    <td>기타</td>
+                    <td>기타사유</td>
+                    <td>마지막 메모 내용</td>
+                    <td>2021-11-08</td>
+                    <td>2021-11-15</td>
+                    <td>2021-11-08</td>
+                    <td>소개_구환소개</td>
+                    <td>사보험</td>
+                    <td>치주</td>
+                    <td class="customer_orientation"><span class="chip" style="background:#83CE77"></span>비용민감</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        function toggleDateRange() {
+          var calendar = this.closest('.flexbox').querySelector('.calendar'),
+            isRange = this.hasAttribute('data-daterange');
+          calendar.classList.toggle('disabled', !isRange)
+          calendar.querySelectorAll('input').forEach(function (input) {
+            input.disabled = !isRange;
+          })
+        }
+      </script>
+    </main>
+    <!-- // [D] CONTENTS -->
+  </div>
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 10px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var vip = '<li>VVIP</li>'
+      $('.title_box').find('.header_title').eq(0).hide();
+      $('.title_box').find('.header_title').eq(1).show().find('li').eq(3).html('생년월일 : 1956-11-16 (남 6Y 9M)').after(vip);
+      $('.menu_lst li:nth-child(2)').find('.dropdown').hide().eq(2).show();
+      $('.patient_search').removeClass('has_suggest');
+      $('.patient_search .input_search').addClass('txt_sensitive').val('김한국 (305)');
+    });
+  </script>
+</body>
+
+</html>

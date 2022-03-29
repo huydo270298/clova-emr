@@ -1,0 +1,96 @@
+.chkbox {
+  display: inline-block;
+  position: relative;
+  --custom-cb-color: var(--p500);
+
+  label {
+    display: block;
+    font-size: 12px;
+    line-height: 16px;
+    height: 16px;
+    color: var(--g800);
+
+    [theme="dark"] & {
+      color: var(--g100);
+    }
+
+    &:before {
+      display: inline-block;
+      border: 1px solid var(--g500);
+      box-sizing: border-box;
+      border-radius: 4px;
+      width: 16px;
+      height: 16px;
+      margin-right: 6px;
+      vertical-align: top;
+      content: '';
+
+      [theme="dark"] & {
+        border-color: var(--g300);
+      }
+    }
+  }
+
+  &>input {
+    position: absolute;
+    top: 100%;
+    left: 100%;
+    height: 1px;
+    width: 1px;
+    visibility: hidden;
+
+    &:not([disabled])+label:hover:before {
+      background-color: var(--g100);
+
+      [theme="dark"] & {
+        border-color: var(--g200);
+        background-color: transparent;
+      }
+    }
+
+    &:checked {
+      &+label {
+        &::before {
+          background-color: var(--custom-cb-color);
+          border-color: var(--custom-cb-color);
+          background-image: url(../img/components/checkbox/icon_checked.svg);
+          background-position: top 4px center;
+          background-repeat: no-repeat;
+        }
+      }
+
+      &:not([disabled])+label:hover::before {
+        background-color: #809CFF;
+        border-color: #809CFF;
+      }
+    }
+
+    &[disabled] {
+      &+label {
+        color: var(--g600);
+
+        &::before {
+          background-color: var(--g300);
+          border-color: var(--g400);
+        }
+
+        [theme="dark"] & {
+          color: var(--g300);
+
+          &::before {
+            background-color: var(--g500);
+            border-color: var(--g500);
+          }
+        }
+      }
+
+      &:checked+label::before {
+        background-image: url(../img/components/checkbox/icon_checked_disabled_light.svg);
+
+        [theme="dark"] & {
+          background-image: url(../img/components/checkbox/icon_checked_disabled_dark.svg);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,211 @@
+#echart_group_button_popup {
+  width: 750px;
+  height: 100%;
+  max-height: 377px;
+  margin: 90px 0;
+
+  .popup_cont {
+    padding: 24px 32px;
+  }
+
+  .content_box {
+    margin-top: 12px;
+    padding: 15px 23px;
+
+    hr {
+      display: block;
+      margin: 16px 0;
+      height: 1px;
+      width: 100%;
+      background: var(--g300);
+      border: none;
+
+      [theme="dark"] & {
+        background: var(--g600);
+      }
+    }
+  }
+
+  .flexbox {
+    &:first-child {
+      .select {
+        .select_btn {
+          width: 152px;
+        }
+      }
+
+      .flex_item_group[position="left"] {
+        align-items: center;
+      }
+    }
+  }
+
+  .select_group {
+    label {
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+  }
+
+  .bundle_button_setting {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .select_group {
+      &:first-child {
+        .select_btn {
+          width: 80px;
+        }
+      }
+
+      &:nth-child(2) {
+        .select_btn {
+          width: 188px;
+        }
+      }
+
+      &:nth-child(3) {
+        .select_btn {
+          width: 123px;
+        }
+      }
+    }
+  }
+
+  .background_setting {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 12px;
+
+    .edit_btn_group {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      width: calc(100% / 3);
+
+      .txt {
+        font-size: 12px;
+        line-height: 14px;
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+
+      &:nth-child(3) {
+        .edit_btn {
+          background: #333;
+
+          [theme="dark"] & {
+            background: #E2E2E2;
+          }
+        }
+      }
+
+      &:nth-child(4) {
+        .edit_btn {
+          background: #F7CFC2;
+
+          [theme="dark"] & {
+            background: #31713A;
+          }
+        }
+      }
+
+      &:nth-child(5) {
+        .edit_btn {
+          background: #333;
+
+          [theme="dark"] & {
+            background: #E2E2E2;
+          }
+        }
+      }
+
+      &:nth-child(6) {
+        .edit_btn {
+          background: #F4B09C;
+
+          [theme="dark"] & {
+            background: #4BA456;
+          }
+        }
+      }
+    }
+
+    .edit_btn {
+      position: relative;
+      width: 32px;
+      height: 24px;
+      padding: 4px 9px;
+      border: 1px solid rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+
+      [theme="dark"] & {
+        border: 1px solid rgba(255, 255, 255, 0.1);
+      }
+    }
+
+    .icon_edit {
+      display: block;
+      width: 14px;
+      height: 14px;
+      background: var(--g700);
+      clip-path: path("M9.36 2.075a1.046 1.046 0 011.48 0l1.11 1.11a1.046 1.046 0 010 1.48l-6.232 6.23-2.59-2.59 6.231-6.23zM2.495 9.086l-.842 2.962a.262.262 0 00.323.323l2.961-.842-2.442-2.443z");
+
+      [theme="dark"] & {
+        background: var(--g200);
+      }
+
+      &.white_default {
+        background: var(--g0);
+
+        [theme="dark"] & {
+          background: var(--g200);
+        }
+      }
+
+      &.white_custom {
+        background: var(--g0);
+
+        [theme="dark"] & {
+          background: var(--g0);
+        }
+      }
+    }
+  }
+
+  .note_txt {
+    display: block;
+    margin-top: 8px;
+    font-size: 12px;
+    line-height: 14px;
+    color: var(--g700);
+    [theme="dark"] & {
+      color: var(--g200);
+    }
+  }
+
+  .popup_bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    .btn {
+      height: 32px;
+      padding: 0;
+    }
+
+    .reset_btn {
+      height: 28px;
+      min-width: 80px;
+      margin-left: 0;
+      margin-right: auto;
+      font-size: 12px;
+      font-weight: normal;
+    }
+  }
+}

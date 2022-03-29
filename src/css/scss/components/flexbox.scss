@@ -1,0 +1,55 @@
+.flexbox {
+  display: flex;
+
+  &[align="left"] {
+    justify-content: flex-start;
+  }
+
+  &[align="right"] {
+    justify-content: flex-end;
+  }
+
+  &[align="between"] {
+    justify-content: space-between;
+  }
+
+  &[align="center"] {
+    justify-content: center;
+  }
+
+  &[v-align="top"] {
+    align-items: flex-start;
+  }
+
+  &[v-align="right"] {
+    align-items: flex-end;
+  }
+  &[v-align="stretch"] {
+    align-items: stretch;
+  }
+
+  &[v-align="center"] {
+    align-items: center;
+  }
+
+  &[dir="row"] {
+    flex-direction: row;
+  }
+
+  &[dir="col"] {
+    flex-direction: column;
+  }
+
+  .flex_item_group {
+    display: flex;
+    &[position="left"] {
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    &[position="right"] {
+      margin-left: auto;
+      margin-right: 0;
+    }
+  }
+}

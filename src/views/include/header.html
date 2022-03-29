@@ -1,0 +1,385 @@
+@@if (type == 01) {<header class="header_utility">
+  <div class="title_box">
+    <div class="logo">
+      <img src="../img/components/header_utility/header_favicon.svg" alt="">
+    </div>
+    <ul class="header_title">
+      <li>Dv2 DRM System</li>
+    </ul>
+    <!-- display none for caseview -->
+    <ul class="header_title" style="display:none">
+      <li>Chart No. 305</li>
+      <li>이름 : 김한국</li>
+      <li style="display: none;">이름 : 김ㅎ국</li>
+      <li>생년월일 : 2014 - 11- 16 (남 6Y 9M)</li>
+      <li>보험구분 : 건강보험</li>
+      <li>최종내원일 : 2021-02-01 (7개월전)</li>
+    </ul>
+  </div>
+  <div class="menu_box">
+    <ul class="menu_lst">
+      <li style="display: none;">
+        <div class="dropdown">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/icon_security.svg" alt=""></button>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <button type="button" button-type="icon" button-tooltip="선택된 환자 없음" class="dropdown_btn"><img src="../img/components/header_utility/patient_default.svg" alt=""></button>
+        </div>
+        <div class="dropdown" style="display: none;">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_baby.svg" alt=""></button>
+          <div class="dropdown_option" type="context">
+            <ul>
+              <li>
+                <a href="#none">[김한국] 님 접수</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown" style="display: none;">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_male.svg" alt=""></button>
+          <div class="dropdown_option" type="context">
+            <ul>
+              <li>
+                <a href="#none">[김한국] 님 접수</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown" style="display: none;">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_female.svg" alt=""></button>
+          <div class="dropdown_option" type="context">
+            <ul>
+              <li>
+                <a href="#none">[김한국] 님 접수</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown" style="display: none;">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_old_male.svg" alt=""></button>
+          <div class="dropdown_option" type="context">
+            <ul>
+              <li>
+                <a href="#none">[김한국] 님 접수</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="dropdown" style="display: none;">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_old_female.svg" alt=""></button>
+          <div class="dropdown_option" type="context">
+            <ul>
+              <li>
+                <a href="#none">[김한국] 님 접수</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown settings">
+          <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/icon_gear.svg" alt="">
+            <div class="span blind">환경설정</div>
+          </button>
+          <div class="dropdown_option">
+            <ul>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#none">다크모드</a>
+                  </li>
+                  <li>
+                    <a href="#none">라이트모드</a>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li>
+                    <a href="#none">단축키 설정</a>
+                  </li>
+                  <li>
+                    <a href="#none">레이아웃 편집</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <div class="dropdown">
+          <button type="button" button-type="text" class="dropdown_btn">Dr.김덴트</button>
+          <div class="dropdown_option">
+            <ul>
+              <li>
+                <a href="#none">비밀번호 변경</a>
+              </li>
+              <li>
+                <a href="#none">로그아웃</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </li>
+      <li>
+        <button type="button" button-type="icon" class="dropdown_btn search_btn"><img src="../img/components/header_utility/icon_search.svg" alt=""></button>
+      </li>
+      <li>
+        <button type="button" button-type="icon" class="dropdown_btn menu_btn"><img src="../img/components/header_utility/icon_menu.svg" alt=""></button>
+      </li>
+    </ul>
+  </div>
+</header>}
+<div class="main_nav">
+  <div class="patient_nav_box">
+    <div class="patient_search">
+      <div class="search_wrap">
+        <div class="search_input_group">
+          <i class="icon_search"></i>
+          <input type="text" class="input_search" placeholder="환자 이름으로 검색하세요">
+          <button class="keyboard_btn" title="화상키보드실행"><span class="blind">화상키보드 실행</span><i class="icon_keyboard"></i></button>
+        </div>
+        <div class="suggest_box">
+          <ul>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+                <strong class="patient_name">김한국 (305)</strong>
+                <p class="patient_info">남, 1999-11-11, 000Y 11M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_baby.svg" alt="">
+                <strong class="patient_name">김빛나라래 (204)</strong>
+                <p class="patient_info">여, 1988-08-09, 33Y 2M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_old_female.svg" alt="">
+                <strong class="patient_name">김로 (48)</strong>
+                <p class="patient_info">남, 1979-07-10, 42Y 3M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_old_male.svg" alt="">
+                <strong class="patient_name">공지철 (93)</strong>
+                <p class="patient_info">여, 1991-02-03, 30Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+                <strong class="patient_name">김현민 (491)</strong>
+                <p class="patient_info">남, 1991-02-18, 30Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_female.svg" alt="">
+                <strong class="patient_name">김태희 (320)</strong>
+                <p class="patient_info">남, 1986-02-18, 36Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+                <strong class="patient_name">김현민 (491)</strong>
+                <p class="patient_info">남, 1991-02-18, 30Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_female.svg" alt="">
+                <strong class="patient_name">김태희 (320)</strong>
+                <p class="patient_info">남, 1986-02-18, 36Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+                <strong class="patient_name">김현민 (491)</strong>
+                <p class="patient_info">남, 1991-02-18, 30Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+            <li>
+              <a href="#none">
+                <img class="patient_img" src="../img/components/header_utility/patient_female.svg" alt="">
+                <strong class="patient_name">김태희 (320)</strong>
+                <p class="patient_info">남, 1986-02-18, 36Y 8M<br>010-0000-0000</p>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="patient_lst">
+      <div class="dropdown context_menu">
+        <div class="dropdown_option">
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <a href="#none">[송창범] 님 선택</a>
+                </li>
+                <li>
+                  <a href="#none">접수대기화면 알림 보내기</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <a href="#none">[접수]로 변경</a>
+                </li>
+                <li>
+                  <a href="#none">[준비완료]로 변경</a>
+                </li>
+                <li>
+                  <a href="#none">[진료중]로 변경</a>
+                </li>
+                <li>
+                  <a href="#none">[진료완료]로 변경</a>
+                </li>
+                <li>
+                  <a href="#none">[수납완료]로 변경</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">접수 취소 (삭제)</a>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <a href="#none">[송창범] 님 인적사항 보기</a>
+                </li>
+                <li>
+                  <a href="#none">[송창범] 님 전자차트 보기</a>
+                </li>
+                <li>
+                  <a href="#none">[송창범] 님 사진 보기</a>
+                </li>
+                <li>
+                  <a href="#none">[송창범] 님 외부 X-Ray 실행</a>
+                </li>
+                <li>
+                  <a href="#none">[송창범] 님 예약 검색</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#none">의사필터 선택</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <ul>
+        <li class="dropdown">
+          <a href="#none" class="dropdown_btn"><span class="patient_stt received">접수</span>송창범 (305)</a>
+        </li>
+        <li class="dropdown">
+          <a href="#none" class="dropdown_btn"><span class="patient_stt received">접수</span>최성희 (13)</a>
+        </li>
+        <li class="dropdown">
+          <a href="#none" class="dropdown_btn"><span class="patient_stt received">접수</span>최성희 (13)</a>
+        </li>
+        <li class="dropdown">
+          <a href="#none" class="dropdown_btn"><span class="patient_stt done_treat">진료완료</span>송창범 (305)</a>
+        </li>
+      </ul>
+      <span class="resize_indicator"></span>
+    </div>
+  </div>
+  <nav class="nav swiper">
+    <ul class="swiper-wrapper">
+      <li class="swiper-slide@@if(context.tab && tab == 01){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="desk"></span>
+          <span class="nav_txt">데스크</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 02){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="e_chart"></span>
+          <span class="nav_txt">전자차트</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 03){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="reservation"></span>
+          <span class="nav_txt">예약</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 04){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="consultation"></span>
+          <span class="nav_txt">환자상담</span>
+        </a>
+      </li>
+      <li class="swiper-slide dropdown@@if(context.tab && tab == 05){ is_active}">
+        <a href="#none" class="dropdown_btn">
+          <span class="nav_icon" data-icon="photos"></span>
+          <span class="nav_txt">사진보기</span>
+        </a>
+        <div class="dropdown_option" type="context">
+          <ul>
+            <li>
+              <a href="#none">구강카메라(웹캠) 촬영</a>
+            </li>
+            <li>
+              <a href="#none">이미지 파일 추가하기</a>
+            </li>
+          </ul>
+        </div>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 06){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="capture"></span>
+          <span class="nav_txt">사진찍기</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 07){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="xray"></span>
+          <span class="nav_txt">X-ray</span>
+        </a>
+      </li>
+      <li class="swiper-@@if(context.tab && tab == 08){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="customer_manage"></span>
+          <span class="nav_txt">고객관리</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 09){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="oral_exam"></span>
+          <span class="nav_txt">구강검진</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 10){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="bill"></span>
+          <span class="nav_txt">청구/EDI</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 11){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="digit_sign"></span>
+          <span class="nav_txt">전자서명</span>
+        </a>
+      </li>
+      <li class="swiper-slide@@if(context.tab && tab == 12){ is_active}">
+        <a href="#none">
+          <span class="nav_icon" data-icon="stats"></span>
+          <span class="nav_txt">경영통계</span>
+        </a>
+      </li>
+    </ul>
+  </nav>
+</div>

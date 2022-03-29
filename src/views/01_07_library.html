@@ -1,0 +1,206 @@
+@@include('./include/head.html',{"title": "라이브러리 : NAVER CLOVA EMR", "list_title": "[팝업] 라이브러리 : Common"})
+
+<body data-pagestatus="new : 2022.03.04">
+  @@include('./include/skipnavigation.html')
+
+  <!-- [D] Popup - 라이브러리 -->
+  <div class="layer show dimmed">
+
+    <div class="popup_wrap">
+      <div class="popup" id="libraryPopup" style="display: block;">
+        <div class="popup_innerwrap">
+          <div class="popup_head">
+            <strong class="tit">라이브러리</strong>
+            <button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+          </div>
+          <div class="popup_cont" data-simplebar>
+            <div class="tit_group">
+              <strong class="title" size="16">기존 진료메모 중에서 입력할 내용을 선택 합니다.</strong>
+            </div>
+            <div class="content_box filter_wrap">
+              <div class="flexbox radio_wrap" v-align="center" align="between">
+                <div class="flex_item_group">
+                  <span class="radio">
+                    <input type="radio" checked id="applyButtonFilter">
+                    <label for="applyButtonFilter">버튼필터 적용</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="applyMedicalFilter">
+                    <label for="applyMedicalFilter">진료필터 적용</label>
+                  </span>
+                  <span class="radio">
+                    <input type="radio" id="generalMemoSearch">
+                    <label for="generalMemoSearch">일반메모 검색</label>
+                  </span>
+                </div>
+              </div>
+              <div class="flexbox symptom_range" v-align="center" align="between">
+                <div class="flex_item_group">
+                  <strong class="title" size="12">선택 증상 범위</strong>
+                </div>
+                <div class="flex_item_group">
+                  <span class="chkbox" data-check="true">
+                    <input type="checkbox" checked="" id="toothExtraction">
+                    <label for="toothExtraction">발치</label>
+                  </span>
+                  <span class="chkbox" data-check="true">
+                    <input type="checkbox" checked="" id="rootCanalEnlargement">
+                    <label for="rootCanalEnlargement">발수, 근관확대</label>
+                  </span>
+                </div>
+              </div>
+              <div class="flexbox" v-align="center" align="between">
+                <div class="flex_item_group">
+                  <label>작성자</label>
+                  <div class="select">
+                    <button type="button" value="Option A" class="select_btn">김덴트</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="Option A">김덴트</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex_item_group">
+                  <label>표시 갯수</label>
+                  <div class="select">
+                    <button type="button" value="Option A" class="select_btn">최근100개</button>
+                    <div class="select_opt">
+                      <ul data-simplebar>
+                        <li><button type="button" class="option" value="Option A">최근100개</button></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="flex_item_group">
+                  <label>결과내 재검색</label>
+                  <div class="input">
+                    <input type="text" value="" placeholder="검색할 내용을 입력하세요.">
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="content_box">
+              <div class="list">
+                <div class="table js_context" data-row-select>
+                  <table data-simplebar>
+                    <colgroup>
+                      <col>
+                    </colgroup>
+                    <tbody>
+                      <tr data-contextmenu>
+                        <td>환자분이 골다공증 약을 드시고 계시므로 BRONJ 발생 가능성과 BRONJ 발생 시의 예후를 설명하고, 환자분이 치료에 동의 하셔서 치료 진행함.</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>발치 후 통증이나 출혈, 부종, 감염, Dry Socket 등이 생길 수 있음을 설명하고 환자분이 발치에 동의하여 발치 시행함</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>우식이 깊어 치료후 <strong>통증이 있을 경우</strong> 근관치료<span>필요함을 설명함.</span></td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>드물게 Flare-up 이 생길 수 있음을 설명함. 혹시 붓고 심한 통증이 생기시면 바로 내원하시도록 설명</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>부근관 존재, crack 등 알기 어려운 원인에 의해 근관치료 실패 가능성은 항상 존재함을 설명하고, 환자분이 치료에 동의하여 근관치료 시작함</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>pus 나오고 동요도가 있으므로 치료 후 증상 개선이 없으면 발치 가능성이 있음을 설명함.</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>발치 후 통증이나 출혈, 부종, 감염, Dry Socket 등이 생길 수 있음을 설명하고 환자분이 발치에 동의하여 발치 시행함</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>드물게 Flare-up 이 생길 수 있음을 설명함. 혹시 붓고 심한 통증이 생기시면 바로 내원하시도록 설명</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>우식이 깊어 치료후 통증이 있을 경우 근관치료 필요함을 설명함.</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>환자분이 골다공증 약을 드시고 계시므로 BRONJ 발생 가능성과 BRONJ 발생 시의 예후를 설명하고, 환자분이 치료에 동의 하셔서 치료 진행함.</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>발치 후 통증이나 출혈, 부종, 감염, Dry Socket 등이 생길 수 있음을 설명하고 환자분이 발치에 동의하여 발치 시행함</td>
+                      </tr>
+                      <tr data-contextmenu>
+                        <td>우식이 깊어 치료후 통증이 있을 경우 근관치료 필요함을 설명함.</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  <div class="dropdown context_menu">
+                    <div class="dropdown_option">
+                      <ul>
+                        <li>
+                          <ul>
+                            <li>
+                              <a href="#none">라이브러리 내 삭제</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!--[D] Editor 영역-->
+            <div class="editor_wrap">
+              <img src="../img/library_popup/texteditor.png" alt="">
+            </div>
+            <!--// [D] Editor 영역-->
+          </div>
+          <div class="popup_bottom">
+            <div class="flexbox" v-align="center">
+              <div class="flex_item_group" position="left">
+                <span class="chkbox" data-check="true">
+                  <input type="checkbox" checked="" id="enterInNormalFormat">
+                  <label for="enterInNormalFormat">일반 서식으로 입력</label>
+                </span>
+              </div>
+              <div class="flex_item_group" position="right">
+                <p class="note_txt">&#8251; 위의 목록에서 앞으로 표시하지 않을 내용은 마우스 오른쪽을 클릭 하여 삭제 하세요.</p>
+                <button class="btn">취소</button>
+                <button class="btn primary">확인</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- // [D] Popup - 라이브러리 -->
+
+  @@include('./include/script.html')
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+    .case_review {
+      position: fixed;
+      bottom: 20px;
+      right: 20px;
+      width: auto;
+      padding: 8px;
+      z-index: 600;
+      background: #000;
+      color: #fff;
+      opacity: 0.7;
+      filter: alpha(opacity=70);
+    }
+
+    .case_review a {
+      display: block;
+      padding: 4px 0;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    .case_review a:hover {
+      color: #fff4a6;
+    }
+  </style>
+  <div class="case_review">
+    <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+</body>
+
+</html>

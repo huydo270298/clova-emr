@@ -1,0 +1,50 @@
+.tooltips {
+  display: none;
+  position: fixed;
+  max-width: 267px;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: rgba(25, 29, 43, 0.9);
+  box-shadow: 0px 4px 8px rgba(25, 29, 43, 0.08);
+  border-radius: 2px;
+  padding: 6px 8px;
+
+  * {
+    color: var(--g0);
+    font-size: 12px;
+    line-height: 18px;
+    white-space: normal;
+  }
+
+  [theme="dark"] & {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+    background: rgba(#626368, .9);
+  }
+
+  dl {
+    margin-top: 8px;
+  }
+
+  ul {
+    li {
+      position: relative;
+      padding-left: 8px;
+
+      &:before {
+        position: absolute;
+        left: 0;
+        top: 7px;
+        border-radius: 50%;
+        width: 4px;
+        height: 4px;
+        background: var(--g0);
+        content: '';
+      }
+    }
+  }
+
+  strong {
+    display: block;
+  }
+}

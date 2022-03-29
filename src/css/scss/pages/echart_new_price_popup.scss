@@ -1,0 +1,189 @@
+#new_price_popup {
+  width: 1160px;
+  height: 100%;
+  max-height: 975px;
+  margin: 90px 0;
+
+  .popup_cont {
+    padding: 0;
+    height: calc(100% - 106px);
+
+    &>.simplebar-wrapper {
+      height: 100%;
+    }
+
+    &>div.simplebar-wrapper>div.simplebar-mask>div>div>div.simplebar-content {
+      padding: 24px 32px !important;
+
+      &>.flexbox~.flexbox {
+        margin-top: 12px;
+        gap: 32px;
+      }
+    }
+
+  }
+
+  .injury_code_info {
+    width: 100%;
+
+    .input_field {
+      .input {
+        width: 312px;
+      }
+    }
+
+  }
+
+  .separate_selection {
+    .content_box {
+      width: 480px;
+      height: 777px;
+      padding: 0 24px;
+      margin-top: 0;
+    }
+
+    dl {
+      display: flex;
+      padding: 8px 8px 8px 0;
+
+      &>div {
+        width: 50%;
+      }
+
+      &~dl {
+        border-top: 1px solid var(--g300);
+
+        [theme="dark"] & {
+          border-color: var(--g600)
+        }
+      }
+
+      dt {
+        display: block;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 36px;
+        height: 36px;
+        color: var(--g900);
+
+        [theme="dark"] & {
+          color: var(--g0);
+        }
+      }
+
+      dd {
+        ul {
+          li {
+            display: flex;
+            height: 32px;
+            align-items: center;
+          }
+        }
+      }
+    }
+  }
+
+  .list_code_table {
+    width: 584px;
+
+    .table {
+      border: 1px solid var(--g300);
+      box-sizing: border-box;
+      border-radius: 6px;
+      overflow: hidden;
+
+      [theme="dark"] & {
+        border-color: var(--g600)
+      }
+
+      table {
+        height: 775px;
+
+        th,
+        td {
+          padding-left: 16px;
+          padding-right: 16px;
+        }
+      }
+    }
+  }
+
+  .input_field {
+    display: flex;
+    align-items: center;
+
+    label {
+      font-size: 12px;
+      line-height: 12px;
+      margin-right: 12px;
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+
+    .search_input {
+      &:after {
+        position: absolute;
+        top: 50%;
+        right: 10px;
+        width: 16px;
+        height: 16px;
+        background: url('../img/new_price_popup/icon_search.svg') no-repeat;
+        transform: translateY(-50%);
+        content: '';
+
+        [theme="dark"] & {
+          background: url('../img/new_price_popup/icon_search_dark.svg') no-repeat;
+        }
+      }
+
+      input {
+        padding-right: 30px;
+      }
+    }
+  }
+
+  .icon_add {
+    display: inline-block;
+    vertical-align: top;
+    width: 12px;
+    height: 12px;
+    margin-right: 6px;
+    margin-top: 1px;
+    background: url('../img/code_etc_popup/icon_add.svg') no-repeat;
+  }
+
+  .icon_delete {
+    display: block;
+    width: 16px;
+    height: 16px;
+    background: url('../img/code_etc_popup/icon_delete.svg') no-repeat;
+  }
+
+  .popup_bottom {
+    padding: 16px 32px;
+    gap: 6px;
+
+    .flex_item_group {
+      &[position="left"] {
+        .btn {
+          height: 28px;
+          padding: 6px 9px;
+          font-size: 12px;
+          line-height: 14px;
+          min-width: auto;
+        }
+      }
+
+      &[position="right"] {
+        .btn {
+          height: 32px;
+          padding: 6px 9px;
+          font-size: 12px;
+          line-height: 14px;
+        }
+      }
+    }
+  }
+}

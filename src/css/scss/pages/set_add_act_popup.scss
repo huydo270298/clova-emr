@@ -1,0 +1,355 @@
+#set_add_act_popup {
+  width: 1252px;
+  max-height: 869px;
+  height: 100%;
+
+  .popup_cont {
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .simplebar-content {
+      padding-top: 23px !important;
+      padding-bottom: 23px !important;
+    }
+
+    .content {
+      display: flex;
+      margin-top: 12px;
+      padding: 15px 23px;
+      flex-wrap: wrap;
+
+      .filter_area {
+        display: flex;
+        flex-basis: 100%;
+        gap: 32px;
+        font-size: 0;
+
+        .form_group {
+          flex: 1;
+        }
+
+        .btn {
+          height: 32px;
+          width: 100%;
+          padding: 0;
+          background: var(--g100);
+          border: 1px solid var(--g400);
+          color: var(--g600);
+          font-size: 14px;
+          font-weight: normal;
+
+          [theme="dark"] & {
+            background: var(--g600);
+            border: 1px solid var(--g500);
+            color: var(--g300);
+          }
+        }
+      }
+
+      .box {
+        flex: 1;
+
+        &+.box {
+          margin-left: 32px;
+        }
+      }
+    }
+  }
+
+  .popup_bottom {
+    .flexbox {
+      align-items: center;
+    }
+
+    .btn {
+      margin: 0;
+    }
+
+    .group_btn {
+      display: flex;
+      gap: 8px;
+    }
+
+    .flex_item_group[position="left"] {
+      gap: 24px;
+      align-items: center;
+
+      .btn {
+        height: 28px;
+      }
+    }
+
+    .flex_item_group[position="right"] {
+      gap: 8px;
+      align-items: center;
+
+      .btn {
+        height: 32px;
+        padding: 7px 21px;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+
+    .group_btn_left {
+      .btn {
+        min-width: 80px;
+        padding: 6px 9px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: normal;
+      }
+    }
+
+    p {
+      max-width: 661px;
+      text-align: left;
+      font-size: 12px;
+      line-height: 18px;
+      color: var(--g700);
+
+      [theme="dark"] & {
+        color: var(--g200);
+      }
+    }
+  }
+
+  .tit_group {
+
+    .title {
+      line-height: 18px;
+    }
+
+    span {
+      vertical-align: middle;
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--g700);
+
+      [theme="dark"] & {
+        color: var(--g200);
+      }
+
+      &+.btn {
+        margin-left: 24px;
+      }
+    }
+
+    &~.tit_group {
+      margin-top: 24px;
+    }
+  }
+
+  .group_btn_right {
+    font-size: 0;
+
+    .btn {
+      vertical-align: middle;
+      min-width: 48px;
+      padding: 6px 9px;
+      font-size: 12px;
+      line-height: 14px;
+      font-weight: normal;
+
+      &+.btn {
+        margin-left: 8px;
+      }
+
+      &.btn_add {
+        position: relative;
+        padding-left: 27px;
+
+        &:before {
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 10px;
+          width: 12px;
+          height: 12px;
+          transform: translateY(-50%);
+          background: url(../img/set_add_act_popup/icon_add.svg) no-repeat center/auto;
+
+          [theme="dark"] & {
+            background: url(../img/set_add_act_popup/icon_add_dark.svg) no-repeat center/auto;
+          }
+        }
+      }
+
+      &.btn_save {
+        display: none;
+        margin-left: 24px;
+      }
+    }
+  }
+
+  .form_group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    .form_tit {
+      width: 49px;
+
+      .title {
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--g800);
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+    }
+
+    .form_cont {
+      flex: 1;
+
+      .input {
+        width: 100%;
+      }
+
+      .radio {
+
+        &+.radio {
+          margin-left: 16px;
+        }
+
+        &+.input {
+          width: 247px;
+          margin-left: 8px;
+
+          input {
+            height: 22px;
+            padding: 4px 5px 3px;
+            font-size: 11px;
+            line-height: 13px;
+
+            &::placeholder {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .filter_area {
+
+    .form_group {
+
+      &:first-child {
+
+        input::placeholder {
+          text-align: center;
+        }
+      }
+
+      .title {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .box {
+    font-size: 0;
+
+    .form_group {
+      margin-top: 8px;
+    }
+
+    strong.title {
+      display: block;
+      margin-top: 20px;
+      padding-bottom: 4px;
+      font-size: 13px;
+      line-height: 15px;
+      color: var(--g900);
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+    }
+  }
+
+  .table {
+    overflow: hidden;
+    margin-top: 12px;
+    border: 1px solid;
+    border-color: var(--g300);
+    border-radius: 6px;
+
+    [theme="dark"] & {
+      border-color: var(--g600);
+    }
+
+    table {
+      height: 438px;
+
+      tbody {
+        position: relative;
+
+        tr {
+          position: relative;
+
+          &.is_active {
+            background: var(--p200);
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              background: transparent;
+              border: 1px solid var(--p500);
+            }
+
+            td {
+              font-weight: bold;
+
+              &~td {
+                border-left: 0;
+              }
+            }
+          }
+        }
+
+      }
+
+
+
+      td,
+      th {
+
+        &:first-child {
+          padding-left: 17px;
+        }
+      }
+    }
+
+    .btn_area {
+      position: relative;
+    }
+
+    .btn_delete {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 16px;
+      height: 16px;
+      transform: translate(-50%, -50%);
+      background: url(../img/set_add_act_popup/icon_delete.svg) no-repeat center/auto;
+
+      [theme="dark"] & {
+        background: url(../img/set_add_act_popup/icon_delete_dark.svg) no-repeat center/auto;
+      }
+    }
+  }
+}

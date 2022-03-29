@@ -1,0 +1,327 @@
+#dental_plaque_popup {
+  width: 1072px;
+  max-height: 658px;
+  height: 100%;
+
+  .popup_cont {
+    height: calc(100% - 106px);
+    padding: 0;
+
+    .popup_inner {
+      height: 100%;
+      padding: 0 32px;
+      box-sizing: border-box;
+    }
+
+    .simplebar-content {
+      padding-top: 24px !important;
+      padding-bottom: 24px !important;
+    }
+
+    .select {
+
+      .simplebar-content {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+      }
+    }
+
+    .content {
+      position: relative;
+      margin-top: 12px;
+      padding: 15px 23px;
+
+      .list {
+        flex: 1;
+        font-size: 0;
+      }
+
+      .item {
+        &+.item {
+          margin-top: 16px;
+        }
+      }
+
+      .item_tit {
+        display: inline-block;
+        width: 86px;
+        font-size: 12px;
+        line-height: 14px;
+        font-weight: bold;
+      }
+
+      .item_cont {
+        display: inline-block;
+        width: calc(100% - 98px);
+        margin-left: 12px;
+
+        .btn_fixtures {
+          width: 100%;
+          height: 28px;
+          padding: 6px 10px;
+          font-size: 12px;
+          line-height: 14px;
+          background: var(--g100);
+          border: 1px solid;
+          border-color: var(--g400);
+          border-radius: 4px;
+          box-sizing: border-box;
+
+          [theme="dark"] & {
+            color: var(--g0);
+            background: var(--g600);
+            border-color: var(--g500);
+          }
+        }
+
+        .btn_add {
+          position: relative;
+          min-width: 84px;
+          font-size: 12px;
+          line-height: 14px;
+          padding: 6px 9px 6px 27px;
+          border: 1px solid;
+          border-color: var(--g500);
+          border-radius: 4px;
+          color: var(--g800);
+
+          [theme="dark"] & {
+            color: var(--g100);
+          }
+
+          &:before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 10px;
+            width: 12px;
+            height: 12px;
+            transform: translateY(-50%);
+            background: url(../img/imp_popup/icon_add2.svg) no-repeat center/auto;
+
+            [theme="dark"] & {
+              background: url(../img/imp_popup/icon_add2_dark.svg) no-repeat center/auto;
+            }
+          }
+        }
+
+        .radio,
+        .chkbox {
+
+          input:checked+label {
+            font-weight: bold;
+            color: var(--p600);
+
+            [theme="dark"] & {
+              color: var(--p400);
+            }
+          }
+
+          &+.input {
+
+            input {
+              height: 22px;
+              font-size: 11px;
+              line-height: 13px;
+              padding: 4px 5px 3px;
+
+              &::placeholder {
+                font-size: 11px;
+              }
+            }
+          }
+
+          &+.select {
+
+            .select_btn {
+              height: 22px;
+              padding: 4px 5px 3px;
+              font-size: 11px;
+              line-height: 13px;
+            }
+          }
+        }
+      }
+
+      .item_cont_inner {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        gap: 20px;
+
+        .chkbox+.input,
+        .chkbox+.select {
+          margin-left: -12px;
+        }
+      }
+    }
+  }
+
+  .popup_bottom {
+
+    .btn {
+      padding: 7px 21px;
+      line-height: 16px;
+    }
+  }
+
+  .form_group {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 24px;
+    margin-right: auto;
+    font-size: 0;
+
+    .title {
+      font-size: 14px;
+      line-height: 21px;
+      color: var(--g800);
+
+      [theme="dark"] & {
+        color: var(--g100);
+      }
+    }
+
+    .input {
+      width: 56px;
+
+      input {
+        text-align: right;
+      }
+    }
+
+    .form_cont {
+      span {
+        margin: 0 8px;
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--g800);
+
+        [theme="dark"] & {
+          color: var(--g100);
+        }
+      }
+    }
+  }
+
+  .measured_area {
+    margin: 0;
+    padding: 4px 0 3px;
+  }
+
+  .box {
+    width: 59px;
+    height: 59px;
+
+    .image_area {
+      font-size: 12px;
+      line-height: 59px;
+
+      img {
+        width: 59px;
+        height: 59px;
+      }
+    }
+
+    .top_area,
+    .bottom_area {
+      width: 59px;
+      height: 30px;
+    }
+
+    .left_area,
+    .right_area {
+      top: 0;
+      width: 20px;
+      height: 59px
+    }
+
+    ;
+  }
+
+  tfoot {
+    font-size: 0;
+
+    tr {
+      height: 32px;
+      background: var(--g50);
+
+      [theme="dark"] & {
+        background: var(--g800);
+      }
+    }
+
+    .percent,
+    .bleeding {
+      display: inline-block;
+    }
+
+    .percent {
+      vertical-align: middle;
+      padding-left: 15px;
+
+      .num {
+        margin-left: 2px;
+        font-size: 12px;
+        color: var(--p00);
+        [theme="dark"] & {
+          color: var(--p400);
+        }
+        font-weight: bold;
+      }
+    }
+
+    .txt {
+      font-size: 12px;
+      line-height: 14px;
+      color: var(--g900);
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+    }
+
+    .bar {
+      display: inline-block;
+      vertical-align: middle;
+      margin: 0 12px;
+      width: 1px;
+      height: 12px;
+      background: var(--g300);
+    }
+
+    .form_group {
+      margin: 5px 0 0;
+
+      .title {
+        font-size: 12px;
+        line-height: 14px;
+        color: var(--g900);
+
+        [theme="dark"] & {
+          color: var(--g0);
+        }
+      }
+
+      .radio {
+        margin: 0;
+
+        &+.radio {
+          margin-left: 16px;
+        }
+      }
+    }
+  }
+
+  .content {
+    .char {
+      position: absolute;
+      top: 24px;
+      right: 24px;
+      width: 339px;
+      height: 110px;
+    }
+  }
+}

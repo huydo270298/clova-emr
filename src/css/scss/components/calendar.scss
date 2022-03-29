@@ -1,0 +1,51 @@
+.calendar {
+  position: relative;
+
+  .input {
+    width: 156px;
+
+    &:after {
+      position: absolute;
+      top: 50%;
+      right: 8px;
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      background: url('../img/components/calendar/icon_calendar.svg') no-repeat center/auto;
+      transform: translateY(-50%);
+      content: '';
+
+      [theme="dark"] & {
+        background: url('../img/components/calendar/icon_calendar_dark.svg') no-repeat center/auto;
+      }
+    }
+
+    input {
+      padding-right: 32px;
+    }
+  }
+
+  &.range {
+    margin-left: 12px;
+    font-size: 0;
+
+    &>span:not(.input) {
+      margin: 0 4px;
+      font-size: 14px;
+    }
+
+    .input {
+      width: 152px;
+    }
+  }
+
+  &.disabled {
+    .input:after {
+      background: url('../img/components/calendar/icon_calendar_disabled.svg') no-repeat center/auto;
+
+      [theme="dark"] & {
+        background: url('../img/components/calendar/icon_calendar_disabled_dark.svg') no-repeat center/auto;
+      }
+    }
+  }
+}

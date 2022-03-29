@@ -1,0 +1,26 @@
+.key {
+  display: inline-flex;
+  min-width: 30px;
+  height: 32px;
+  border-radius: 4px;
+  background: var(--g0);
+  border: 1px solid var(--g400);
+  border-bottom-width: 3px;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  color: var(--g700);
+  box-sizing: border-box;
+
+  [theme="dark"] & {
+    background: var(--g700);
+    border-color: var(--g400);
+    color: var(--g200);
+  }
+
+  &.modifier_key {
+    width: 42px;
+  }
+}

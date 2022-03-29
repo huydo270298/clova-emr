@@ -1,0 +1,63 @@
+#patientManage {
+  min-width: 1074px;
+  height: 100%;
+  height: 632px;
+  border-radius: 10px;
+  overflow: hidden;
+
+  .tab_group {
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+
+    .tabs {
+      height: calc(100% - 36px);
+    }
+
+    .tab {
+      height: 100%;
+    }
+  }
+
+  .tit_group {
+    padding: 16px 16px 10px;
+
+    .title {
+      color: var(--g900);
+
+      [theme="dark"] & {
+        color: var(--g0);
+      }
+    }
+  }
+
+  .table {
+    height: calc(100% - 40px);
+
+    table {
+      height: 502px;
+
+      th {
+        font-weight: normal;
+      }
+
+      td {
+        white-space: normal;
+      }
+    }
+
+    .table_area {
+      height: calc(100% - 44px)
+    }
+  }
+
+  #nonFulfillment {
+    .table_area {
+      height: calc(100% - 101px)
+    }
+
+    table {
+      height: 445px;
+    }
+  }
+}
