@@ -1,0 +1,1213 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>전자차트 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.02.09">
+  <!-- Skip Navigation -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
+</ul>
+<!-- // Skip Navigation -->
+
+  <div class="wrap">
+
+	<div class="panel">
+	  <div id="echartHistory">
+  <div class="record_display_control">
+	<div class="filter_control">
+	  <button class="folding_btn" data-position="left" data-function="reduce"><span class="tooltips" data-ex-content="진료기록 표시부 영역 확장" data-reduce-content="진료기록 표시부 영역 축소"></span></button>
+	  <button class="btn rounded"><i class="icon_settings"></i></button>
+	  <button class="btn rounded inc_font_btn" data-max-size="28" data-fs-target=".history_table .table table"><i class="icon_plus"></i></button>
+	  <button class="btn rounded dec_font_btn" data-min-size="14" data-fs-target=".history_table .table table"><i class="icon_minus"></i></button>
+	  <div class="medical_alert_box">
+		<span class="input">
+		  <input type="text" placeholder="전신병력을 입력해주세요" readonly="">
+		</span>
+		<span class="icon_notice"></span>
+		<span class="select_item" style="display: none;">
+		  <span class="txt">전신병력 특이사항 없음</span>
+		</span>
+		<span class="select_item" style="display: none;">
+		  <span class="txt">B,C형 간염/협심증, 심근, 뇌경색</span>
+		  <span class="date">@2021-11-24</span>
+		</span>
+		<span class="select_item multilines" style="display: none;">
+		  <span class="txt">신장 투석(월수금) / B,C형 간염 / 당뇨/협심증, 심근, 뇌경색 / 만성 간경화 / 임신(초) / 심장 스탠스 삽입수술 신장 투석(월수금) / B,C형 간염 / 당뇨/협심증, 심근, 뇌경색 / 만성 간경화 / 임신(초) / 심장 스탠스 삽입수술</span>
+		  <span class="date">@2021-11-24</span>
+		</span>
+	  </div>
+	  <div class="search_box">
+		<button class="btn rounded"><i class="icon_search"></i></button>
+	  </div>
+	</div>
+	<div class="filter_option">
+	  <a href="#none" class="attachment_stt">
+		<i class="unfold_stt"></i>
+		<span class="stt_txt" style="display: none;">스캔, 파일이 없습니다.</span>
+		<span class="stt_txt">스캔, 파일이 7개 있습니다.</span>
+	  </a>
+	  <div class="filter">
+		<ul data-grab-scroll="">
+		  <li><input type="checkbox" id="filter_cc"><label for="filter_cc">CC</label></li>
+		  <li><input type="checkbox" id="filter_next"><label for="filter_next">Next</label></li>
+		  <li><input type="checkbox" id="filter_pi"><label for="filter_pi">PI</label></li>
+		  <li><input type="checkbox" id="filter_memo"><label for="filter_memo">메모</label></li>
+		  <li><input type="checkbox" id="filter_custom"><label for="filter_custom">커스텀</label></li>
+		  <li><input type="checkbox" id="filter_pore"><label for="filter_pore">기공</label></li>
+		  <li><input type="checkbox" id="filter_diagnosis"><label for="filter_diagnosis">진료</label></li>
+		  <li><input type="checkbox" id="filter_ooh"><label for="filter_ooh">원외</label></li>
+		  <li><input type="checkbox" id="filter_photo"><label for="filter_photo">사진</label></li>
+		  <li><input type="checkbox" id="filter_txplan"><label for="filter_txplan">Tx.Plan</label></li>
+		  <li><input type="checkbox" id="filter_all"><label for="filter_all">전체</label></li>
+		</ul>
+	  </div>
+	  <button class="btn filter_btn"><i class="icon_filter"></i>상세필터</button>
+	</div>
+	<div class="attachment_box js_context">
+	  <div class="list_file_box" data-contextmenu="upfile_contextmenu">
+		<ul class="files_list" data-simplebar="">
+		  <li data-contextmenu="file_contextmenu">발치동의서.mp3</li>
+		  <li data-contextmenu="file_contextmenu">0000614774.pdf</li>
+		  <li data-contextmenu="file_contextmenu">한국과 일본의 치과 건강</li>
+		  <li data-contextmenu="file_contextmenu">Dv2진료입력flow.emm</li>
+		  <li data-contextmenu="file_contextmenu">Dv2다이어그램.emm</li>
+		  <li data-contextmenu="file_contextmenu">발치동의서.mp3</li>
+		  <li data-contextmenu="file_contextmenu">0000614774.pdf</li>
+		  <li data-contextmenu="file_contextmenu">한국과 일본의 치과 건강</li>
+		  <li data-contextmenu="file_contextmenu">Dv2진료입력flow.emm</li>
+		  <li data-contextmenu="file_contextmenu">Dv2다이어그램.emm</li>
+		</ul>
+		<div class="dropdown context_menu" id="file_contextmenu">
+		  <div class="dropdown_option">
+			<ul>
+			  <li>
+				<a href="#none">파일 다운로드</a>
+				<a href="#none">파일 삭제</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		<div class="dropdown context_menu" id="upfile_contextmenu">
+		  <div class="dropdown_option">
+			<ul>
+			  <li>
+				<a href="#none">파일 업로드</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </div>
+	  <ul class="preview_files_list" data-simplebar="">
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+		<li>
+		  <div class="preview_img">
+			<img src="https://dummyimage.com/420x594/000/fff" alt="">
+		  </div>
+		  <span class="file_name">발치동의서</span>
+		  <span class="upload_date">2021-11-09</span>
+		</li>
+	  </ul>
+	</div>
+	<div class="float_search_box">
+	  <span class="input search_input">
+		<input type="text">
+	  </span>
+	  <span class="chkbox">
+		<input type="checkbox" id="tooth_filter">
+		<label for="tooth_filter">치아번호 필터 보이기</label>
+	  </span>
+	  <div class="tooth_filter_box">
+		<div class="tooth_select" id="toothEchartHistory">
+		  <div class="tooth_select_main">
+			<div class="tooth_content" data-toothselect="">
+			  <ul class="tooth_list" data-toothall="">
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth18">
+					<label for="tooth18">
+					  <span class="tooth_num">18</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums18">
+					<!--elastic, screw, loop 클래스 추가 시 활성화 됨-->
+					<label for="gums18"><span class="blind">gums 18</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth17">
+					<label for="tooth17">
+					  <span class="tooth_num">17</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums17">
+					<label for="gums17"><span class="blind">gums 17</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth type_implant tooth_expression">
+					<input type="checkbox" id="tooth16">
+					<label for="tooth16">
+					  <span class="tooth_state">Ext.</span>
+					  <span class="tooth_num">16</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums16">
+					<label for="gums16"><span class="blind">gums 16</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth15">
+					<label for="tooth15">
+					  <span class="tooth_num">15</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums15">
+					<label for="gums15"><span class="blind">gums 15</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth14">
+					<label for="tooth14">
+					  <span class="tooth_num">14</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums14">
+					<label for="gums14"><span class="blind">gums 14</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth13">
+					<label for="tooth13">
+					  <span class="tooth_num">13</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums13">
+					<label for="gums13"><span class="blind">gums 13</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth12">
+					<label for="tooth12">
+					  <span class="tooth_num">12</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums12">
+					<label for="gums12"><span class="blind">gums 12</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth11">
+					<label for="tooth11">
+					  <span class="tooth_num">11</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_top">
+					<input type="checkbox" id="gums11">
+					<label for="gums11"><span class="blind">gums 11</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth21">
+					<label for="tooth21">
+					  <span class="tooth_num">21</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums21">
+					<label for="gums21"><span class="blind">gums 21</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth22">
+					<label for="tooth22">
+					  <span class="tooth_num">22</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums22">
+					<label for="gums22"><span class="blind">gums 22</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth23">
+					<label for="tooth23">
+					  <span class="tooth_num">23</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums23">
+					<label for="gums23"><span class="blind">gums 23</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth24">
+					<label for="tooth24">
+					  <span class="tooth_num">24</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums24">
+					<label for="gums24"><span class="blind">gums 24</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth25">
+					<label for="tooth25">
+					  <span class="tooth_num">25</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums25">
+					<label for="gums25"><span class="blind">gums 25</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth" data-tooltips="">
+					<input type="checkbox" id="tooth26">
+					<label for="tooth26">
+					  <span class="tooth_num">26</span>
+					</label>
+					<span class="tooltips">
+					  <span>#26 과거 진료 내역</span>
+					  <ul>
+						<li>[2021-09-05] 즉일충전처치</li>
+						<li>[2021-08-27] 파노라마</li>
+					  </ul>
+					</span>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums26">
+					<label for="gums26"><span class="blind">gums 26</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth27">
+					<label for="tooth27">
+					  <span class="tooth_num">27</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums27">
+					<label for="gums27"><span class="blind">gums 27</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth28">
+					<label for="tooth28">
+					  <span class="tooth_num">28</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_top">
+					<input type="checkbox" id="gums28">
+					<label for="gums28"><span class="blind">gums 28</span></label>
+				  </span>
+				</li>
+			  </ul>
+			  <ul class="tooth_list" data-toothchild="">
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth55">
+					<label for="tooth55">
+					  <span class="tooth_num">55</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth54">
+					<label for="tooth54">
+					  <span class="tooth_num">54</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth53">
+					<label for="tooth53">
+					  <span class="tooth_num">53</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth52">
+					<label for="tooth52">
+					  <span class="tooth_num">52</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth51">
+					<label for="tooth51">
+					  <span class="tooth_num">51</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth61">
+					<label for="tooth61">
+					  <span class="tooth_num">61</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth62">
+					<label for="tooth62">
+					  <span class="tooth_num">62</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth63">
+					<label for="tooth63">
+					  <span class="tooth_num">63</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth64">
+					<label for="tooth64">
+					  <span class="tooth_num">64</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth65">
+					<label for="tooth65">
+					  <span class="tooth_num">65</span>
+					</label>
+				  </span>
+				</li>
+			  </ul>
+			  <ul class="tooth_list tooth_list_bottom" data-toothchild="">
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth85">
+					<label for="tooth85">
+					  <span class="tooth_num">85</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth84">
+					<label for="tooth84">
+					  <span class="tooth_num">84</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth83">
+					<label for="tooth83">
+					  <span class="tooth_num">83</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth82">
+					<label for="tooth82">
+					  <span class="tooth_num">82</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth81">
+					<label for="tooth81">
+					  <span class="tooth_num">81</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth71">
+					<label for="tooth71">
+					  <span class="tooth_num">71</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth72">
+					<label for="tooth72">
+					  <span class="tooth_num">72</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth73">
+					<label for="tooth73">
+					  <span class="tooth_num">73</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth74">
+					<label for="tooth74">
+					  <span class="tooth_num">74</span>
+					</label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth75">
+					<label for="tooth75">
+					  <span class="tooth_num">75</span>
+					</label>
+				  </span>
+				</li>
+			  </ul>
+			  <ul class="tooth_list tooth_list_bottom" data-toothall="">
+				<li>
+				  <span class="tooth type_implant tooth_expression">
+					<input type="checkbox" id="tooth48">
+					<label for="tooth48">
+					  <span class="tooth_state">Ext.</span>
+					  <span class="tooth_num">48</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums48">
+					<label for="gums48"><span class="blind">gums 48</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth type_pontic tooth_expression">
+					<input type="checkbox" id="tooth47">
+					<label for="tooth47">
+					  <span class="tooth_state">Endo</span>
+					  <span class="tooth_num">47</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums47">
+					<label for="gums47"><span class="blind">gums 47</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_expression">
+					<input type="checkbox" id="tooth46">
+					<label for="tooth46">
+					  <span class="tooth_state">Fill</span>
+					  <span class="tooth_num">46</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums46">
+					<label for="gums46"><span class="blind">gums 46</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth45">
+					<label for="tooth45">
+					  <span class="tooth_num">45</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums45">
+					<label for="gums45"><span class="blind">gums 45</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth44">
+					<label for="tooth44">
+					  <span class="tooth_num">44</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums44">
+					<label for="gums44"><span class="blind">gums 44</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth43">
+					<label for="tooth43">
+					  <span class="tooth_num">43</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums43">
+					<label for="gums43"><span class="blind">gums 43</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth42">
+					<label for="tooth42">
+					  <span class="tooth_num">42</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums42">
+					<label for="gums42"><span class="blind">gums 42</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth41">
+					<label for="tooth41">
+					  <span class="tooth_num">41</span>
+					</label>
+				  </span>
+				  <span class="gums gums_left_bottom">
+					<input type="checkbox" id="gums41">
+					<label for="gums41"><span class="blind">gums 41</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth31">
+					<label for="tooth31">
+					  <span class="tooth_num">31</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums31">
+					<label for="gums31"><span class="blind">gums 31</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth32">
+					<label for="tooth32">
+					  <span class="tooth_num">32</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums32">
+					<label for="gums32"><span class="blind">gums 32</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_front">
+					<input type="checkbox" id="tooth33">
+					<label for="tooth33">
+					  <span class="tooth_num">33</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums33">
+					<label for="gums33"><span class="blind">gums 33</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth34">
+					<label for="tooth34">
+					  <span class="tooth_num">34</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums34">
+					<label for="gums34"><span class="blind">gums 34</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth tooth_fang">
+					<input type="checkbox" id="tooth35">
+					<label for="tooth35">
+					  <span class="tooth_num">35</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums35">
+					<label for="gums35"><span class="blind">gums 35</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth36">
+					<label for="tooth36">
+					  <span class="tooth_num">36</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums36">
+					<label for="gums36"><span class="blind">gums 36</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth37">
+					<label for="tooth37">
+					  <span class="tooth_num">37</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums37">
+					<label for="gums37"><span class="blind">gums 37</span></label>
+				  </span>
+				</li>
+				<li>
+				  <span class="tooth">
+					<input type="checkbox" id="tooth38">
+					<label for="tooth38">
+					  <span class="tooth_num">38</span>
+					</label>
+				  </span>
+				  <span class="gums gums_right_bottom">
+					<input type="checkbox" id="gums38">
+					<label for="gums38"><span class="blind">gums 38</span></label>
+				  </span>
+				</li>
+			  </ul>
+			  <ul class="btn_list">
+				<li>
+				  <button type="button" class="btn_item" data-selecttop="">상악</button>
+				</li>
+				<li>
+				  <button type="button" class="btn_item" data-selectall="">전체선택</button>
+				</li>
+				<li>
+				  <button type="button" class="btn_item" data-selectbottom="">하악</button>
+				</li>
+			  </ul>
+			  <ul class="btn_list btn_list_right">
+				<li>
+				  <button type="button" class="btn_item" data-selecttop-child="">유치상악</button>
+				</li>
+				<li>
+				  <button type="button" class="btn_item" data-selectall-child="">전체선택</button>
+				</li>
+				<li>
+				  <button type="button" class="btn_item" data-selectbottom-child="">유치하악</button>
+				</li>
+			  </ul>
+			  <div class="btn_sub_interdental">
+				<div class="btn_wrap">
+				  <button type="button" class="btn_new"><span class="blind">New</span></button>
+				  <button type="button" class="btn_clear"><span class="blind">Clear</span></button>
+				  <button type="button" class="btn_back"><span class="blind">Back</span></button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="history_table">
+	<div class="table layout2" data-simplebar="">
+	  <table>
+		<tbody>
+		  <tr>
+			<td>
+			  <div>
+				<strong>2021-05-01 [토]</strong>
+				<span>GI충전</span>
+				<span class="right">초진 / 총진료비 102,780 / 본인부담 30,800</span>
+			  </div>
+			</td>
+			<td align="center">
+			  <div class="tooth_map">
+				<ul class="tooth_address">
+				  <li>8</li>
+				  <li>7</li>
+				  <li>6</li>
+				  <li>5</li>
+				  <li class="is_visible">4</li>
+				  <li>3</li>
+				  <li>2</li>
+				  <li>1</li>
+				</ul>
+				<ul class="tooth_address">
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				  <li>4</li>
+				  <li>5</li>
+				  <li>6</li>
+				  <li>7</li>
+				  <li>8</li>
+				</ul>
+				<ul class="tooth_address">
+				  <li>8</li>
+				  <li>7</li>
+				  <li>6</li>
+				  <li>5</li>
+				  <li>4</li>
+				  <li>3</li>
+				  <li>2</li>
+				  <li>1</li>
+				</ul>
+				<ul class="tooth_address">
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				  <li>4</li>
+				  <li>5</li>
+				  <li>6</li>
+				  <li>7</li>
+				  <li>8</li>
+				</ul>
+			  </div>
+			</td>
+			<td>
+			  <dl>
+				<div>
+				  <dt>진료</dt>
+				  <dd>
+					<div>
+					  <span>GI 즉일충전 2면 - K02.1 상아질의 우식</span>
+					  <span class="right">Dr. 이닥터</span>
+					</div>
+					<ul>
+					  <li>즉일충전처치</li>
+					  <li>GI충전 2면 &nbsp;&nbsp;&nbsp;&nbsp; #26(DO)</li>
+					  <li>충전물 연마</li>
+					  <li>FUJI IX GP EXTRA</li>
+					</ul>
+				  </dd>
+				</div>
+				<div>
+				  <dt>메모</dt>
+				  <dd>제거한 골드는 환자분 드림</dd>
+				</div>
+			  </dl>
+			</td>
+		  </tr>
+		  <tr>
+			<td>
+			  <div>
+				<strong>2021-01-26 [화]</strong>
+				<span>파노라마 촬영</span>
+				<span class="right">초진 / 총진료비 102,780 / 본인부담 30,800</span>
+			  </div>
+			</td>
+			<td align="center">
+			  <div class="tooth_map">
+				<ul class="tooth_address">
+				  <li>8</li>
+				  <li>7</li>
+				  <li>6</li>
+				  <li>5</li>
+				  <li class="is_visible">4</li>
+				  <li>3</li>
+				  <li>2</li>
+				  <li>1</li>
+				</ul>
+				<ul class="tooth_address">
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				  <li>4</li>
+				  <li>5</li>
+				  <li>6</li>
+				  <li>7</li>
+				  <li>8</li>
+				</ul>
+				<ul class="tooth_address">
+				  <li>8</li>
+				  <li>7</li>
+				  <li>6</li>
+				  <li>5</li>
+				  <li>4</li>
+				  <li>3</li>
+				  <li>2</li>
+				  <li>1</li>
+				</ul>
+				<ul class="tooth_address">
+				  <li>1</li>
+				  <li>2</li>
+				  <li>3</li>
+				  <li>4</li>
+				  <li>5</li>
+				  <li>6</li>
+				  <li>7</li>
+				  <li>8</li>
+				</ul>
+			  </div>
+			</td>
+			<td>
+			  <div>
+				<strong>&lt; Chief Complaint - 2021-01-26 &gt;</strong>
+				<span class="right">Dr. 이닥터</span>
+			  </div>
+			  <p>왼쪽 아래 치아 떼운데 떨어졌고 (떨어진거 가져왔어요)<br>오른쪽 위에 끝에서 두번째 치아가 씹지를 못하겠어요.</p>
+			  <div>
+				<strong>&lt; Medical Alert - 2021-01-26 &gt;</strong>
+				<span class="right">김솔이</span>
+			  </div>
+			  <p>특이사항 없음</p>
+			  <img src="../img/echart_history/img_sample.png" alt="">
+			  <img src="../img/echart_history/img_sample_1.png" alt="">
+			  <img src="../img/echart_history/img_sample_2.png" alt="">
+			  <span class="notice_txt"><i class="icon_info"></i>방사선 사진 오른쪽을 클릭 하시면 판독문을 작성할 수 있습니다.</span>
+			  <dl>
+				<div>
+				  <dt>내역</dt>
+				  <dd>
+					<p>[파노라마] 전체적인 치주상태 평가를 위해 파노라마 촬영</p>
+					<p>[치석제거] 치주치료 예정임</p>
+				  </dd>
+				</div>
+			  </dl>
+			</td>
+		  </tr>
+		  <tr>
+			<td>
+			  <div>
+				<strong>2021-11-19 [금]</strong>
+				<span>치료계획</span>
+				<span class="right">초진 / 총진료비 102,780 / 본인부담 30,800</span>
+			  </div>
+			</td>
+			<td></td>
+			<td>
+			  <dl>
+				<div>
+				  <dt>Plan</dt>
+				  <dd>치료비용계획 - 진행중 : 총액 500,000원 / 남은금액 500,000원</dd>
+				</div>
+			  </dl>
+			  <div class="tooth_area">
+				<div class="tooth_map" data-toothmap="">
+				  <ul class="tooth_address">
+					<li data-tooth="tooth18">8</li>
+					<li data-tooth="tooth17">7</li>
+					<li data-tooth="tooth16" class="is_visible">6</li>
+					<li data-tooth="tooth15">5</li>
+					<li data-tooth="tooth14">4</li>
+					<li data-tooth="tooth13">3</li>
+					<li data-tooth="tooth12">2</li>
+					<li data-tooth="tooth11">1</li>
+				  </ul>
+				  <ul class="tooth_address">
+					<li data-tooth="tooth21">1</li>
+					<li data-tooth="tooth22">2</li>
+					<li data-tooth="tooth23">3</li>
+					<li data-tooth="tooth24">4</li>
+					<li data-tooth="tooth25">5</li>
+					<li data-tooth="tooth26">6</li>
+					<li data-tooth="tooth27">7</li>
+					<li data-tooth="tooth28">8</li>
+				  </ul>
+				  <ul class="tooth_address">
+					<li data-tooth="tooth48">8</li>
+					<li data-tooth="tooth47">7</li>
+					<li data-tooth="tooth46">6</li>
+					<li data-tooth="tooth45">5</li>
+					<li data-tooth="tooth44">4</li>
+					<li data-tooth="tooth43">3</li>
+					<li data-tooth="tooth42">2</li>
+					<li data-tooth="tooth41">1</li>
+				  </ul>
+				  <ul class="tooth_address">
+					<li data-tooth="tooth31">1</li>
+					<li data-tooth="tooth32">2</li>
+					<li data-tooth="tooth33">3</li>
+					<li data-tooth="tooth34" class="is_visible">4</li>
+					<li data-tooth="tooth35" class="is_visible">5</li>
+					<li data-tooth="tooth36">6</li>
+					<li data-tooth="tooth37">7</li>
+					<li data-tooth="tooth38">8</li>
+				  </ul>
+				</div>
+				<p class="text_cc">[예정] 근관치료</p>
+			  </div>
+			  <div class="tooth_area">
+				<div class="tooth_map" data-toothmap="">
+				  <ul class="tooth_address">
+					<li data-tooth="tooth18">8</li>
+					<li data-tooth="tooth17">7</li>
+					<li data-tooth="tooth16" class="is_visible">6</li>
+					<li data-tooth="tooth15">5</li>
+					<li data-tooth="tooth14">4</li>
+					<li data-tooth="tooth13">3</li>
+					<li data-tooth="tooth12">2</li>
+					<li data-tooth="tooth11">1</li>
+				  </ul>
+				  <ul class="tooth_address">
+					<li data-tooth="tooth21">1</li>
+					<li data-tooth="tooth22">2</li>
+					<li data-tooth="tooth23">3</li>
+					<li data-tooth="tooth24">4</li>
+					<li data-tooth="tooth25">5</li>
+					<li data-tooth="tooth26">6</li>
+					<li data-tooth="tooth27">7</li>
+					<li data-tooth="tooth28">8</li>
+				  </ul>
+				  <ul class="tooth_address">
+					<li data-tooth="tooth48">8</li>
+					<li data-tooth="tooth47">7</li>
+					<li data-tooth="tooth46">6</li>
+					<li data-tooth="tooth45">5</li>
+					<li data-tooth="tooth44">4</li>
+					<li data-tooth="tooth43">3</li>
+					<li data-tooth="tooth42">2</li>
+					<li data-tooth="tooth41">1</li>
+				  </ul>
+				  <ul class="tooth_address">
+					<li data-tooth="tooth31">1</li>
+					<li data-tooth="tooth32">2</li>
+					<li data-tooth="tooth33">3</li>
+					<li data-tooth="tooth34" class="is_visible">4</li>
+					<li data-tooth="tooth35" class="is_visible">5</li>
+					<li data-tooth="tooth36">6</li>
+					<li data-tooth="tooth37">7</li>
+					<li data-tooth="tooth38">8</li>
+				  </ul>
+				</div>
+				<p class="text_cc">[예정] 골드 크루안(A)</p>
+			  </div>
+			  <dl>
+				<div>
+				  <dt>메모</dt>
+				  <dd>지인 DC10%</dd>
+				</div>
+				<div>
+				  <dt>진료</dt>
+				  <dd>
+					GI 즉일충전 2면 - K02.1 상아질의 우식
+					<ul>
+					  <li>즉일충전처치</li>
+					  <li>GI충전 2면 &nbsp;&nbsp;&nbsp;&nbsp; #26(DO)</li>
+					  <li>충전물 연마</li>
+					  <li>FUJI IX GP EXTRA</li>
+					</ul>
+				  </dd>
+				</div>
+			  </dl>
+			  <div>
+				<strong>&lt; Medical Alert - 2021-01-26 &gt;</strong>
+				<span class="right">Dr. 이닥터</span>
+			  </div>
+			  <p>B,C형 간염/협심증, 심근, 뇌경색</p>
+			</td>
+		  </tr>
+		</tbody>
+	  </table>
+	</div>
+  </div>
+</div>
+
+	</div>
+  </div>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+	.case_review {
+	  position: fixed;
+	  bottom: 10px;
+	  right: 20px;
+	  width: auto;
+	  padding: 8px;
+	  z-index: 600;
+	  background: #000;
+	  color: #fff;
+	  opacity: 0.7;
+	  filter: alpha(opacity=70);
+	}
+
+	.case_review a {
+	  display: block;
+	  padding: 4px 0;
+	  font-size: 12px;
+	  color: #fff;
+	}
+
+	.case_review a:hover {
+	  color: #fff4a6;
+	}
+  </style>
+  <div class="case_review">
+	<a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	<a href="#none" onclick="toggleMegadrop()">[기존기록-첨부파일] 영역 토글</a>
+	<a href="#none" onclick="toggleNoAttachment()">[기존기록-첨부파일] 없음</a>
+	<a href="#none" onclick="medicalHistory(0)">[기존기록-전신병력] 특이사항 없음</a>
+	<a href="#none" onclick="medicalHistory(1)">[기존기록-전신병력] 특이사항 있음</a>
+	<a href="#none" onclick="medicalHistory(2)">[기존기록-전신병력] 특이사항 2줄이상</a>
+	<a href="#none" onclick="toggleSeachBox()">[기존기록] 검색필드 열기</a>
+  </div>
+  <script>
+	function toggleMegadrop() {
+	  $('.record_display_control').toggleClass('megadrop')
+	}
+	function medicalHistory(n) {
+	  $('.medical_alert_box .select_item').hide().eq(n).show();
+	  if (n === 0) {
+		$('.medical_alert_box').addClass('ns').removeClass('notice')
+	  } else {
+		$('.medical_alert_box').addClass('notice').removeClass('ns')
+	  }
+	}
+	function toggleNoAttachment() {
+	  $('.attachment_box .files_list,.attachment_box .preview_files_list,.attachment_stt .stt_txt').toggle();
+	}
+	function toggleSeachBox() {
+	  $('.float_search_box').toggle();
+	}
+  </script>
+
+
+
+</body></html>

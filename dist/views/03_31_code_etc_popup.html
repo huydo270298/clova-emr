@@ -1,0 +1,742 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>수가별 상병코드, 기타내역, 다음진료 설정 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.03.02">
+  <!-- Skip Navigation -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
+</ul>
+<!-- // Skip Navigation -->
+
+  <!-- [D] LAYER -->
+  <div class="layer show dimmed">
+
+	<div class="popup_wrap">
+	  <div class="popup" id="code_etc_popup" style="display: block;">
+		<div class="popup_innerwrap">
+		  <div class="popup_head">
+			<strong class="tit">수가별 상병코드, 기타내역, 다음진료 설정</strong>
+			<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+		  </div>
+		  <div class="popup_cont" data-simplebar="">
+			<div class="flexbox" v-align="stretch">
+			  <div class="injury_code_info">
+				<div class="flexbox" v-align="center" align="between">
+				  <div class="flex_item_group" position="left">
+					<strong class="title" size="16">수가별 상병코드, 기타내역, 다음진료(Next) 설정</strong>
+				  </div>
+				  <div class="flex_item_group" position="right">
+					<div class="input_field">
+					  <label>수가명 / 코드 검색</label>
+					  <div class="input search_input">
+						<input type="text" placeholder="검색">
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="flexbox" v-align="stretch" align="left">
+			  <div class="separate_selection">
+				<div class="content_box" data-simplebar="">
+				  <dl>
+					<dt>보험수가</dt>
+					<dd>
+					  <ul>
+						<li>
+						  <span class="radio">
+							<input type="radio" checked="" name="distinct" id="insuranceNumber1">
+							<label for="insuranceNumber1">기본 진료료</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber2">
+							<label for="insuranceNumber2">행위료 - 검사료</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber3">
+							<label for="insuranceNumber3">행위료 - 영상 진단료</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber4">
+							<label for="insuranceNumber4">행위료 - 투약료</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber5">
+							<label for="insuranceNumber5">행위료 - 주사, 마취료</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber6">
+							<label for="insuranceNumber6">행위료 - 이학요법료</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber7">
+							<label for="insuranceNumber7">행위료 - 처치 및 수술</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber8">
+							<label for="insuranceNumber8">행위료 - 급여틀니/임플란트</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber9">
+							<label for="insuranceNumber9">행위료 - 100분의 100본인부담</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="insuranceNumber10">
+							<label for="insuranceNumber10">행위료 - 선별 급여</label>
+						  </span>
+						</li>
+					  </ul>
+					</dd>
+				  </dl>
+				  <dl>
+					<dt>비급여 수가</dt>
+					<dd>
+					  <ul>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber1">
+							<label for="unpaidNumber1">임플란트</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber2">
+							<label for="unpaidNumber2">보철</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber3">
+							<label for="unpaidNumber3">보존</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber4">
+							<label for="unpaidNumber4">소아/예방</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber5">
+							<label for="unpaidNumber5">교정</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber6">
+							<label for="unpaidNumber6">기타</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="unpaidNumber7">
+							<label for="unpaidNumber7">미용(과세)</label>
+						  </span>
+						</li>
+					  </ul>
+					</dd>
+				  </dl>
+				  <dl>
+					<dt>자보/산재 수가</dt>
+					<dd>
+					  <ul>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="accidents1">
+							<label for="accidents1">자동차 보험</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="accidents2">
+							<label for="accidents2">산재 보험</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="accidents3">
+							<label for="accidents3">자동차 보험</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="accidents4">
+							<label for="accidents4">산재 보험</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="accidents5">
+							<label for="accidents5">자동차 보험</label>
+						  </span>
+						</li>
+						<li>
+						  <span class="radio">
+							<input type="radio" name="distinct" id="accidents6">
+							<label for="accidents6">산재 보험</label>
+						  </span>
+						</li>
+					  </ul>
+					</dd>
+				  </dl>
+				</div>
+			  </div>
+			  <div class="list_code_table">
+				<div class="table" data-row-select="">
+				  <table data-simplebar="">
+					<colgroup>
+					  <col style="width: 77px;">
+					  <col>
+					</colgroup>
+					<thead>
+					  <tr>
+						<th>Code</th>
+						<th>수가명</th>
+					  </tr>
+					</thead>
+					<tbody>
+					  <tr>
+						<td>A0000</td>
+						<td>기본진료</td>
+					  </tr>
+					  <tr>
+						<td>AA100</td>
+						<td>초진진찰료-치과의원,보건의료원 내 치과</td>
+					  </tr>
+					  <tr>
+						<td>AA109</td>
+						<td>초진진찰료-치과병원, 병원•요양병원•한방병원 내 치과</td>
+					  </tr>
+					  <tr>
+						<td>AA200</td>
+						<td>재진진찰료-치과의원, 보건의료원 내 치과</td>
+					  </tr>
+					  <tr>
+						<td>AA209</td>
+						<td>재진진찰료-치과의원, 병원•요양병원•한방병원 내 치과</td>
+					  </tr>
+					  <tr>
+						<td>AA222</td>
+						<td>재진-물리치료,주사등을 시술받은 경우</td>
+					  </tr>
+					  <tr>
+						<td>AH115</td>
+						<td>전화상담 관리료(초진)-치과의원, 보건의료원 내 치과</td>
+					  </tr>
+					  <tr>
+						<td>AL300</td>
+						<td>외래환자 의약품관리료[방문당]-병원, 치과병원,요양병원- 한방병원 내 의•치과</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					  <tr>
+						<td>AL400</td>
+						<td>외래환자 의약품관리료-포장단위(병,팩)지급(의원급 의•치과)</td>
+					  </tr>
+					</tbody>
+				  </table>
+				</div>
+			  </div>
+			  <div class="hospitals" style="display: none;">
+				<strong class="title" size="14">재진진찰료-치과병원, 병원•요양병원•한방병원 내 치과 편집</strong>
+				<div class="content_box">
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">자주쓰는 상병명</strong>
+					</div>
+					<div class="flex_item_group" position="right">
+					  <button class="btn" type="button"><i class="icon_add"></i>추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+					<table data-simplebar="">
+					  <colgroup>
+						<col style="width: 80px;">
+						<col>
+						<col style="width: 48px;">
+					  </colgroup>
+					  <thead>
+						<tr>
+						  <th>Code</th>
+						  <th>내용</th>
+						  <th align="center"><button class="delete_btn"><i class="icon_delete"></i></button></th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>K05.31</td>
+						  <td>만성 복합치주염</td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>K05.31</td>
+						  <td>잔류(잔존)치근</td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>K05.31</td>
+						  <td>동이 없는 근단주위농양, 치아농치아농치아농 </td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>K05.31</td>
+						  <td>동이 없는 근단주위농양, 치아농치아농치아농 </td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>K05.31</td>
+						  <td>동이 없는 근단주위농양, 치아농치아농치아농 </td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>K05.31</td>
+						  <td>동이 없는 근단주위농양, 치아농치아농치아농 </td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+					  </tbody>
+					</table>
+				  </div>
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">기타내역</strong>
+					</div>
+					<div class="flex_item_group" position="right">
+					  <button class="btn" type="button"><i class="icon_add"></i>추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+					<table data-simplebar="">
+					  <colgroup>
+						<col>
+						<col style="width: 48px;">
+					  </colgroup>
+					  <thead>
+						<tr>
+						  <th>내역</th>
+						  <th align="center"><button class="delete_btn"><i class="icon_delete"></i></button></th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>구강검진 실시감, 초기우식만 있어 관찰 및 정기검진 필요 설명</td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>시린 증상 호소하여 검진 시행</td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr class="fill">
+						  <td></td>
+						  <td></td>
+						</tr>
+					  </tbody>
+					</table>
+				  </div>
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">다음진료</strong>
+					</div>
+					<div class="flex_item_group" position="right">
+					  <button class="btn" type="button"><i class="icon_add"></i>추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+					<table data-simplebar="">
+					  <colgroup>
+						<col>
+						<col style="width: 48px;">
+					  </colgroup>
+					  <thead>
+						<tr>
+						  <th>내역</th>
+						  <th align="center"><button class="delete_btn"><i class="icon_delete"></i></button></th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>충치 치료</td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr>
+						  <td>치석제거</td>
+						  <td align="center"><button class="delete_btn"><i class="icon_delete"></i></button></td>
+						</tr>
+						<tr class="fill">
+						  <td></td>
+						  <td></td>
+						</tr>
+					  </tbody>
+					</table>
+				  </div>
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">자동입력 기타내역</strong>
+					</div>
+				  </div>
+				  <textarea class="textarea" placeholder="입력">진료 기록부 내역에서 내용 레벨에서 노출되는 내용입니다.</textarea>
+				  <div class="input_field">
+					<label>수가명 / 코드 검색</label>
+					<div class="input">
+					  <input type="text" placeholder="검색" value="재진찰료-포괄버전">
+					</div>
+				  </div>
+				  <div class="input_field">
+					<label>치식 히스토리 표시</label>
+					<div class="datalist">
+					  <div class="input">
+						<input type="text" placeholder="입력 또는 선택" value="홈메우기(Seal)">
+					  </div>
+					  <div class="datalist_option">
+						<ul data-simplebar="">
+						  <li><button type="button" class="option" value="입력 또는 선택">입력 또는 선택</button></li>
+						  <li><button type="button" class="option" value="선택안함">선택안함</button></li>
+						  <li><button type="button" class="option" value="홈메우기(Seal)">홈메우기(Seal)</button></li>
+						  <li><button type="button" class="option" value="충전(Fill)">충전(Fill)</button></li>
+						  <li><button type="button" class="option" value="충전(Fill)">충전(Fill)</button></li>
+						  <li><button type="button" class="option" value="인레이(Inlay)">인레이(Inlay)</button></li>
+						  <li><button type="button" class="option" value="근관치료(Endo)">근관치료(Endo)</button></li>
+						  <li><button type="button" class="option" value="크라운(Cr)">크라운(Cr)</button></li>
+						  <li><button type="button" class="option" value="임시치아(Temp)">임시치아(Temp)</button></li>
+						  <li><button type="button" class="option" value="임시접착(T.S)">임시접착(T.S)</button></li>
+						  <li><button type="button" class="option" value="폰틱(=)">폰틱(=)</button></li>
+						  <li><button type="button" class="option" value="발치(Ext)">발치(Ext)</button></li>
+						  <li><button type="button" class="option" value="상실결손(Miss)">상실결손(Miss)</button></li>
+						  <li><button type="button" class="option" value="미맹출(N.E)">미맹출(N.E)</button></li>
+						  <li><button type="button" class="option" value="우식(Caries)">우식(Caries)</button></li>
+						  <li><button type="button" class="option" value="충전물 또는 보철물 불량(Bad)">충전물 또는 보철물 불량(Bad)</button></li>
+						  <li><button type="button" class="option" value="치경부마모(abfr)">치경부마모(abfr)</button></li>
+						  <li><button type="button" class="option" value="잔존치근(Rest)">잔존치근(Rest)</button></li>
+						  <li><button type="button" class="option" value="파절(Fx)">파절(Fx)</button></li>
+						  <li><button type="button" class="option" value="크랙(Crack)">크랙(Crack)</button></li>
+						  <li><button type="button" class="option" value="임플란트(Impl)">임플란트(Impl)</button></li>
+						</ul>
+					  </div>
+					</div>
+					<div class="datalist" style="display: none;">
+					  <div class="input">
+						<input type="text" placeholder="입력 또는 선택" value="홈메">
+					  </div>
+					  <div class="datalist_option">
+						<ul data-simplebar="">
+						  <li><button type="button" class="option" value="선택안함">선택안함</button></li>
+						  <li><button type="button" class="option" value="홈메우기(Seal)"><span class="highlight">홈메</span>우기(Seal)</button></li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="hospitals empty">
+				<strong class="title" size="14">수가를 선택하세요</strong>
+				<div class="content_box">
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">자주쓰는 상병명</strong>
+					</div>
+					<div class="flex_item_group" position="right">
+					  <button class="btn" disabled="" type="button"><i class="icon_add"></i>추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+				  </div>
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">기타내역</strong>
+					</div>
+					<div class="flex_item_group" position="right">
+					  <button class="btn" disabled="" type="button"><i class="icon_add"></i>추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+				  </div>
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">다음진료</strong>
+					</div>
+					<div class="flex_item_group" position="right">
+					  <button class="btn" disabled="" type="button"><i class="icon_add"></i>추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+				  </div>
+				  <div class="flexbox" v-align="center">
+					<div class="flex_item_group" position="left">
+					  <strong class="title" size="13">자동입력 기타내역</strong>
+					</div>
+				  </div>
+				  <textarea disabled="" class="textarea" placeholder="입력"></textarea>
+				  <div class="input_field">
+					<label>수가명 / 코드 검색</label>
+					<div class="input">
+					  <input disabled="" type="text" placeholder="검색">
+					</div>
+				  </div>
+				  <div class="input_field">
+					<label>치식 히스토리 표시</label>
+					<div class="datalist">
+					  <div class="input" disabled="">
+						<input type="text" disabled="" placeholder="입력 또는 선택">
+					  </div>
+					  <div class="datalist_option">
+						<ul data-simplebar="">
+						  <li><button type="button" class="option" value="입력 또는 선택">입력 또는 선택</button></li>
+						  <li><button type="button" class="option" value="선택안함">선택안함</button></li>
+						  <li><button type="button" class="option" value="홈메우기(Seal)">홈메우기(Seal)</button></li>
+						  <li><button type="button" class="option" value="충전(Fill)">충전(Fill)</button></li>
+						  <li><button type="button" class="option" value="충전(Fill)">충전(Fill)</button></li>
+						  <li><button type="button" class="option" value="인레이(Inlay)">인레이(Inlay)</button></li>
+						  <li><button type="button" class="option" value="근관치료(Endo)">근관치료(Endo)</button></li>
+						  <li><button type="button" class="option" value="크라운(Cr)">크라운(Cr)</button></li>
+						  <li><button type="button" class="option" value="임시치아(Temp)">임시치아(Temp)</button></li>
+						  <li><button type="button" class="option" value="임시접착(T.S)">임시접착(T.S)</button></li>
+						  <li><button type="button" class="option" value="폰틱(=)">폰틱(=)</button></li>
+						  <li><button type="button" class="option" value="발치(Ext)">발치(Ext)</button></li>
+						  <li><button type="button" class="option" value="상실결손(Miss)">상실결손(Miss)</button></li>
+						  <li><button type="button" class="option" value="미맹출(N.E)">미맹출(N.E)</button></li>
+						  <li><button type="button" class="option" value="우식(Caries)">우식(Caries)</button></li>
+						  <li><button type="button" class="option" value="충전물 또는 보철물 불량(Bad)">충전물 또는 보철물 불량(Bad)</button></li>
+						  <li><button type="button" class="option" value="치경부마모(abfr)">치경부마모(abfr)</button></li>
+						  <li><button type="button" class="option" value="잔존치근(Rest)">잔존치근(Rest)</button></li>
+						  <li><button type="button" class="option" value="파절(Fx)">파절(Fx)</button></li>
+						  <li><button type="button" class="option" value="크랙(Crack)">크랙(Crack)</button></li>
+						  <li><button type="button" class="option" value="임플란트(Impl)">임플란트(Impl)</button></li>
+						</ul>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="popup_bottom">
+			<div class="flexbox" v-align="center">
+			  <div class="flex_item_group" position="left">
+				<button class="btn">기본값 복원</button>
+				<button class="btn">파일로부터 복구</button>
+				<button class="btn">파일로 저장</button>
+			  </div>
+			  <div class="flex_item_group" position="right">
+				<button class="btn">수가별 Next 시기 편집</button>
+				<button class="btn primary">현재 수가 내용 저장</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <!-- [D] LAYER -->
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+	.case_review {
+	  position: fixed;
+	  bottom: 20px;
+	  right: 20px;
+	  width: auto;
+	  padding: 8px;
+	  z-index: 600;
+	  background: #000;
+	  color: #fff;
+	  opacity: 0.7;
+	  filter: alpha(opacity=70);
+	}
+
+	.case_review a {
+	  display: block;
+	  padding: 4px 0;
+	  font-size: 12px;
+	  color: #fff;
+	}
+
+	.case_review a:hover {
+	  color: #fff4a6;
+	}
+  </style>
+  <div class="case_review">
+	<a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	<a href="#none" onclick="$('.hospitals').toggle()">[화면] 수가명 선택/미선택 토글</a>
+	<a href="#none" onclick="$('.hospitals:not(.empty) .datalist').toggle()">[화면] 입력으로 선택 했을 때</a>
+  </div>
+
+
+
+</body></html>

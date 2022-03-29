@@ -1,0 +1,471 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>패널 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.02.17">
+  <div class="wrap">
+	<!-- [D] CONTENTS -->
+	<main id="content">
+
+	  <div class="layer show dimmed">
+
+		<div class="popup_wrap">
+		  <div class="popup" id="next_frequently_popup" style="display: block;">
+			<div class="popup_innerwrap">
+			  <div class="popup_head">
+				<strong class="tit">다음 진료(Next) 설정</strong>
+				<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+			  </div>
+			  <div class="popup_cont">
+				<div class="popup_inner" data-simplebar="">
+				  <div class="data_filter">
+					<strong class="title">자주쓰는 다음 진료 추가/설정</strong>
+					<div class="select">
+					  <button type="button" value="김덴트" class="select_btn">김덴트</button>
+					  <div class="select_opt">
+						<ul data-simplebar="">
+						  <li><button type="button" class="option" value="김덴트">김덴트</button></li>
+						  <li><button type="button" class="option" value="의사A">의사A</button></li>
+						  <li><button type="button" class="option" value="의사B">의사B</button></li>
+						  <li><button type="button" class="option" value="의사C">의사C</button></li>
+						  <li><button type="button" class="option" value="의사D">의사D</button></li>
+						</ul>
+					  </div>
+					</div>
+					<div class="btn_right_group">
+					  <button class="btn" disabled="">편집</button>
+					  <button class="btn btn_add">추가</button>
+					  <button class="btn btn_save">저장</button>
+					</div>
+				  </div>
+				  <div class="data_filter">
+					<div class="form_group">
+					  <div class="form_title">
+						<span class="form_txt">버튼명</span>
+					  </div>
+					  <div class="form_cont">
+						<span class="input">
+						  <input type="text" placeholder="입력" maxlength="30">
+						</span>
+					  </div>
+					</div>
+					<div class="form_group">
+					  <div class="form_title">
+						<span class="form_txt">소요시간</span>
+					  </div>
+					  <div class="form_cont">
+						<div class="select">
+						  <button type="button" class="select_btn">=선택=</button>
+						  <div class="select_opt">
+							<ul data-simplebar="">
+							  <li><button type="button" class="option" value="선택 안함">선택 안함</button></li>
+							  <li><button type="button" class="option" value="30분">30분</button></li>
+							  <li><button type="button" class="option" value="1시간">1시간</button></li>
+							  <li><button type="button" class="option" value="1시간30분">1시간30분</button></li>
+							  <li><button type="button" class="option" value="2시간">2시간</button></li>
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="custom_color">
+					  <ul class="list">
+						<li class="item">
+						  <button type="button" class="btn_item" style="background: #fff">
+							<span class="blind">사용자 정의 색상</span>
+						  </button>
+						  <span class="txt_item">버튼 배경색</span>
+						</li>
+						<li class="item">
+						  <!-- 사용자가 색상을 사용자 정의할 때 is_custom 클래스 추가 -->
+						  <button type="button" class="btn_item is_custom" style="background: #333">
+							<span class="blind">사용자 정의 색상</span>
+						  </button>
+						  <span class="txt_item">버튼 글자색</span>
+						</li>
+					  </ul>
+
+					</div>
+				  </div>
+				  <div class="tit_group">
+					<strong class="title" size="14" weight="bold">자주쓰는 다음 진료</strong>
+					<div class="btn_right_group">
+					  <button class="btn">전체삭제</button>
+					</div>
+				  </div>
+				  <div class="content">
+					<div class="treatments_lst" data-simplebar="">
+					  <ul class="list" data-reorder="">
+						<li class="item is_edit">
+						  <button class="btn rounded">정기 검진</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">1주 ck</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Endo (시작)</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Endo (CE)</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Endo (CI)</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Endo (CF)</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Cr del (T/S)</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">발치</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit is_custom">
+						  <button class="btn rounded" style="color:#fff;background:#ee6950;">수술 발치</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete white"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded is_edit">발치 + GBR</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">드레싱</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">S/O</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Inlay prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Implant OP</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">G.J</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Cr prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Implant OP</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Implant OP + Sinus</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Post + core + Cr prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit is_custom">
+						  <button class="btn rounded" style="color:#333;background:#F9D2AA;">Inlay del</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">CA RF</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Post + core + Cr prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Implant OP</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">드레싱</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">S/O</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Inlay prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Implant OP</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">G.J</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Cr prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Implant OP</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Endo (CF)</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+						<li class="item is_edit">
+						  <button class="btn rounded">Inlay prep</button>
+						  <div class="btn_delete_area">
+							<button class="btn_delete"><span class="blind">삭제</span></button>
+						  </div>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				  <p class="note">※ 드래그 앤 드랍으로 순서를 변경하세요.</p>
+				</div>
+			  </div>
+			  <div class="popup_bottom">
+				<button class="btn">취소</button>
+				<button class="btn primary">확인</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</main>
+	<!-- // [D] CONTENTS -->
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+	<!-- Caseview  -->
+	<script src="../js/libs/vendor.min.js"></script>
+	<style>
+	  .case_review {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: auto;
+		padding: 8px;
+		z-index: 600;
+		background: #000;
+		color: #fff;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	  }
+
+	  .case_review a {
+		display: block;
+		padding: 4px 0;
+		font-size: 12px;
+		color: #fff;
+	  }
+
+	  .case_review a:hover {
+		color: #fff4a6;
+	  }
+	</style>
+	<div class="case_review">
+	  <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	  <a href="#none" onclick="caseview()">[화면] 항목 설정 팝업</a>
+	  <a href="#none" onclick="caseview2()">[화면] 진료 항목 추가</a>
+	  <a href="#none" onclick="caseview3()">[화면] 진료 항목 선택</a>
+	  <a href="#none" onclick="caseview4()">[화면] 진료 버튼 편집모드</a>
+	</div>
+	<script>
+	  function caseview() {
+		$('.input input').removeAttr('disabled').val('');
+		$('.data_filter + .data_filter .select_btn').text('=선택=').removeAttr('value', 'disabled');
+		$('.treatments_lst .item').each(function () {
+		  $(this).removeClass('is_active');
+		})
+		$('.btn_add').show(); $('.btn_save').hide()
+	  }
+	  function caseview2() {
+		$('.input input').val('Endo (시작)').removeAttr('disabled', '');
+		$('.data_filter + .data_filter .select_btn').text('=선택=').removeAttr('value', 'disabled');
+		$('.treatments_lst .item').each(function () {
+		  $(this).removeClass('is_active');
+		})
+		$('.btn_add').show(); $('.btn_save').hide()
+	  }
+	  function caseview3() {
+		$('.treatments_lst .item').each(function () {
+		  $(this).removeClass('is_active');
+		})
+		$('.treatments_lst .item').eq(2).addClass('is_active');
+		$('.data_filter + .data_filter .select_btn').val('1시간 30분').text('1시간 30분').attr('disabled', '');
+		$('.input input').val('Endo (시작)').attr('disabled', '');
+		$('.btn_right_group .btn[disabled]').removeAttr('disabled');
+		$('.btn_add').show(); $('.btn_save').hide()
+	  }
+	  function caseview4() {
+		$('.treatments_lst .item').each(function () {
+		  $(this).removeClass('is_active');
+		})
+		$('.treatments_lst .item').eq(2).addClass('is_active');
+		$('.data_filter + .data_filter .select_btn').val('1시간 30분').text('1시간 30분').removeAttr('disabled');
+		$('.input input').val('Endo (시작)').removeAttr('disabled', '');
+		$('.btn_right_group .btn[disabled]').removeAttr('disabled');
+		$('.btn_add').hide(); $('.btn_save').show()
+	  }
+	</script>
+  </div>
+
+
+
+</body></html>

@@ -1,0 +1,953 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>상담 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.03.14">
+  <!-- Skip Navigation -->
+<ul class="skip">
+<li><a href="#header" onclick="document.getElementById('header').tabIndex=-1;document.getElementById('header').focus();return false;">Skip to navigation</a></li>
+<li><a href="#content" onclick="document.getElementById('content').tabIndex=-1;document.getElementById('content').focus();return false">Skip to content</a></li>
+</ul>
+<!-- // Skip Navigation -->
+
+  <div class="wrap" data-simplebar="">
+	<!--[D] HEADER -->
+	<header class="header_utility">
+  <div class="title_box">
+	<div class="logo">
+	  <img src="../img/components/header_utility/header_favicon.svg" alt="">
+	</div>
+	<ul class="header_title">
+	  <li>Dv2 DRM System</li>
+	</ul>
+	<!-- display none for caseview -->
+	<ul class="header_title" style="display:none">
+	  <li>Chart No. 305</li>
+	  <li>이름 : 김한국</li>
+	  <li style="display: none;">이름 : 김ㅎ국</li>
+	  <li>생년월일 : 2014 - 11- 16 (남 6Y 9M)</li>
+	  <li>보험구분 : 건강보험</li>
+	  <li>최종내원일 : 2021-02-01 (7개월전)</li>
+	</ul>
+  </div>
+  <div class="menu_box">
+	<ul class="menu_lst">
+	  <li style="display: none;">
+		<div class="dropdown">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/icon_security.svg" alt=""></button>
+		</div>
+	  </li>
+	  <li>
+		<div class="dropdown">
+		  <button type="button" button-type="icon" button-tooltip="선택된 환자 없음" class="dropdown_btn"><img src="../img/components/header_utility/patient_default.svg" alt=""></button>
+		</div>
+		<div class="dropdown" style="display: none;">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_baby.svg" alt=""></button>
+		  <div class="dropdown_option" type="context">
+			<ul>
+			  <li>
+				<a href="#none">[김한국] 님 접수</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		<div class="dropdown" style="display: none;">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_male.svg" alt=""></button>
+		  <div class="dropdown_option" type="context">
+			<ul>
+			  <li>
+				<a href="#none">[김한국] 님 접수</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		<div class="dropdown" style="display: none;">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_female.svg" alt=""></button>
+		  <div class="dropdown_option" type="context">
+			<ul>
+			  <li>
+				<a href="#none">[김한국] 님 접수</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		<div class="dropdown" style="display: none;">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_old_male.svg" alt=""></button>
+		  <div class="dropdown_option" type="context">
+			<ul>
+			  <li>
+				<a href="#none">[김한국] 님 접수</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+		<div class="dropdown" style="display: none;">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/patient_old_female.svg" alt=""></button>
+		  <div class="dropdown_option" type="context">
+			<ul>
+			  <li>
+				<a href="#none">[김한국] 님 접수</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </li>
+	  <li>
+		<div class="dropdown settings">
+		  <button type="button" button-type="icon" class="dropdown_btn"><img src="../img/components/header_utility/icon_gear.svg" alt="">
+			<div class="span blind">환경설정</div>
+		  </button>
+		  <div class="dropdown_option">
+			<ul>
+			  <li>
+				<ul>
+				  <li>
+					<a href="#none">다크모드</a>
+				  </li>
+				  <li>
+					<a href="#none">라이트모드</a>
+				  </li>
+				</ul>
+			  </li>
+			  <li>
+				<ul>
+				  <li>
+					<a href="#none">단축키 설정</a>
+				  </li>
+				  <li>
+					<a href="#none">레이아웃 편집</a>
+				  </li>
+				</ul>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </li>
+	  <li>
+		<div class="dropdown">
+		  <button type="button" button-type="text" class="dropdown_btn">Dr.김덴트</button>
+		  <div class="dropdown_option">
+			<ul>
+			  <li>
+				<a href="#none">비밀번호 변경</a>
+			  </li>
+			  <li>
+				<a href="#none">로그아웃</a>
+			  </li>
+			</ul>
+		  </div>
+		</div>
+	  </li>
+	  <li>
+		<button type="button" button-type="icon" class="dropdown_btn search_btn"><img src="../img/components/header_utility/icon_search.svg" alt=""></button>
+	  </li>
+	  <li>
+		<button type="button" button-type="icon" class="dropdown_btn menu_btn"><img src="../img/components/header_utility/icon_menu.svg" alt=""></button>
+	  </li>
+	</ul>
+  </div>
+</header>
+<div class="main_nav">
+  <div class="patient_nav_box">
+	<div class="patient_search">
+	  <div class="search_wrap">
+		<div class="search_input_group">
+		  <i class="icon_search"></i>
+		  <input type="text" class="input_search" placeholder="환자 이름으로 검색하세요">
+		  <button class="keyboard_btn" title="화상키보드실행"><span class="blind">화상키보드 실행</span><i class="icon_keyboard"></i></button>
+		</div>
+		<div class="suggest_box">
+		  <ul>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+				<strong class="patient_name">김한국 (305)</strong>
+				<p class="patient_info">남, 1999-11-11, 000Y 11M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_baby.svg" alt="">
+				<strong class="patient_name">김빛나라래 (204)</strong>
+				<p class="patient_info">여, 1988-08-09, 33Y 2M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_old_female.svg" alt="">
+				<strong class="patient_name">김로 (48)</strong>
+				<p class="patient_info">남, 1979-07-10, 42Y 3M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_old_male.svg" alt="">
+				<strong class="patient_name">공지철 (93)</strong>
+				<p class="patient_info">여, 1991-02-03, 30Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+				<strong class="patient_name">김현민 (491)</strong>
+				<p class="patient_info">남, 1991-02-18, 30Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_female.svg" alt="">
+				<strong class="patient_name">김태희 (320)</strong>
+				<p class="patient_info">남, 1986-02-18, 36Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+				<strong class="patient_name">김현민 (491)</strong>
+				<p class="patient_info">남, 1991-02-18, 30Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_female.svg" alt="">
+				<strong class="patient_name">김태희 (320)</strong>
+				<p class="patient_info">남, 1986-02-18, 36Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_male.svg" alt="">
+				<strong class="patient_name">김현민 (491)</strong>
+				<p class="patient_info">남, 1991-02-18, 30Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+			<li>
+			  <a href="#none">
+				<img class="patient_img" src="../img/components/header_utility/patient_female.svg" alt="">
+				<strong class="patient_name">김태희 (320)</strong>
+				<p class="patient_info">남, 1986-02-18, 36Y 8M<br>010-0000-0000</p>
+			  </a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+	<div class="patient_lst">
+	  <div class="dropdown context_menu">
+		<div class="dropdown_option">
+		  <ul>
+			<li>
+			  <ul>
+				<li>
+				  <a href="#none">[송창범] 님 선택</a>
+				</li>
+				<li>
+				  <a href="#none">접수대기화면 알림 보내기</a>
+				</li>
+			  </ul>
+			</li>
+			<li>
+			  <ul>
+				<li>
+				  <a href="#none">[접수]로 변경</a>
+				</li>
+				<li>
+				  <a href="#none">[준비완료]로 변경</a>
+				</li>
+				<li>
+				  <a href="#none">[진료중]로 변경</a>
+				</li>
+				<li>
+				  <a href="#none">[진료완료]로 변경</a>
+				</li>
+				<li>
+				  <a href="#none">[수납완료]로 변경</a>
+				</li>
+			  </ul>
+			</li>
+			<li>
+			  <a href="#none">접수 취소 (삭제)</a>
+			</li>
+			<li>
+			  <ul>
+				<li>
+				  <a href="#none">[송창범] 님 인적사항 보기</a>
+				</li>
+				<li>
+				  <a href="#none">[송창범] 님 전자차트 보기</a>
+				</li>
+				<li>
+				  <a href="#none">[송창범] 님 사진 보기</a>
+				</li>
+				<li>
+				  <a href="#none">[송창범] 님 외부 X-Ray 실행</a>
+				</li>
+				<li>
+				  <a href="#none">[송창범] 님 예약 검색</a>
+				</li>
+			  </ul>
+			</li>
+			<li>
+			  <a href="#none">의사필터 선택</a>
+			</li>
+		  </ul>
+		</div>
+	  </div>
+	  <ul>
+		<li class="dropdown">
+		  <a href="#none" class="dropdown_btn"><span class="patient_stt received">접수</span>송창범 (305)</a>
+		</li>
+		<li class="dropdown">
+		  <a href="#none" class="dropdown_btn"><span class="patient_stt received">접수</span>최성희 (13)</a>
+		</li>
+		<li class="dropdown">
+		  <a href="#none" class="dropdown_btn"><span class="patient_stt received">접수</span>최성희 (13)</a>
+		</li>
+		<li class="dropdown">
+		  <a href="#none" class="dropdown_btn"><span class="patient_stt done_treat">진료완료</span>송창범 (305)</a>
+		</li>
+	  </ul>
+	  <span class="resize_indicator"></span>
+	</div>
+  </div>
+  <nav class="nav swiper">
+	<ul class="swiper-wrapper">
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="desk"></span>
+		  <span class="nav_txt">데스크</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="e_chart"></span>
+		  <span class="nav_txt">전자차트</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="reservation"></span>
+		  <span class="nav_txt">예약</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide is_active">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="consultation"></span>
+		  <span class="nav_txt">환자상담</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide dropdown">
+		<a href="#none" class="dropdown_btn">
+		  <span class="nav_icon" data-icon="photos"></span>
+		  <span class="nav_txt">사진보기</span>
+		</a>
+		<div class="dropdown_option" type="context">
+		  <ul>
+			<li>
+			  <a href="#none">구강카메라(웹캠) 촬영</a>
+			</li>
+			<li>
+			  <a href="#none">이미지 파일 추가하기</a>
+			</li>
+		  </ul>
+		</div>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="capture"></span>
+		  <span class="nav_txt">사진찍기</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="xray"></span>
+		  <span class="nav_txt">X-ray</span>
+		</a>
+	  </li>
+	  <li class="swiper-">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="customer_manage"></span>
+		  <span class="nav_txt">고객관리</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="oral_exam"></span>
+		  <span class="nav_txt">구강검진</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="bill"></span>
+		  <span class="nav_txt">청구/EDI</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="digit_sign"></span>
+		  <span class="nav_txt">전자서명</span>
+		</a>
+	  </li>
+	  <li class="swiper-slide">
+		<a href="#none">
+		  <span class="nav_icon" data-icon="stats"></span>
+		  <span class="nav_txt">경영통계</span>
+		</a>
+	  </li>
+	</ul>
+  </nav>
+</div>
+
+	<!--//[D] HEADER -->
+
+	<!-- [D] CONTENTS -->
+	<main class="consulting_layout" data-simplebar="">
+	  <div class="col">
+		<div class="panel">
+		  <div class="tab_group">
+			<div class="tab_lst_box">
+			  <ul class="tab_lst">
+				<li class="tab_item is_active">
+				  <a href="#consultationVideo" class="tab_btn">상담 영상</a>
+				</li>
+				<li class="tab_item">
+				  <a href="#beforeAfter" class="tab_btn">치료 전후 사진</a>
+				</li>
+				<li class="tab_item">
+				  <a href="#patientPhoto" class="tab_btn">환자 사진</a>
+				</li>
+			  </ul>
+			</div>
+			<div class="tabs">
+			  <div class="tab is_active" id="consultationVideo" data-extra-content="videoPlayBox">
+				<button class="btn" type="button">상담 영상 관리</button>
+				<div class="content_box" data-simplebar="">
+				  <ul class="categorized_list">
+					<li class="is_expanded">
+					  <a href="#none">치료</a>
+					  <ul>
+						<li><a href="#none"><i class="icon icon_play"></i>크라운</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>레진</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>치아 홈 메우기</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>근관치료</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>임플란트</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>임플란트 with GBR</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>상악동 거상술 Crestal</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>부분틀니</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>전체틀니</a></li>
+					  </ul>
+					</li>
+					<li class="is_expanded">
+					  <a href="#none">주의사항</a>
+					  <ul>
+						<li><a href="#none"><i class="icon icon_play"></i>발치 후 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>임플란트 수술 후 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>근관치료 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>소아환자 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>턱관절질환 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>틀니사용 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>교정치료 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>교정환자 잇솔질 방법</a></li>
+					  </ul>
+					</li>
+					<li class="is_expanded">
+					  <a href="#none">교육</a>
+					  <ul>
+						<li><a href="#none"><i class="icon icon_play"></i>잇솔질 교육(대한치주과학회)</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>임플란트 수술 후 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>근관치료 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>소아환자 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>턱관절질환 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>틀니사용 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>교정치료 주의사항</a></li>
+						<li><a href="#none"><i class="icon icon_play"></i>교정환자 잇솔질 방법</a></li>
+					  </ul>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="tab" id="beforeAfter" data-extra-content="beforeAfterDetail">
+				<button class="btn" type="button">치료 전후 사진 관리</button>
+				<div class="content_box" data-simplebar="">
+				  <ul class="before_after_list" data-detail="beforeAfterView">
+					<li>
+					  <div class="photo_before_after">
+						<span class="name">라미네이트</span>
+						<div class="img_box" data-tooltips="">
+						  <div class="img" data-txt="영구치가 2개 없으신 상태로 치아 사이 공간 많음">
+							<img src="../img/consulting/@tmp_before.png" alt="">
+						  </div>
+						  <div class="img" data-txt="#21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리">
+							<img src="../img/consulting/@tmp_after.png" alt="">
+						  </div>
+						  <span class="tooltips">
+							<p><b>부분교정 + 라미네이트 + 브릿지</b></p>
+							<p>[Before] 영구치가 2개 없으신 상태로 치아 사이 공간 많음<br>[After] #21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+						  </span>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_before_after">
+						<span class="name">미백</span>
+						<div class="img_box" data-tooltips="">
+						  <div class="img" data-txt="영구치가 2개 없으신 상태로 치아 사이 공간 많음">
+							<img src="../img/consulting/@tmp_before1.png" alt="">
+						  </div>
+						  <div class="img" data-txt="#21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리">
+							<img src="../img/consulting/@tmp_after1.png" alt="">
+						  </div>
+						  <span class="tooltips">
+							<p><b>부분교정 + 라미네이트 + 브릿지</b></p>
+							<p>[Before] 영구치가 2개 없으신 상태로 치아 사이 공간 많음<br>[After] #21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+						  </span>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_before_after selected">
+						<span class="name">부분교정 + 라미네이트 + 브릿지</span>
+						<div class="img_box" data-tooltips="">
+						  <div class="img" data-txt="영구치가 2개 없으신 상태로 치아 사이 공간 많음">
+							<img src="../img/consulting/@tmp_before2.png" alt="">
+						  </div>
+						  <div class="img" data-txt="#21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리">
+							<img src="../img/consulting/@tmp_after2.png" alt="">
+						  </div>
+						  <span class="tooltips">
+							<p><b>부분교정 + 라미네이트 + 브릿지</b></p>
+							<p>[Before] 영구치가 2개 없으신 상태로 치아 사이 공간 많음<br>[After] #21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+						  </span>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_before_after">
+						<span class="name">브릿지 + 임플란트</span>
+						<div class="img_box" data-tooltips="">
+						  <div class="img" data-txt="영구치가 2개 없으신 상태로 치아 사이 공간 많음">
+							<img src="../img/consulting/@tmp_photo1.png" alt="">
+						  </div>
+						  <span class="tooltips">
+							<p><b>부분교정 + 라미네이트 + 브릿지</b></p>
+							<p>[Before] 영구치가 2개 없으신 상태로 치아 사이 공간 많음<br>[After] #21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+						  </span>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_before_after">
+						<span class="name">인레이</span>
+						<div class="img_box" data-tooltips="">
+						  <div class="img" data-txt="영구치가 2개 없으신 상태로 치아 사이 공간 많음">
+							<img src="../img/consulting/@tmp_before1.png" alt="">
+						  </div>
+						  <div class="img" data-txt="#21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리">
+							<img src="../img/consulting/@tmp_after1.png" alt="">
+						  </div>
+						  <span class="tooltips">
+							<p><b>부분교정 + 라미네이트 + 브릿지</b></p>
+							<p>[Before] 영구치가 2개 없으신 상태로 치아 사이 공간 많음<br>[After] #21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+						  </span>
+						</div>
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_before_after">
+						<span class="name">발치 교정</span>
+						<div class="img_box" data-tooltips="">
+						  <div class="img" data-txt="영구치가 2개 없으신 상태로 치아 사이 공간 많음">
+							<img src="../img/consulting/@tmp_before.png" alt="">
+						  </div>
+						  <div class="img" data-txt="#21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리">
+							<img src="../img/consulting/@tmp_after.png" alt="">
+						  </div>
+						  <span class="tooltips">
+							<p><b>부분교정 + 라미네이트 + 브릿지</b></p>
+							<p>[Before] 영구치가 2개 없으신 상태로 치아 사이 공간 많음<br>[After] #21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+						  </span>
+						</div>
+					  </div>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			  <div class="tab" id="patientPhoto" data-extra-content="patientPhotoDetail">
+				<div class="dropdown">
+				  <button class="btn dropdown_btn" type="button"><i class="icon_add"></i>사진 추가</button>
+				  <div class="dropdown_option">
+					<ul>
+					  <li>
+						<ul>
+						  <li>
+							<a href="#none">구강카메라(웹캠) 촬영</a>
+						  </li>
+						  <li>
+							<a href="#none">이미지 파일 추가하기</a>
+						  </li>
+						</ul>
+					  </li>
+					</ul>
+				  </div>
+				</div>
+				<div class="content_box" data-simplebar="">
+				  <ul class="photo_list" data-slider="patientPhotoSlide">
+					<li>
+					  <div class="photo_box selected" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo1.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo2.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo3.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo1.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo2.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo3.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo1.png" alt="">
+					  </div>
+					</li>
+					<li>
+					  <div class="photo_box" data-info="김한국 (남 6Y 9M)" data-time="2021-12-09 17:26:23 (2y 4m bef.)" data-size="4000x1831px">
+						<span class="time">2021-01-23</span>
+						<img src="../img/consulting/@tmp_photo2.png" alt="">
+					  </div>
+					</li>
+				  </ul>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="col">
+		<div class="panel">
+		  <div class="extra_tab_content">
+			<div class="tab is_active" id="videoPlayBox">
+			  <div class="video_box">
+				<video controls="">
+				  <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+				  Your browser does not support the video tag.
+				</video>
+			  </div>
+			</div>
+			<div class="tab" id="beforeAfterDetail">
+			  <div class="toolbox">
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_zoom_in"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_zoom_out"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_hand"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="colorbox" style="background: #EE6950;"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_pencil"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_figure"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_drawing_thin"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_drawing_thick"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_measure"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_impl_down"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_impl_up"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_rotation_left"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_rotation_right"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_flip_horizontal"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_flip_vertical"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_undo"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_redo"></i></button>
+				  </li>
+				</ul>
+			  </div>
+			  <div id="beforeAfterView">
+				<div class="view_detail">
+				  <strong class="name">부분교정 + 라미네이트 + 브릿지</strong>
+				  <p class="detail_txt">영구치가 2개 없으신 상태로 치아 사이 공간 많음</p>
+				  <div class="img">
+					<img src="../img/consulting/@tmp_before.png" alt="">
+				  </div>
+				</div>
+				<div class="view_detail">
+				  <strong class="name">부분교정 + 라미네이트 + 브릿지</strong>
+				  <p class="detail_txt">#21 잇몸이 아쉽긴 하나, 부분교정 + 라미네이트 + 브릿지로 마무리</p>
+				  <div class="img">
+					<img src="../img/consulting/@tmp_after.png" alt="">
+				  </div>
+				</div>
+			  </div>
+			</div>
+			<div class="tab" id="patientPhotoDetail">
+			  <div class="toolbox">
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_zoom_in"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_zoom_out"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_hand"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="colorbox" style="background: #EE6950;"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_pencil"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_figure"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_drawing_thin"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_drawing_thick"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_measure"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_impl_down"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_impl_up"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_rotation_left"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_rotation_right"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_flip_horizontal"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_flip_vertical"></i></button>
+				  </li>
+				</ul>
+				<span class="divide"></span>
+				<ul>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_undo"></i></button>
+				  </li>
+				  <li>
+					<button class="toolbox_btn" type="button"><i class="icon_redo"></i></button>
+				  </li>
+				</ul>
+			  </div>
+			  <div class="photo_slide" id="patientPhotoSlide">
+				<div class="photo_box">
+				  <div class="info">
+					<span class="name">김한국 (남 6Y 9M)</span>
+					<span class="time">2021-12-09 17:26:23 (2y 4m bef.)</span>
+					<span class="size">4000x1831px</span>
+				  </div>
+				  <img src="../img/consulting/@tmp_photo1.png" alt="">
+				</div>
+				<button type="button" class="slde_nav_btn prev_btn"></button>
+				<button type="button" class="slde_nav_btn next_btn"></button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</main>
+	<!-- // [D] CONTENTS -->
+  </div>
+
+  <script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+  <!-- Caseview  -->
+  <script src="../js/libs/vendor.min.js"></script>
+  <style>
+	.case_review {
+	  position: fixed;
+	  bottom: 10px;
+	  right: 20px;
+	  width: auto;
+	  padding: 8px;
+	  z-index: 600;
+	  background: #000;
+	  color: #fff;
+	  opacity: 0.7;
+	  filter: alpha(opacity=70);
+	}
+
+	.case_review a {
+	  display: block;
+	  padding: 4px 0;
+	  font-size: 12px;
+	  color: #fff;
+	}
+
+	.case_review a:hover {
+	  color: #fff4a6;
+	}
+  </style>
+  <div class="case_review">
+	<a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+  </div>
+
+
+
+</body></html>

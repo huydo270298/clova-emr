@@ -1,0 +1,210 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>당일 수납 정보 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.01.11">
+	<div class="wrap">
+	<!-- [D] CONTENTS -->
+	<main id="content">
+	  <div class="panel">
+		<div id="secMedicalExpenses">
+  <div class="tit_group">
+	<h2 class="title" weight="bold" size="16">당일 수납 정보</h2>
+	<div class="btn_right_group">
+	  <div class="select">
+		<button type="button" class="select_btn">=선택=</button>
+		<div class="select_opt">
+		  <ul data-simplebar="">
+			<li><button type="button" class="option" value="Option A">진료비 구분 1</button></li>
+			<li><button type="button" class="option" value="Option B">진료비 구분 2</button></li>
+			<li><button type="button" class="option" value="Option C">진료비 구분 3</button></li>
+		  </ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+  <div class="panel_cont">
+	<table class="storage_info">
+	  <caption><span class="blind">당일 수납 정보</span></caption>
+	  <colgroup>
+		<col style="width: 9.4%">
+		<col style="width: 15.6%">
+		<col style="width: 9.5%">
+		<col style="width: 15.4%">
+		<col style="width: 12.4%">
+		<col style="width: 12.7%">
+		<col style="width: 11%">
+		<col>
+	  </colgroup>
+	  <tbody>
+		<tr>
+		  <th scope="row">총진료비</th>
+		  <td>497,810</td>
+		  <th scope="row">본인부담</th>
+		  <td>29,300</td>
+		  <th scope="row">
+			<span class="chkbox">
+			  <input type="checkbox" checked="" id="total_rec">
+			  <label for="total_rec">총미수금</label>
+			</span>
+		  </th>
+		  <td class="text_red">-31,700</td>
+		  <th scope="row" rowspan="2">환자부담금</th>
+		  <td rowspan="2">429,300</td>
+		</tr>
+		<tr>
+		  <th>비급여</th>
+		  <td>400,000</td>
+		  <th colspan="2">
+			<span class="chkbox">
+			  <input type="checkbox" id="deduction">
+			  <label for="deduction">비급여에서 본인분담금 차감</label>
+			</span>
+		  </th>
+		  <th scope="row">부가가치세</th>
+		  <td>0</td>
+		</tr>
+	  </tbody>
+	</table>
+	<ul class="note">
+	  <li>세액공제 제외액 : 0원</li>
+	  <li>치료비용계획 수납에 포함</li>
+	</ul>
+  </div>
+</div>
+<script>
+  var totalRecCB = document.getElementById('total_rec'),
+	total = document.querySelector('.storage_info tr:first-child td:last-child');
+  totalRecCB.addEventListener('change', function () {
+	var totalAmount = parseInt(total.innerText.replace(',', ''));
+	var amount = Math.abs(parseInt(this.closest('th').nextElementSibling.innerText.replace(',', '')));
+	total.innerText = Intl.NumberFormat("en-US").format(!this.checked ? totalAmount - amount : totalAmount + amount)
+  });
+</script>
+
+	  </div>
+
+	</main>
+	<!-- // [D] CONTENTS -->
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+	<!-- Caseview  -->
+	<script src="../js/libs/vendor.min.js"></script>
+	<style>
+	  .case_review {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: auto;
+		padding: 8px;
+		z-index: 600;
+		background: #000;
+		color: #fff;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	  }
+
+	  .case_review a {
+		display: block;
+		padding: 4px 0;
+		font-size: 12px;
+		color: #fff;
+	  }
+
+	  .case_review a:hover {
+		color: #fff4a6;
+	  }
+	</style>
+	<div class="case_review">
+	  <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	</div>
+  </div>
+
+
+
+</body></html>

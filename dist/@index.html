@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>CLOVA EMR : 마크업 산출물</title> 
+<style>
+@import url(https://fonts.googleapis.com/css?family=Noto+Sans+KR:300,400,700);blockquote,body,dd,dl,dt,fieldset,figure,h1,h2,h3,h4,h5,h6,hr,html,iframe,legend,li,ol,p,pre,textarea,ul{margin:0;padding:0;font-family:'Noto Sans KR','맑은고딕',MalgunGothic,sans-serif}h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:400}ul{list-style:none}button,input,select,textarea{margin:0}html{box-sizing:border-box}*{box-sizing:inherit}:after,:before{box-sizing:inherit}audio,embed,img,object,video{height:auto;max-width:100%}iframe{border:0}table{border-collapse:collapse;border-spacing:0}td,th{padding:0;text-align:left}header{position:fixed;top:0;left:0;right:0;height:80px;background:#333;z-index:2}.clearfix:after,.clearfix:before{content:'';display:block;clear:both}h1{float:left;margin:20px;font-size:25px;font-weight:700;color:#eee}h2{padding:7px;font-size:18px;font-weight:700;color:#333;border-bottom:2px solid #333}.search{float:right;margin:13px 25px;font-size:12px;color:#fff}.search div{float:left}.search label{vertical-align:middle;margin-right:10px;letter-spacing:1.5px;font-weight:300;color:#adff2f}.search input,.search select{font-size:12px;vertical-align:middle;padding:3px 5px;color:#333}.search .search_date{margin-left: 20px;}.search .search_keyword{float:none;margin-top:30px;text-align:right}.search .search_keyword input{width:173px}.toc{margin-top:80px;padding: 20px;background:#f4f4f4}.toc h2{font-size:14px;}.toc ul{margin-bottom:0}.toc li{padding:3px 10px;}.section_list{padding:15px 20px 0;margin:0 0 38px}ul{margin-bottom:20px}li{display:block;padding:7px 10px;border-bottom:1px solid #eee}li span{margin-left:10px}a{font-size:13px;color:#777;text-decoration:none;letter-spacing:.6px;padding:1px 5px;border-radius:3px}a:hover{color:#333}footer{position:fixed;left:0;right:0;bottom:0;padding:10px 20px;background:#333;text-align:center}footer p{font-size:12px;color:#fff;letter-spacing:2px}footer strong{text-transform:uppercase}.new{display:inline-block;position:relative;top:-1px;height:16px;padding:0 5px 1px;border-radius:3px;background:#fd3939;font-family:verdana;font-size:11px;font-weight:400;color:#fff;line-height:16px;vertical-align:middle;margin-left:0;}.update{display:inline-block;position:relative;top:-1px;height:16px;background:#45a7fb;color:#fff;padding:0 5px 1px;border-radius:3px;font-family:verdana;font-size:11px;font-weight:400;line-height:16px;vertical-align:middle;margin-left:0}.matching_keywords{background:#2aff9c;color:#16752e}.section_info{padding:15px 20px 0;font-size:12px;color:#666}.section_info span{vertical-align:top;margin-top:2px}.section_info span+span{margin-left:5px}@media screen and (max-width:767px){h1{font-size:18px;margin:15px 15px 0}header{height:120px}.section_list{margin:0 0 28px}.search{float:none;margin:0 15px}.search label{margin-right:5px}.search div{margin-top:5px}.toc{margin-top:120px}.search select{width:89px}.search .search_date{margin-left:10px}.search .search_keyword{float:none!important;clear:both;margin-left:0!important;padding-top:5px;text-align:left}.search input{width:129px}footer{padding:5px 20px}}.filename{color:#333;background:#eee;padding:1px 5px;margin:0;border-radius:4px;}@media screen and (max-width:360px){.search select{width:65px}.search .search_keyword input{width:124px}}
+</style>
+</head> 
+<body>
+	<header>
+		<h1>CLOVA EMR : 마크업 산출물</h1>
+		<section class="search clearfix">
+			<div class="search_menu">
+				<label for="search_from_menu">Menu</label>
+				<select name="" id="search_from_menu">
+				</select>
+			</div>
+			<div class="search_date">
+				<label for="search_from_date">Updated date</label>
+				<select name="" id="search_from_date">
+				</select>
+			</div>
+			<div class="search_keyword">
+				<label for="search_by_keyword">Searching by keywords</label><input type="text" id="search_by_keyword" placeholder="Keywords">
+			</div>
+		</section>
+	</header>
+  <section class="toc">
+		<h2>카테고리 바로가기</h2>
+		<ul>
+			
+			<li><a href="#tab01">Common</a></li>
+			<li><a href="#tab02">데스크</a></li>
+			<li><a href="#tab03">전자차트</a></li>
+			<li><a href="#tab04">상담</a></li>
+			<li><a href="#tab05">사진</a></li>
+			<li><a href="#tab06">고객관리</a></li>
+			<li><a href="#tab07">예약</a></li>
+		</ul>
+  </section>
+	<section class="section_info">
+		<span class="label_date new"></span> NEW <span class="label_date update"></span> UPDATE
+	</section>
+	<section class="section_list">
+		<h2 id="tab_doc" class="sec_h">Guide</h2>
+		<ul> 
+			<li>
+				<a href="views/@UIO_guide.html">UIO Guide : Common / <span class="filename">@UIO_guide.html</span></a> 
+				
+				<span class="label_
+				date new">2021.12.21</span>
+				
+			</li> 
+		</ul>
+		</ul> 
+		<h2 id="tab01">Common</h2>
+		<ul> 
+			<li>
+				<a href="views/01_01_layout.html">
+					Layout / <span class="filename">01_01_layout.html</span>
+				</a> 
+					<span class="label_date update">2022.01.18</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_02_login.html">
+					로그인 / <span class="filename">01_02_login.html</span>
+				</a> 
+					<span class="label_date new">2021.12.21</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_03_frequently_phrase.html">
+					[팝업] 자주쓰는 문구 / <span class="filename">01_03_frequently_phrase.html</span>
+				</a> 
+					<span class="label_date new">2021.12.30</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_05_webcam_popup.html">
+					[팝업] 구강카메라(웹캠) 촬영 / <span class="filename">01_05_webcam_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.01.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_06_alert_popup.html">
+					알림 팝업 / <span class="filename">01_06_alert_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.01.18</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_07_library.html">
+					[팝업] 라이브러리 / <span class="filename">01_07_library.html</span>
+				</a> 
+					<span class="label_date new">2022.03.04</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_08_shortcut.html">
+					[팝업] 단축키 설정 / <span class="filename">01_08_shortcut.html</span>
+				</a> 
+					<span class="label_date new">2021.12.30</span>
+				  
+			</li>  
+			<li>
+				<a href="views/01_09_stacked_popup.html">
+					[팝업] 2단계 이상 / <span class="filename">01_09_stacked_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.10</span>
+				  
+			</li> 
+		</ul> 
+		<h2 id="tab02">데스크</h2>
+		<ul> 
+			<li>
+				<a href="views/02_01_layout_edit_mode.html">
+					레이아웃 편집 / <span class="filename">02_01_layout_edit_mode.html</span>
+				</a> 
+					<span class="label_date new">2022.01.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_01_main_desk.html">
+					메인 / <span class="filename">02_01_main_desk.html</span>
+				</a> 
+					<span class="label_date new">2022.01.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_02_desk_patient.html">
+					[모듈] 환자 인적 표시/등록/수정 / <span class="filename">02_02_desk_patient.html</span>
+				</a> 
+					<span class="label_date new">2022.01.10</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_03_desk_patient_list.html">
+					[모듈] 환자 목록 / <span class="filename">02_03_desk_patient_list.html</span>
+				</a> 
+					<span class="label_date new">2022.01.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_04_desk_medical_expenses.html">
+					[모듈] 당일 수납 정보 / <span class="filename">02_04_desk_medical_expenses.html</span>
+				</a> 
+					<span class="label_date new">2022.01.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_05_desk_history.html">
+					[모듈] 히스토리 / <span class="filename">02_05_desk_history.html</span>
+				</a> 
+					<span class="label_date new">2022.01.26</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_06_desk_cc_popup.html">
+					[팝업] 히스토리 &gt; Chief complaint / <span class="filename">02_06_desk_cc_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.01.26</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_07_desk_cc_setting.html">
+					[팝업] 히스토리 &gt; Chief complaint &gt; Setting / <span class="filename">02_07_desk_cc_setting.html</span>
+				</a> 
+					<span class="label_date new">2022.01.26</span>
+				  
+			</li>  
+			<li>
+				<a href="views/02_08_desk_patient_manage.html">
+					[모듈] 환자 관리 및 스케줄 / <span class="filename">02_08_desk_patient_manage.html</span>
+				</a> 
+					<span class="label_date new">2022.01.26</span>
+				  
+			</li> 
+		</ul> 
+		<h2 id="tab03">전자차트</h2>
+		<ul> 
+			<li>
+				<a href="views/03_01_layout_edit_mode.html">
+					레이아웃 편집 / <span class="filename">03_01_layout_edit_mode.html</span>
+				</a> 
+					<span class="label_date new">2022.02.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_01_main_electronic_chart.html">
+					메인 / <span class="filename">03_01_main_electronic_chart.html</span>
+				</a> 
+					<span class="label_date new">2022.02.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_02_panel_basic.html">
+					[모듈] 기본정보/계획 / <span class="filename">03_02_panel_basic.html</span>
+				</a> 
+					<span class="label_date new">2022.02.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_03_panel_etc.html">
+					[모듈] 접수/예약/가족/소개자 / <span class="filename">03_03_panel_etc.html</span>
+				</a> 
+					<span class="label_date new">2022.02.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_04_panel_add_family.html">
+					[팝업] 가족추가 &gt; 환자검색 / <span class="filename">03_04_panel_add_family.html</span>
+				</a> 
+					<span class="label_date new">2022.02.11</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_05_history.html">
+					[모듈] 기존기록 표시부 / <span class="filename">03_05_history.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_06_medical_alert_popup.html">
+					[팝업] Medical Alert(전신병력), 부가정보선택 / <span class="filename">03_06_medical_alert_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_07_filter_popup.html">
+					[팝업] 필터 선택 / <span class="filename">03_07_filter_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_08_viewer_popup.html">
+					[팝업] 기존기록 표시부 Viewer / <span class="filename">03_08_viewer_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_09_cc_popup.html">
+					[팝업] Chief Complaint / <span class="filename">03_09_cc_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_10_radiation_popup.html">
+					[팝업] 방사선 사진 판독 / <span class="filename">03_10_radiation_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_11_memo_popup.html">
+					[팝업] 진료메모 입력 / <span class="filename">03_11_memo_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.09</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_12_memo_table_popup.html">
+					[팝업] 메모 / <span class="filename">03_12_memo_table_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_13_next_popup.html">
+					[팝업] 다음 진료 / <span class="filename">03_13_next_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_14_next_frequently_popup.html">
+					[팝업] 다음 진료 추가/수정 / <span class="filename">03_14_next_frequently_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_15_outpatient_popup.html">
+					[팝업] 원외 처방 / <span class="filename">03_15_outpatient_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_16_outpatient_usage_popup.html">
+					[팝업] 외래 사용 팝업 / <span class="filename">03_16_outpatient_usage_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_17_outpatient_usage_detail_popup.html">
+					[팝업] 외래 환자 사용 내역 팝업 / <span class="filename">03_17_outpatient_usage_detail_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.02.17</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_18_pi.html">
+					[모듈] PI입력 / <span class="filename">03_18_pi.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_19_cc_popup.html">
+					[팝업] 치식선택(PI 탭) / <span class="filename">03_19_cc_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_20_treatment_plan.html">
+					[모듈] 치료계획 입력 / <span class="filename">03_20_treatment_plan.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_21_cc_popup.html">
+					[팝업] 치식선택(치료계획 탭) / <span class="filename">03_21_cc_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_21_progress_tooth_popup.html">
+					[팝업] 치아별 진행상태 / <span class="filename">03_21_progress_tooth_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_22_enter_medical.html">
+					[모듈] 진료 입력 / <span class="filename">03_22_enter_medical.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_23_group_button_popup.html">
+					[팝업] 묶음 버튼 스타일 설정 / <span class="filename">03_23_group_button_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_24_group_button_search_popup.html">
+					[팝업] 버튼 검색 / <span class="filename">03_24_group_button_search_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_25_add_disease_popup.html">
+					[팝업] 상병명 선택 / <span class="filename">03_25_add_disease_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_26_disease_search_popup.html">
+					[팝업] 전체상병 검색 / <span class="filename">03_26_disease_search_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_27_etc_popup.html">
+					[진료입력탭] 이름변경, 구치획수변경 등 / <span class="filename">03_27_etc_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_28_edit_group_button_popup.html">
+					[팝업] 진료 묶음 버튼 편집 / <span class="filename">03_28_edit_group_button_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_29_tablet_memo_popup.html">
+					[팝업] 태블릿 메모 / <span class="filename">03_29_tablet_memo_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_30_unpaid_edit_popup.html">
+					[팝업] 비급여 수가 조회변경 / <span class="filename">03_30_unpaid_edit_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_31_code_etc_popup.html">
+					[팝업] 수가별 상병코드, 기타내역, 다음진료 설정 / <span class="filename">03_31_code_etc_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_32_search_group_button_popup.html">
+					[팝업] 묶음 버튼 검색 / <span class="filename">03_32_search_group_button_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_33_new_price_popup.html">
+					[팝업] 새 수가 추가 / <span class="filename">03_33_new_price_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_34_add_medicine_popup.html">
+					[팝업] 의약품 추가 / <span class="filename">03_34_add_medicine_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_35_oral_result_popup.html">
+					[팝업] 구강검사 결과 입력 / <span class="filename">03_35_oral_result_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_36_tooth_information_popup.html">
+					[팝업] 충전면/인레이 와동면 선택 / <span class="filename">03_36_tooth_information_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_36_tooth_measurement_popup.html">
+					[팝업] 치주낭 측정검사 입력 / <span class="filename">03_36_tooth_measurement_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_37_imp_popup.html">
+					[팝업] 임플란트 수술 기록지 / <span class="filename">03_37_imp_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_38_imp_fixture_popup.html">
+					[팝업] 임플란트 픽스처 선택 / <span class="filename">03_38_imp_fixture_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_39_select_photo_popup.html">
+					[팝업] 환자 사진 보기 / <span class="filename">03_39_select_photo_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_40_arch_wire_popup.html">
+					[팝업] 아치 와이어 선택 / <span class="filename">03_40_arch_wire_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_40_endodontic_treatment_popup.html">
+					[팝업] 근관치료 정보 입력 / <span class="filename">03_40_endodontic_treatment_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_41_expand_file_popup.html">
+					[팝업] 확대 파일 선택 / <span class="filename">03_41_expand_file_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_42_ref_point_popup.html">
+					[팝업] 근관장 입력 / <span class="filename">03_42_ref_point_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_43_dental_plaque_popup.html">
+					[팝업] 치면세균막 검사 데이터 입력 / <span class="filename">03_43_dental_plaque_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_44_ept_popup.html">
+					[팝업] EPT 검사결과 입력 / <span class="filename">03_44_ept_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_45_add_act_popup.html">
+					[팝업] 행위 추가정보 입력 / <span class="filename">03_45_add_act_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li>  
+			<li>
+				<a href="views/03_46_set_add_act_popup.html">
+					[팝업] 행위 추가정보 설정 / <span class="filename">03_46_set_add_act_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.02</span>
+				  
+			</li> 
+		</ul> 
+		<h2 id="tab04">상담</h2>
+		<ul> 
+			<li>
+				<a href="views/04_01_consulting.html">
+					메인 / <span class="filename">04_01_consulting.html</span>
+				</a> 
+					<span class="label_date new">2022.03.14</span>
+				  
+			</li>  
+			<li>
+				<a href="views/04_02_manage_photo.html">
+					[팝업] 치료 전후 사진 관리 / <span class="filename">04_02_manage_photo.html</span>
+				</a> 
+					<span class="label_date new">2022.03.14</span>
+				  
+			</li> 
+		</ul> 
+		<h2 id="tab05">사진</h2>
+		<ul> 
+			<li>
+				<a href="views/05_01_photo.html">
+					메인 / <span class="filename">05_01_photo.html</span>
+				</a> 
+					<span class="label_date new">2022.03.15</span>
+				  
+			</li> 
+		</ul> 
+		<h2 id="tab06">고객관리</h2>
+		<ul> 
+			<li>
+				<a href="views/06_01_manage_customer.html">
+					메인 / <span class="filename">06_01_manage_customer.html</span>
+				</a> 
+					<span class="label_date new">2022.03.18</span>
+				  
+			</li> 
+		</ul> 
+		<h2 id="tab07">예약</h2>
+		<ul> 
+			<li>
+				<a href="views/07_01_reservation.html">
+					메인 / <span class="filename">07_01_reservation.html</span>
+				</a> 
+					<span class="label_date new">2022.03.16</span>
+				  
+			</li>  
+			<li>
+				<a href="views/07_02_memo_popup.html">
+					[팝업] 메모 / <span class="filename">07_02_memo_popup.html</span>
+				</a> 
+					<span class="label_date new">2022.03.16</span>
+				  
+			</li> 
+		</ul> 
+	</section>
+	<footer>
+		<p><strong>Hivelab</strong> / UIT / Developer1, Developer2</p>
+	</footer>
+
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/1.12.4/jquery.min.js'></script>
+    <script>
+    var categoryList=["All"],categoryUnique=[],categoryUnique2=[],sectionList=$(".section_list"),categorySelect=$("#search_from_menu"),dateLabel=sectionList.find(".label_date"),dateSelect=$("#search_from_date"),dateList=["Default"],dateUnique=[],searchKeyword=$("#search_by_keyword"),searchValue=null,hiddenList=function(){sectionList.find("h2").hide(),sectionList.find("ul").hide(),sectionList.find("li").hide()},showList=function(){sectionList.find("h2").show(),sectionList.find("ul").show(),sectionList.find("li").show()},resetStyle=function(){searchKeyword.val(""),sectionList.find("li a").removeClass("matching_keywords")},setCategory=function(){if(sectionList.find("h2").length>0){for(var e=0;e<sectionList.find("h2").length+1;e++)categoryList.push(sectionList.find("h2").eq(e).text()),$.each(categoryList,function(e,t){-1===$.inArray(t,categoryUnique)&&categoryUnique.push(t)});categoryUnique=$.grep(categoryUnique,function(e){return" "==e||e});for(var t=0;t<categoryUnique.length;t++)categorySelect.append("<option value="+t+">"+categoryUnique[t]+"</option>");categorySelect.on("change",function(){var e=$(this).val();"0"==e?showList():(dateSelect.val("Default").change(),resetStyle(),hiddenList(),$.each($(".section_list h2"),function(t,i){t==e-1&&($(this).show(),$(this).next("ul").show(),$(this).next("ul").find("li").show())}))})}else $("..search_menu").hide()},setDate=function(){if(dateLabel.length>0){for(var e=0;e<dateLabel.length;e++)dateList.push(dateLabel.eq(e).text()),$.each(dateList,function(e,t){-1===$.inArray(t,dateUnique)&&dateUnique.push(t)});Array.prototype.move=function(e,t){return this.splice(t,0,this.splice(e,1)[0]),this},dateUnique.sort(),dateUnique.move(dateUnique.lastIndexOf(),0);for(var t=0;t<dateUnique.length;t++)dateSelect.append("<option value="+dateUnique[t]+">"+dateUnique[t]+"</option>");dateSelect.on("change",function(){var e=$(this).val();"Default"==e?showList():(categorySelect.val("0").change(),resetStyle(),hiddenList(),$.each($(".section_list .label_date"),function(t,i){$(this).text()==e&&($(this).parents("ul").prev("h2").show(),$(this).parents("ul").show(),$(this).parents("li").show())}))})}else $(".search_date").hide()},searchFromKeyword=function(){searchKeyword.on("keyup",function(e){searchValue=$(this).val(),categorySelect.val("0").change(),dateSelect.val("Default").change(),searchValue.length>0?(hiddenList(),sectionList.find("li").each(function(e,t){var i=$(this).find("a:contains("+searchValue+")");i.parents("ul").prev("h2").show(),i.parents("ul").show(),i.parents("li").show(),i.addClass("matching_keywords")})):(showList(),sectionList.find("a").removeClass("matching_keywords"))})};$(window).on("load",function(){setCategory(),setDate(),searchFromKeyword()})
+    </script>
+</body>
+</html>

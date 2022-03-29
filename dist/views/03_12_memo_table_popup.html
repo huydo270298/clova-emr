@@ -1,0 +1,476 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>패널 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.02.17">
+  <div class="wrap">
+	<!-- [D] CONTENTS -->
+	<main id="content">
+
+	  <div class="layer show dimmed">
+
+		<div class="popup_wrap">
+		  <div class="popup memo_tablet_popup" id="memo_tablet_popup" style="display: block">
+			<div class="popup_innerwrap">
+			  <div class="popup_head">
+				<strong class="tit">진료 메모 태블릿 입력</strong>
+				<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+			  </div>
+			  <div class="popup_cont">
+				<div class="popup_inner" data-simplebar="">
+				  <div class="data_filter">
+					<button class="btn btn_access">저장된 메모 불러오기</button>
+					<div class="calendar">
+					  <span class="input calendar_input">
+						<input type="text" value="2021년 11월 22일">
+					  </span>
+					</div>
+					<div class="form_group">
+					  <div class="form_title">
+						<span class="form_txt">작성자</span>
+					  </div>
+					  <div class="form_cont">
+						<div class="select">
+						  <button type="button" value="김덴트" class="select_btn">김덴트</button>
+						  <div class="select_opt">
+							<ul data-simplebar="">
+							  <li><button type="button" class="option" value="김덴트">김덴트</button></li>
+							  <li><button type="button" class="option" value="의사A">의사A</button></li>
+							  <li><button type="button" class="option" value="의사B">의사B</button></li>
+							  <li><button type="button" class="option" value="의사C">의사C</button></li>
+							  <li><button type="button" class="option" value="의사D">의사D</button></li>
+							</ul>
+						  </div>
+						</div>
+						<div class="select">
+						  <button type="button" class="select_btn">진료과 선택</button>
+						  <div class="select_opt">
+							<ul data-simplebar="">
+							  <li><button type="button" class="option" value="optionA">optionA</button></li>
+							  <li><button type="button" class="option" value="optionB">optionB</button></li>
+							  <li><button type="button" class="option" value="optionC">optionC</button></li>
+							  <li><button type="button" class="option" value="optionD">optionD</button></li>
+							  <li><button type="button" class="option" value="optionE">optionE</button></li>
+							</ul>
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="data_filter">
+					<strong class="title">템플릿 선택</strong>
+					<button type="button" class="btn rounded is_active" data-tabid="blank_page">빈페이지</button>
+					<button type="button" class="btn rounded" data-tabid="dental_picture">치식그림</button>
+					<button type="button" class="btn rounded" data-tabid="chart_notes">차트노트</button>
+					<button type="button" class="btn rounded" data-tabid="line_notes">줄노트</button>
+					<button type="button" class="btn rounded" data-tabid="maxillary_arch">상하악아치</button>
+					<button type="button" class="btn rounded" data-tabid="permanent_teeth">영구치</button>
+					<button type="button" class="btn rounded" data-tabid="dentition">치열</button>
+					<button type="button" class="btn rounded" data-tabid="oral_soft_tissue">구강내연조직</button>
+					<button type="button" class="btn rounded" data-tabid="incisor_shade">앞니 쉐이드</button>
+					<button type="button" class="btn rounded" data-tabid="inducement">유치</button>
+					<button type="button" class="btn rounded" data-tabid="tmd_promotion">TMD촉진</button>
+					<button type="button" class="btn btn_add">템플릿 등록</button>
+				  </div>
+				  <div class="tabs">
+					<div class="tab is_active" data-tabid="blank_page">
+					  <!--[D] Editor 영역-->
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor.png" alt="">
+					  </div>
+					  <!--// [D] Editor 영역-->
+					</div>
+					<div class="tab" data-tabid="dental_picture">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor2.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="chart_notes">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor3.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="line_notes">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor4.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="maxillary_arch">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor5.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="permanent_teeth">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor6.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="dentition">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor7.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="oral_soft_tissue">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor8.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="incisor_shade">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor9.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="inducement">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor10.png" alt="">
+					  </div>
+					</div>
+					<div class="tab" data-tabid="tmd_promotion">
+					  <div class="editor_wrap">
+						<img src="../img/memo_tablet_popup/@temp_formEditor11.png" alt="">
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="popup_bottom">
+				<span class="chkbox">
+				  <input type="checkbox" id="rememberLastWindowSize">
+				  <label for="rememberLastWindowSize">마지막 창 크기 기억</label>
+				</span>
+				<span class="chkbox">
+				  <input type="checkbox" checked="" id="rememberLastPenColor">
+				  <label for="rememberLastPenColor">마지막 펜 색상 기억</label>
+				</span>
+				<span class="chkbox">
+				  <input type="checkbox" id="verticalCropOfChartingArea">
+				  <label for="verticalCropOfChartingArea">저장 시 차팅영역 세로크롭</label>
+				</span>
+				<button class="btn">취소</button>
+				<button class="btn primary">저장</button>
+			  </div>
+			</div>
+			<span class="resize_indicator"></span>
+			<span class="resize_indicator" resize-height=""></span>
+		  </div>
+		</div>
+	  </div>
+	  <div class="layer dimmed" style="display: none">
+
+		<div class="popup_wrap">
+		  <div class="popup memo_list_popup" style="display: block">
+			<div class="popup_innerwrap">
+			  <div class="popup_head">
+				<strong class="tit">미리 저장된 태블릿 메모 설정</strong>
+				<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+			  </div>
+			  <div class="popup_cont">
+				<div class="popup_inner" data-simplebar="">
+				  <div class="data_filter">
+					<button class="btn btn_access">저장된 메모 만들기/편집</button>
+				  </div>
+				  <div class="content">
+					<ul class="list" data-simplebar="">
+					  <li class="item">
+						<!-- <span class="chkbox">
+						  <input type="checkbox" id="item1">
+						  <label for="item1"><span class="blind">항목 1</span></label>
+						</span> -->
+					  </li>
+					  <li class="item">
+						<!-- <span class="chkbox">
+						  <input type="checkbox" id="item2">
+						  <label for="item2"><span class="blind">항목 2</span></label>
+						</span> -->
+					  </li>
+					  <li class="item">
+						<!-- <span class="chkbox">
+						  <input type="checkbox" id="item3">
+						  <label for="item3"><span class="blind">항목 3</span></label>
+						</span> -->
+					  </li>
+					  <li class="item">
+						<!-- <span class="chkbox">
+						  <input type="checkbox" id="item4">
+						  <label for="item4"><span class="blind">항목 4</span></label>
+						</span> -->
+					  </li>
+					  <li class="item">
+						<!-- <span class="chkbox">
+						  <input type="checkbox" id="item5">
+						  <label for="item5"><span class="blind">항목 5</span></label>
+						</span> -->
+					  </li>
+					</ul>
+				  </div>
+				</div>
+			  </div>
+			  <div class="popup_bottom">
+				<button class="btn">취소</button>
+				<button class="btn primary">선택</button>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	  <div class="layer dimmed" style="display: none">
+
+		<div class="popup_wrap">
+		  <div class="popup memo_tablet_popup memo_list_popup" style="display: block">
+			<div class="popup_innerwrap">
+			  <div class="popup_head">
+				<strong class="tit">미리 저장된 태블릿 메모 설정</strong>
+				<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+			  </div>
+			  <div class="popup_cont">
+				<div class="popup_inner" data-simplebar="">
+				  <div class="col_left">
+					<div class="content">
+					  <ul class="list" data-simplebar="">
+						<li class="item">
+						  <span class="chkbox">
+							<input type="checkbox" id="item1" checked="">
+							<label for="item1"><span class="blind">항목 1</span></label>
+						  </span>
+						</li>
+						<li class="item">
+						  <span class="chkbox">
+							<input type="checkbox" id="item2">
+							<label for="item2"><span class="blind">항목 2</span></label>
+						  </span>
+						</li>
+						<li class="item">
+						  <span class="chkbox">
+							<input type="checkbox" id="item3">
+							<label for="item3"><span class="blind">항목 3</span></label>
+						  </span>
+						</li>
+						<li class="item">
+						  <span class="chkbox">
+							<input type="checkbox" id="item4">
+							<label for="item4"><span class="blind">항목 4</span></label>
+						  </span>
+						</li>
+						<li class="item">
+						  <span class="chkbox">
+							<input type="checkbox" id="item5">
+							<label for="item5"><span class="blind">항목 5</span></label>
+						  </span>
+						</li>
+					  </ul>
+					</div>
+				  </div>
+				  <div class="col_right">
+					<div class="data_filter">
+					  <strong class="title">템플릿 선택</strong>
+					  <button type="button" class="btn rounded is_active" data-tabid="blank_page">빈페이지</button>
+					  <button type="button" class="btn rounded" data-tabid="dental_picture">치식그림</button>
+					  <button type="button" class="btn rounded" data-tabid="chart_notes">차트노트</button>
+					  <button type="button" class="btn rounded" data-tabid="line_notes">줄노트</button>
+					  <button type="button" class="btn rounded" data-tabid="maxillary_arch">상하악아치</button>
+					  <button type="button" class="btn rounded" data-tabid="permanent_teeth">영구치</button>
+					  <button type="button" class="btn rounded" data-tabid="dentition">치열</button>
+					  <button type="button" class="btn rounded" data-tabid="oral_soft_tissue">구강내연조직</button>
+					  <button type="button" class="btn rounded" data-tabid="incisor_shade">앞니 쉐이드</button>
+					  <button type="button" class="btn rounded" data-tabid="inducement">유치</button>
+					  <button type="button" class="btn rounded" data-tabid="tmd_promotion">TMD촉진</button>
+					  <button type="button" class="btn btn_add">템플릿 등록</button>
+					</div>
+					<div class="tabs">
+					  <div class="tab is_active" data-tabid="blank_page">
+						<!--[D] Editor 영역-->
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor.png" alt="">
+						</div>
+						<!--// [D] Editor 영역-->
+					  </div>
+					  <div class="tab" data-tabid="dental_picture">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor2.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="chart_notes">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor3.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="line_notes">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor4.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="maxillary_arch">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor5.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="permanent_teeth">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor6.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="dentition">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor7.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="oral_soft_tissue">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor8.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="incisor_shade">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor9.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="inducement">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor10.png" alt="">
+						</div>
+					  </div>
+					  <div class="tab" data-tabid="tmd_promotion">
+						<div class="editor_wrap">
+						  <img src="../img/memo_tablet_popup/@temp_formEditor11.png" alt="">
+						</div>
+					  </div>
+					</div>
+				  </div>
+				</div>
+			  </div>
+			  <div class="popup_bottom">
+				<button class="btn btn_delete">선택 삭제</button>
+				<button class="btn">취소</button>
+				<button class="btn primary">저장</button>
+			  </div>
+			</div>
+			<span class="resize_indicator"></span>
+		  </div>
+		</div>
+	  </div>
+
+	</main>
+	<!-- // [D] CONTENTS -->
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+	<!-- Caseview  -->
+	<script src="../js/libs/vendor.min.js"></script>
+	<style>
+	  .case_review {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: auto;
+		padding: 8px;
+		z-index: 600;
+		background: #000;
+		color: #fff;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	  }
+
+	  .case_review a {
+		display: block;
+		padding: 4px 0;
+		font-size: 12px;
+		color: #fff;
+	  }
+
+	  .case_review a:hover {
+		color: #fff4a6;
+	  }
+	</style>
+	<div class="case_review">
+	  <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	  <a href="#none" onclick="$('.layer').eq(1).show().siblings().hide()">[팝업] 저장된 태블릿 메모 설정</a>
+	</div>
+  </div>
+
+
+
+</body></html>

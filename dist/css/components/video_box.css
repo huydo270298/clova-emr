@@ -1,0 +1,8 @@
+.video_box {
+  height: 100%;
+  width: 100%; }
+  .video_box video {
+    width: 100%;
+    height: 100%;
+    background: #000; }
+/*# sourceMappingURL=data:application/json;charset=utf-8;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbImNvbXBvbmVudHMvdmlkZW9fYm94LnNjc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxZQUFZO0VBQ1osV0FBVyxFQUFBO0VBRmI7SUFLSSxXQUFXO0lBQ1gsWUFBWTtJQUNaLGdCQUFnQixFQUFBIiwiZmlsZSI6ImNvbXBvbmVudHMvdmlkZW9fYm94LmNzcyIsInNvdXJjZXNDb250ZW50IjpbIi52aWRlb19ib3gge1xyXG4gIGhlaWdodDogMTAwJTtcclxuICB3aWR0aDogMTAwJTtcclxuXHJcbiAgdmlkZW8ge1xyXG4gICAgd2lkdGg6IDEwMCU7XHJcbiAgICBoZWlnaHQ6IDEwMCU7XHJcbiAgICBiYWNrZ3JvdW5kOiAjMDAwO1xyXG4gIH1cclxufVxyXG4iXX0= */

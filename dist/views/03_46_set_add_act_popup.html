@@ -1,0 +1,534 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>행위 추가정보 설정 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.03.02">
+  <div class="wrap">
+	<!-- [D] CONTENTS -->
+	<main id="content">
+
+	  <div class="layer show dimmed">
+
+		<div class="popup_wrap">
+		  <div class="popup" id="set_add_act_popup" style="display: block;">
+			<div class="popup_innerwrap">
+			  <div class="popup_head">
+				<strong class="tit">행위 추가정보 설정</strong>
+				<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+			  </div>
+			  <div class="popup_cont">
+				<div class="popup_inner" data-simplebar="">
+				  <div class="tit_group">
+					<strong class="title" size="16" weight="bold">행위 추가정보 설정</strong>
+					<div class="group_btn_right">
+					  <span>기본입력, 전체 옵션 항목들은 콤마(,)로 구분됩니다.</span>
+					  <button type="button" class="btn btn_edit" disabled="">편집</button>
+					  <button type="button" class="btn btn_save">저장</button>
+					  <button type="button" class="btn btn_add">추가</button>
+					</div>
+				  </div>
+				  <div class="content">
+					<div class="filter_area">
+					  <div class="form_group">
+						<div class="form_tit">
+						  <span class="title">수가 선택</span>
+						</div>
+						<div class="form_cont">
+						  <button class="btn" type="button">Click 하여 수가 항목을 선택하세요.</button>
+						</div>
+					  </div>
+					  <div class="form_group">
+						<div class="form_tit">
+						  <span class="title">접두사</span>
+						</div>
+						<div class="form_cont">
+						  <span class="radio">
+							<input type="radio" id="with" name="prefix" checked="">
+							<label for="with">with</label>
+						  </span>
+						  <span class="radio">
+							<input type="radio" id="duoTo" name="prefix">
+							<label for="duoTo">d/t (duo to)</label>
+						  </span>
+						  <span class="radio" data-inpother="">
+							<input type="radio" id="directInput" name="prefix">
+							<label for="directInput">직접 입력</label>
+						  </span>
+						  <span class="input" data-inpother="">
+							<input type="text" placeholder="입력" disabled="">
+						  </span>
+						</div>
+					  </div>
+					</div>
+					<div class="box">
+					  <strong class="title">행위추가정보 입력항목 #1</strong>
+					  <div class="form_group">
+						<div class="form_tit">
+						  <span class="title">기본 입력</span>
+						</div>
+						<div class="form_cont">
+						  <div class="input">
+							<input type="text" placeholder="입력">
+						  </div>
+						</div>
+					  </div>
+					  <div class="form_group">
+						<div class="form_tit">
+						  <span class="title">전체 옵션</span>
+						</div>
+						<div class="form_cont">
+						  <div class="input">
+							<input type="text" placeholder="입력">
+						  </div>
+						</div>
+					  </div>
+					</div>
+					<div class="box">
+
+					  <strong class="title">행위추가정보 입력항목 #2</strong>
+					  <div class="form_group">
+						<div class="form_tit">
+						  <span class="title">기본 입력</span>
+						</div>
+						<div class="form_cont">
+						  <div class="input">
+							<input type="text" placeholder="입력">
+						  </div>
+						</div>
+					  </div>
+					  <div class="form_group">
+						<div class="form_tit">
+						  <span class="title">전체 옵션</span>
+						</div>
+						<div class="form_cont">
+						  <div class="input">
+							<input type="text" placeholder="입력">
+						  </div>
+						</div>
+					  </div>
+					</div>
+				  </div>
+				  <div class="tit_group">
+					<strong class="title" size="16" weight="bold">행위 추가정보 설정</strong>
+					<span>해당 수가가 입력된 경우 기본입력항목이 전자차트에 자동으로 입력됩니다.</span>
+				  </div>
+				  <div class="table" data-row-select="">
+					<table data-simplebar="">
+					  <colgroup>
+						<col style="width: 222px">
+						<col style="width: 50px">
+						<col style="width: 83px">
+						<col style="width: 258px">
+						<col style="width: 93px">
+						<col style="width: auto">
+						<col style="width: 55px">
+					  </colgroup>
+					  <thead>
+						<tr>
+						  <th>수가명</th>
+						  <th align="center">접두사</th>
+						  <th>기본 입력 #1</th>
+						  <th>전체 옵션 #1</th>
+						  <th>기본 입력 #2</th>
+						  <th>전체 옵션 #2</th>
+						  <th align="center">삭제</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>[N6L320] Vertical Elastic</td>
+						  <td>with</td>
+						  <td>1/4 5oz</td>
+						  <td>1/4 5oz, 1/8 4oz, 5/16 4oz, 3/16 6oz</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N6L300] Class II Elastic</td>
+						  <td>with</td>
+						  <td>3/8 4oz</td>
+						  <td>3/8 4oz, 5/16 6oz</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N6L300] Cross Elastic</td>
+						  <td>with</td>
+						  <td>1/4 4oz</td>
+						  <td>1/4 4oz, 1/8 4oz, 5/16 4oz, 3/16 6oz</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N6L310] Class III Elastic</td>
+						  <td>with</td>
+						  <td>3/8 4oz</td>
+						  <td>3/8 4oz, 5/16 6oz</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[U0121] 단순근관충전[1근관당]</td>
+						  <td>with</td>
+						  <td>Vitapex</td>
+						  <td>Vitapex</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N4G101] 레진 충전(전치부)</td>
+						  <td>with</td>
+						  <td>근심면</td>
+						  <td>절단면, 근심면, 원심면, 순면, 설면</td>
+						  <td>Single bond</td>
+						  <td>Single bond, Z350 BODY A2, Z250 A1, Z250 A2, Z250 A3, Z250 A3.5, Z250 A4, GRADIA A2, GRADIA A3</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N4G102] 레진 충전(치경부)</td>
+						  <td>with</td>
+						  <td>교합면</td>
+						  <td>교합면, 원심면, 근심면, 협면, 설면</td>
+						  <td>SE-bond</td>
+						  <td>SE-bond, z350 A3, Z350 A2, Z250 A3, Z250 A3, Z250, A3.5, Z250 A4</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N6L280] 파워체인 교환</td>
+						  <td>with</td>
+						  <td>close</td>
+						  <td>close, open</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N1A490] 보철물 시적, 장착</td>
+						  <td>with</td>
+						  <td>fujicem</td>
+						  <td>fujicem, temp bond</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[U0121] 단순근관충전[1근관당]</td>
+						  <td>with</td>
+						  <td>Vitapex</td>
+						  <td>Vitapex</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N4G101] 레진 충전(전치부)</td>
+						  <td>with</td>
+						  <td>근심면</td>
+						  <td>절단면, 근심면, 원심면, 순면, 설면</td>
+						  <td>Single bond</td>
+						  <td>Single bond, Z350 BODY A2, Z250 A1, Z250 A2, Z250 A3, Z250 A3.5, Z250 A4, GRADIA A2, GRADIA A3</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N4G102] 레진 충전(치경부)</td>
+						  <td>with</td>
+						  <td>교합면</td>
+						  <td>교합면, 원심면, 근심면, 협면, 설면</td>
+						  <td>SE-bond</td>
+						  <td>SE-bond, z350 A3, Z350 A2, Z250 A3, Z250 A3, Z250, A3.5, Z250 A4</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N6L280] 파워체인 교환</td>
+						  <td>with</td>
+						  <td>close</td>
+						  <td>close, open</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>[N1A490] 보철물 시적, 장착</td>
+						  <td>with</td>
+						  <td>fujicem</td>
+						  <td>fujicem, temp bond</td>
+						  <td>-</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+					  </tbody>
+					</table>
+				  </div>
+				</div>
+			  </div>
+			  <div class="popup_bottom">
+				<div class="flexbox">
+				  <div class="flex_item_group" position="left">
+					<div class="group_btn group_btn_left">
+					  <button class="btn">기본값 복원</button>
+					  <button class="btn">파일로부터 복구</button>
+					  <button class="btn">파일로 저장</button>
+					</div>
+					<p>행위를 추가, 삭제 또는 접두사를 변경한 경우, 해당 행위가 포함된 이전 진료기록의 저자서명이 일치하지 않을 수 있으니, 행위 추가정보를 추가, 수정, 삭제한 후에는 전자서명이 일치하지 않는 진료기록에 전자서명을 다시 해 주시기 바랍니다.</p>
+				  </div>
+				  <div class="flex_item_group" position="right">
+					<button class="btn">취소</button>
+					<button class="btn primary">확인</button>
+				  </div>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</main>
+	<!-- // [D] CONTENTS -->
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+	<!-- Caseview  -->
+	<script src="../js/libs/vendor.min.js"></script>
+	<style>
+	  .case_review {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: auto;
+		padding: 8px;
+		z-index: 600;
+		background: #000;
+		color: #fff;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	  }
+
+	  .case_review a {
+		display: block;
+		padding: 4px 0;
+		font-size: 12px;
+		color: #fff;
+	  }
+
+	  .case_review a:hover {
+		color: #fff4a6;
+	  }
+	</style>
+	<div class="case_review">
+	  <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	  <a href="#none" onclick="caseview()">[화면] 초기 팝업 오픈</a>
+	  <a href="#none" onclick="caseview2()">[화면] 콘텐츠 선택</a>
+	  <a href="#none" onclick="caseview3()">[화면] 편집 모드</a>
+	</div>
+
+	<script>
+	  function caseview() {
+		$('tr').eq(7).removeClass('selected');
+		$('.btn_edit').show();
+		$('.btn_save').hide();
+		$('.btn_edit').attr('disabled', '');
+		$('.filter_area .form_group input').eq(0).val('')
+		$('.box input').eq(0).val('');
+		$('.box input').eq(1).val('');
+		$('.box input').eq(3).val('');
+	  }
+	  function caseview2() {
+		$('tr').eq(7).addClass('selected');
+		$('.btn_edit').removeAttr('disabled');
+		$('.btn_add').removeAttr('disabled');
+		$('.filter_area .form_group input').eq(0).val('[N4G102] 레진 충전(치경부)')
+		$('.box input').eq(0).val('교합면');
+		$('.box input').eq(1).val('교합면, 원심면, 근심면, 협면, 설면');
+		$('.box input').eq(3).val('SE-bond, Z350 A3, Z30 A2, Z250 A2, Z250 A3, Z250 A2');
+		$('.btn_edit').show();
+		$('.btn_save').hide();
+	  }
+	  function caseview3() {
+		$('.filter_area .form_group input').eq(0).val('[N4G102] 레진 충전(치경부)')
+		$('tr').eq(7).removeClass('is_active');
+		$('.box input').eq(0).val('교합면');
+		$('.box input').eq(1).val('교합면, 원심면, 근심면, 협면, 설면');
+		$('.box input').eq(3).val('SE-bond, Z350 A3, Z30 A2, Z250 A2, Z250 A3, Z250 A2');
+		$('.btn_edit').hide();
+		$('.btn_save').show();
+		$('.btn_add').attr('disabled', '');
+	  }
+	</script>
+  </div>
+
+
+
+</body></html>

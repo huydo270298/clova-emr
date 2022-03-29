@@ -1,0 +1,431 @@
+<!DOCTYPE html><html lang="ko" theme="light"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=no">
+  <meta name="format-detection" content="telephone=no">
+
+  
+  <title>패널 : NAVER CLOVA EMR</title>
+
+  <!-- SEO meta tag -->
+  <meta name="keywords" content="">
+  <meta name="description" content="">
+  <meta name="date" content="">
+  <meta name="sitecode" content="">
+  <!-- // SEO meta tag -->
+
+  <!-- Open Graph -->
+  <meta property="og:url" content="">
+  <meta property="og:image" content="">
+  <meta property="og:type" content="">
+  <meta property="og:site_name" content="">
+  <meta property="og:locale" content="">
+  <meta property="og:title" content="">
+  <meta property="og:description" content="">
+  <meta property="og:country-name" content="">
+  <!-- // Open Graph -->
+
+  <!-- <link rel="stylesheet" href="/css/libs.css"> -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
+  <noscript>
+	<style>
+	  /**
+	  * Reinstate scrolling for non-JS clients
+	  */
+	  .simplebar-content-wrapper {
+		overflow: auto;
+	  }
+	</style>
+  </noscript>
+  <link rel="stylesheet" href="../css/emr.css">
+
+</head>
+
+
+<body data-pagestatus="new : 2022.02.17">
+  <div class="wrap">
+	<!-- [D] CONTENTS -->
+	<main id="content">
+
+	  <div class="layer show dimmed">
+
+		<div class="popup_wrap">
+		  <div class="popup" id="outpatient_popup" style="display: block;">
+			<div class="popup_innerwrap">
+			  <div class="popup_head">
+				<strong class="tit">원외처방전 입력 - $환자명$($환자코드$)</strong>
+				<button class="popup_close_btn"><span class="blind">팝업 닫기</span></button>
+			  </div>
+			  <div class="popup_cont">
+				<div class="popup_inner" data-simplebar="">
+				  <div class="tit_group">
+					<strong class="title" size="16" weight="bold">원외 처방전 구분</strong>
+				  </div>
+				  <div class="data_filter">
+					<span class="radio">
+					  <input type="radio" id="healthInsurance" checked="" name="insuranceClassification">
+					  <label for="healthInsurance">건강보험</label>
+					</span>
+					<span class="radio">
+					  <input type="radio" id="medicalBenefit" name="insuranceClassification">
+					  <label for="medicalBenefit">의료급여</label>
+					</span>
+					<span class="radio">
+					  <input type="radio" id="industrialAccidentInsurance" name="insuranceClassification">
+					  <label for="industrialAccidentInsurance">산재보험</label>
+					</span>
+					<span class="radio">
+					  <input type="radio" id="carInsurance" name="insuranceClassification">
+					  <label for="carInsurance">자동차보험</label>
+					</span>
+					<div class="form_group">
+					  <span class="radio">
+						<input type="radio" id="other" name="insuranceClassification">
+						<label for="other">기타(비급여)</label>
+					  </span>
+					  <span class="input">
+						<input type="text" placeholder="입력" disabled="">
+					  </span>
+					</div>
+				  </div>
+				  <div class="tit_group">
+					<strong class="title" size="16" weight="bold">원외 처방전 발급 정보</strong>
+				  </div>
+				  <div class="content">
+					<div class="line">
+					  <div class="form_group">
+						<div class="form_title">
+						  <span class="form_txt">발급 의사</span>
+						</div>
+						<div class="form_cont">
+						  <div class="select">
+							<button type="button" value="김덴트" class="select_btn">김덴트</button>
+							<div class="select_opt">
+							  <ul data-simplebar="">
+								<li><button type="button" class="option" value="김덴트">김덴트</button></li>
+								<li><button type="button" class="option" value="의사A">의사A</button></li>
+								<li><button type="button" class="option" value="의사B">의사B</button></li>
+								<li><button type="button" class="option" value="의사C">의사C</button></li>
+								<li><button type="button" class="option" value="의사D">의사D</button></li>
+							  </ul>
+							</div>
+						  </div>
+						</div>
+					  </div>
+					  <div class="form_group">
+						<div class="form_title">
+						  <span class="form_txt">발급일</span>
+						</div>
+						<div class="form_cont">
+						  <div class="calendar">
+							<span class="input calendar_input">
+							  <input type="text" value="2021-12-09" disabled="">
+							</span>
+						  </div>
+						</div>
+					  </div>
+					  <div class="form_group">
+						<div class="form_title">
+						  <span class="form_txt">처방전 유효기간</span>
+						</div>
+						<div class="form_cont">
+						  <span class="input size_md">
+							<input type="text" placeholder="입력" value="5일">
+						  </span>
+						</div>
+					  </div>
+					  <div class="form_group">
+						<div class="form_title">
+						  <span class="form_txt">처방전 번호</span>
+						</div>
+						<div class="form_cont">
+						  <span class="input">
+							<input type="text" placeholder="입력" value="20211209-00009">
+						  </span>
+						</div>
+					  </div>
+					</div>
+					<div class="line">
+					  <div class="form_group">
+						<div class="form_title">
+						  <span class="form_txt">질병코드</span>
+						</div>
+						<div class="form_cont">
+						  <span class="input size_lg">
+							<input type="text" placeholder="=상병코드 선택(환자의 요청시 미선택 가능)=">
+						  </span>
+						</div>
+					  </div>
+					  <div class="chkbox_group">
+						<span class="chkbox">
+						  <input type="checkbox" id="codeAutomaticallyEntered">
+						  <label for="codeAutomaticallyEntered">주상병 존재시 코드 자동 입력</label>
+						</span>
+						<span class="chkbox">
+						  <input type="checkbox" id="pregnantPatient">
+						  <label for="pregnantPatient">임신 중인 환자</label>
+						</span>
+						<span class="chkbox">
+						  <input type="checkbox" id="printPrescriptions">
+						  <label for="printPrescriptions">환자 보관용 처방전(2부) 출력</label>
+						</span>
+					  </div>
+					</div>
+				  </div>
+				  <div class="tit_group">
+					<strong class="title" size="16" weight="bold">처방묶음</strong>
+					<div class="btn_right_group">
+					  <button class="btn btn_add">묶음 처방 추가</button>
+					</div>
+				  </div>
+				  <div class="content">
+					<button class="btn rounded">아목아실린</button>
+					<button class="btn rounded">오구멘틴</button>
+					<button class="btn rounded">로도질</button>
+					<button class="btn rounded">소아처방</button>
+					<button class="btn rounded">근이완제</button>
+					<button class="btn rounded">덴티스타</button>
+				  </div>
+				  <div class="tit_group">
+					<div class="title_left_group">
+					  <strong class="title" size="16" weight="bold">처방내역</strong>
+					  <div class="form_group">
+						<div class="form_title">
+						  <span class="form_txt">처방 일수</span>
+						</div>
+						<div class="form_cont">
+						  <span class="input size_sm">
+							<input type="text" placeholder="입력" value="5일">
+						  </span>
+						</div>
+					  </div>
+					  <span class="chkbox">
+						<input type="checkbox" id="medicationDayChanged">
+						<label for="medicationDayChanged">처방일수 변경시, 투약일 수 함께 변경</label>
+					  </span>
+					</div>
+					<div class="btn_right_group">
+					  <button class="btn">환자 투약 안내문 입력</button>
+					  <button class="btn">의약품 검색/추가</button>
+					</div>
+				  </div>
+				  <div class="table">
+					<table data-simplebar="">
+					  <colgroup>
+						<col style="min-width: 72px">
+						<col style="width: auto;">
+						<col style="min-width: 72px;">
+						<col style="min-width: 84px">
+						<col style="min-width: 76px;">
+						<col style="min-width: 124px">
+						<col style="min-width: 47px;">
+					  </colgroup>
+					  <thead>
+						<tr>
+						  <th>구분</th>
+						  <th>약품명</th>
+						  <th>1회 투약량</th>
+						  <th>1일 투약횟수</th>
+						  <th>총 투약일수</th>
+						  <th>용법</th>
+						  <th>삭제</th>
+						</tr>
+					  </thead>
+					  <tbody>
+						<tr>
+						  <td>내복약</td>
+						  <td>광동록소프로펜나트륨수화물정_(68.1mg/1정)</td>
+						  <td align="right">1</td>
+						  <td align="right">3</td>
+						  <td align="right">3</td>
+						  <td>식후 30분 후 복용</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>내복약</td>
+						  <td>종근당아목시실린캡슐500밀리그램_(0.5g/1캡슐)</td>
+						  <td align="right">1</td>
+						  <td align="right">3</td>
+						  <td align="right">3</td>
+						  <td>식후 30분 후 복용</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>내복약</td>
+						  <td>알마겔정(알마게이트)(수출명:유한가스트라겔정)_(0.5g/1정)</td>
+						  <td align="right">1</td>
+						  <td align="right">3</td>
+						  <td align="right">3</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>내복약</td>
+						  <td>종근당아목시실린캡슐500밀리그램_(0.5g/1캡슐)</td>
+						  <td align="right">1</td>
+						  <td align="right">3</td>
+						  <td align="right">3</td>
+						  <td>식후 30분 후 복용</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+						<tr>
+						  <td>내복약</td>
+						  <td>알마겔정(알마게이트)(수출명:유한가스트라겔정)_(0.5g/1정)</td>
+						  <td align="right">1</td>
+						  <td align="right">3</td>
+						  <td align="right">3</td>
+						  <td>-</td>
+						  <td>
+							<div class="btn_area">
+							  <button type="button" class="btn_delete">
+								<span class="blind">삭제</span>
+							  </button>
+							</div>
+						  </td>
+						</tr>
+					  </tbody>
+					</table>
+				  </div>
+				  <div class="tit_group">
+					<strong class="title" size="16" weight="bold">조제 시 참고사항</strong>
+				  </div>
+				  <div class="text_area">
+					<textarea name="text" id="note" class="note" cols="30" rows="2" placeholder="내용"></textarea>
+				  </div>
+				</div>
+			  </div>
+			  <div class="popup_bottom">
+				<div class="left_area">
+				  <span>출력 장치 선택</span>
+				  <div class="select">
+					<button type="button" value="Microsoft XPS Document Writer 00EC88" class="select_btn">Microsoft XPS Document Writer 00EC88</button>
+					<div class="select_opt">
+					  <ul data-simplebar="">
+						<li><button type="button" class="option" value="valueA">Microsoft XPS Document Writer 00EC88</button></li>
+						<li><button type="button" class="option" value="valueB">Microsoft XPS Document Writer 00EC88</button></li>
+						<li><button type="button" class="option" value="valueC">Microsoft XPS Document Writer 00EC88</button></li>
+						<li><button type="button" class="option" value="valueD">Microsoft XPS Document Writer 00EC88</button></li>
+					  </ul>
+					</div>
+				  </div>
+				  <button class="btn">처방전 발급 취소</button>
+				  <button class="btn">저장</button>
+				</div>
+				<div class="right_area">
+				  <button class="btn">취소</button>
+				  <button class="btn primary">저장 후 출력</button>
+				</div>
+			  </div>
+			</div>
+		  </div>
+		</div>
+	  </div>
+
+	</main>
+	<!-- // [D] CONTENTS -->
+
+	<script src="https://unpkg.com/swiper@7/swiper-bundle.min.js"></script>
+<script src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
+
+<!-- Components -->
+<script src="../js/component/popup.js"></script>
+<script src="../js/component/select.js"></script>
+<script src="../js/component/datalist.js"></script>
+<script src="../js/component/input.js"></script>
+<script src="../js/component/tab.js"></script>
+<script src="../js/component/dropdown.js"></script>
+<script src="../js/component/frequently_phrase.js"></script>
+<script src="../js/component/patient_lst.js"></script>
+<script src="../js/component/main_nav.js"></script>
+<script src="../js/component/draggable_component.js"></script>
+<script src="../js/component/webcam_popup.js"></script>
+<script src="../js/component/resize_indicator.js"></script>
+<script src="../js/component/custom_scroll.js"></script>
+<script src="../js/component/edit_mode.js"></script>
+<script src="../js/component/tooltips.js"></script>
+<script src="../js/component/context.js"></script>
+<script src="../js/component/extend.js"></script>
+<script src="../js/component/tooth.js"></script>
+<script src="../js/component/history.js"></script>
+<script src="../js/component/table.js"></script>
+<script src="../js/component/checkbox.js"></script>
+<script src="../js/component/folding.js"></script>
+<script src="../js/component/grab_scroll.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/memo.js"></script>
+<script src="../js/component/outpatient.js"></script>
+<script src="../js/component/next_popup.js"></script>
+<script src="../js/component/record_display_control.js"></script>
+<script src="../js/component/next_frequently.js"></script>
+<script src="../js/component/imp_popup.js"></script>
+<script src="../js/component/add_text_input.js"></script>
+<script src="../js/component/oral_result.js"></script>
+<script src="../js/component/open_inpOther.js"></script>
+<script src="../js/component/suggest_input.js"></script>
+<script src="../js/component/shortcut_popup.js"></script>
+<script src="../js/component/categorized_list.js"></script>
+<script src="../js/component/photo_before_after.js"></script>
+<script src="../js/component/photo_slide.js"></script>
+<script src="../js/component/undo_gums.js"></script>
+
+
+	<!-- Caseview  -->
+	<script src="../js/libs/vendor.min.js"></script>
+	<style>
+	  .case_review {
+		position: fixed;
+		bottom: 20px;
+		right: 20px;
+		width: auto;
+		padding: 8px;
+		z-index: 600;
+		background: #000;
+		color: #fff;
+		opacity: 0.7;
+		filter: alpha(opacity=70);
+	  }
+
+	  .case_review a {
+		display: block;
+		padding: 4px 0;
+		font-size: 12px;
+		color: #fff;
+	  }
+
+	  .case_review a:hover {
+		color: #fff4a6;
+	  }
+	</style>
+	<div class="case_review">
+	  <a href="#none" onclick="$('html').attr('theme', $('html').attr('theme') === 'light' ? 'dark' : 'light')">Dark/Light theme</a>
+	</div>
+  </div>
+
+
+
+</body></html>
